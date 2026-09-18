@@ -1,0 +1,1464 @@
+{
+  "generated_at": "2026-09-18T10:49:38.484340",
+  "monthly_target_rupees": null,
+  "counts": {
+    "backtest": 76,
+    "live": 0,
+    "total": 76
+  },
+  "summary": {
+    "count": 76,
+    "wins": 44,
+    "losses": 32,
+    "win_rate": 57.9,
+    "net_pnl": 84156.55,
+    "gross_pnl": 87196.55,
+    "total_charges": 3040.0,
+    "profit_factor": 2.27,
+    "avg_win": 3413.96,
+    "avg_loss": -2064.3,
+    "best": 13503.75,
+    "worst": -8697.0,
+    "current_streak": 1,
+    "current_streak_type": "win",
+    "max_drawdown": 29381.65,
+    "equity_curve": [
+      {
+        "date": "2026-01-01",
+        "equity": -672.75,
+        "drawdown": 672.75
+      },
+      {
+        "date": "2026-01-02",
+        "equity": 7621.25,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-01-02",
+        "equity": 13373.25,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-01-07",
+        "equity": 12957.45,
+        "drawdown": 415.8
+      },
+      {
+        "date": "2026-01-08",
+        "equity": 17520.85,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-01-08",
+        "equity": 19805.05,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-01-14",
+        "equity": 18170.65,
+        "drawdown": 1634.4
+      },
+      {
+        "date": "2026-01-19",
+        "equity": 15310.65,
+        "drawdown": 4494.4
+      },
+      {
+        "date": "2026-01-19",
+        "equity": 17144.65,
+        "drawdown": 2660.4
+      },
+      {
+        "date": "2026-01-20",
+        "equity": 18051.4,
+        "drawdown": 1753.65
+      },
+      {
+        "date": "2026-01-20",
+        "equity": 17484.8,
+        "drawdown": 2320.25
+      },
+      {
+        "date": "2026-01-20",
+        "equity": 29717.4,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-01-20",
+        "equity": 37439.4,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-01-23",
+        "equity": 44492.4,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-02-09",
+        "equity": 44833.65,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-02-10",
+        "equity": 43390.65,
+        "drawdown": 1443.0
+      },
+      {
+        "date": "2026-02-10",
+        "equity": 43935.65,
+        "drawdown": 898.0
+      },
+      {
+        "date": "2026-02-24",
+        "equity": 43132.9,
+        "drawdown": 1700.75
+      },
+      {
+        "date": "2026-02-26",
+        "equity": 43755.3,
+        "drawdown": 1078.35
+      },
+      {
+        "date": "2026-02-27",
+        "equity": 47902.3,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "equity": 51932.7,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-03-06",
+        "equity": 52787.45,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-03-11",
+        "equity": 58081.7,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "equity": 65418.3,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-03-19",
+        "equity": 56721.3,
+        "drawdown": 8697.0
+      },
+      {
+        "date": "2026-04-17",
+        "equity": 58440.55,
+        "drawdown": 6977.75
+      },
+      {
+        "date": "2026-04-17",
+        "equity": 60208.75,
+        "drawdown": 5209.55
+      },
+      {
+        "date": "2026-05-11",
+        "equity": 63819.5,
+        "drawdown": 1598.8
+      },
+      {
+        "date": "2026-05-12",
+        "equity": 77323.25,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-05-12",
+        "equity": 89806.05,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-05-13",
+        "equity": 92328.05,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-05-13",
+        "equity": 94469.45,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-05-25",
+        "equity": 95437.95,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "equity": 94915.55,
+        "drawdown": 522.4
+      },
+      {
+        "date": "2026-06-11",
+        "equity": 95669.55,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-06-16",
+        "equity": 97459.75,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-06-16",
+        "equity": 97843.25,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-06-17",
+        "equity": 97112.0,
+        "drawdown": 731.25
+      },
+      {
+        "date": "2026-06-17",
+        "equity": 96877.4,
+        "drawdown": 965.85
+      },
+      {
+        "date": "2026-06-17",
+        "equity": 99019.6,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-06-17",
+        "equity": 99347.85,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-06-18",
+        "equity": 102694.45,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-06-23",
+        "equity": 102054.2,
+        "drawdown": 640.25
+      },
+      {
+        "date": "2026-07-01",
+        "equity": 98953.7,
+        "drawdown": 3740.75
+      },
+      {
+        "date": "2026-07-02",
+        "equity": 97370.95,
+        "drawdown": 5323.5
+      },
+      {
+        "date": "2026-07-02",
+        "equity": 95489.15,
+        "drawdown": 7205.3
+      },
+      {
+        "date": "2026-07-06",
+        "equity": 99171.4,
+        "drawdown": 3523.05
+      },
+      {
+        "date": "2026-07-06",
+        "equity": 96016.2,
+        "drawdown": 6678.25
+      },
+      {
+        "date": "2026-07-17",
+        "equity": 96610.8,
+        "drawdown": 6083.65
+      },
+      {
+        "date": "2026-07-21",
+        "equity": 95418.05,
+        "drawdown": 7276.4
+      },
+      {
+        "date": "2026-07-23",
+        "equity": 94302.85,
+        "drawdown": 8391.6
+      },
+      {
+        "date": "2026-07-24",
+        "equity": 92645.35,
+        "drawdown": 10049.1
+      },
+      {
+        "date": "2026-07-30",
+        "equity": 89887.95,
+        "drawdown": 12806.5
+      },
+      {
+        "date": "2026-08-06",
+        "equity": 88164.95,
+        "drawdown": 14529.5
+      },
+      {
+        "date": "2026-08-06",
+        "equity": 86355.95,
+        "drawdown": 16338.5
+      },
+      {
+        "date": "2026-08-13",
+        "equity": 83014.95,
+        "drawdown": 19679.5
+      },
+      {
+        "date": "2026-08-14",
+        "equity": 81857.95,
+        "drawdown": 20836.5
+      },
+      {
+        "date": "2026-08-17",
+        "equity": 84152.45,
+        "drawdown": 18542.0
+      },
+      {
+        "date": "2026-08-17",
+        "equity": 81666.85,
+        "drawdown": 21027.6
+      },
+      {
+        "date": "2026-08-18",
+        "equity": 82420.85,
+        "drawdown": 20273.6
+      },
+      {
+        "date": "2026-08-18",
+        "equity": 80532.25,
+        "drawdown": 22162.2
+      },
+      {
+        "date": "2026-08-19",
+        "equity": 83369.5,
+        "drawdown": 19324.95
+      },
+      {
+        "date": "2026-08-19",
+        "equity": 86277.9,
+        "drawdown": 16416.55
+      },
+      {
+        "date": "2026-08-31",
+        "equity": 84922.65,
+        "drawdown": 17771.8
+      },
+      {
+        "date": "2026-08-31",
+        "equity": 84230.85,
+        "drawdown": 18463.6
+      },
+      {
+        "date": "2026-08-31",
+        "equity": 80785.85,
+        "drawdown": 21908.6
+      },
+      {
+        "date": "2026-09-01",
+        "equity": 74685.6,
+        "drawdown": 28008.85
+      },
+      {
+        "date": "2026-09-02",
+        "equity": 73312.8,
+        "drawdown": 29381.65
+      },
+      {
+        "date": "2026-09-07",
+        "equity": 76796.8,
+        "drawdown": 25897.65
+      },
+      {
+        "date": "2026-09-07",
+        "equity": 80900.6,
+        "drawdown": 21793.85
+      },
+      {
+        "date": "2026-09-08",
+        "equity": 82103.1,
+        "drawdown": 20591.35
+      },
+      {
+        "date": "2026-09-08",
+        "equity": 83785.5,
+        "drawdown": 18908.95
+      },
+      {
+        "date": "2026-09-08",
+        "equity": 84633.75,
+        "drawdown": 18060.7
+      },
+      {
+        "date": "2026-09-08",
+        "equity": 85521.55,
+        "drawdown": 17172.9
+      },
+      {
+        "date": "2026-09-09",
+        "equity": 80497.05,
+        "drawdown": 22197.4
+      },
+      {
+        "date": "2026-09-15",
+        "equity": 84156.55,
+        "drawdown": 18537.9
+      }
+    ]
+  },
+  "by_segment": [
+    {
+      "key": "SENSEX",
+      "net_pnl": 57847.8
+    },
+    {
+      "key": "NIFTY",
+      "net_pnl": 26308.75
+    }
+  ],
+  "by_setup_tag": [
+    {
+      "key": "eod_squareoff",
+      "net_pnl": 79941.9
+    },
+    {
+      "key": "sticky_ema5",
+      "net_pnl": 4214.65
+    }
+  ],
+  "daily_pnl": [
+    {
+      "date": "2026-01-01",
+      "pnl": -672.75
+    },
+    {
+      "date": "2026-01-02",
+      "pnl": 14046.0
+    },
+    {
+      "date": "2026-01-07",
+      "pnl": -415.8
+    },
+    {
+      "date": "2026-01-08",
+      "pnl": 6847.6
+    },
+    {
+      "date": "2026-01-14",
+      "pnl": -1634.4
+    },
+    {
+      "date": "2026-01-19",
+      "pnl": -1026.0
+    },
+    {
+      "date": "2026-01-20",
+      "pnl": 20294.75
+    },
+    {
+      "date": "2026-01-23",
+      "pnl": 7053.0
+    },
+    {
+      "date": "2026-02-09",
+      "pnl": 341.25
+    },
+    {
+      "date": "2026-02-10",
+      "pnl": -898.0
+    },
+    {
+      "date": "2026-02-24",
+      "pnl": -802.75
+    },
+    {
+      "date": "2026-02-26",
+      "pnl": 622.4
+    },
+    {
+      "date": "2026-02-27",
+      "pnl": 8177.4
+    },
+    {
+      "date": "2026-03-06",
+      "pnl": 854.75
+    },
+    {
+      "date": "2026-03-11",
+      "pnl": 5294.25
+    },
+    {
+      "date": "2026-03-19",
+      "pnl": -1360.4
+    },
+    {
+      "date": "2026-04-17",
+      "pnl": 3487.45
+    },
+    {
+      "date": "2026-05-11",
+      "pnl": 3610.75
+    },
+    {
+      "date": "2026-05-12",
+      "pnl": 25986.55
+    },
+    {
+      "date": "2026-05-13",
+      "pnl": 4663.4
+    },
+    {
+      "date": "2026-05-25",
+      "pnl": 968.5
+    },
+    {
+      "date": "2026-05-26",
+      "pnl": -522.4
+    },
+    {
+      "date": "2026-06-11",
+      "pnl": 754.0
+    },
+    {
+      "date": "2026-06-16",
+      "pnl": 2173.7
+    },
+    {
+      "date": "2026-06-17",
+      "pnl": 1504.6
+    },
+    {
+      "date": "2026-06-18",
+      "pnl": 3346.6
+    },
+    {
+      "date": "2026-06-23",
+      "pnl": -640.25
+    },
+    {
+      "date": "2026-07-01",
+      "pnl": -3100.5
+    },
+    {
+      "date": "2026-07-02",
+      "pnl": -3464.55
+    },
+    {
+      "date": "2026-07-06",
+      "pnl": 527.05
+    },
+    {
+      "date": "2026-07-17",
+      "pnl": 594.6
+    },
+    {
+      "date": "2026-07-21",
+      "pnl": -1192.75
+    },
+    {
+      "date": "2026-07-23",
+      "pnl": -1115.2
+    },
+    {
+      "date": "2026-07-24",
+      "pnl": -1657.5
+    },
+    {
+      "date": "2026-07-30",
+      "pnl": -2757.4
+    },
+    {
+      "date": "2026-08-06",
+      "pnl": -3532.0
+    },
+    {
+      "date": "2026-08-13",
+      "pnl": -3341.0
+    },
+    {
+      "date": "2026-08-14",
+      "pnl": -1157.0
+    },
+    {
+      "date": "2026-08-17",
+      "pnl": -191.1
+    },
+    {
+      "date": "2026-08-18",
+      "pnl": -1134.6
+    },
+    {
+      "date": "2026-08-19",
+      "pnl": 5745.65
+    },
+    {
+      "date": "2026-08-31",
+      "pnl": -5492.05
+    },
+    {
+      "date": "2026-09-01",
+      "pnl": -6100.25
+    },
+    {
+      "date": "2026-09-02",
+      "pnl": -1372.8
+    },
+    {
+      "date": "2026-09-07",
+      "pnl": 7587.8
+    },
+    {
+      "date": "2026-09-08",
+      "pnl": 4620.95
+    },
+    {
+      "date": "2026-09-09",
+      "pnl": -5024.5
+    },
+    {
+      "date": "2026-09-15",
+      "pnl": 3659.5
+    }
+  ],
+  "trades": [
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-01-01T12:15:00",
+      "exit_time": "2026-01-01T15:15:00",
+      "pnl_rupees": -672.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-01-02T09:15:00",
+      "exit_time": "2026-01-02T15:15:00",
+      "pnl_rupees": 8294.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-01-02T09:30:00",
+      "exit_time": "2026-01-02T15:15:00",
+      "pnl_rupees": 5752.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-07T12:15:00",
+      "exit_time": "2026-01-07T14:00:00",
+      "pnl_rupees": -415.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-08T11:00:00",
+      "exit_time": "2026-01-08T14:00:00",
+      "pnl_rupees": 4563.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-01-08T14:45:00",
+      "exit_time": "2026-01-08T15:15:00",
+      "pnl_rupees": 2284.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-14T13:30:00",
+      "exit_time": "2026-01-14T14:45:00",
+      "pnl_rupees": -1634.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-19T09:15:00",
+      "exit_time": "2026-01-19T13:45:00",
+      "pnl_rupees": -2860.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-19T09:15:00",
+      "exit_time": "2026-01-19T11:45:00",
+      "pnl_rupees": 1834.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-20T09:15:00",
+      "exit_time": "2026-01-20T11:45:00",
+      "pnl_rupees": 906.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-20T09:15:00",
+      "exit_time": "2026-01-20T11:45:00",
+      "pnl_rupees": -566.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-01-20T13:00:00",
+      "exit_time": "2026-01-20T15:15:00",
+      "pnl_rupees": 12232.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-01-20T14:30:00",
+      "exit_time": "2026-01-20T15:15:00",
+      "pnl_rupees": 7722.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-01-23T11:30:00",
+      "exit_time": "2026-01-23T14:45:00",
+      "pnl_rupees": 7053.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-02-09T14:45:00",
+      "exit_time": "2026-02-09T15:15:00",
+      "pnl_rupees": 341.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-02-10T09:30:00",
+      "exit_time": "2026-02-10T13:30:00",
+      "pnl_rupees": -1443.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-02-10T09:30:00",
+      "exit_time": "2026-02-10T11:30:00",
+      "pnl_rupees": 545.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-02-24T14:15:00",
+      "exit_time": "2026-02-24T15:00:00",
+      "pnl_rupees": -802.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-02-26T11:30:00",
+      "exit_time": "2026-02-26T14:00:00",
+      "pnl_rupees": 622.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-02-27T09:15:00",
+      "exit_time": "2026-02-27T13:15:00",
+      "pnl_rupees": 4147.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-02-27T09:15:00",
+      "exit_time": "2026-02-27T13:30:00",
+      "pnl_rupees": 4030.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-03-06T14:45:00",
+      "exit_time": "2026-03-06T15:15:00",
+      "pnl_rupees": 854.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-03-11T13:00:00",
+      "exit_time": "2026-03-11T15:15:00",
+      "pnl_rupees": 5294.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-03-19T13:00:00",
+      "exit_time": "2026-03-19T15:15:00",
+      "pnl_rupees": 7336.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-03-19T14:45:00",
+      "exit_time": "2026-03-19T15:15:00",
+      "pnl_rupees": -8697.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-04-17T14:30:00",
+      "exit_time": "2026-04-17T15:15:00",
+      "pnl_rupees": 1719.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-04-17T14:30:00",
+      "exit_time": "2026-04-17T15:15:00",
+      "pnl_rupees": 1768.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-05-11T14:45:00",
+      "exit_time": "2026-05-11T15:15:00",
+      "pnl_rupees": 3610.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-05-12T09:15:00",
+      "exit_time": "2026-05-12T15:15:00",
+      "pnl_rupees": 13503.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-05-12T09:15:00",
+      "exit_time": "2026-05-12T15:15:00",
+      "pnl_rupees": 12482.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-05-13T14:30:00",
+      "exit_time": "2026-05-13T15:15:00",
+      "pnl_rupees": 2522.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-05-13T14:30:00",
+      "exit_time": "2026-05-13T15:15:00",
+      "pnl_rupees": 2141.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-05-25T14:45:00",
+      "exit_time": "2026-05-25T15:15:00",
+      "pnl_rupees": 968.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-05-26T09:15:00",
+      "exit_time": "2026-05-26T11:15:00",
+      "pnl_rupees": -522.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-06-11T14:30:00",
+      "exit_time": "2026-06-11T15:15:00",
+      "pnl_rupees": 754.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-06-16T13:15:00",
+      "exit_time": "2026-06-16T15:15:00",
+      "pnl_rupees": 1790.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-06-16T14:45:00",
+      "exit_time": "2026-06-16T15:15:00",
+      "pnl_rupees": 383.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-06-17T09:30:00",
+      "exit_time": "2026-06-17T12:00:00",
+      "pnl_rupees": -731.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-06-17T09:30:00",
+      "exit_time": "2026-06-17T12:00:00",
+      "pnl_rupees": -234.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-06-17T14:30:00",
+      "exit_time": "2026-06-17T15:15:00",
+      "pnl_rupees": 2142.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-06-17T14:45:00",
+      "exit_time": "2026-06-17T15:15:00",
+      "pnl_rupees": 328.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-06-18T14:45:00",
+      "exit_time": "2026-06-18T15:15:00",
+      "pnl_rupees": 3346.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-06-23T09:30:00",
+      "exit_time": "2026-06-23T10:30:00",
+      "pnl_rupees": -640.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-07-01T14:45:00",
+      "exit_time": "2026-07-01T15:15:00",
+      "pnl_rupees": -3100.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-02T09:15:00",
+      "exit_time": "2026-07-02T11:15:00",
+      "pnl_rupees": -1582.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-02T09:15:00",
+      "exit_time": "2026-07-02T11:15:00",
+      "pnl_rupees": -1881.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-06T09:15:00",
+      "exit_time": "2026-07-06T13:45:00",
+      "pnl_rupees": 3682.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-06T13:00:00",
+      "exit_time": "2026-07-06T14:00:00",
+      "pnl_rupees": -3155.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-17T11:15:00",
+      "exit_time": "2026-07-17T13:30:00",
+      "pnl_rupees": 594.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-21T09:15:00",
+      "exit_time": "2026-07-21T09:45:00",
+      "pnl_rupees": -1192.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-07-23T12:30:00",
+      "exit_time": "2026-07-23T15:15:00",
+      "pnl_rupees": -1115.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-24T09:30:00",
+      "exit_time": "2026-07-24T11:30:00",
+      "pnl_rupees": -1657.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-07-30T12:30:00",
+      "exit_time": "2026-07-30T13:15:00",
+      "pnl_rupees": -2757.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-06T11:15:00",
+      "exit_time": "2026-08-06T13:00:00",
+      "pnl_rupees": -1723.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-06T13:45:00",
+      "exit_time": "2026-08-06T14:45:00",
+      "pnl_rupees": -1809.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-08-13T14:45:00",
+      "exit_time": "2026-08-13T15:15:00",
+      "pnl_rupees": -3341.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-14T09:15:00",
+      "exit_time": "2026-08-14T11:45:00",
+      "pnl_rupees": -1157.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-17T09:15:00",
+      "exit_time": "2026-08-17T12:00:00",
+      "pnl_rupees": 2294.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-17T11:00:00",
+      "exit_time": "2026-08-17T12:00:00",
+      "pnl_rupees": -2485.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-18T09:30:00",
+      "exit_time": "2026-08-18T12:00:00",
+      "pnl_rupees": 754.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-18T11:15:00",
+      "exit_time": "2026-08-18T12:00:00",
+      "pnl_rupees": -1888.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-19T09:15:00",
+      "exit_time": "2026-08-19T14:45:00",
+      "pnl_rupees": 2837.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-19T09:15:00",
+      "exit_time": "2026-08-19T14:45:00",
+      "pnl_rupees": 2908.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-31T09:15:00",
+      "exit_time": "2026-08-31T11:45:00",
+      "pnl_rupees": -1355.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-31T09:15:00",
+      "exit_time": "2026-08-31T11:45:00",
+      "pnl_rupees": -691.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-08-31T14:15:00",
+      "exit_time": "2026-08-31T14:45:00",
+      "pnl_rupees": -3445.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-01T14:30:00",
+      "exit_time": "2026-09-01T15:15:00",
+      "pnl_rupees": -6100.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-02T09:15:00",
+      "exit_time": "2026-09-02T12:15:00",
+      "pnl_rupees": -1372.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-07T09:15:00",
+      "exit_time": "2026-09-07T13:45:00",
+      "pnl_rupees": 3484.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-07T09:15:00",
+      "exit_time": "2026-09-07T13:45:00",
+      "pnl_rupees": 4103.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-08T09:15:00",
+      "exit_time": "2026-09-08T14:15:00",
+      "pnl_rupees": 1202.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-08T09:15:00",
+      "exit_time": "2026-09-08T14:15:00",
+      "pnl_rupees": 1682.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-08T14:30:00",
+      "exit_time": "2026-09-08T15:15:00",
+      "pnl_rupees": 848.25,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-08T14:30:00",
+      "exit_time": "2026-09-08T15:15:00",
+      "pnl_rupees": 887.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-09T09:45:00",
+      "exit_time": "2026-09-09T12:30:00",
+      "pnl_rupees": -5024.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-15T14:45:00",
+      "exit_time": "2026-09-15T15:15:00",
+      "pnl_rupees": 3659.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0
+    }
+  ],
+  "notes": {
+    "pnl_conversion": "Backtest trade P&L is estimated as index-points x lot size (NIFTY 65, SENSEX 20) -- not a real fill-based figure. Live trades use real recorded fill prices.",
+    "charges": "Estimated brokerage only (Rs.20/executed F&O leg x 2 legs/trade, Dhan's published flat rate). Does NOT include STT, GST, exchange/SEBI charges, or stamp duty -- real charges will be higher."
+  }
+}

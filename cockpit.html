@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TV Composite v7 — Dashboard</title>
+<style>
+  :root {
+    --page: #0A0E10; --surface: #12181B; --surface-2: #171F23;
+    --ink: #EAF0F2; --ink-2: #9FB0B8; --ink-muted: #6B7A82;
+    --hairline: #232C31; --hairline-strong: #303B41;
+    --good: #3ecf8e; --critical: #ef5a5a; --warn: #E0A458; --accent: #5b8def;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 24px 60px; }
+
+  .topbar { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+  .topbar h1 { font-size: 19px; margin: 0; }
+  .topbar .sub { color: var(--ink-muted); font-size: 12.5px; margin-top: 3px; }
+  .badges { display: flex; gap: 8px; }
+  .badge { background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: 999px; padding: 5px 12px; font-size: 12px; color: var(--ink-2); }
+
+  .filters { display: flex; gap: 10px; align-items: center; margin: 18px 0 20px; flex-wrap: wrap; }
+  .filters select, .filters button {
+    background: var(--surface); border: 1px solid var(--hairline-strong); color: var(--ink-2);
+    border-radius: 7px; padding: 7px 12px; font-size: 12.5px; font-family: inherit; cursor: pointer;
+  }
+  .filters .spacer { flex: 1; }
+  .filters .meta { color: var(--ink-muted); font-size: 12px; }
+
+  .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-bottom: 18px; }
+  .kpi { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 16px 18px; }
+  .kpi .k { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-muted); margin-bottom: 8px; }
+  .kpi .v { font-size: 22px; font-weight: 700; }
+  .kpi .v.good { color: var(--good); } .kpi .v.bad { color: var(--critical); }
+  .kpi .extra { font-size: 11.5px; color: var(--ink-muted); margin-top: 4px; }
+
+  .grid2 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 18px 20px; }
+  .card h3 { font-size: 13px; margin: 0 0 4px; font-weight: 600; }
+  .card .hint { font-size: 11.5px; color: var(--ink-muted); margin-bottom: 14px; }
+
+  .num { font-variant-numeric: tabular-nums; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+  .pos { color: var(--good); } .neg { color: var(--critical); }
+
+  .ladder-track { height: 8px; background: var(--surface-2); border-radius: 5px; overflow: hidden; margin: 10px 0 6px; }
+  .ladder-fill { height: 100%; background: linear-gradient(90deg, var(--good), #2fa876); }
+  .ladder-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-muted); }
+
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 8px; }
+  .cal-dow { font-size: 10px; color: var(--ink-muted); text-align: center; padding-bottom: 2px; }
+  .cal-cell { aspect-ratio: 1.3; border-radius: 6px; font-size: 10.5px; display: flex; align-items: flex-start; justify-content: flex-start; padding: 4px 5px; border: 1px solid var(--hairline); color: var(--ink-2); }
+  .cal-cell.empty { border: none; }
+  .cal-legend { display: flex; gap: 14px; font-size: 11px; color: var(--ink-muted); margin-top: 10px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 12.5px; }
+  .bar-row .label { width: 110px; color: var(--ink-2); flex-shrink: 0; text-align: right; }
+  .bar-track { flex: 1; background: var(--surface-2); border-radius: 5px; height: 20px; position: relative; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--good); border-radius: 5px; }
+  .bar-fill.neg { background: var(--critical); }
+  .bar-val { width: 90px; text-align: left; }
+
+  .bottom-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 16px 18px; text-align: center; }
+  .stat-card .v { font-size: 20px; font-weight: 700; }
+  .stat-card .k { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+
+  .footer-note { font-size: 11px; color: var(--ink-muted); margin-top: 26px; line-height: 1.7; border-top: 1px solid var(--hairline); padding-top: 14px; }
+  .footer-note b { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <h1>TV Composite v7 — Dashboard</h1>
+      <div class="sub">NIFTY + SENSEX cockpit — backtest history (Jan-Sep 2026) + live confirmed trades combined.</div>
+    </div>
+    <div class="badges">
+      <span class="badge" id="badgeTotal">—</span>
+      <span class="badge" id="badgeTrades">—</span>
+    </div>
+  </div>
+
+  <div class="filters">
+    <select id="fSegment"><option value="ALL">All segments</option><option value="NIFTY">NIFTY</option><option value="SENSEX">SENSEX</option></select>
+    <select id="fSource"><option value="ALL">Backtest + Live</option><option value="backtest">Backtest only</option><option value="live">Live only</option></select>
+    <div class="spacer"></div>
+    <span class="meta" id="genMeta"></span>
+    <button id="btnCsv">⬇ CSV</button>
+  </div>
+
+  <div class="kpi-row" id="kpiRow"></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Equity curve</h3>
+      <div class="hint">Cumulative P&amp;L across all trades in the filtered set (estimated rupees for backtest trades, actual for live)</div>
+      <div id="equityChart"></div>
+    </div>
+    <div class="card">
+      <h3>Monthly target</h3>
+      <div class="hint" id="ladderHint">—</div>
+      <div id="ladder"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <h3>Daily P&amp;L calendar</h3>
+    <div class="hint" id="calHint">—</div>
+    <div id="calendar"></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Net P&amp;L by segment</h3>
+      <div class="hint">NIFTY vs SENSEX</div>
+      <div id="bySegment"></div>
+    </div>
+    <div class="card">
+      <h3>Net P&amp;L by exit type</h3>
+      <div class="hint">Sticky EMA5 stop vs EOD square-off</div>
+      <div id="bySetup"></div>
+    </div>
+  </div>
+
+  <div class="bottom-row" id="bottomRow"></div>
+
+  <div class="footer-note" id="footerNote"></div>
+</div>
+
+<script>
+let RAW = null;
+
+function rupees(n, showSign) {
+  const v = Number(n) || 0;
+  const sign = v > 0 && showSign ? '+' : (v < 0 ? '-' : '');
+  return sign + 'Rs.' + Math.abs(v).toLocaleString('en-IN', {maximumFractionDigits: 0});
+}
+
+function filterTrades() {
+  const seg = document.getElementById('fSegment').value;
+  const src = document.getElementById('fSource').value;
+  return RAW.trades.filter(t =>
+    (seg === 'ALL' || t.symbol === seg) && (src === 'ALL' || t.source === src)
+  );
+}
+
+function summarize(trades) {
+  if (!trades.length) return null;
+  const pnls = trades.map(t => t.pnl_rupees);
+  const wins = pnls.filter(p => p > 0);
+  const losses = pnls.filter(p => p <= 0);
+  const grossWin = wins.reduce((a,b)=>a+b,0);
+  const grossLoss = Math.abs(losses.reduce((a,b)=>a+b,0));
+  const totalCharges = trades.reduce((a,t)=>a+(t.charges_rupees||0),0);
+
+  let streak = 0;
+  const lastIsWin = pnls[pnls.length-1] > 0;
+  for (let i = pnls.length - 1; i >= 0; i--) {
+    if ((pnls[i] > 0) === lastIsWin) streak++; else break;
+  }
+
+  let equity = 0, peak = 0, maxDd = 0;
+  const curve = trades.map(t => {
+    equity += t.pnl_rupees; peak = Math.max(peak, equity); maxDd = Math.max(maxDd, peak - equity);
+    return { date: t.exit_time.slice(0,10), equity, drawdown: peak - equity };
+  });
+
+  return {
+    count: trades.length, wins: wins.length, losses: losses.length,
+    win_rate: (wins.length / trades.length * 100),
+    net_pnl: pnls.reduce((a,b)=>a+b,0),
+    total_charges: totalCharges,
+    profit_factor: grossLoss > 0 ? grossWin / grossLoss : null,
+    avg_win: wins.length ? grossWin / wins.length : 0,
+    avg_loss: losses.length ? losses.reduce((a,b)=>a+b,0) / losses.length : 0,
+    best: Math.max(...pnls), worst: Math.min(...pnls),
+    current_streak: streak, current_streak_type: lastIsWin ? 'win' : 'loss',
+    max_drawdown: maxDd, equity_curve: curve,
+  };
+}
+
+function renderKPIs(s) {
+  const expectancy = s.count ? s.net_pnl / s.count : 0;
+  const cards = [
+    { k: 'Net P&L', v: rupees(s.net_pnl, true), cls: s.net_pnl >= 0 ? 'good' : 'bad', extra: `Gross ${rupees(s.net_pnl + s.total_charges)}` },
+    { k: 'Total Charges (est.)', v: rupees(s.total_charges), cls: '', extra: `${(s.total_charges / (s.net_pnl + s.total_charges) * 100 || 0).toFixed(2)}% of gross` },
+    { k: 'Win Rate', v: s.win_rate.toFixed(1) + '%', cls: '', extra: `${s.wins}W / ${s.losses}L` },
+    { k: 'Profit Factor', v: s.profit_factor != null ? s.profit_factor.toFixed(2) : '—', cls: '', extra: `Expectancy ${rupees(expectancy, true)}` },
+    { k: 'Avg Win / Loss', v: `${rupees(s.avg_win)} / ${rupees(s.avg_loss)}`, cls: '', extra: `Max DD ${rupees(s.max_drawdown)}` },
+  ];
+  document.getElementById('kpiRow').innerHTML = cards.map(c => `
+    <div class="kpi"><div class="k">${c.k}</div><div class="v num ${c.cls}">${c.v}</div><div class="extra">${c.extra}</div></div>
+  `).join('');
+}
+
+function renderEquityCurve(curve) {
+  const el = document.getElementById('equityChart');
+  if (!curve.length) { el.innerHTML = '<div style="color:var(--ink-muted);font-size:13px;">No trades in this filter</div>'; return; }
+  const W = 720, H = 220, pad = 30;
+  const values = curve.map(c => c.equity);
+  const min = Math.min(0, ...values), max = Math.max(0, ...values);
+  const range = (max - min) || 1;
+  const x = i => pad + (i / (curve.length - 1 || 1)) * (W - pad * 2);
+  const y = v => H - pad - ((v - min) / range) * (H - pad * 2);
+  const zeroY = y(0);
+
+  const linePts = curve.map((c,i) => `${x(i)},${y(c.equity)}`).join(' ');
+  const areaPts = `${pad},${zeroY} ` + linePts + ` ${x(curve.length-1)},${zeroY}`;
+
+  el.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;">
+      <defs>
+        <linearGradient id="eqGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="var(--good)" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="var(--good)" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="${pad}" y1="${zeroY}" x2="${W-pad}" y2="${zeroY}" stroke="var(--hairline-strong)" stroke-dasharray="3,3"/>
+      <polygon points="${areaPts}" fill="url(#eqGrad)"/>
+      <polyline points="${linePts}" fill="none" stroke="var(--good)" stroke-width="2"/>
+      <text x="${pad}" y="14" fill="var(--ink-muted)" font-size="10">${curve[0].date}</text>
+      <text x="${W-pad}" y="14" fill="var(--ink-muted)" font-size="10" text-anchor="end">${curve[curve.length-1].date}</text>
+      <text x="${pad}" y="${H-8}" fill="var(--ink-muted)" font-size="10">Rs.${Math.round(min).toLocaleString('en-IN')}</text>
+      <text x="${pad}" y="${pad-14}" fill="var(--ink-muted)" font-size="10">Rs.${Math.round(max).toLocaleString('en-IN')}</text>
+    </svg>`;
+}
+
+function renderLadder(s) {
+  const hint = document.getElementById('ladderHint');
+  const target = RAW.monthly_target_rupees;
+  if (!target) {
+    hint.textContent = 'No monthly target set (build_dashboard_data.py: MONTHLY_TARGET_RUPEES).';
+    document.getElementById('ladder').innerHTML = '<div style="color:var(--ink-muted);font-size:12.5px;">Set a target to see progress here.</div>';
+    return;
+  }
+  const now = new Date();
+  const monthKey = now.toISOString().slice(0,7);
+  const monthPnl = RAW.trades.filter(t => t.exit_time.slice(0,7) === monthKey).reduce((a,t)=>a+t.pnl_rupees,0);
+  const pct = Math.max(0, Math.min(100, monthPnl / target * 100));
+  hint.textContent = `${monthKey} progress toward target`;
+  document.getElementById('ladder').innerHTML = `
+    <div class="num" style="font-size:20px;font-weight:700;">${rupees(monthPnl,true)}</div>
+    <div class="ladder-track"><div class="ladder-fill" style="width:${pct}%"></div></div>
+    <div class="ladder-labels"><span>Rs.0</span><span>Target Rs.${target.toLocaleString('en-IN')}</span></div>`;
+}
+
+function renderCalendar(trades) {
+  const now = new Date();
+  const months = [...new Set(trades.map(t => t.exit_time.slice(0,7)))].sort();
+  const monthKey = months.length ? months[months.length - 1] : now.toISOString().slice(0,7);
+  document.getElementById('calHint').textContent = `Showing ${monthKey} (most recent month with trades)`;
+
+  const daily = {};
+  trades.filter(t => t.exit_time.slice(0,7) === monthKey).forEach(t => {
+    const d = t.exit_time.slice(0,10);
+    daily[d] = (daily[d] || 0) + t.pnl_rupees;
+  });
+
+  const [y, m] = monthKey.split('-').map(Number);
+  const firstDow = new Date(y, m-1, 1).getDay();
+  const daysInMonth = new Date(y, m, 0).getDate();
+  const maxAbs = Math.max(1, ...Object.values(daily).map(Math.abs));
+
+  let cells = ['S','M','T','W','T','F','S'].map(d => `<div class="cal-dow">${d}</div>`).join('');
+  for (let i = 0; i < firstDow; i++) cells += '<div class="cal-cell empty"></div>';
+  for (let d = 1; d <= daysInMonth; d++) {
+    const key = `${monthKey}-${String(d).padStart(2,'0')}`;
+    const pnl = daily[key];
+    let style = '';
+    if (pnl !== undefined) {
+      const intensity = Math.min(1, Math.abs(pnl) / maxAbs);
+      const color = pnl >= 0 ? '62,207,142' : '239,90,90';
+      style = `background: rgba(${color}, ${0.12 + intensity * 0.35});`;
+    }
+    cells += `<div class="cal-cell" style="${style}">${d}${pnl !== undefined ? `<br><span class="num" style="font-size:9px;">${rupees(pnl)}</span>` : ''}</div>`;
+  }
+  document.getElementById('calendar').innerHTML = `<div class="cal-grid">${cells}</div>
+    <div class="cal-legend"><span><span class="dot" style="background:rgba(62,207,142,0.5)"></span>profit</span><span><span class="dot" style="background:rgba(239,90,90,0.5)"></span>loss</span></div>`;
+}
+
+function renderBarPanel(elId, rows) {
+  const maxAbs = Math.max(1, ...rows.map(r => Math.abs(r.net_pnl)));
+  document.getElementById(elId).innerHTML = rows.map(r => `
+    <div class="bar-row">
+      <div class="label">${r.key}</div>
+      <div class="bar-track"><div class="bar-fill ${r.net_pnl < 0 ? 'neg' : ''}" style="width:${Math.abs(r.net_pnl)/maxAbs*100}%"></div></div>
+      <div class="bar-val num ${r.net_pnl >= 0 ? 'pos' : 'neg'}">${rupees(r.net_pnl, true)}</div>
+    </div>`).join('') || '<div style="color:var(--ink-muted);font-size:12.5px;">No data</div>';
+}
+
+function byKey(trades, key) {
+  const totals = {};
+  trades.forEach(t => { totals[t[key]] = (totals[t[key]] || 0) + t.pnl_rupees; });
+  return Object.entries(totals).map(([key, net_pnl]) => ({key, net_pnl})).sort((a,b) => b.net_pnl - a.net_pnl);
+}
+
+function renderBottomRow(s) {
+  document.getElementById('bottomRow').innerHTML = `
+    <div class="stat-card"><div class="v ${s.current_streak_type === 'win' ? 'good' : 'bad'}">${s.current_streak} ${s.current_streak_type === 'win' ? 'wins' : 'losses'}</div><div class="k">Current streak</div></div>
+    <div class="stat-card"><div class="v num">${rupees(s.avg_win)} / ${rupees(s.avg_loss)}</div><div class="k">Avg win / loss per trade</div></div>
+    <div class="stat-card"><div class="v num">${rupees(s.total_charges)}</div><div class="k">Estimated charges (brokerage only)</div></div>`;
+}
+
+function downloadCsv() {
+  const trades = filterTrades();
+  const headers = ['source','symbol','direction','setup_tag','entry_time','exit_time','pnl_rupees','pnl_is_estimate','charges_rupees'];
+  const lines = [headers.join(',')].concat(trades.map(t => headers.map(h => t[h]).join(',')));
+  const blob = new Blob([lines.join('\n')], {type: 'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'tv_composite_v7_trades.csv';
+  a.click();
+}
+
+function renderAll() {
+  const trades = filterTrades();
+  const s = summarize(trades);
+
+  document.getElementById('badgeTotal').textContent = s ? `Total ${rupees(s.net_pnl, true)}` : 'No trades';
+  document.getElementById('badgeTrades').textContent = s ? `${s.count} trades` : '';
+  document.getElementById('genMeta').textContent = RAW.generated_at ? `Data as of ${new Date(RAW.generated_at).toLocaleString('en-IN')} — ${RAW.counts.backtest} backtest + ${RAW.counts.live} live` : '';
+
+  if (!s) {
+    document.getElementById('kpiRow').innerHTML = '<div class="kpi"><div class="k">No trades</div><div class="v">—</div></div>';
+    return;
+  }
+
+  renderKPIs(s);
+  renderEquityCurve(s.equity_curve);
+  renderLadder(s);
+  renderCalendar(trades);
+  renderBarPanel('bySegment', byKey(trades, 'symbol'));
+  renderBarPanel('bySetup', byKey(trades, 'setup_tag'));
+  renderBottomRow(s);
+
+  document.getElementById('footerNote').innerHTML = `
+    <b>Rupee figures for backtest trades are estimates</b> (index points × lot size), not real fills — the underlying v1-v7 backtests only ever measured points. Live trades use real recorded fill prices.<br>
+    <b>Charges are estimated brokerage only</b> (Rs.20/executed leg × 2 legs/trade) — does NOT include STT, GST, exchange/SEBI charges, or stamp duty. Real net P&amp;L will be lower than shown once full charges are modeled.<br>
+    Data from <code>dashboard_data.json</code>, built by <code>build_dashboard_data.py</code>. Not live-computed — refresh by re-running that script.`;
+}
+
+async function init() {
+  const res = await fetch('dashboard_data.json?t=' + Date.now());
+  RAW = await res.json();
+  document.getElementById('fSegment').addEventListener('change', renderAll);
+  document.getElementById('fSource').addEventListener('change', renderAll);
+  document.getElementById('btnCsv').addEventListener('click', downloadCsv);
+  renderAll();
+}
+
+init();
+</script>
+</body>
+</html>
