@@ -63,6 +63,20 @@
   .bar-fill.neg { background: var(--critical); }
   .bar-val { width: 90px; text-align: left; }
 
+  .src { font-size: 9px; font-weight: 700; letter-spacing: 0.05em; padding: 1px 5px; border-radius: 4px; border: 1px solid; vertical-align: middle; white-space: nowrap; }
+  .src.bt { color: var(--ink-muted); border-color: var(--hairline-strong); }
+  .src.live { color: var(--accent); border-color: var(--accent); }
+  .cal-cell { flex-direction: column; gap: 2px; }
+  .cal-cell.has-live { box-shadow: inset 0 0 0 1px var(--accent); }
+  .cal-nav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 6px; font-size: 12px; color: var(--ink-2); }
+  .cal-nav button { background: var(--surface-2); border: 1px solid var(--hairline-strong); color: var(--ink); border-radius: 6px; padding: 2px 11px; cursor: pointer; font-family: inherit; }
+  .cal-nav button:disabled { opacity: 0.35; cursor: default; }
+  .bar-group { margin-bottom: 14px; }
+  .bar-group-label { font-size: 12px; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+  .bar-row.sub { margin-bottom: 4px; }
+  .bar-fill.est { opacity: 0.55; }
+  .stat-card .split-line { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 3px 0; font-size: 15px; font-weight: 700; }
+  .stat-card .split-line .good { color: var(--good); } .stat-card .split-line .bad { color: var(--critical); }
   .bottom-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
   .stat-card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 16px 18px; text-align: center; }
   .stat-card .v { font-size: 20px; font-weight: 700; }
@@ -317,37 +331,64 @@ function renderLadder(s) {
     <div class="ladder-labels"><span>Rs.0</span><span>Target Rs.${target.toLocaleString('en-IN')}</span></div>`;
 }
 
-function renderCalendar(trades) {
+const SRC_TAG = {
+  backtest: '<span class="src bt" title="Backtest: rupees are estimates (index points x lot size)">BT</span>',
+  live: '<span class="src live" title="Live: real recorded fills">LIVE</span>',
+};
+const srcOf = t => t.source === 'live' ? 'live' : 'backtest';
+let CAL_MONTH = null, CAL_MONTHS = [];
+
+function calNav(delta) {
+  const i = CAL_MONTHS.indexOf(CAL_MONTH) + delta;
+  if (i >= 0 && i < CAL_MONTHS.length) { CAL_MONTH = CAL_MONTHS[i]; renderAll(); }
+}
+
+// `split` = the Source filter is "Backtest + Live": each day says which kind of trades it holds (LIVE cells get a blue outline)
+function renderCalendar(trades, split) {
   const now = new Date();
-  const months = [...new Set(trades.map(t => t.exit_time.slice(0,7)))].sort();
-  const monthKey = months.length ? months[months.length - 1] : now.toISOString().slice(0,7);
-  document.getElementById('calHint').textContent = `Showing ${monthKey} (most recent month with trades)`;
+  CAL_MONTHS = [...new Set(trades.map(t => t.exit_time.slice(0,7)))].sort();
+  if (!CAL_MONTHS.includes(CAL_MONTH)) CAL_MONTH = CAL_MONTHS.length ? CAL_MONTHS[CAL_MONTHS.length - 1] : null;
+  const monthKey = CAL_MONTH || now.toISOString().slice(0,7);
+  const idx = CAL_MONTHS.indexOf(monthKey);
+  document.getElementById('calHint').textContent = `Showing ${monthKey}` + (CAL_MONTHS.length > 1 ? ` (month ${idx + 1} of ${CAL_MONTHS.length} with trades)` : ' (the only month with trades)')
+    + (split ? ' · BT = backtest (estimated rupees) · LIVE = real fills, blue outline' : '');
 
   const daily = {};
   trades.filter(t => t.exit_time.slice(0,7) === monthKey).forEach(t => {
     const d = t.exit_time.slice(0,10);
-    daily[d] = (daily[d] || 0) + t.pnl_rupees;
+    if (!daily[d]) daily[d] = {backtest: null, live: null};
+    daily[d][srcOf(t)] = (daily[d][srcOf(t)] || 0) + t.pnl_rupees;
   });
+  const dayTotal = v => (v.backtest || 0) + (v.live || 0);
 
   const [y, m] = monthKey.split('-').map(Number);
   const firstDow = new Date(y, m-1, 1).getDay();
   const daysInMonth = new Date(y, m, 0).getDate();
-  const maxAbs = Math.max(1, ...Object.values(daily).map(Math.abs));
+  const maxAbs = Math.max(1, ...Object.values(daily).map(v => Math.abs(dayTotal(v))));
 
   let cells = ['S','M','T','W','T','F','S'].map(d => `<div class="cal-dow">${d}</div>`).join('');
   for (let i = 0; i < firstDow; i++) cells += '<div class="cal-cell empty"></div>';
   for (let d = 1; d <= daysInMonth; d++) {
     const key = `${monthKey}-${String(d).padStart(2,'0')}`;
-    const pnl = daily[key];
-    let style = '';
-    if (pnl !== undefined) {
+    const v = daily[key];
+    let style = '', extra = '', cls = 'cal-cell', title = '';
+    if (v !== undefined) {
+      const pnl = dayTotal(v);
       const intensity = Math.min(1, Math.abs(pnl) / maxAbs);
       const color = pnl >= 0 ? '62,207,142' : '239,90,90';
       style = `background: rgba(${color}, ${0.12 + intensity * 0.35});`;
+      extra = `<span class="num" style="font-size:9px;">${rupees(pnl)}</span>`;
+      if (split) {
+        extra += (v.live !== null ? SRC_TAG.live : '') + (v.backtest !== null ? SRC_TAG.backtest : '');
+        if (v.live !== null) cls += ' has-live';
+        title = ` title="${esc('Backtest ' + (v.backtest === null ? '-' : rupees(v.backtest, true)) + ' | Live ' + (v.live === null ? '-' : rupees(v.live, true)))}"`;
+      }
     }
-    cells += `<div class="cal-cell" style="${style}">${d}${pnl !== undefined ? `<br><span class="num" style="font-size:9px;">${rupees(pnl)}</span>` : ''}</div>`;
+    cells += `<div class="${cls}" style="${style}"${title}>${d}${extra}</div>`;
   }
-  document.getElementById('calendar').innerHTML = `<div class="cal-grid">${cells}</div>
+  const nav = CAL_MONTHS.length > 1
+    ? `<div class="cal-nav"><button onclick="calNav(-1)" ${idx <= 0 ? 'disabled' : ''} aria-label="Previous month">◀</button><span>${esc(monthKey)}</span><button onclick="calNav(1)" ${idx >= CAL_MONTHS.length - 1 ? 'disabled' : ''} aria-label="Next month">▶</button></div>` : '';
+  document.getElementById('calendar').innerHTML = `${nav}<div class="cal-grid">${cells}</div>
     <div class="cal-legend"><span><span class="dot" style="background:rgba(62,207,142,0.5)"></span>profit</span><span><span class="dot" style="background:rgba(239,90,90,0.5)"></span>loss</span></div>`;
 }
 
@@ -367,11 +408,36 @@ function byKey(trades, key) {
   return Object.entries(totals).map(([key, net_pnl]) => ({key, net_pnl})).sort((a,b) => b.net_pnl - a.net_pnl);
 }
 
-function renderBottomRow(s) {
-  document.getElementById('bottomRow').innerHTML = `
-    <div class="stat-card"><div class="v ${s.current_streak_type === 'win' ? 'good' : 'bad'}">${s.current_streak} ${s.current_streak_type === 'win' ? 'wins' : 'losses'}</div><div class="k">Current streak</div></div>
-    <div class="stat-card"><div class="v num">${rupees(s.avg_win)} / ${rupees(s.avg_loss)}</div><div class="k">Avg win / loss per trade</div></div>
-    <div class="stat-card"><div class="v num">${rupees(s.total_charges)}</div><div class="k">Estimated charges (brokerage only)</div></div>`;
+// Backtest and live side by side per segment / exit type; backtest bars are drawn lighter because they are estimates.
+function renderSplitBarPanel(elId, trades, key) {
+  const agg = {};
+  trades.forEach(t => {
+    const k = t[key], a = agg[k] || (agg[k] = {backtest: null, live: null});
+    a[srcOf(t)] = (a[srcOf(t)] || 0) + t.pnl_rupees;
+  });
+  const total = a => (a.backtest || 0) + (a.live || 0);
+  const keys = Object.keys(agg).sort((x, y) => total(agg[y]) - total(agg[x]));
+  const maxAbs = Math.max(1, ...keys.flatMap(k => [Math.abs(agg[k].backtest || 0), Math.abs(agg[k].live || 0)]));
+  const line = (src, v) => `<div class="bar-row sub"><div class="label">${SRC_TAG[src]}</div>
+      <div class="bar-track">${v === null ? '' : `<div class="bar-fill ${v < 0 ? 'neg' : ''}${src === 'backtest' ? ' est' : ''}" style="width:${Math.abs(v) / maxAbs * 100}%"></div>`}</div>
+      <div class="bar-val num ${v === null ? '' : v >= 0 ? 'pos' : 'neg'}">${v === null ? '—' : rupees(v, true)}</div></div>`;
+  const anyLive = keys.some(k => agg[k].live !== null);
+  document.getElementById(elId).innerHTML = keys.length
+    ? keys.map(k => `<div class="bar-group"><div class="bar-group-label">${esc(k)}</div>${line('backtest', agg[k].backtest)}${line('live', agg[k].live)}</div>`).join('')
+      + (anyLive ? '' : '<div style="color:var(--ink-muted);font-size:11.5px;">No live trades yet — the LIVE rows fill in as real trades close.</div>')
+    : '<div style="color:var(--ink-muted);font-size:12.5px;">No data</div>';
+}
+
+function renderBottomRow(s, bySrc) {
+  // bySrc = {backtest: summary|null, live: summary|null} when the Source filter is "Backtest + Live", else null
+  const plural = (n, one, many) => n === 1 ? one : many;
+  const streak = x => x ? `<span class="${x.current_streak_type === 'win' ? 'good' : 'bad'}">${x.current_streak} ${x.current_streak_type === 'win' ? plural(x.current_streak, 'win', 'wins') : plural(x.current_streak, 'loss', 'losses')}</span>` : '—';
+  const avg = x => x ? `<span class="num">${rupees(x.avg_win)} / ${rupees(x.avg_loss)}</span>` : '—';
+  const charges = x => x ? `<span class="num">${rupees(x.total_charges)}</span>` : '—';
+  const card = (fn, label) => bySrc
+    ? `<div class="stat-card"><div class="split-line">${SRC_TAG.backtest}<span>${fn(bySrc.backtest)}</span></div><div class="split-line">${SRC_TAG.live}<span>${fn(bySrc.live)}</span></div><div class="k">${label}</div></div>`
+    : `<div class="stat-card"><div class="v">${fn(s)}</div><div class="k">${label}</div></div>`;
+  document.getElementById('bottomRow').innerHTML = card(streak, 'Current streak') + card(avg, 'Avg win / loss per trade') + card(charges, 'Estimated charges (brokerage only)');
 }
 
 function downloadCsv() {
@@ -401,10 +467,16 @@ function renderAll() {
   renderKPIs(s);
   renderEquityCurve(s.equity_curve);
   renderLadder(s);
-  renderCalendar(trades);
-  renderBarPanel('bySegment', byKey(trades, 'symbol'));
-  renderBarPanel('bySetup', byKey(trades, 'setup_tag'));
-  renderBottomRow(s);
+  const split = document.getElementById('fSource').value === 'ALL';   // both kinds are in play: show them side by side
+  renderCalendar(trades, split);
+  if (split) {
+    renderSplitBarPanel('bySegment', trades, 'symbol');
+    renderSplitBarPanel('bySetup', trades, 'setup_tag');
+  } else {
+    renderBarPanel('bySegment', byKey(trades, 'symbol'));
+    renderBarPanel('bySetup', byKey(trades, 'setup_tag'));
+  }
+  renderBottomRow(s, split ? {backtest: summarize(trades.filter(t => srcOf(t) === 'backtest')), live: summarize(trades.filter(t => srcOf(t) === 'live'))} : null);
 
   document.getElementById('footerNote').innerHTML = `
     <b>Rupee figures for backtest trades are estimates</b> (index points × lot size), not real fills — the underlying v1-v7 backtests only ever measured points. Live trades use real recorded fill prices.<br>
