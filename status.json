@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T16:01:31+05:30",
-  "last_tick": "2026-09-19T16:01:31+05:30",
+  "generated_at": "2026-09-19T16:08:25+05:30",
+  "last_tick": "2026-09-19T16:08:25+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.95,
+  "token_hours_remaining": 23.83,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,12 +30,12 @@
     "ip_whitelist": {
       "ok": false,
       "detail": "Dhan reports orders NOT allowed from this machine's current IP (mismatch); Dhan sees this machine on IPv6",
-      "checked_at": "2026-09-19T15:04:37.170104"
+      "checked_at": "2026-09-19T16:08:27.864837"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.8,401, SENSEX ~Rs.188,168) -- add funds",
-      "checked_at": "2026-09-19T16:01:32.984565"
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.10,031, SENSEX ~Rs.21,485) -- add funds",
+      "checked_at": "2026-09-19T16:08:28.584967"
     }
   },
   "pending": [],
