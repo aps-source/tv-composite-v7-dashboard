@@ -483,10 +483,19 @@ function buildChecks(S, D) {
   const fd = (S.checks || {}).funds || {};
   rows.push([fd.ok === true ? 'pass' : fd.ok === false ? 'fail' : 'na', 'Balance covers at least one lot', fd.detail || 'not checked yet']);
 
+  const au = S.auto_trading, autoLabel = 'Automatic ordering armed (orders go out without a prompt)';
+  if (!au) rows.push(['na', autoLabel, 'not reported yet']);
+  else if (!au.enabled) rows.push(['warn', autoLabel, "OFF — proposals wait for a typed 'yes' in confirm_and_place.bat"]);
+  else if (au.blocked) rows.push(['fail', autoLabel, `ON but blocked — ${au.blocked}`]);
+  else if ((au.held || []).length) rows.push(['warn', autoLabel, `ON, ${au.held.length} proposal(s) held — ${au.held.slice(0, 2).join('; ')}`]);
+  else rows.push(['pass', autoLabel, au.placed ? `ON — ${au.placed} order(s) placed on the last tick` : 'ON — pre-checks run before every order']);
+
   const pend = S.pending || [], urgent = pend.filter(p => p.urgent);
   const pendLabel = 'No urgent action awaiting your confirmation';
-  if (urgent.length) rows.push(['fail', pendLabel, `${urgent.length} URGENT (EOD square-off) — run confirm_and_place.bat now`]);
-  else if (pend.length) rows.push(['warn', pendLabel, `${pend.length} proposal(s) waiting — run confirm_and_place.bat to review`]);
+  if (urgent.length) rows.push(['fail', pendLabel, urgent.some(p => p.needs_review)
+    ? `${urgent.length} URGENT — an order's outcome is UNKNOWN: check the Dhan order book now`
+    : `${urgent.length} URGENT (EOD square-off) — run confirm_and_place.bat now`]);
+  else if (pend.length) rows.push(['warn', pendLabel, `${pend.length} proposal(s) waiting — ${au && au.enabled ? 'automatic mode will place them once its pre-checks pass' : 'run confirm_and_place.bat to review'}`]);
   else rows.push(['pass', pendLabel, '']);
 
   const overall = rows.some(r => r[0] === 'fail') ? 'fail' : rows.some(r => r[0] === 'warn') ? 'warn' : 'pass';

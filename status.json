@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T16:43:48+05:30",
-  "last_tick": "2026-09-19T16:43:48+05:30",
+  "generated_at": "2026-09-19T16:50:28+05:30",
+  "last_tick": "2026-09-19T16:50:28+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.24,
+  "token_hours_remaining": 23.13,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -39,8 +39,8 @@
     }
   },
   "auto_trading": {
-    "enabled": false,
-    "ran_at": "2026-09-19T16:43:50",
+    "enabled": true,
+    "ran_at": "2026-09-19T16:50:30",
     "placed": 0,
     "held": [],
     "blocked": null
