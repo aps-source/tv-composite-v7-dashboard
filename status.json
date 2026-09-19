@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T16:08:25+05:30",
-  "last_tick": "2026-09-19T16:08:25+05:30",
+  "generated_at": "2026-09-19T16:43:48+05:30",
+  "last_tick": "2026-09-19T16:43:48+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.83,
+  "token_hours_remaining": 23.24,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -35,8 +35,15 @@
     "funds": {
       "ok": false,
       "detail": "balance too low for even one lot (needs NIFTY ~Rs.10,031, SENSEX ~Rs.21,485) -- add funds",
-      "checked_at": "2026-09-19T16:08:28.584967"
+      "checked_at": "2026-09-19T16:43:50.115964"
     }
+  },
+  "auto_trading": {
+    "enabled": false,
+    "ran_at": "2026-09-19T16:43:50",
+    "placed": 0,
+    "held": [],
+    "blocked": null
   },
   "pending": [],
   "symbols": {
