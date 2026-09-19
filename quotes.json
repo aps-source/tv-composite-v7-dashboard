@@ -1,0 +1,43 @@
+{
+ "version": 1,
+ "as_of": "2026-10-16T15:36:00+05:30",
+ "indices": {
+  "NIFTY": {
+   "label": "NIFTY 50",
+   "ltp": 23146.15,
+   "prev_close": 22997.35,
+   "session_date": "2026-10-16",
+   "last_trade_time": "2026-10-16T15:36:02+05:30",
+   "change": 148.8,
+   "change_pct": 0.65
+  },
+  "BANKNIFTY": {
+   "label": "BANKNIFTY",
+   "ltp": 55844.0,
+   "prev_close": 55810.5,
+   "session_date": "2026-10-16",
+   "last_trade_time": "2026-10-16T15:36:02+05:30",
+   "change": 33.5,
+   "change_pct": 0.06
+  },
+  "SENSEX": {
+   "label": "SENSEX",
+   "ltp": 74729.27,
+   "prev_close": 74315.61,
+   "session_date": "2026-10-16",
+   "last_trade_time": "2026-10-16T15:36:02+05:30",
+   "change": 413.66,
+   "change_pct": 0.56
+  },
+  "VIX": {
+   "label": "INDIA VIX",
+   "ltp": 14.04,
+   "prev_close": 14.03,
+   "session_date": "2026-10-16",
+   "last_trade_time": "2026-10-16T15:36:02+05:30",
+   "change": 0.01,
+   "change_pct": 0.07
+  }
+ },
+ "error": null
+}
