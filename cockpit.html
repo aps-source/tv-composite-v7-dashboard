@@ -113,6 +113,17 @@
   .mini-table td { padding: 5px 4px; border-bottom: 1px solid var(--hairline); }
   .muted { color: var(--ink-muted); font-size: 13px; }
 
+  /* ---- index quotes strip ---- */
+  .q-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; font-size: 12px; color: var(--ink-muted); }
+  .q-head .left { display: flex; align-items: center; gap: 8px; }
+  .q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .qtile { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 12px 16px; }
+  .qname { font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-muted); }
+  .qprice { font-size: 22px; font-weight: 700; margin: 4px 0 2px; }
+  .qchg { font-size: 13px; font-weight: 600; }
+  .qchg.up { color: var(--good); } .qchg.dn { color: var(--critical); } .qchg.flat { color: var(--ink-muted); }
+  .qsub { font-size: 11px; color: var(--ink-muted); margin-top: 3px; }
+
   @media (max-width: 720px) {
     .wrap { padding: 16px 14px 50px; }
     .grid2 { grid-template-columns: 1fr; }
@@ -135,6 +146,7 @@
   </div>
 
   <div class="section-title">Live status</div>
+  <div id="quotesStrip"></div>
   <div id="liveSection"><div class="muted">Loading live status…</div></div>
 
   <div class="section-title">Performance — backtest history + live trades</div>
@@ -594,7 +606,81 @@ function renderLive() {
     + `<div class="live-grid">${syms.map(s => renderLivePanel(s, S, D)).join('')}</div>`;
 }
 
-async function refreshStatus() { STATUS = await fetchJson('status.json'); renderLive(); }
+// ===================== INDEX QUOTES (quotes.json, pushed by quote_tick.py every minute) =====================
+// A static Pages site can never call Dhan itself (that would publish the token), so a local poller pushes quotes to the
+// `quotes` branch. raw.githubusercontent.com caches 5 min and ignores cache-busting query strings, so the page reads
+// GitHub's Contents API first (60 s cache; 60 req/h/IP unauthenticated -> poll every 90 s = 40/h) and falls back to raw.
+let QUOTES = null;
+const QUOTE_ORDER = ['NIFTY', 'BANKNIFTY', 'SENSEX', 'VIX'];
+const QUOTE_POLL_MS = 90000;
+
+function feedRepo() {
+  const h = location.hostname, p = location.pathname.split('/')[1];
+  return h.endsWith('.github.io') && p ? {owner: h.split('.')[0], repo: p} : {owner: 'aps-source', repo: 'tv-composite-v7-dashboard'};
+}
+
+async function fetchQuotes() {
+  const {owner, repo} = feedRepo();
+  try {
+    const r = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/quotes.json?ref=quotes`,
+      {headers: {Accept: 'application/vnd.github.raw+json'}, cache: 'no-store'});
+    if (r.ok) return await r.json();
+  } catch (e) { /* rate-limited or offline -> fall through to raw */ }
+  try {
+    const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/quotes/quotes.json?t=${Date.now()}`, {cache: 'no-store'});
+    if (r.ok) return await r.json();
+  } catch (e) { /* nothing left to try */ }
+  return null;
+}
+
+function fmtPrice(n) { return Number(n).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+function fmtSessionDay(d) {   // 'YYYY-MM-DD' -> 'Fri 18 Sep', independent of locale/timezone (en-IN says "Sept" in some browsers)
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(d));
+  if (!m) return d;
+  const dt = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+  return `${['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][dt.getUTCDay()]} ${+m[3]} ${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][+m[2] - 1]}`;
+}
+function fmtClock(iso) {
+  const t = Date.parse(iso);
+  return isNaN(t) ? '—' : new Date(t).toLocaleTimeString('en-GB', {timeZone: 'Asia/Kolkata', hour12: false});
+}
+
+function renderQuotes() {
+  const el = document.getElementById('quotesStrip'), Q = QUOTES;
+  if (!Q) { el.innerHTML = '<div class="q-head"><span class="left"><span class="dot-live bad"></span> Indices — quote feed unavailable</span></div>'; return; }
+
+  const ageMin = (Date.now() - Date.parse(Q.as_of)) / 60000;
+  const open = marketWindowOpen({weekdays: [1, 2, 3, 4, 5], start: '09:15', end: '15:35'});
+  let dot, label;
+  if (Q.error === 'token_expired') { dot = 'bad'; label = 'quotes paused — Dhan token expired'; }
+  else if (Q.error) { dot = 'bad'; label = 'quote fetch failing'; }
+  else if (open) { if (ageMin <= 4) { dot = 'on'; label = 'live'; } else { dot = 'bad'; label = `stale — last update ${Math.round(ageMin)} min ago`; } }
+  else { dot = 'off'; label = 'market closed'; }
+  const live = dot === 'on';
+
+  const vixGate = STATUS && STATUS.vix ? STATUS.vix.state : null;
+  const tiles = QUOTE_ORDER.map(name => {
+    const q = (Q.indices || {})[name];
+    if (!q) return `<div class="qtile"><div class="qname">${esc(name)}</div><div class="qprice num">—</div><div class="qsub">no data</div></div>`;
+    if (q.error || q.ltp == null) return `<div class="qtile"><div class="qname">${esc(q.label || name)}</div><div class="qprice num">—</div><div class="qsub">${esc(q.error || 'no quote')}</div></div>`;
+    const ch = q.change, up = ch > 0, dn = ch < 0;
+    const invert = name === 'VIX';                       // VIX rising = more fear -> shown red
+    const cls = ch == null ? 'flat' : up ? (invert ? 'dn' : 'up') : dn ? (invert ? 'up' : 'dn') : 'flat';
+    const arrow = up ? '▲' : dn ? '▼' : '';
+    const chg = ch == null ? 'change n/a' : `${arrow} ${fmtPrice(Math.abs(ch))} (${q.change_pct >= 0 ? '+' : ''}${q.change_pct.toFixed(2)}%)`;
+    let sub = live && q.last_trade_time ? `tick ${fmtClock(q.last_trade_time)}` : `${fmtSessionDay(q.session_date)} close`;
+    if (name === 'VIX' && vixGate) sub += ` · strategy gate ${vixGate === 'ok' ? 'OK' : vixGate === 'bad' ? 'BAD (≥20 or +10% d/d)' : 'n/a'}`;
+    return `<div class="qtile"${invert ? ' title="VIX up = more fear, so shown red"' : ''}><div class="qname">${esc(q.label || name)}</div>
+      <div class="qprice num">${fmtPrice(q.ltp)}</div><div class="qchg num ${cls}">${esc(chg)}</div><div class="qsub">${esc(sub)}</div></div>`;
+  }).join('');
+
+  el.innerHTML = `<div class="q-head"><span class="left"><span class="dot-live ${dot}"></span> Indices — ${esc(label)}</span>
+    <span>as of ${esc(fmtClock(Q.as_of))} IST · updates about every minute</span></div><div class="q-grid">${tiles}</div>`;
+}
+
+async function refreshQuotes() { QUOTES = await fetchQuotes(); renderQuotes(); }
+
+async function refreshStatus() { STATUS = await fetchJson('status.json'); renderLive(); renderQuotes(); }
 async function refreshData() { const d = await fetchJson('dashboard_data.json'); if (d) { RAW = d; renderAll(); renderLive(); } }
 
 async function init() {
@@ -602,9 +688,11 @@ async function init() {
   document.getElementById('fSource').addEventListener('change', renderAll);
   document.getElementById('btnCsv').addEventListener('click', downloadCsv);
   RAW = await fetchJson('dashboard_data.json');
+  refreshQuotes();                        // don't block the rest of the page on the quote feed
   await refreshStatus();
   if (RAW) renderAll();
   else document.getElementById('kpiRow').innerHTML = '<div class="kpi"><div class="k">Performance data</div><div class="v">unavailable</div></div>';
+  setInterval(refreshQuotes, QUOTE_POLL_MS);
   setInterval(refreshStatus, 30000);     // GitHub Pages caches ~10 min; the 15-min tick cadence makes that fine
   setInterval(refreshData, 120000);
 }
