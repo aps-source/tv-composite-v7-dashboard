@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T15:02:03+05:30",
-  "last_tick": "2026-09-19T15:02:03+05:30",
+  "generated_at": "2026-09-19T15:04:35+05:30",
+  "last_tick": "2026-09-19T15:04:35+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.99,
+  "token_hours_remaining": 23.94,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -29,8 +29,8 @@
   "checks": {
     "ip_whitelist": {
       "ok": false,
-      "detail": "current public IP is NOT in the Dhan whitelist -- orders will be rejected",
-      "checked_at": "2026-09-19T15:02:08.547965"
+      "detail": "Dhan reports orders NOT allowed from this machine's current IP (mismatch); Dhan sees this machine on IPv6",
+      "checked_at": "2026-09-19T15:04:37.170104"
     }
   },
   "pending": [],
