@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T14:51:15.057942",
+  "generated_at": "2026-09-19T15:38:48.151633",
   "monthly_target_rupees": null,
   "last_order": null,
   "counts": {
@@ -630,7 +630,11 @@
       "exit_time": "2026-01-01T15:15:00",
       "pnl_rupees": -672.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 26150.6,
+      "exit_price": 26140.25,
+      "points": -10.35,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -641,7 +645,11 @@
       "exit_time": "2026-01-02T15:15:00",
       "pnl_rupees": 8294.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 26208.1,
+      "exit_price": 26335.7,
+      "points": 127.6,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -652,7 +660,11 @@
       "exit_time": "2026-01-02T15:15:00",
       "pnl_rupees": 5752.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 85522.69,
+      "exit_price": 85810.29,
+      "points": 287.6,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -663,7 +675,11 @@
       "exit_time": "2026-01-07T14:00:00",
       "pnl_rupees": -415.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 84806.0,
+      "exit_price": 84826.79,
+      "points": -20.79,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -674,7 +690,11 @@
       "exit_time": "2026-01-08T14:00:00",
       "pnl_rupees": 4563.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 84597.98,
+      "exit_price": 84369.81,
+      "points": 228.17,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -685,7 +705,11 @@
       "exit_time": "2026-01-08T15:15:00",
       "pnl_rupees": 2284.2,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 84276.23,
+      "exit_price": 84162.02,
+      "points": 114.21,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -696,7 +720,11 @@
       "exit_time": "2026-01-14T14:45:00",
       "pnl_rupees": -1634.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 83381.01,
+      "exit_price": 83462.73,
+      "points": -81.72,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -707,7 +735,11 @@
       "exit_time": "2026-01-19T13:45:00",
       "pnl_rupees": -2860.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25554.75,
+      "exit_price": 25598.75,
+      "points": -44.0,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -718,7 +750,11 @@
       "exit_time": "2026-01-19T11:45:00",
       "pnl_rupees": 1834.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 83159.41,
+      "exit_price": 83067.71,
+      "points": 91.7,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -729,7 +765,11 @@
       "exit_time": "2026-01-20T11:45:00",
       "pnl_rupees": 906.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25488.35,
+      "exit_price": 25474.4,
+      "points": 13.95,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -740,7 +780,11 @@
       "exit_time": "2026-01-20T11:45:00",
       "pnl_rupees": -566.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 82949.11,
+      "exit_price": 82977.44,
+      "points": -28.33,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -751,7 +795,11 @@
       "exit_time": "2026-01-20T15:15:00",
       "pnl_rupees": 12232.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 82765.37,
+      "exit_price": 82153.74,
+      "points": 611.63,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -762,7 +810,11 @@
       "exit_time": "2026-01-20T15:15:00",
       "pnl_rupees": 7722.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25344.15,
+      "exit_price": 25225.35,
+      "points": 118.8,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -773,7 +825,11 @@
       "exit_time": "2026-01-23T14:45:00",
       "pnl_rupees": 7053.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 82034.03,
+      "exit_price": 81681.38,
+      "points": 352.65,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -784,7 +840,11 @@
       "exit_time": "2026-02-09T15:15:00",
       "pnl_rupees": 341.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25858.05,
+      "exit_price": 25863.3,
+      "points": 5.25,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -795,7 +855,11 @@
       "exit_time": "2026-02-10T13:30:00",
       "pnl_rupees": -1443.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25949.4,
+      "exit_price": 25927.2,
+      "points": -22.2,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -806,7 +870,11 @@
       "exit_time": "2026-02-10T11:30:00",
       "pnl_rupees": 545.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 84337.02,
+      "exit_price": 84364.27,
+      "points": 27.25,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -817,7 +885,11 @@
       "exit_time": "2026-02-24T15:00:00",
       "pnl_rupees": -802.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25408.85,
+      "exit_price": 25421.2,
+      "points": -12.35,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -828,7 +900,11 @@
       "exit_time": "2026-02-26T14:00:00",
       "pnl_rupees": 622.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 82171.86,
+      "exit_price": 82140.74,
+      "points": 31.12,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -839,7 +915,11 @@
       "exit_time": "2026-02-27T13:15:00",
       "pnl_rupees": 4147.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 25364.55,
+      "exit_price": 25300.75,
+      "points": 63.8,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -850,7 +930,11 @@
       "exit_time": "2026-02-27T13:30:00",
       "pnl_rupees": 4030.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 81870.34,
+      "exit_price": 81668.82,
+      "points": 201.52,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -861,7 +945,11 @@
       "exit_time": "2026-03-06T15:15:00",
       "pnl_rupees": 854.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24482.55,
+      "exit_price": 24469.4,
+      "points": 13.15,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -872,7 +960,11 @@
       "exit_time": "2026-03-11T15:15:00",
       "pnl_rupees": 5294.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23929.65,
+      "exit_price": 23848.2,
+      "points": 81.45,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -883,7 +975,11 @@
       "exit_time": "2026-03-19T15:15:00",
       "pnl_rupees": 7336.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 74871.1,
+      "exit_price": 74504.27,
+      "points": 366.83,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -894,7 +990,11 @@
       "exit_time": "2026-03-19T15:15:00",
       "pnl_rupees": -8697.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 22954.05,
+      "exit_price": 23087.85,
+      "points": -133.8,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -905,7 +1005,11 @@
       "exit_time": "2026-04-17T15:15:00",
       "pnl_rupees": 1719.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24340.45,
+      "exit_price": 24366.9,
+      "points": 26.45,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -916,7 +1020,11 @@
       "exit_time": "2026-04-17T15:15:00",
       "pnl_rupees": 1768.2,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 78433.92,
+      "exit_price": 78522.33,
+      "points": 88.41,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -927,7 +1035,11 @@
       "exit_time": "2026-05-11T15:15:00",
       "pnl_rupees": 3610.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23875.9,
+      "exit_price": 23820.35,
+      "points": 55.55,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -938,7 +1050,11 @@
       "exit_time": "2026-05-12T15:15:00",
       "pnl_rupees": 13503.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23638.3,
+      "exit_price": 23430.55,
+      "points": 207.75,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -949,7 +1065,11 @@
       "exit_time": "2026-05-12T15:15:00",
       "pnl_rupees": 12482.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 75349.43,
+      "exit_price": 74725.29,
+      "points": 624.14,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -960,7 +1080,11 @@
       "exit_time": "2026-05-13T15:15:00",
       "pnl_rupees": 2522.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23467.5,
+      "exit_price": 23428.7,
+      "points": 38.8,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -971,7 +1095,11 @@
       "exit_time": "2026-05-13T15:15:00",
       "pnl_rupees": 2141.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 74775.81,
+      "exit_price": 74668.74,
+      "points": 107.07,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -982,7 +1110,11 @@
       "exit_time": "2026-05-25T15:15:00",
       "pnl_rupees": 968.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24035.0,
+      "exit_price": 24049.9,
+      "points": 14.9,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -993,7 +1125,11 @@
       "exit_time": "2026-05-26T11:15:00",
       "pnl_rupees": -522.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 76476.49,
+      "exit_price": 76450.37,
+      "points": -26.12,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1004,7 +1140,11 @@
       "exit_time": "2026-06-11T15:15:00",
       "pnl_rupees": 754.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23198.15,
+      "exit_price": 23186.55,
+      "points": 11.6,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1015,7 +1155,11 @@
       "exit_time": "2026-06-16T15:15:00",
       "pnl_rupees": 1790.2,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 76737.27,
+      "exit_price": 76826.78,
+      "points": 89.51,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1026,7 +1170,11 @@
       "exit_time": "2026-06-16T15:15:00",
       "pnl_rupees": 383.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23988.05,
+      "exit_price": 23993.95,
+      "points": 5.9,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1037,7 +1185,11 @@
       "exit_time": "2026-06-17T12:00:00",
       "pnl_rupees": -731.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24061.55,
+      "exit_price": 24050.3,
+      "points": -11.25,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1048,7 +1200,11 @@
       "exit_time": "2026-06-17T12:00:00",
       "pnl_rupees": -234.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77051.98,
+      "exit_price": 77040.25,
+      "points": -11.73,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1059,7 +1215,11 @@
       "exit_time": "2026-06-17T15:15:00",
       "pnl_rupees": 2142.2,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77036.28,
+      "exit_price": 77143.39,
+      "points": 107.11,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1070,7 +1230,11 @@
       "exit_time": "2026-06-17T15:15:00",
       "pnl_rupees": 328.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24076.9,
+      "exit_price": 24081.95,
+      "points": 5.05,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1081,7 +1245,11 @@
       "exit_time": "2026-06-18T15:15:00",
       "pnl_rupees": 3346.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77278.95,
+      "exit_price": 77446.28,
+      "points": 167.33,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1092,7 +1260,11 @@
       "exit_time": "2026-06-23T10:30:00",
       "pnl_rupees": -640.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24115.5,
+      "exit_price": 24105.65,
+      "points": -9.85,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1103,7 +1275,11 @@
       "exit_time": "2026-07-01T15:15:00",
       "pnl_rupees": -3100.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24035.65,
+      "exit_price": 23987.95,
+      "points": -47.7,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1114,7 +1290,11 @@
       "exit_time": "2026-07-02T11:15:00",
       "pnl_rupees": -1582.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24111.65,
+      "exit_price": 24087.3,
+      "points": -24.35,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1125,7 +1305,11 @@
       "exit_time": "2026-07-02T11:15:00",
       "pnl_rupees": -1881.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77285.38,
+      "exit_price": 77191.29,
+      "points": -94.09,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1136,7 +1320,11 @@
       "exit_time": "2026-07-06T13:45:00",
       "pnl_rupees": 3682.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24352.5,
+      "exit_price": 24409.15,
+      "points": 56.65,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1147,7 +1335,11 @@
       "exit_time": "2026-07-06T14:00:00",
       "pnl_rupees": -3155.2,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 78372.37,
+      "exit_price": 78214.61,
+      "points": -157.76,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1158,7 +1350,11 @@
       "exit_time": "2026-07-17T13:30:00",
       "pnl_rupees": 594.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77881.18,
+      "exit_price": 77910.91,
+      "points": 29.73,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1169,7 +1365,11 @@
       "exit_time": "2026-07-21T09:45:00",
       "pnl_rupees": -1192.75,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24247.75,
+      "exit_price": 24229.4,
+      "points": -18.35,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1180,7 +1380,11 @@
       "exit_time": "2026-07-23T15:15:00",
       "pnl_rupees": -1115.2,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 76322.18,
+      "exit_price": 76377.94,
+      "points": -55.76,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1191,7 +1395,11 @@
       "exit_time": "2026-07-24T11:30:00",
       "pnl_rupees": -1657.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23656.7,
+      "exit_price": 23682.2,
+      "points": -25.5,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1202,7 +1410,11 @@
       "exit_time": "2026-07-30T13:15:00",
       "pnl_rupees": -2757.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77865.82,
+      "exit_price": 77727.95,
+      "points": -137.87,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1213,7 +1425,11 @@
       "exit_time": "2026-08-06T13:00:00",
       "pnl_rupees": -1723.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 78865.0,
+      "exit_price": 78778.85,
+      "points": -86.15,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1224,7 +1440,11 @@
       "exit_time": "2026-08-06T14:45:00",
       "pnl_rupees": -1809.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 78874.45,
+      "exit_price": 78784.0,
+      "points": -90.45,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1235,7 +1455,11 @@
       "exit_time": "2026-08-13T15:15:00",
       "pnl_rupees": -3341.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24344.45,
+      "exit_price": 24395.85,
+      "points": -51.4,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1246,7 +1470,11 @@
       "exit_time": "2026-08-14T11:45:00",
       "pnl_rupees": -1157.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24309.1,
+      "exit_price": 24326.9,
+      "points": -17.8,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1257,7 +1485,11 @@
       "exit_time": "2026-08-17T12:00:00",
       "pnl_rupees": 2294.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24306.05,
+      "exit_price": 24270.75,
+      "points": 35.3,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1268,7 +1500,11 @@
       "exit_time": "2026-08-17T12:00:00",
       "pnl_rupees": -2485.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77486.25,
+      "exit_price": 77610.53,
+      "points": -124.28,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1279,7 +1515,11 @@
       "exit_time": "2026-08-18T12:00:00",
       "pnl_rupees": 754.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24224.55,
+      "exit_price": 24212.95,
+      "points": 11.6,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1290,7 +1530,11 @@
       "exit_time": "2026-08-18T12:00:00",
       "pnl_rupees": -1888.6,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77307.92,
+      "exit_price": 77402.35,
+      "points": -94.43,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1301,7 +1545,11 @@
       "exit_time": "2026-08-19T14:45:00",
       "pnl_rupees": 2837.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24096.75,
+      "exit_price": 24053.1,
+      "points": 43.65,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1312,7 +1560,11 @@
       "exit_time": "2026-08-19T14:45:00",
       "pnl_rupees": 2908.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 77067.55,
+      "exit_price": 76922.13,
+      "points": 145.42,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1323,7 +1575,11 @@
       "exit_time": "2026-08-31T11:45:00",
       "pnl_rupees": -1355.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24043.05,
+      "exit_price": 24063.9,
+      "points": -20.85,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1334,7 +1590,11 @@
       "exit_time": "2026-08-31T11:45:00",
       "pnl_rupees": -691.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 76952.98,
+      "exit_price": 76987.57,
+      "points": -34.59,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1345,7 +1605,11 @@
       "exit_time": "2026-08-31T14:45:00",
       "pnl_rupees": -3445.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 24022.2,
+      "exit_price": 24075.2,
+      "points": -53.0,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1356,7 +1620,11 @@
       "exit_time": "2026-09-01T15:15:00",
       "pnl_rupees": -6100.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23961.95,
+      "exit_price": 24055.8,
+      "points": -93.85,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1367,7 +1635,11 @@
       "exit_time": "2026-09-02T12:15:00",
       "pnl_rupees": -1372.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 76261.55,
+      "exit_price": 76330.19,
+      "points": -68.64,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1378,7 +1650,11 @@
       "exit_time": "2026-09-07T13:45:00",
       "pnl_rupees": 3484.0,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23828.65,
+      "exit_price": 23775.05,
+      "points": 53.6,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1389,7 +1665,11 @@
       "exit_time": "2026-09-07T13:45:00",
       "pnl_rupees": 4103.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 76310.68,
+      "exit_price": 76105.49,
+      "points": 205.19,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1400,7 +1680,11 @@
       "exit_time": "2026-09-08T14:15:00",
       "pnl_rupees": 1202.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23672.5,
+      "exit_price": 23654.0,
+      "points": 18.5,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1411,7 +1695,11 @@
       "exit_time": "2026-09-08T14:15:00",
       "pnl_rupees": 1682.4,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 75725.97,
+      "exit_price": 75641.85,
+      "points": 84.12,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1422,7 +1710,11 @@
       "exit_time": "2026-09-08T15:15:00",
       "pnl_rupees": 848.25,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23648.15,
+      "exit_price": 23635.1,
+      "points": 13.05,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1433,7 +1725,11 @@
       "exit_time": "2026-09-08T15:15:00",
       "pnl_rupees": 887.8,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 75621.97,
+      "exit_price": 75577.58,
+      "points": 44.39,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1444,7 +1740,11 @@
       "exit_time": "2026-09-09T12:30:00",
       "pnl_rupees": -5024.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23488.85,
+      "exit_price": 23566.15,
+      "points": -77.3,
+      "price_kind": "index"
     },
     {
       "source": "backtest",
@@ -1455,7 +1755,11 @@
       "exit_time": "2026-09-15T15:15:00",
       "pnl_rupees": 3659.5,
       "pnl_is_estimate": true,
-      "charges_rupees": 40.0
+      "charges_rupees": 40.0,
+      "entry_price": 23174.9,
+      "exit_price": 23118.6,
+      "points": 56.3,
+      "price_kind": "index"
     }
   ],
   "notes": {

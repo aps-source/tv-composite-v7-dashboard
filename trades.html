@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day-wise Trades &amp; G/L — TV Composite v7</title>
+<style>
+  :root {
+    --page: #0A0E10; --surface: #12181B; --surface-2: #171F23;
+    --ink: #EAF0F2; --ink-2: #9FB0B8; --ink-muted: #6B7A82;
+    --hairline: #232C31; --hairline-strong: #303B41;
+    --good: #3ecf8e; --critical: #ef5a5a; --warn: #E0A458; --accent: #8f86ea;
+    --call: #3987E5; --put: #ff8a5b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 22px 20px 50px; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px 24px; flex-wrap: wrap; margin-bottom: 16px; }
+  h1 { font-size: 21px; margin: 0; letter-spacing: -0.01em; }
+  .sub { color: var(--ink-muted); font-size: 13px; margin-top: 3px; max-width: 640px; line-height: 1.5; }
+  a.back { color: var(--accent); text-decoration: none; font-size: 13.5px; font-weight: 600; border: 1px solid var(--hairline-strong); border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
+  a.back:hover { border-color: var(--accent); }
+
+  .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+  .card h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin: 0 0 12px; font-weight: 600; }
+  .num { font-variant-numeric: tabular-nums; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+  .pos { color: var(--good); } .neg { color: var(--critical); }
+
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+  .fg { display: flex; flex-direction: column; }
+  .fg label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); margin-bottom: 4px; }
+  select, button { background: var(--surface-2); color: var(--ink); border: 1px solid var(--hairline-strong); border-radius: 8px; padding: 7px 10px; font-size: 13px; font-family: inherit; cursor: pointer; }
+  button:hover, select:hover { border-color: var(--ink-muted); }
+  .spacer { flex: 1; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+  .stat { text-align: center; }
+  .stat .v { font-size: 20px; font-weight: 700; }
+  .stat .k { font-size: 10.5px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 3px; }
+
+  .month-head { display: flex; justify-content: space-between; align-items: baseline; margin: 22px 2px 8px; }
+  .month-head .m { font-size: 15px; font-weight: 700; }
+  .month-head .meta { font-size: 12px; color: var(--ink-muted); margin-left: 10px; font-weight: 400; }
+  .month-head .mp { font-size: 15px; font-weight: 700; }
+
+  details.day { background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; margin-bottom: 10px; }
+  details.day > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; }
+  details.day > summary::-webkit-details-marker { display: none; }
+  details.day > summary::before { content: "▸"; color: var(--ink-muted); margin-right: 8px; font-size: 12px; transition: transform .12s; display: inline-block; }
+  details.day[open] > summary::before { transform: rotate(90deg); }
+  .day-l { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; flex: 1; }
+  .day-date { font-size: 14.5px; font-weight: 700; }
+  .day-meta { font-size: 12px; color: var(--ink-muted); }
+  .day-pnl { font-size: 16px; font-weight: 700; }
+  .tbl-wrap { overflow-x: auto; padding: 0 18px 14px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { text-align: left; color: var(--ink-muted); font-weight: 600; padding: 6px 6px; border-bottom: 1px solid var(--hairline-strong); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+  td { padding: 7px 6px; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+  td.r, th.r { text-align: right; }
+  .side { font-weight: 700; } .side.LONG { color: var(--call); } .side.SHORT { color: var(--put); }
+  .src { font-size: 10px; font-weight: 700; letter-spacing: 0.05em; padding: 2px 6px; border-radius: 5px; border: 1px solid var(--hairline-strong); color: var(--ink-muted); cursor: help; }
+  .src.live { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, transparent); }
+  .empty { color: var(--ink-muted); text-align: center; padding: 34px 4px; font-size: 14px; }
+  footer { font-size: 11.5px; color: var(--ink-muted); line-height: 1.7; margin-top: 22px; border-top: 1px solid var(--hairline); padding-top: 14px; }
+  footer b { color: var(--ink-2); }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 16px 12px 40px; }
+    .spacer { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Day-wise Trades &amp; G/L</h1>
+    <div class="sub">Every trade grouped by the day it closed, with that day's gain / loss. Backtest history (Jan–Sep 2026, estimated) plus real confirmed live trades — NIFTY 50 + SENSEX.</div>
+  </div>
+  <a class="back" href="cockpit.html">&larr; Back to dashboard</a>
+</header>
+
+<div class="card">
+  <h2>Filters</h2>
+  <div class="filters">
+    <div class="fg"><label for="f-source">Source</label>
+      <select id="f-source"><option value="">Backtest + Live</option><option value="backtest">Backtest only</option><option value="live">Live only</option></select></div>
+    <div class="fg"><label for="f-month">Month</label><select id="f-month"><option value="">All months</option></select></div>
+    <div class="fg"><label for="f-symbol">Symbol</label><select id="f-symbol"><option value="">All symbols</option></select></div>
+    <div class="fg"><label for="f-dir">Side</label>
+      <select id="f-dir"><option value="">All sides</option><option value="LONG">LONG (call)</option><option value="SHORT">SHORT (put)</option></select></div>
+    <div class="fg"><label for="f-result">Result</label>
+      <select id="f-result"><option value="">Gain or loss</option><option value="gain">Gain only</option><option value="loss">Loss only</option></select></div>
+    <button id="f-clear">Clear</button>
+    <div class="spacer"></div>
+    <button id="btn-expand">Expand all</button>
+    <button id="btn-collapse">Collapse all</button>
+    <button id="btn-csv">⬇ CSV</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Overall (filtered)</h2>
+  <div class="stats" id="overall"></div>
+</div>
+
+<div id="days-root"><div class="empty">Loading…</div></div>
+
+<footer id="foot"></footer>
+
+</div>
+
+<script>
+let RAW = null;
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const MON3 = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c])); }
+function rupees(n, sign) {
+  const v = Number(n) || 0;
+  return (v < 0 ? '-' : v > 0 && sign ? '+' : '') + 'Rs.' + Math.abs(v).toLocaleString('en-IN', {maximumFractionDigits: 0});
+}
+function px(n) { return n == null ? '—' : Number(n).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+function cls(v) { return v > 0 ? 'pos' : v < 0 ? 'neg' : ''; }
+// locale-independent date labels (en-IN renders "Sept" in some browsers)
+function dayLabel(d) { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d); if (!m) return d; const dt = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])); return `${DOW[dt.getUTCDay()]} ${+m[3]} ${MON3[+m[2] - 1]} ${m[1]}`; }
+function monthLabel(k) { const m = /^(\d{4})-(\d{2})$/.exec(k); return m ? `${MONTHS[+m[2] - 1]} ${m[1]}` : k; }
+const tod = iso => String(iso || '').slice(11, 16) || '—';
+
+function filters() {
+  const g = id => document.getElementById(id).value;
+  return {source: g('f-source'), month: g('f-month'), symbol: g('f-symbol'), dir: g('f-dir'), result: g('f-result')};
+}
+function matches(t, f) {
+  const day = String(t.exit_time).slice(0, 10);
+  if (f.source && t.source !== f.source) return false;
+  if (f.month && day.slice(0, 7) !== f.month) return false;
+  if (f.symbol && t.symbol !== f.symbol) return false;
+  if (f.dir && t.direction !== f.dir) return false;
+  if (f.result === 'gain' && !(t.pnl_rupees > 0)) return false;
+  if (f.result === 'loss' && !(t.pnl_rupees < 0)) return false;
+  return true;
+}
+
+function fillOptions() {
+  const set = (id, first, values, label) => {
+    const el = document.getElementById(id), prev = el.value;
+    el.innerHTML = `<option value="">${first}</option>` + values.map(v => `<option value="${esc(v)}">${esc(label ? label(v) : v)}</option>`).join('');
+    if (values.includes(prev)) el.value = prev;
+  };
+  const trades = RAW.trades || [];
+  set('f-month', 'All months', [...new Set(trades.map(t => String(t.exit_time).slice(0, 7)))].sort().reverse(), monthLabel);
+  set('f-symbol', 'All symbols', [...new Set(trades.map(t => t.symbol))].sort());
+}
+
+function groupDays(trades) {
+  const byDay = {};
+  trades.forEach(t => { (byDay[String(t.exit_time).slice(0, 10)] ||= []).push(t); });
+  return Object.keys(byDay).sort().reverse().map(date => {
+    const ts = byDay[date].slice().sort((a, b) => String(a.entry_time).localeCompare(String(b.entry_time)));
+    const pnl = ts.reduce((a, t) => a + t.pnl_rupees, 0);
+    return {date, trades: ts, pnl, wins: ts.filter(t => t.pnl_rupees > 0).length};
+  });
+}
+
+function tradeRow(t) {
+  const side = t.direction + (t.option_type ? ' ' + t.option_type + (t.strike != null ? ' ' + t.strike : '') : '');
+  const live = t.source === 'live';
+  const tip = live ? 'Live — real confirmed trade: prices are option premiums, P&L is from the recorded fills.'
+                   : 'Backtest — prices are the INDEX level; P&L is an estimate (index points × lot size), not a real fill.';
+  return `<tr><td class="num">${esc(tod(t.entry_time))}</td><td class="num">${esc(tod(t.exit_time))}</td><td>${esc(t.symbol)}</td>
+    <td><span class="side ${esc(t.direction)}">${esc(side)}</span></td>
+    <td class="num r">${px(t.entry_price)}</td><td class="num r">${px(t.exit_price)}</td><td>${esc(t.setup_tag)}</td>
+    <td class="num r ${cls(t.pnl_rupees)}">${rupees(t.pnl_rupees, true)}</td>
+    <td><span class="src ${live ? 'live' : ''}" title="${esc(tip)}">${live ? 'LIVE' : 'BT'}</span></td></tr>`;
+}
+
+function render() {
+  if (!RAW) return;
+  const f = filters();
+  const trades = (RAW.trades || []).filter(t => matches(t, f));
+  const days = groupDays(trades);
+  const total = trades.reduce((a, t) => a + t.pnl_rupees, 0);
+  const wins = trades.filter(t => t.pnl_rupees > 0).length;
+  const green = days.filter(d => d.pnl > 0).length, red = days.filter(d => d.pnl < 0).length;
+  const best = days.length ? days.reduce((a, d) => d.pnl > a.pnl ? d : a) : null;
+  const worst = days.length ? days.reduce((a, d) => d.pnl < a.pnl ? d : a) : null;
+
+  document.getElementById('overall').innerHTML = trades.length ? `
+    <div class="stat"><div class="v num">${trades.length}</div><div class="k">Trades</div></div>
+    <div class="stat"><div class="v num ${cls(total)}">${rupees(total, true)}</div><div class="k">Net G/L</div></div>
+    <div class="stat"><div class="v num">${(wins / trades.length * 100).toFixed(1)}%</div><div class="k">Win rate</div></div>
+    <div class="stat"><div class="v num">${days.length}</div><div class="k">Days traded</div></div>
+    <div class="stat"><div class="v num"><span class="pos">${green}</span> / <span class="neg">${red}</span></div><div class="k">Green / red days</div></div>
+    <div class="stat"><div class="v num pos">${rupees(best.pnl, true)}</div><div class="k">Best day · ${esc(dayLabel(best.date).slice(0, -5))}</div></div>
+    <div class="stat"><div class="v num neg">${rupees(worst.pnl, true)}</div><div class="k">Worst day · ${esc(dayLabel(worst.date).slice(0, -5))}</div></div>`
+    : '<div class="empty" style="grid-column:1/-1;padding:8px;">No trades match the current filters</div>';
+
+  const root = document.getElementById('days-root');
+  if (!days.length) { root.innerHTML = '<div class="card"><div class="empty">No trades match the current filters</div></div>'; return; }
+
+  const openAll = days.length <= 8;
+  let html = '', curMonth = null;
+  days.forEach((d, i) => {
+    const m = d.date.slice(0, 7);
+    if (m !== curMonth) {
+      curMonth = m;
+      const md = days.filter(x => x.date.slice(0, 7) === m);
+      const mp = md.reduce((a, x) => a + x.pnl, 0), mt = md.reduce((a, x) => a + x.trades.length, 0);
+      html += `<div class="month-head"><div><span class="m">${esc(monthLabel(m))}</span><span class="meta">${mt} trade${mt === 1 ? '' : 's'} · ${md.length} day${md.length === 1 ? '' : 's'}</span></div><div class="mp num ${cls(mp)}">${rupees(mp, true)}</div></div>`;
+    }
+    html += `<details class="day"${openAll || i < 5 ? ' open' : ''}><summary>
+      <div class="day-l"><span class="day-date">${esc(dayLabel(d.date))}</span>
+      <span class="day-meta">${d.trades.length} trade${d.trades.length === 1 ? '' : 's'} · ${d.wins}W / ${d.trades.length - d.wins}L</span></div>
+      <div class="day-pnl num ${cls(d.pnl)}">${rupees(d.pnl, true)}</div></summary>
+      <div class="tbl-wrap"><table><thead><tr><th>Entry</th><th>Exit</th><th>Symbol</th><th>Side</th><th class="r">Entry px</th><th class="r">Exit px</th><th>Exit reason</th><th class="r">G/L</th><th></th></tr></thead>
+      <tbody>${d.trades.map(tradeRow).join('')}</tbody></table></div></details>`;
+  });
+  root.innerHTML = html;
+
+  const c = RAW.counts || {};
+  document.getElementById('foot').innerHTML = `<b>BT</b> rows are backtest: prices are the <b>index level</b> and G/L is an <b>estimate</b> (index points × lot size — NIFTY 65, SENSEX 20), not a real fill; the backtest never modeled option premiums or full charges. <b>LIVE</b> rows are real confirmed trades: prices are option premiums and G/L comes from the recorded fills. Gross of charges. ${c.backtest != null ? `${c.backtest} backtest + ${c.live} live trades in this data set.` : ''}${RAW.generated_at ? ` Data as of ${esc(String(RAW.generated_at).slice(0, 16).replace('T', ' '))}.` : ''}`;
+}
+
+function downloadCsv() {
+  const f = filters(), rows = (RAW.trades || []).filter(t => matches(t, f));
+  const cols = ['source', 'symbol', 'direction', 'option_type', 'strike', 'setup_tag', 'entry_time', 'exit_time', 'entry_price', 'exit_price', 'price_kind', 'pnl_rupees', 'pnl_is_estimate'];
+  const cell = v => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const blob = new Blob([[cols.join(',')].concat(rows.map(t => cols.map(c => cell(t[c])).join(','))).join('\n')], {type: 'text/csv'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'tv_composite_v7_daywise_trades.csv'; a.click();
+}
+
+async function load() {
+  try {
+    const r = await fetch('dashboard_data.json?t=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    RAW = await r.json();
+    fillOptions();
+    render();
+  } catch (e) {
+    if (!RAW) document.getElementById('days-root').innerHTML = `<div class="card"><div class="empty">Could not load dashboard_data.json (${esc(e.message)})</div></div>`;
+  }
+}
+
+function init() {
+  ['f-source', 'f-month', 'f-symbol', 'f-dir', 'f-result'].forEach(id => document.getElementById(id).addEventListener('change', render));
+  document.getElementById('f-clear').addEventListener('click', () => { ['f-source', 'f-month', 'f-symbol', 'f-dir', 'f-result'].forEach(id => document.getElementById(id).value = ''); render(); });
+  document.getElementById('btn-expand').addEventListener('click', () => document.querySelectorAll('details.day').forEach(d => d.open = true));
+  document.getElementById('btn-collapse').addEventListener('click', () => document.querySelectorAll('details.day').forEach(d => d.open = false));
+  document.getElementById('btn-csv').addEventListener('click', downloadCsv);
+  load();
+  setInterval(load, 120000);
+}
+init();
+</script>
+</body>
+</html>
