@@ -480,6 +480,9 @@ function buildChecks(S, D) {
   const ip = (S.checks || {}).ip_whitelist || {};
   rows.push([ip.ok === true ? 'pass' : ip.ok === false ? 'fail' : 'na', "IP whitelist matches this machine's current public IP", ip.detail || 'not checked yet']);
 
+  const fd = (S.checks || {}).funds || {};
+  rows.push([fd.ok === true ? 'pass' : fd.ok === false ? 'fail' : 'na', 'Balance covers at least one lot', fd.detail || 'not checked yet']);
+
   const pend = S.pending || [], urgent = pend.filter(p => p.urgent);
   const pendLabel = 'No urgent action awaiting your confirmation';
   if (urgent.length) rows.push(['fail', pendLabel, `${urgent.length} URGENT (EOD square-off) — run confirm_and_place.bat now`]);
