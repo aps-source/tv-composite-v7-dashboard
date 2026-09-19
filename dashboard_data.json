@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-09-18T11:02:22.861080",
+  "generated_at": "2026-09-19T14:51:15.057942",
   "monthly_target_rupees": null,
+  "last_order": null,
   "counts": {
     "backtest": 76,
     "live": 0,

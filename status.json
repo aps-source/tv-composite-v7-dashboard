@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "generated_at": "2026-09-19T14:50:59+05:30",
+  "last_tick": "2026-09-19T14:50:59+05:30",
+  "engine_status": "token_invalid",
+  "last_error": "Dhan access token expired -- paste a fresh token (update_all_dhan_tokens.bat)",
+  "token_hours_remaining": -5.69,
+  "paused": false,
+  "tick_window": {
+    "start": "09:31",
+    "end": "15:50",
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "interval_min": 15
+  },
+  "trading_day": "2026-09-19",
+  "daily_loss_cap_rupees": 3000.0,
+  "combined_daily_pnl_rupees": 0.0,
+  "vix": {
+    "state": "unavailable",
+    "prev_close": null,
+    "prev_change_pct": null
+  },
+  "checks": {
+    "ip_whitelist": {
+      "ok": null,
+      "detail": "cannot verify -- Dhan token expired",
+      "checked_at": "2026-09-19T14:50:59.830011"
+    }
+  },
+  "pending": [],
+  "symbols": {
+    "NIFTY": {
+      "position": null,
+      "day_losses": 0,
+      "snapshot": null,
+      "error": null
+    },
+    "SENSEX": {
+      "position": null,
+      "day_losses": 0,
+      "snapshot": null,
+      "error": null
+    }
+  }
+}

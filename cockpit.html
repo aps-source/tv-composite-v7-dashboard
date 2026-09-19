@@ -68,6 +68,57 @@
 
   .footer-note { font-size: 11px; color: var(--ink-muted); margin-top: 26px; line-height: 1.7; border-top: 1px solid var(--hairline); padding-top: 14px; }
   .footer-note b { color: var(--ink-2); }
+
+  /* ---- live status ---- */
+  .section-title { font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-muted); margin: 24px 0 10px; }
+  .chk-card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 16px 20px 8px; margin-bottom: 16px; }
+  .chk-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .chk-head h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-muted); margin: 0; font-weight: 600; }
+  .pill { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; padding: 4px 11px; border-radius: 999px; }
+  .pill.fail { background: color-mix(in srgb, var(--critical) 18%, var(--surface)); color: var(--critical); }
+  .pill.warn { background: color-mix(in srgb, var(--warn) 18%, var(--surface)); color: var(--warn); }
+  .pill.pass { background: color-mix(in srgb, var(--good) 15%, var(--surface)); color: var(--good); }
+  .chk-row { display: flex; gap: 10px; align-items: baseline; padding: 9px 0; border-top: 1px solid var(--hairline); font-size: 13.5px; flex-wrap: wrap; }
+  .chk-ic { width: 16px; font-weight: 700; flex-shrink: 0; text-align: center; }
+  .chk-ic.pass { color: var(--good); } .chk-ic.fail { color: var(--critical); } .chk-ic.warn { color: var(--warn); } .chk-ic.na { color: var(--ink-muted); }
+  .chk-detail { color: var(--ink-muted); font-size: 11.5px; }
+
+  .decide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 14px; margin-bottom: 16px; }
+  .decide { background: #000; border: 1px solid var(--hairline-strong); border-radius: 12px; padding: 16px 18px 14px; }
+  .decide .sym { font-size: 12px; font-weight: 700; letter-spacing: 0.07em; color: var(--ink-2); }
+  .decide .big { font-size: 26px; font-weight: 800; margin: 4px 0 2px; line-height: 1.15; }
+  .decide .big.long { color: var(--good); } .decide .big.short { color: #ff8a5b; } .decide .big.blocked { color: var(--warn); }
+  .decide .big.exit { color: var(--critical); } .decide .big.idle { color: #fff; } .decide .big.hold { color: var(--accent); }
+  .decide .sub { font-size: 12px; color: var(--ink-muted); }
+  .side-label { font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-muted); margin: 12px 0 5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 11px; padding: 3px 8px; border-radius: 6px; border: 1px solid var(--hairline-strong); color: var(--ink-muted); }
+  .chip.met { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, transparent); background: color-mix(in srgb, var(--good) 10%, transparent); }
+  .chip.gate { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, transparent); background: color-mix(in srgb, var(--warn) 10%, transparent); }
+
+  .live-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; margin-bottom: 8px; }
+  .livehead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; font-size: 12.5px; color: var(--ink-muted); }
+  .livehead .name { font-size: 16px; font-weight: 700; color: var(--ink); }
+  .dot-live { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .dot-live.on { background: var(--good); box-shadow: 0 0 0 3px color-mix(in srgb, var(--good) 25%, transparent); }
+  .dot-live.off { background: var(--ink-muted); } .dot-live.bad { background: var(--critical); }
+  .mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; }
+  .mini-stats .v { font-size: 19px; font-weight: 700; } .mini-stats .k { font-size: 10.5px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 3px; }
+  .pos-side { font-size: 18px; font-weight: 700; } .pos-side.LONG { color: var(--good); } .pos-side.SHORT { color: #ff8a5b; }
+  .pos-meta { font-size: 12px; color: var(--ink-2); margin-top: 4px; }
+  .live-card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  .live-card h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-muted); margin: 0 0 10px; font-weight: 600; }
+  .mini-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .mini-table th { text-align: left; color: var(--ink-muted); font-weight: 600; padding: 5px 4px; border-bottom: 1px solid var(--hairline-strong); }
+  .mini-table td { padding: 5px 4px; border-bottom: 1px solid var(--hairline); }
+  .muted { color: var(--ink-muted); font-size: 13px; }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 16px 14px 50px; }
+    .grid2 { grid-template-columns: 1fr; }
+    .topbar { flex-direction: column; gap: 10px; }
+    .decide-grid, .live-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -83,6 +134,10 @@
     </div>
   </div>
 
+  <div class="section-title">Live status</div>
+  <div id="liveSection"><div class="muted">Loading live status…</div></div>
+
+  <div class="section-title">Performance — backtest history + live trades</div>
   <div class="filters">
     <select id="fSegment"><option value="ALL">All segments</option><option value="NIFTY">NIFTY</option><option value="SENSEX">SENSEX</option></select>
     <select id="fSource"><option value="ALL">Backtest + Live</option><option value="backtest">Backtest only</option><option value="live">Live only</option></select>
@@ -342,13 +397,216 @@ function renderAll() {
     Data from <code>dashboard_data.json</code>, built by <code>build_dashboard_data.py</code>. Not live-computed — refresh by re-running that script.`;
 }
 
+// ===================== LIVE STATUS (status.json, written by live_tick.py every 15 min) =====================
+let STATUS = null;
+const DISPLAY = {NIFTY: 'NIFTY 50', SENSEX: 'SENSEX'};
+const STATUS_LABEL = {running: 'Running', paused: 'Paused (PAUSE.flag) — no new entries', token_invalid: 'Token invalid', rate_limited: 'Dhan rate-limited', data_error: 'Data error'};
+
+async function fetchJson(url) {
+  try {
+    const r = await fetch(url + '?t=' + Date.now(), {cache: 'no-store'});
+    return r.ok ? await r.json() : null;
+  } catch (e) { return null; }
+}
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+}
+
+function istNow() { return new Date(new Date().toLocaleString('en-US', {timeZone: 'Asia/Kolkata'})); }
+function istToday() { const d = istNow(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; }
+
+function marketWindowOpen(tw) {
+  const d = istNow();
+  if (!tw.weekdays.includes(d.getDay())) return false;
+  const mins = d.getHours() * 60 + d.getMinutes();
+  const [sh, sm] = tw.start.split(':').map(Number), [eh, em] = tw.end.split(':').map(Number);
+  return mins >= sh * 60 + sm && mins <= eh * 60 + em;
+}
+
+function fmtIst(iso) {
+  const t = Date.parse(iso);
+  if (isNaN(t)) return '—';
+  return new Date(t).toLocaleString('en-IN', {timeZone: 'Asia/Kolkata', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', hour12: false}) + ' IST';
+}
+
+function buildChecks(S, D) {
+  if (!S) return {rows: [['fail', 'Scanner heartbeat', 'status.json not published yet — has the scanner run?']], overall: 'fail'};
+  const rows = [], now = Date.now();
+  const open = marketWindowOpen(S.tick_window);
+  const ageMin = (now - Date.parse(S.last_tick)) / 60000;
+  const allTicked = Object.values(S.symbols || {}).length > 0 && Object.values(S.symbols).every(s => s.snapshot && !s.error);
+  const tickLabel = 'Both instruments ticking (last tick ≤ 20 min old)';
+  if (open) {
+    if (ageMin > 20) rows.push(['fail', tickLabel, `last tick ${Math.round(ageMin)} min ago — is the scheduled task firing?`]);
+    else if (!allTicked) rows.push(['fail', tickLabel, 'ticked, but an instrument had no data on the last tick']);
+    else rows.push(['pass', tickLabel, `last tick ${Math.max(0, Math.round(ageMin))} min ago`]);
+  } else {
+    rows.push(['na', tickLabel, `market closed — scanner idle (last tick ${fmtIst(S.last_tick)})`]);
+  }
+
+  rows.push([S.paused ? 'warn' : 'pass', 'Not paused (PAUSE.flag absent)', S.paused ? 'PAUSE.flag present — no new entries are being proposed' : '']);
+
+  const hoursLeft = S.token_hours_remaining == null ? null : S.token_hours_remaining - (now - Date.parse(S.generated_at)) / 3600000;
+  const engOk = S.engine_status === 'running' || S.engine_status === 'paused';
+  let st, detail;
+  if (!engOk) { st = 'fail'; detail = (STATUS_LABEL[S.engine_status] || S.engine_status) + (S.last_error ? ' — ' + S.last_error : ''); }
+  else if (hoursLeft != null && hoursLeft <= 0) { st = 'fail'; detail = `Dhan token expired ${Math.abs(hoursLeft).toFixed(1)} h ago — paste a fresh one`; }
+  else if (hoursLeft != null && hoursLeft < 2) { st = 'warn'; detail = `Dhan token expires in ${hoursLeft.toFixed(1)} h`; }
+  else { st = 'pass'; detail = hoursLeft != null ? `token valid ~${Math.floor(hoursLeft)} h more` : ''; }
+  rows.push([st, 'No token/config/data errors (engine_status = running)', detail]);
+
+  const lo = D && D.last_order;
+  const orderLabel = 'No error on most recent order attempt';
+  if (!lo) rows.push(['na', orderLabel, 'no orders attempted yet']);
+  else if (lo.ok) rows.push(['pass', orderLabel, `${lo.kind} ${lo.symbol} accepted (${fmtIst(String(lo.time).slice(0, 19) + '+05:30')})`]);
+  else rows.push(['fail', orderLabel, `${lo.kind} ${lo.symbol} REJECTED — ${lo.detail}`]);
+
+  const ip = (S.checks || {}).ip_whitelist || {};
+  rows.push([ip.ok === true ? 'pass' : ip.ok === false ? 'fail' : 'na', "IP whitelist matches this machine's current public IP", ip.detail || 'not checked yet']);
+
+  const pend = S.pending || [], urgent = pend.filter(p => p.urgent);
+  const pendLabel = 'No urgent action awaiting your confirmation';
+  if (urgent.length) rows.push(['fail', pendLabel, `${urgent.length} URGENT (EOD square-off) — run confirm_and_place.bat now`]);
+  else if (pend.length) rows.push(['warn', pendLabel, `${pend.length} proposal(s) waiting — run confirm_and_place.bat to review`]);
+  else rows.push(['pass', pendLabel, '']);
+
+  const overall = rows.some(r => r[0] === 'fail') ? 'fail' : rows.some(r => r[0] === 'warn') ? 'warn' : 'pass';
+  return {rows, overall};
+}
+
+function renderChecklist(S, D) {
+  const {rows, overall} = buildChecks(S, D);
+  const pill = {fail: ['fail', 'NEEDS ATTENTION'], warn: ['warn', 'REVIEW'], pass: ['pass', 'ALL GOOD']}[overall];
+  const icons = {pass: '✓', fail: '✕', warn: '!', na: '–'};
+  return `<div class="chk-card">
+    <div class="chk-head"><h3>Start-of-day checklist</h3><span class="pill ${pill[0]}">${pill[1]}</span></div>
+    ${rows.map(([st, label, detail]) => `<div class="chk-row"><span class="chk-ic ${st}">${icons[st]}</span><span>${esc(label)}</span>${detail ? `<span class="chk-detail">(${esc(detail)})</span>` : ''}</div>`).join('')}
+  </div>`;
+}
+
+function condChips(side, conds, snap) {
+  const items = [
+    ['hourly_stack', 'Hourly EMA stack'],
+    ['m15_stack', '15m EMA stack'],
+    ['above_cpr', side === 'long' ? 'Above daily CPR TC' : 'Below daily CPR TC'],
+    ['volume', 'Volume > 1.2× avg' + (snap.volume_ratio != null ? ` (${snap.volume_ratio}×)` : '')],
+    ['candle', 'Strong candle' + (snap.body_ratio != null ? ` (body ${Math.round(snap.body_ratio * 100)}%)` : '')],
+  ];
+  return items.map(([k, label]) => `<span class="chip ${conds[k] ? 'met' : ''}">${conds[k] ? '✓' : '✕'} ${esc(label)}</span>`).join('');
+}
+
+function decisionView(snap) {
+  if (!snap) return {cls: 'idle', big: 'DECISION PENDING', sub: 'No data yet'};
+  const d = snap.decision, dir = d.direction;
+  switch (d.code) {
+    case 'SIGNAL_LONG': case 'SIGNAL_SHORT': return {cls: dir === 'LONG' ? 'long' : 'short', big: `${dir} SIGNAL`, sub: d.detail};
+    case 'ENTRY_PROPOSED': return {cls: dir === 'LONG' ? 'long' : 'short', big: `${dir} ENTRY PROPOSED`, sub: 'Awaiting your confirmation — run confirm_and_place.bat'};
+    case 'IN_POSITION': return {cls: 'hold', big: 'IN POSITION', sub: d.detail};
+    case 'EXIT_PROPOSED': return {cls: 'exit', big: 'EXIT PROPOSED', sub: d.detail};
+    case 'BLOCKED': return {cls: 'blocked', big: 'BLOCKED', sub: 'No new entries right now'};
+    default: return {cls: 'idle', big: 'NO SIGNAL', sub: 'Waiting for all entry conditions to line up'};
+  }
+}
+
+function renderDecision(sym, S) {
+  const sd = S.symbols[sym] || {}, snap = sd.snapshot, v = decisionView(snap);
+  let body = '';
+  if (snap) {
+    const nLong = Object.values(snap.long.conditions).filter(Boolean).length;
+    const nShort = Object.values(snap.short.conditions).filter(Boolean).length;
+    const gates = snap.blocked_reasons || [];
+    const fmt = n => n == null ? '—' : Number(n).toLocaleString('en-IN', {maximumFractionDigits: 2});
+    body = `<div class="sub" style="margin-top:6px;">Bar ${esc(String(snap.bar_time).slice(11, 16))} · close ${fmt(snap.close)}${snap.ema5_15m != null ? ' · 15m EMA5 ' + fmt(snap.ema5_15m) : ''}</div>
+      <div class="side-label">Long entry — ${nLong}/5 conditions</div><div class="chips">${condChips('long', snap.long.conditions, snap)}</div>
+      <div class="side-label">Short entry — ${nShort}/5 conditions</div><div class="chips">${condChips('short', snap.short.conditions, snap)}</div>
+      <div class="side-label">Entry gates</div>
+      <div class="chips">${gates.length ? gates.map(g => `<span class="chip gate">⛔ ${esc(g)}</span>`).join('') : '<span class="chip met">✓ All gates open</span>'}</div>`;
+  } else if (sd.error) {
+    body = `<div class="sub" style="margin-top:8px;">${esc(sd.error)}</div>`;
+  }
+  return `<div class="decide"><div class="sym">${esc(DISPLAY[sym] || sym)}</div><div class="big ${v.cls}">${esc(v.big)}</div><div class="sub">${esc(v.sub)}</div>${body}</div>`;
+}
+
+function renderGatesStrip(S) {
+  const vix = S.vix || {}, fresh = S.trading_day === istToday();
+  const vixTxt = vix.prev_close != null
+    ? `prior close ${vix.prev_close}${vix.prev_change_pct != null ? ` (${vix.prev_change_pct >= 0 ? '+' : ''}${vix.prev_change_pct}% d/d)` : ''}`
+    : 'no prior-day value';
+  const vixChip = vix.state === 'ok' ? `<span class="chip met">✓ India VIX regime OK — ${esc(vixTxt)}</span>`
+    : vix.state === 'bad' ? `<span class="chip gate">⛔ India VIX regime BAD — ${esc(vixTxt)} (≥ 20 or &gt; +10% d/d)</span>`
+    : `<span class="chip gate">⛔ India VIX data unavailable — entries blocked</span>`;
+  const pnl = fresh ? (S.combined_daily_pnl_rupees || 0) : 0, cap = S.daily_loss_cap_rupees;
+  const capHit = pnl <= -cap;
+  return `<div class="live-card"><h4>Today's gates</h4><div class="chips">
+    ${vixChip}
+    <span class="chip ${capHit ? 'gate' : 'met'}">${capHit ? '⛔' : '✓'} Combined P&amp;L ${rupees(pnl, true)} · daily loss cap ${rupees(cap)}</span>
+    <span class="chip ${S.paused ? 'gate' : 'met'}">${S.paused ? '⛔ PAUSE.flag present' : '✓ Not paused'}</span>
+  </div></div>`;
+}
+
+function renderLivePanel(sym, S, D) {
+  const sd = S.symbols[sym] || {};
+  const open = marketWindowOpen(S.tick_window);
+  const ageMin = (Date.now() - Date.parse(S.last_tick)) / 60000;
+  let dot = 'off', dotLabel = 'idle';
+  if (open) { if (ageMin <= 20 && !sd.error) { dot = 'on'; dotLabel = 'live'; } else { dot = 'bad'; dotLabel = 'stale'; } }
+
+  const p = sd.position;
+  const posHtml = p
+    ? `<div class="pos-side ${esc(p.direction)}">${esc(p.direction)} ${esc(p.option_type)} ${esc(p.strike)}</div>
+       <div class="pos-meta">Entered ${p.entry_time ? esc(String(p.entry_time).slice(11, 16)) : '—'} @ Rs.${Number(p.entry_ltp || 0).toFixed(2)} · qty ${esc(p.quantity)} · bars held ${p.bars_held || 0} · stop streak ${p.stop_streak || 0}/2 · expiry ${esc(p.expiry)}</div>`
+    : '<span class="muted">No open position</span>';
+
+  const today = istToday();
+  const live = ((D && D.trades) || []).filter(t => t.source === 'live' && t.symbol === sym && String(t.exit_time).slice(0, 10) === today);
+  const pnl = live.reduce((a, t) => a + t.pnl_rupees, 0);
+  const losses = S.trading_day === today ? (sd.day_losses || 0) : 0;
+  const rows = live.slice().reverse().map(t => `<tr>
+      <td class="num">${esc(String(t.exit_time).slice(11, 16))}</td><td>${esc(t.direction)}${t.option_type ? ' ' + esc(t.option_type) : ''}</td>
+      <td class="num">${t.strike != null ? esc(t.strike) : '—'}</td><td>${esc(t.setup_tag)}</td>
+      <td class="num ${t.pnl_rupees >= 0 ? 'pos' : 'neg'}">${rupees(t.pnl_rupees, true)}</td></tr>`).join('')
+    || '<tr><td colspan="5" class="muted">No trades yet today</td></tr>';
+
+  return `<div>
+    <div class="livehead"><span class="name">${esc(DISPLAY[sym] || sym)}</span>
+      <span><span class="dot-live ${dot}"></span> ${dotLabel}</span>
+      <span>Last tick: ${fmtIst(S.last_tick)}</span>
+      <span>Status: <b style="color:var(--ink)">${esc(STATUS_LABEL[S.engine_status] || S.engine_status)}</b></span></div>
+    <div class="live-card"><h4>Position</h4>${posHtml}</div>
+    <div class="live-card"><h4>Today</h4><div class="mini-stats">
+      <div><div class="v num">${live.length}</div><div class="k">Trades today</div></div>
+      <div><div class="v num ${pnl >= 0 ? 'pos' : 'neg'}">${rupees(pnl, true)}</div><div class="k">Realized P&amp;L</div></div>
+      <div><div class="v num ${losses >= 2 ? 'neg' : ''}">${losses}/2</div><div class="k">Loss breaker</div></div>
+    </div></div>
+    <div class="live-card"><h4>Trade log (today)</h4>
+      <table class="mini-table"><thead><tr><th>Time</th><th>Side</th><th>Strike</th><th>Exit</th><th>P&amp;L</th></tr></thead><tbody>${rows}</tbody></table></div>
+  </div>`;
+}
+
+function renderLive() {
+  const el = document.getElementById('liveSection'), S = STATUS, D = RAW;
+  if (!S) { el.innerHTML = renderChecklist(null, D) + '<div class="muted">Live status unavailable — the scanner has not published a status.json yet.</div>'; return; }
+  const syms = Object.keys(S.symbols || {});
+  el.innerHTML = renderChecklist(S, D)
+    + `<div class="decide-grid">${syms.map(s => renderDecision(s, S)).join('')}</div>`
+    + renderGatesStrip(S)
+    + `<div class="live-grid">${syms.map(s => renderLivePanel(s, S, D)).join('')}</div>`;
+}
+
+async function refreshStatus() { STATUS = await fetchJson('status.json'); renderLive(); }
+async function refreshData() { const d = await fetchJson('dashboard_data.json'); if (d) { RAW = d; renderAll(); renderLive(); } }
+
 async function init() {
-  const res = await fetch('dashboard_data.json?t=' + Date.now());
-  RAW = await res.json();
   document.getElementById('fSegment').addEventListener('change', renderAll);
   document.getElementById('fSource').addEventListener('change', renderAll);
   document.getElementById('btnCsv').addEventListener('click', downloadCsv);
-  renderAll();
+  RAW = await fetchJson('dashboard_data.json');
+  await refreshStatus();
+  if (RAW) renderAll();
+  else document.getElementById('kpiRow').innerHTML = '<div class="kpi"><div class="k">Performance data</div><div class="v">unavailable</div></div>';
+  setInterval(refreshStatus, 30000);     // GitHub Pages caches ~10 min; the 15-min tick cadence makes that fine
+  setInterval(refreshData, 120000);
 }
 
 init();
