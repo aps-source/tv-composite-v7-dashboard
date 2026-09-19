@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T14:50:59+05:30",
-  "last_tick": "2026-09-19T14:50:59+05:30",
-  "engine_status": "token_invalid",
-  "last_error": "Dhan access token expired -- paste a fresh token (update_all_dhan_tokens.bat)",
-  "token_hours_remaining": -5.69,
+  "generated_at": "2026-09-19T15:02:03+05:30",
+  "last_tick": "2026-09-19T15:02:03+05:30",
+  "engine_status": "running",
+  "last_error": null,
+  "token_hours_remaining": 23.99,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -22,15 +22,15 @@
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "unavailable",
+    "state": "ok",
     "prev_close": null,
     "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
-      "ok": null,
-      "detail": "cannot verify -- Dhan token expired",
-      "checked_at": "2026-09-19T14:50:59.830011"
+      "ok": false,
+      "detail": "current public IP is NOT in the Dhan whitelist -- orders will be rejected",
+      "checked_at": "2026-09-19T15:02:08.547965"
     }
   },
   "pending": [],
@@ -38,13 +38,83 @@
     "NIFTY": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
+      "snapshot": {
+        "bar_time": "2026-09-18T15:15:00",
+        "close": 23346.4,
+        "ema5_15m": 23351.1,
+        "volume_ratio": 0.0,
+        "body_ratio": 1.0,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
+          "Entry hour blocked (15:xx)"
+        ]
+      },
       "error": null
     },
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
+      "snapshot": {
+        "bar_time": "2026-09-18T15:15:00",
+        "close": 74294.96,
+        "ema5_15m": 74505.86,
+        "volume_ratio": 0.91,
+        "body_ratio": 1.0,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
+          "Entry hour blocked (15:xx)"
+        ]
+      },
       "error": null
     }
   }
