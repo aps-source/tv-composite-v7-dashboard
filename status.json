@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T17:30:26+05:30",
-  "last_tick": "2026-09-19T17:30:26+05:30",
+  "generated_at": "2026-09-21T08:40:53+05:30",
+  "last_tick": "2026-09-21T08:40:53+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.47,
+  "token_hours_remaining": 23.92,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,7 +18,7 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-09-19",
+  "trading_day": "2026-09-21",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
@@ -28,19 +28,19 @@
   },
   "checks": {
     "ip_whitelist": {
-      "ok": false,
-      "detail": "Dhan reports orders NOT allowed from this machine's current IP (mismatch); Dhan sees this machine on IPv6",
-      "checked_at": "2026-09-19T17:30:28.414926"
+      "ok": true,
+      "detail": "Dhan reports orders allowed from this machine's current IP",
+      "checked_at": "2026-09-21T08:40:55.364128"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.10,031, SENSEX ~Rs.21,485) -- add funds",
-      "checked_at": "2026-09-19T17:30:29.163109"
+      "ok": true,
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.20,914, SENSEX ~Rs.23,293)",
+      "checked_at": "2026-09-21T08:40:56.084711"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-19T17:30:28",
+    "ran_at": "2026-09-21T08:40:55",
     "placed": 0,
     "held": [],
     "blocked": null
