@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-21T11:01:04+05:30",
-  "last_tick": "2026-09-21T11:01:04+05:30",
-  "engine_status": "running",
-  "last_error": null,
-  "token_hours_remaining": 21.59,
+  "generated_at": "2026-09-21T11:16:03+05:30",
+  "last_tick": "2026-09-21T11:16:03+05:30",
+  "engine_status": "data_error",
+  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000001E2529457F0>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
+  "token_hours_remaining": 21.34,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -22,9 +22,9 @@
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "ok",
-    "prev_close": 11.38,
-    "prev_change_pct": -7.4
+    "state": "unavailable",
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-21T11:01:08",
+    "ran_at": "2026-09-21T11:16:17",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,52 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-21T11:00:00",
-        "close": 23386.4,
-        "ema5_15m": 23382.26,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.06,
-        "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
-          "direction": null
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "blocked_reasons": []
-      },
-      "error": null
-    },
-    "SENSEX": {
-      "position": null,
-      "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-09-21T11:00:00",
-        "close": 74702.5,
-        "ema5_15m": 74687.53,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.12,
+        "bar_time": "2026-09-21T11:15:00",
+        "close": 23394.9,
+        "ema5_15m": 23388.93,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.44,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "detail": "India VIX data unavailable -- entries blocked (fail-closed)",
           "direction": null
         },
         "long": {
@@ -120,7 +82,48 @@
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
+          "India VIX data unavailable -- entries blocked (fail-closed)"
+        ]
+      },
+      "error": null
+    },
+    "SENSEX": {
+      "position": null,
+      "day_losses": 0,
+      "snapshot": {
+        "bar_time": "2026-09-21T11:15:00",
+        "close": 74741.91,
+        "ema5_15m": 74715.43,
+        "volume_ratio": 2.65,
+        "body_ratio": 0.5,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX data unavailable -- entries blocked (fail-closed)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": true,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": true,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "India VIX data unavailable -- entries blocked (fail-closed)"
         ]
       },
       "error": null
