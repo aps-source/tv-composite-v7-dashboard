@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-21T12:01:02+05:30",
-  "last_tick": "2026-09-21T12:01:02+05:30",
+  "generated_at": "2026-09-21T12:16:02+05:30",
+  "last_tick": "2026-09-21T12:16:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.59,
+  "token_hours_remaining": 20.34,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.20,610, SENSEX ~Rs.13,358) -- add funds",
-      "checked_at": "2026-09-21T11:46:05.112370"
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.19,677, SENSEX ~Rs.13,956) -- add funds",
+      "checked_at": "2026-09-21T12:16:13.242840"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-21T12:01:12",
+    "ran_at": "2026-09-21T12:16:13",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-21T12:00:00",
-        "close": 23429.35,
-        "ema5_15m": 23413.05,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.4,
+        "bar_time": "2026-09-21T12:15:00",
+        "close": 23418.75,
+        "ema5_15m": 23412.36,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.22,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-21T12:00:00",
-        "close": 74864.94,
-        "ema5_15m": 74804.48,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.41,
+        "bar_time": "2026-09-21T12:15:00",
+        "close": 74826.64,
+        "ema5_15m": 74799.89,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.46,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
