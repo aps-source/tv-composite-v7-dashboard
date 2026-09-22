@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-22T12:16:03+05:30",
-  "last_tick": "2026-09-22T12:16:03+05:30",
+  "generated_at": "2026-09-22T12:31:02+05:30",
+  "last_tick": "2026-09-22T12:31:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.79,
+  "token_hours_remaining": 20.54,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-22T12:16:07",
+    "ran_at": "2026-09-22T12:31:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-22T12:15:00",
-        "close": 23351.2,
-        "ema5_15m": 23365.96,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.81,
+        "bar_time": "2026-09-22T12:30:00",
+        "close": 23353.85,
+        "ema5_15m": 23363.48,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.76,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-22T12:15:00",
-        "close": 74615.03,
-        "ema5_15m": 74668.32,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.87,
+        "bar_time": "2026-09-22T12:30:00",
+        "close": 74632.45,
+        "ema5_15m": 74663.16,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.59,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
