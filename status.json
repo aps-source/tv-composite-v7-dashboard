@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-22T12:01:02+05:30",
-  "last_tick": "2026-09-22T12:01:02+05:30",
+  "generated_at": "2026-09-22T12:16:03+05:30",
+  "last_tick": "2026-09-22T12:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.04,
+  "token_hours_remaining": 20.79,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-09-22T12:01:05.055535"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.18,204, SENSEX ~Rs.18,972)",
-      "checked_at": "2026-09-22T11:31:07.510437"
+      "ok": false,
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.17,235, SENSEX ~Rs.19,360) -- add funds",
+      "checked_at": "2026-09-22T12:16:07.716351"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-22T12:01:05",
+    "ran_at": "2026-09-22T12:16:07",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-22T12:00:00",
-        "close": 23355.75,
-        "ema5_15m": 23372.95,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.77,
+        "bar_time": "2026-09-22T12:15:00",
+        "close": 23351.2,
+        "ema5_15m": 23365.96,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.81,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-22T12:00:00",
-        "close": 74646.05,
-        "ema5_15m": 74697.57,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.46,
+        "bar_time": "2026-09-22T12:15:00",
+        "close": 74615.03,
+        "ema5_15m": 74668.32,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.87,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -115,7 +115,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
