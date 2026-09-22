@@ -797,6 +797,15 @@ async function init() {
   setInterval(refreshQuotes, QUOTE_POLL_MS);
   setInterval(refreshStatus, 30000);     // GitHub Pages caches ~10 min; the 15-min tick cadence makes that fine
   setInterval(refreshData, 120000);
+
+  // Browsers throttle or fully pause setInterval timers on a backgrounded tab (and stop them across a laptop
+  // sleep/lock), so a tab left open can silently freeze on a stale status/quotes render -- the checklist then shows
+  // a real-looking but wrong "last tick N min ago" for however long the tab sat backgrounded, not a real gap in the
+  // scanner. Re-fetch immediately the moment the tab is looked at again, instead of waiting out the rest of the
+  // interval (which may itself have been paused and take even longer to catch up).
+  const onWake = () => { if (document.visibilityState !== 'hidden') { refreshStatus(); refreshQuotes(); } };
+  document.addEventListener('visibilitychange', onWake);
+  window.addEventListener('focus', onWake);
 }
 
 init();
