@@ -534,13 +534,28 @@ function buildChecks(S, D) {
 
   rows.push([S.paused ? 'warn' : 'pass', 'Not paused (PAUSE.flag absent)', S.paused ? 'PAUSE.flag present — no new entries are being proposed' : '']);
 
-  const hoursLeft = S.token_hours_remaining == null ? null : S.token_hours_remaining - (now - Date.parse(S.generated_at)) / 3600000;
+  // Extrapolating token life forward from the last tick's generated_at is only trustworthy while ticks are still
+  // fresh (same guard as the heartbeat row above) -- the token can be silently renewed by a completely separate
+  // task between ticks (every 2h, see renew_dhan_tokens.py), so once the last tick is stale the extrapolation can
+  // swing arbitrarily negative and falsely claim "expired" for a token that was renewed hours ago. Seen live
+  // 2026-09-22 09:29: last tick 15:46 the day before, real token fine (renewed 09:03), page said "expired 0.9h ago".
+  const heartbeatFresh = open && ageMin <= 20 && allTicked;
   const engOk = S.engine_status === 'running' || S.engine_status === 'paused';
   let st, detail;
   if (!engOk) { st = 'fail'; detail = (STATUS_LABEL[S.engine_status] || S.engine_status) + (S.last_error ? ' — ' + S.last_error : ''); }
-  else if (hoursLeft != null && hoursLeft <= 0) { st = 'fail'; detail = `Dhan token expired ${Math.abs(hoursLeft).toFixed(1)} h ago — paste a fresh one`; }
-  else if (hoursLeft != null && hoursLeft < 2) { st = 'warn'; detail = `Dhan token expires in ${hoursLeft.toFixed(1)} h`; }
-  else { st = 'pass'; detail = hoursLeft != null ? `token valid ~${Math.floor(hoursLeft)} h more` : ''; }
+  else if (S.token_hours_remaining == null) { st = 'pass'; detail = ''; }
+  else if (heartbeatFresh) {
+    const hoursLeft = S.token_hours_remaining - (now - Date.parse(S.generated_at)) / 3600000;
+    if (hoursLeft <= 0) { st = 'fail'; detail = `Dhan token expired ${Math.abs(hoursLeft).toFixed(1)} h ago — paste a fresh one`; }
+    else if (hoursLeft < 2) { st = 'warn'; detail = `Dhan token expires in ${hoursLeft.toFixed(1)} h`; }
+    else { st = 'pass'; detail = `token valid ~${Math.floor(hoursLeft)} h more`; }
+  } else {
+    // stale tick -- don't guess. Report the last OBSERVED fact (not extrapolated) and wait for the next tick to confirm.
+    st = 'na';
+    detail = S.token_hours_remaining <= 0
+      ? `token had already expired as of the last tick (${fmtIst(S.last_tick)}) — may since have been auto-renewed; confirms on the next tick`
+      : `last known ~${S.token_hours_remaining.toFixed(1)} h as of the last tick (${fmtIst(S.last_tick)}) — confirms on the next tick`;
+  }
   rows.push([st, 'No token/config/data errors (engine_status = running)', detail]);
 
   const lo = D && D.last_order;
