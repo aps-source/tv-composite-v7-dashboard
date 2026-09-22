@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-22T10:31:02+05:30",
-  "last_tick": "2026-09-22T10:31:02+05:30",
+  "generated_at": "2026-09-22T10:46:02+05:30",
+  "last_tick": "2026-09-22T10:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.54,
+  "token_hours_remaining": 22.29,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-09-22T09:31:09.310155"
+      "checked_at": "2026-09-22T10:46:07.285347"
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.16,574, SENSEX ~Rs.18,480)",
-      "checked_at": "2026-09-22T10:16:07.937213"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.18,218, SENSEX ~Rs.19,250)",
+      "checked_at": "2026-09-22T10:46:08.000298"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-22T10:31:05",
+    "ran_at": "2026-09-22T10:46:07",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-22T10:30:00",
-        "close": 23425.8,
-        "ema5_15m": 23440.71,
+        "bar_time": "2026-09-22T10:45:00",
+        "close": 23378.1,
+        "ema5_15m": 23410.26,
         "volume_ratio": 0.07,
-        "body_ratio": 0.81,
+        "body_ratio": 0.42,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -65,7 +65,7 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
@@ -75,9 +75,9 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-22T10:30:00",
-        "close": 74886.73,
-        "ema5_15m": 74929.65,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.68,
+        "bar_time": "2026-09-22T10:45:00",
+        "close": 74712.17,
+        "ema5_15m": 74823.12,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.84,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -105,7 +105,7 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
@@ -115,7 +115,7 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
             "candle": true
           },
