@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-23T11:01:03+05:30",
-  "last_tick": "2026-09-23T11:01:03+05:30",
+  "generated_at": "2026-09-23T11:16:09+05:30",
+  "last_tick": "2026-09-23T11:16:09+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.84,
+  "token_hours_remaining": 21.59,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.15,015, SENSEX ~Rs.18,040)",
-      "checked_at": "2026-09-23T10:46:10.040180"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.14,779, SENSEX ~Rs.18,920)",
+      "checked_at": "2026-09-23T11:16:27.086991"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-23T11:01:05",
+    "ran_at": "2026-09-23T11:16:27",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-23T11:00:00",
-        "close": 23416.55,
-        "ema5_15m": 23404.09,
+        "bar_time": "2026-09-23T11:15:00",
+        "close": 23426.6,
+        "ema5_15m": 23415.9,
         "volume_ratio": 0.04,
-        "body_ratio": 0.04,
+        "body_ratio": 0.95,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -77,7 +77,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-23T11:00:00",
-        "close": 74815.26,
-        "ema5_15m": 74774.65,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.38,
+        "bar_time": "2026-09-23T11:15:00",
+        "close": 74859.06,
+        "ema5_15m": 74819.45,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.87,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -117,7 +117,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
