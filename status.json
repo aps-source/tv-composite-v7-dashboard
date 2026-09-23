@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-23T10:46:04+05:30",
-  "last_tick": "2026-09-23T10:46:04+05:30",
+  "generated_at": "2026-09-23T11:01:03+05:30",
+  "last_tick": "2026-09-23T11:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.09,
+  "token_hours_remaining": 21.84,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-23T10:46:09",
+    "ran_at": "2026-09-23T11:01:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-23T10:45:00",
-        "close": 23417.3,
-        "ema5_15m": 23398.46,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.44,
+        "bar_time": "2026-09-23T11:00:00",
+        "close": 23416.55,
+        "ema5_15m": 23404.09,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.04,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
@@ -82,8 +82,7 @@
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (10:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
@@ -92,14 +91,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-23T10:45:00",
-        "close": 74815.09,
-        "ema5_15m": 74755.48,
+        "bar_time": "2026-09-23T11:00:00",
+        "close": 74815.26,
+        "ema5_15m": 74774.65,
         "volume_ratio": 0.04,
-        "body_ratio": 0.76,
+        "body_ratio": 0.38,
         "decision": {
-          "code": "BLOCKED",
-          "detail": "Entry hour blocked (10:xx)",
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
           "direction": null
         },
         "long": {
@@ -108,7 +107,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -122,9 +121,7 @@
           },
           "all_met": false
         },
-        "blocked_reasons": [
-          "Entry hour blocked (10:xx)"
-        ]
+        "blocked_reasons": []
       },
       "error": null
     }
