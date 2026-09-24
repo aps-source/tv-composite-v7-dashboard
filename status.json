@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-24T12:16:02+05:30",
-  "last_tick": "2026-09-24T12:16:02+05:30",
+  "generated_at": "2026-09-24T12:31:02+05:30",
+  "last_tick": "2026-09-24T12:31:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.61,
+  "token_hours_remaining": 20.36,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-09-24T11:16:07.555158"
+      "checked_at": "2026-09-24T12:31:05.301617"
     },
     "funds": {
       "ok": true,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-24T12:16:07",
+    "ran_at": "2026-09-24T12:31:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-24T12:15:00",
-        "close": 23200.35,
-        "ema5_15m": 23205.49,
+        "bar_time": "2026-09-24T12:30:00",
+        "close": 23189.95,
+        "ema5_15m": 23197.53,
         "volume_ratio": 0.04,
-        "body_ratio": 0.65,
+        "body_ratio": 0.5,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-24T12:15:00",
-        "close": 74057.35,
-        "ema5_15m": 74084.8,
+        "bar_time": "2026-09-24T12:30:00",
+        "close": 74018.44,
+        "ema5_15m": 74053.96,
         "volume_ratio": 0.09,
-        "body_ratio": 0.17,
+        "body_ratio": 0.16,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
