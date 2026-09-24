@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-24T10:01:05+05:30",
-  "last_tick": "2026-09-24T10:01:05+05:30",
+  "generated_at": "2026-09-24T10:16:03+05:30",
+  "last_tick": "2026-09-24T10:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.86,
+  "token_hours_remaining": 22.61,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -28,9 +28,9 @@
   },
   "checks": {
     "ip_whitelist": {
-      "ok": null,
-      "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-09-24T10:01:09.752887"
+      "ok": true,
+      "detail": "Dhan reports orders allowed from this machine's current IP",
+      "checked_at": "2026-09-24T10:16:05.672588"
     },
     "funds": {
       "ok": true,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-24T10:01:09",
+    "ran_at": "2026-09-24T10:16:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-24T10:00:00",
-        "close": 23231.4,
-        "ema5_15m": 23273.02,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.71,
+        "bar_time": "2026-09-24T10:15:00",
+        "close": 23219.75,
+        "ema5_15m": 23252.4,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.13,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-24T10:00:00",
-        "close": 74173.19,
-        "ema5_15m": 74308.31,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.9,
+        "bar_time": "2026-09-24T10:15:00",
+        "close": 74124.73,
+        "ema5_15m": 74237.08,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.49,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -107,7 +107,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
