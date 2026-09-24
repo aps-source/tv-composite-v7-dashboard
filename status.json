@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-24T11:46:06+05:30",
-  "last_tick": "2026-09-24T11:46:06+05:30",
+  "generated_at": "2026-09-24T12:01:04+05:30",
+  "last_tick": "2026-09-24T12:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.11,
+  "token_hours_remaining": 20.86,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.15,594, SENSEX ~Rs.17,087)",
-      "checked_at": "2026-09-24T11:31:06.108145"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.13,421, SENSEX ~Rs.16,843)",
+      "checked_at": "2026-09-24T12:01:09.163753"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-24T11:46:12",
+    "ran_at": "2026-09-24T12:01:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-24T11:45:00",
-        "close": 23210.0,
-        "ema5_15m": 23218.45,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.22,
+        "bar_time": "2026-09-24T12:00:00",
+        "close": 23196.7,
+        "ema5_15m": 23208.39,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.18,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-24T11:45:00",
-        "close": 74124.15,
-        "ema5_15m": 74143.43,
+        "bar_time": "2026-09-24T12:00:00",
+        "close": 74051.04,
+        "ema5_15m": 74097.49,
         "volume_ratio": 0.06,
-        "body_ratio": 0.64,
+        "body_ratio": 0.39,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -105,7 +105,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
