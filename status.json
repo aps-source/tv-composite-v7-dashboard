@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-25T09:46:02+05:30",
-  "last_tick": "2026-09-25T09:46:02+05:30",
+  "generated_at": "2026-09-25T10:01:02+05:30",
+  "last_tick": "2026-09-25T10:01:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.36,
+  "token_hours_remaining": 23.11,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-25T09:46:05",
+    "ran_at": "2026-09-25T10:01:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T09:45:00",
-        "close": 23054.15,
-        "ema5_15m": 23071.07,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.14,
+        "bar_time": "2026-09-25T10:00:00",
+        "close": 23057.0,
+        "ema5_15m": 23067.46,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.33,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx); India VIX regime flagged bad",
           "direction": null
         },
         "long": {
@@ -83,6 +83,7 @@
         },
         "blocked_reasons": [
           "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (10:xx)",
           "India VIX regime flagged bad"
         ]
       },
@@ -92,14 +93,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T09:45:00",
-        "close": 73585.38,
-        "ema5_15m": 73639.6,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.14,
+        "bar_time": "2026-09-25T10:00:00",
+        "close": 73585.99,
+        "ema5_15m": 73624.7,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.92,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx); India VIX regime flagged bad",
           "direction": null
         },
         "long": {
@@ -118,12 +119,13 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
           "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (10:xx)",
           "India VIX regime flagged bad"
         ]
       },
