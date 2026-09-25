@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-25T12:46:03+05:30",
-  "last_tick": "2026-09-25T12:46:03+05:30",
+  "generated_at": "2026-09-25T13:01:02+05:30",
+  "last_tick": "2026-09-25T13:01:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.36,
+  "token_hours_remaining": 20.11,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-09-25T12:31:05.509585"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.12,856, SENSEX ~Rs.16,506) -- add funds",
-      "checked_at": "2026-09-25T12:31:06.401359"
+      "ok": true,
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.13,846, SENSEX ~Rs.18,134)",
+      "checked_at": "2026-09-25T13:01:09.117422"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-25T12:46:06",
+    "ran_at": "2026-09-25T13:01:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T12:45:00",
-        "close": 23055.25,
-        "ema5_15m": 23066.91,
+        "bar_time": "2026-09-25T13:00:00",
+        "close": 23046.75,
+        "ema5_15m": 23056.96,
         "volume_ratio": 0.04,
-        "body_ratio": 0.38,
+        "body_ratio": 0.66,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -92,11 +92,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T12:45:00",
-        "close": 73636.55,
-        "ema5_15m": 73672.31,
-        "volume_ratio": 0.01,
-        "body_ratio": 0.5,
+        "bar_time": "2026-09-25T13:00:00",
+        "close": 73607.67,
+        "ema5_15m": 73639.45,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.76,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
@@ -108,7 +108,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
