@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-25T11:31:04+05:30",
-  "last_tick": "2026-09-25T11:31:04+05:30",
+  "generated_at": "2026-09-25T11:46:04+05:30",
+  "last_tick": "2026-09-25T11:46:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.61,
+  "token_hours_remaining": 21.36,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.13,821, SENSEX ~Rs.17,207) -- add funds",
-      "checked_at": "2026-09-25T11:16:07.831431"
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.13,152, SENSEX ~Rs.16,742) -- add funds",
+      "checked_at": "2026-09-25T11:46:09.408958"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-25T11:31:09",
+    "ran_at": "2026-09-25T11:46:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T11:30:00",
-        "close": 23079.45,
-        "ema5_15m": 23078.71,
+        "bar_time": "2026-09-25T11:45:00",
+        "close": 23083.55,
+        "ema5_15m": 23081.27,
         "volume_ratio": 0.05,
-        "body_ratio": 0.47,
+        "body_ratio": 0.09,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
@@ -92,11 +92,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T11:30:00",
-        "close": 73702.59,
-        "ema5_15m": 73692.34,
+        "bar_time": "2026-09-25T11:45:00",
+        "close": 73720.87,
+        "ema5_15m": 73708.54,
         "volume_ratio": 0.02,
-        "body_ratio": 0.09,
+        "body_ratio": 0.56,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
@@ -106,7 +106,7 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
             "candle": false
           },
@@ -116,7 +116,7 @@
           "conditions": {
             "hourly_stack": true,
             "m15_stack": false,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
