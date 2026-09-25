@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F&amp;O Universe Backtest</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #eceff8; --surface-1: #ffffff; --surface-2: #f3f5fb;
+    --text-primary: #0e1320; --text-secondary: #4f5a74; --text-muted: #76829c;
+    --gridline: #e2e7f1; --border: rgba(14,19,32,0.10);
+    --shadow: 0 1px 2px rgba(14,19,32,0.06), 0 8px 24px rgba(40,50,110,0.08);
+    --brand-a: #4338ca; --brand-b: #7c3aed; --brand-c: #0d9488; --accent: #4f46e5;
+    --nifty: #6d4bd8; --sensex: #0b8f83; --call: #2563eb; --put: #d6336c;
+    --good: #12a150; --warning: #c77d00; --critical: #dc3545;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page: #090c14; --surface-1: #131a29; --surface-2: #1a2336;
+      --text-primary: #eef1f9; --text-secondary: #a0abc4; --text-muted: #7f8aa3;
+      --gridline: #253048; --border: rgba(238,241,249,0.11);
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 10px 28px rgba(0,0,0,0.35);
+      --brand-a: #4f46e5; --brand-b: #8b5cf6; --brand-c: #14b8a6; --accent: #9b8cf3;
+      --nifty: #8a75ec; --sensex: #17a390; --call: #4a8cf0; --put: #e0578a;
+      --good: #2bc85a; --warning: #f2b636; --critical: #f0645f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { font-size: clamp(14px, 0.5vw + 9px, 18px); }
+  body {
+    margin: 0; color: var(--text-primary); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.4;
+    background: radial-gradient(1100px 480px at 8% -8%, color-mix(in srgb, var(--brand-b) 16%, transparent), transparent 70%),
+                radial-gradient(900px 480px at 100% 0%, color-mix(in srgb, var(--brand-c) 14%, transparent), transparent 70%), var(--page);
+    background-attachment: fixed;
+  }
+  .muted { color: var(--text-muted); }
+  .num { font-variant-numeric: tabular-nums; }
+  .pos { color: var(--good); } .neg { color: var(--critical); }
+
+  .hero { background: linear-gradient(115deg, var(--brand-a) 0%, var(--brand-b) 52%, var(--brand-c) 100%); color: #fff;
+          padding: 1.05rem clamp(14px, 2vw, 32px) 0.9rem; box-shadow: 0 6px 26px rgba(67,56,202,0.28); }
+  .hero-inner { max-width: 1500px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 0.9rem; }
+  .logo { width: 2.5rem; height: 2.5rem; border-radius: 0.8rem; background: rgba(255,255,255,0.18); display: grid; place-items: center; font-size: 1.3rem; }
+  h1 { font-size: 1.4rem; margin: 0; font-weight: 800; letter-spacing: -0.015em; }
+  .tag { font-size: 0.84rem; opacity: 0.9; margin-top: 1px; }
+  .hero-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .hero-pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; }
+  a.btn { background: #fff; color: var(--brand-a); text-decoration: none; font-weight: 700; font-size: 0.86rem; padding: 0.42rem 0.95rem; border-radius: 999px; box-shadow: 0 2px 10px rgba(0,0,0,0.18); }
+  details.rules { max-width: 1500px; margin: 0.55rem auto 0; font-size: 0.82rem; }
+  details.rules summary { cursor: pointer; font-weight: 600; width: fit-content; }
+  details.rules p { margin: 0.4rem 0 0; max-width: 1100px; opacity: 0.94; }
+
+  .page { max-width: 1500px; margin: 0 auto; padding: 1.1rem clamp(14px, 2vw, 32px) 2.5rem; }
+  .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 1rem; padding: 1rem 1.15rem; box-shadow: var(--shadow); margin-bottom: 1rem; }
+  .card h3 { margin: 0 0 0.15rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-secondary); }
+  .card .hint { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.7rem; }
+
+  .verdict { border-left: 6px solid var(--kc, var(--warning)); }
+  .verdict .big { font-size: 1.15rem; font-weight: 800; margin-bottom: 0.25rem; }
+  .verdict.bad { --kc: var(--critical); } .verdict.good { --kc: var(--good); } .verdict.warn { --kc: var(--warning); }
+  .verdict ul { margin: 0.35rem 0 0; padding-left: 1.15rem; color: var(--text-secondary); font-size: 0.88rem; }
+
+  .filters { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; margin: 0 0 1rem; }
+  .filters label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-weight: 700; display: flex; flex-direction: column; gap: 3px; }
+  .filters select, .filters input { background: var(--surface-1); border: 1px solid var(--border); color: var(--text-primary); border-radius: 0.6rem; padding: 0.42rem 0.7rem; font-size: 0.86rem; font-family: inherit; }
+  .filters .spacer { flex: 1; }
+  button.csv { background: var(--surface-1); border: 1px solid var(--border); color: var(--text-secondary); border-radius: 0.6rem; padding: 0.45rem 0.85rem; font-size: 0.84rem; cursor: pointer; }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+  .kpi { position: relative; overflow: hidden; background: var(--surface-1); border: 1px solid var(--border); border-radius: 1rem; padding: 0.9rem 1.05rem; box-shadow: var(--shadow); }
+  .kpi::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--kc, var(--accent)); }
+  .kpi .k { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); font-weight: 700; }
+  .kpi .v { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.02em; margin-top: 0.1rem; line-height: 1.15; white-space: nowrap; }
+  .kpi .v.long { font-size: 1.3rem; }
+  .kpi .s { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.15rem; }
+  .kpi.good { --kc: var(--good); } .kpi.bad { --kc: var(--critical); } .kpi.warn { --kc: var(--warning); }
+  .kpi.violet { --kc: var(--nifty); } .kpi.teal { --kc: var(--sensex); } .kpi.blue { --kc: var(--call); }
+
+  .grid2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+  @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+  svg text { font-family: inherit; fill: var(--text-muted); font-size: 10px; }
+
+  .barrow { display: grid; grid-template-columns: 92px 1fr 118px; gap: 8px; align-items: center; font-size: 0.82rem; margin: 5px 0; }
+  .barrow .lbl { color: var(--text-secondary); text-align: right; }
+  .track { position: relative; height: 16px; background: var(--surface-2); border-radius: 6px; overflow: hidden; }
+  .track .mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--gridline); }
+  .track .fill { position: absolute; top: 0; bottom: 0; }
+
+  .refgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .ref { border-radius: 1rem; padding: 0.9rem 1.05rem; color: #fff; }
+  .ref.nifty { background: linear-gradient(135deg, var(--nifty), #4b34a8); } .ref.sensex { background: linear-gradient(135deg, var(--sensex), #076b62); }
+  .ref h4 { margin: 0 0 0.4rem; font-size: 0.95rem; }
+  .ref .row { display: flex; justify-content: space-between; font-size: 0.86rem; padding: 2px 0; opacity: 0.96; }
+
+  .tablewrap { overflow: auto; max-height: 640px; border: 1px solid var(--border); border-radius: 0.8rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.83rem; }
+  thead th { position: sticky; top: 0; background: var(--surface-2); text-align: right; padding: 0.5rem 0.65rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); cursor: pointer; white-space: nowrap; z-index: 1; }
+  thead th:first-child, tbody td:first-child { text-align: left; }
+  tbody td { padding: 0.42rem 0.65rem; text-align: right; border-top: 1px solid var(--gridline); white-space: nowrap; }
+  tbody tr { cursor: pointer; } tbody tr:hover { background: var(--surface-2); }
+  tbody tr.refrow { background: color-mix(in srgb, var(--brand-b) 9%, var(--surface-1)); font-weight: 600; }
+  .flag { color: var(--warning); cursor: help; } .star { color: var(--good); font-weight: 800; }
+  #drill { display: none; } #drill.open { display: block; }
+  .pill { display: inline-block; font-size: 0.72rem; padding: 1px 8px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-secondary); margin-right: 4px; }
+  .foot { font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.55; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand"><div class="logo">▦</div>
+      <div><h1>F&amp;O Universe — TV Composite v7 backtest</h1>
+      <div class="tag" id="tagline">Loading…</div></div></div>
+    <div class="hero-right"><span class="hero-pill" id="pillData">—</span><span class="hero-pill">Backtest only — not traded live</span>
+      <a class="btn" href="./">← Live cockpit</a></div>
+  </div>
+  <details class="rules"><summary>Rules &amp; caveats</summary>
+    <p><b>Same rules as the live engine, nothing re-tuned for stocks:</b> Hourly EMA5&gt;26&gt;50 stack + 15m stack + Daily CPR TC, entry bar volume &gt; 1.2× its 20-bar average with a strong candle; blocked on wide-CPR days, 10:xx and 15:xx bars, after 2 losses/day per symbol and on high/spiking India VIX; exit after 2 closes beyond the 15m EMA5 or at end of day.
+    P&amp;L is in <b>underlying</b> terms (% of price, and points × lot) — a proxy for an ITM option, not real premium. The rules were fitted on NIFTY/SENSEX only, so the stocks are out-of-sample by symbol, but they share the same calendar months.
+    Dhan's equity history ends at 15:14 on recent sessions (24 bars), so end-of-day exits there use the 15:00 bar's close (~15:15).</p></details>
+</header>
+
+<main class="page">
+  <div class="card verdict" id="verdict"></div>
+
+  <div class="filters">
+    <label>Cost per side<select id="fCost"></select></label>
+    <label>Direction<select id="fDir"><option value="0">Long + Short</option><option value="1">Long only</option><option value="-1">Short only</option></select></label>
+    <label>Month<select id="fMonth"><option value="ALL">Whole period</option></select></label>
+    <label>Search symbol<input id="fSearch" type="search" placeholder="e.g. RELI"></label>
+    <div class="spacer"></div>
+    <button class="csv" id="btnCsv">⬇ CSV (leaderboard)</button>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid2">
+    <div class="card"><h3>Pooled equity curve</h3><div class="hint" id="eqHint">Cumulative net % per trade across all stocks, in exit order</div><div id="equity"></div></div>
+    <div class="card"><h3>Where symbols land</h3><div class="hint" id="histHint">Histogram of each stock's total net %</div><div id="hist"></div></div>
+  </div>
+
+  <div class="grid3">
+    <div class="card"><h3>By month</h3><div class="hint">Mean net % per trade · trades</div><div id="byMonth"></div></div>
+    <div class="card"><h3>By side &amp; exit</h3><div class="hint">Mean net % per trade · trades</div><div id="bySide"></div></div>
+    <div class="card"><h3>By entry hour</h3><div class="hint">Bar start hour · mean net % per trade · trades</div><div id="byHour"></div></div>
+  </div>
+
+  <div class="card"><h3>Reference — the two indices on the same engine</h3><div class="hint">NIFTY and SENSEX, same rules and data pipeline; index option friction is far tighter than stock options'.</div><div class="refgrid" id="refs"></div></div>
+
+  <div class="card" id="drill"></div>
+
+  <div class="card"><h3>Symbol leaderboard</h3>
+    <div class="hint" id="lbHint">Click a header to sort, a row for its trades. Per-symbol samples are small (≈50 trades), so rankings are mostly noise — see the verdict above.</div>
+    <div class="tablewrap"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+  </div>
+
+  <div class="card"><h3>Data notes</h3><div id="notes" class="hint"></div></div>
+  <div class="foot" id="foot"></div>
+</main>
+
+<script>
+const REASON = {E: 'End of day', S: 'EMA5 stop'};
+const COLS = [
+  ['sym', 'Symbol'], ['lot', 'Lot'], ['n', 'Trades'], ['winRate', 'Win %'], ['pf', 'PF'], ['avg', 'Avg %/trade'],
+  ['total', 'Total %'], ['rupees', '₹ / lot total'], ['dd', 'Max DD %'], ['best', 'Best %'], ['worst', 'Worst %'], ['sig', ''],
+];
+let DATA = null, SORT = {key: 'total', dir: -1}, DRILL = null;
+
+// ------------------------------------------------------------------ pure calculation core
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c])); }
+function fmt(n, d = 2) { return n == null || !isFinite(n) ? '—' : Number(n).toFixed(d); }
+function sgn(n, d = 2) { return n == null || !isFinite(n) ? '—' : (n > 0 ? '+' : '') + Number(n).toFixed(d); }
+function rupees(n) { const v = Math.round(Number(n) || 0); return (v < 0 ? '-' : v > 0 ? '+' : '') + 'Rs.' + Math.abs(v).toLocaleString('en-IN'); }
+function cls(n) { return n > 0 ? 'pos' : n < 0 ? 'neg' : ''; }
+
+// one flat row per trade: gross % / points computed once; cost applied later (net = gross - 2*cost)
+function flatten(data) {
+  const rows = [];
+  for (const [sym, s] of Object.entries(data.symbols)) {
+    for (const t of s.trades) {
+      const pts = (t[4] - t[3]) * t[2];
+      rows.push({sym, kind: s.kind, lot: s.lot, entry: t[0], exit: t[1], dir: t[2], ep: t[3], xp: t[4], reason: t[5], bars: t[6],
+                 pts, gross: pts / t[3] * 100, month: t[0].slice(0, 7), hour: +t[0].slice(11, 13)});
+    }
+  }
+  return rows;
+}
+const netOf = (r, cost) => r.gross - 2 * cost;
+const rupOf = (r, cost) => r.pts * r.lot - (2 * cost / 100) * r.ep * r.lot;
+
+function calc(rows, cost) {
+  const n = rows.length;
+  if (!n) return {n: 0, wins: 0, winRate: null, pf: null, avg: null, total: 0, rupees: 0, dd: 0, best: null, worst: null, curve: []};
+  const sorted = rows.slice().sort((a, b) => a.exit < b.exit ? -1 : a.exit > b.exit ? 1 : 0);
+  let wins = 0, gp = 0, gl = 0, total = 0, rup = 0, eq = 0, peak = 0, dd = 0, best = -Infinity, worst = Infinity;
+  const curve = [];
+  for (const r of sorted) {
+    const x = netOf(r, cost);
+    if (x > 0) { wins++; gp += x; } else gl -= x;
+    total += x; rup += rupOf(r, cost); eq += x; peak = Math.max(peak, eq); dd = Math.max(dd, peak - eq);
+    best = Math.max(best, x); worst = Math.min(worst, x); curve.push(eq);
+  }
+  return {n, wins, winRate: wins / n * 100, pf: gl > 0 ? gp / gl : null, avg: total / n, total, rupees: rup, dd, best, worst, curve, dates: sorted.map(r => r.exit)};
+}
+
+function group(rows, keyFn) { const m = {}; for (const r of rows) (m[keyFn(r)] = m[keyFn(r)] || []).push(r); return m; }
+
+function filtered(all, f) {
+  return all.filter(r => (f.dir === 0 || r.dir === f.dir) && (f.month === 'ALL' || r.month === f.month));
+}
+
+function symbolStats(rows, cost, notesBySym, nullMax) {
+  const by = group(rows, r => r.sym), out = [];
+  for (const [sym, rs] of Object.entries(by)) {
+    const c = calc(rs, cost);
+    out.push({sym, kind: rs[0].kind, lot: rs[0].lot, n: c.n, winRate: c.winRate, pf: c.pf, avg: c.avg, total: c.total, rupees: c.rupees,
+              dd: c.dd, best: c.best, worst: c.worst, notes: notesBySym[sym] || [], sig: nullMax != null && rs[0].kind === 'stock' && c.total > nullMax});
+  }
+  return out;
+}
+
+function verdictOf(a) {   // a = analysis_stocks_pooled['cost_x.xx']
+  if (!a || a.mean_pct_per_trade == null) return {cls: 'warn', title: 'No statistics available for this cost level', lines: []};
+  const lines = [
+    `Pooled ${a.trades.toLocaleString('en-IN')} trades across ${a.symbols_with_trades} stocks: win rate ${fmt(a.win_rate, 1)}%, profit factor ${fmt(a.profit_factor)}.`,
+    `${a.symbols_profitable} of ${a.symbols_with_trades} stocks are profitable (${fmt(a.pct_symbols_profitable, 1)}%). A strategy with no skill would show ~${fmt(a.null_pct_symbols_profitable, 1)}% (95th percentile ${fmt(a.null_pct_symbols_profitable_p95, 1)}%).`,
+    `Directional-skill test vs a no-skill null: p = ${fmt(a.p_value_vs_null, 3)}.`,
+    `Multiple testing: the best stock is ${sgn(a.best_symbol_total_pct, 1)}% in total; the luckiest stock under no skill reaches ${sgn(a.null_best_symbol_total_p95, 1)}% (95th pct). ${a.symbols_beating_null_max} of ${a.symbols_with_trades} stocks beat that bar.`,
+  ];
+  const [lo, hi] = a.ci95_mean, m = a.mean_pct_per_trade;
+  if (lo > 0) return {cls: 'good', title: `Profitable after costs: ${sgn(m, 3)}% per trade (95% CI ${sgn(lo, 3)} … ${sgn(hi, 3)})`, lines};
+  if (hi < 0) return {cls: 'bad', title: `Not profitable after costs: ${sgn(m, 3)}% per trade (95% CI ${sgn(lo, 3)} … ${sgn(hi, 3)})`, lines};
+  return {cls: 'warn', title: `Indistinguishable from zero: ${sgn(m, 3)}% per trade (95% CI ${sgn(lo, 3)} … ${sgn(hi, 3)})`, lines};
+}
+
+// ------------------------------------------------------------------ charts (inline SVG)
+function lineChart(vals, dates, w = 640, h = 220) {
+  if (!vals.length) return '<div class="muted">No trades for this selection.</div>';
+  const pad = {l: 44, r: 10, t: 10, b: 20}, iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+  const lo = Math.min(0, ...vals), hi = Math.max(0, ...vals), span = (hi - lo) || 1;
+  const X = i => pad.l + (vals.length === 1 ? 0 : i / (vals.length - 1) * iw), Y = v => pad.t + (1 - (v - lo) / span) * ih;
+  const step = Math.max(1, Math.floor(vals.length / 400));
+  let path = '';
+  for (let i = 0; i < vals.length; i += step) path += (path ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(vals[i]).toFixed(1);
+  path += 'L' + X(vals.length - 1).toFixed(1) + ' ' + Y(vals[vals.length - 1]).toFixed(1);
+  const last = vals[vals.length - 1], colr = last >= 0 ? 'var(--good)' : 'var(--critical)';
+  const zero = Y(0);
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="equity curve">
+    <line x1="${pad.l}" x2="${w - pad.r}" y1="${zero}" y2="${zero}" stroke="var(--gridline)" stroke-width="1"/>
+    <path d="${path}" fill="none" stroke="${colr}" stroke-width="1.8"/>
+    <text x="${pad.l - 6}" y="${Y(hi) + 3}" text-anchor="end">${sgn(hi, 0)}%</text><text x="${pad.l - 6}" y="${Y(lo) + 3}" text-anchor="end">${sgn(lo, 0)}%</text>
+    <text x="${pad.l}" y="${h - 4}">${esc((dates[0] || '').slice(0, 10))}</text><text x="${w - pad.r}" y="${h - 4}" text-anchor="end">${esc((dates[dates.length - 1] || '').slice(0, 10))}</text>
+    <text x="${w - pad.r}" y="${Math.max(12, Y(last) - 6)}" text-anchor="end" style="fill:${colr};font-weight:700">${sgn(last, 1)}%</text></svg>`;
+}
+
+function histogram(vals, marker, w = 520, h = 220) {
+  if (!vals.length) return '<div class="muted">No symbols for this selection.</div>';
+  const top = marker != null ? Math.max(Math.max(...vals), marker) : Math.max(...vals);
+  const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.ceil(top / 5) * 5, bins = Math.max(4, Math.round((hi - lo) / 5));
+  const bw = (hi - lo) / bins, counts = new Array(bins).fill(0);
+  vals.forEach(v => counts[Math.min(bins - 1, Math.floor((v - lo) / bw))]++);
+  const pad = {l: 30, r: 8, t: 10, b: 22}, iw = w - pad.l - pad.r, ih = h - pad.t - pad.b, mx = Math.max(...counts, 1);
+  const X = v => pad.l + (v - lo) / (hi - lo) * iw;
+  let bars = '';
+  counts.forEach((c, i) => {
+    const x0 = lo + i * bw, x1 = x0 + bw, mid = (x0 + x1) / 2;
+    bars += `<rect x="${X(x0) + 1}" y="${pad.t + ih - c / mx * ih}" width="${Math.max(1, X(x1) - X(x0) - 2)}" height="${c / mx * ih}" fill="${mid >= 0 ? 'var(--good)' : 'var(--critical)'}" opacity="0.8"><title>${fmt(x0, 0)}% … ${fmt(x1, 0)}%: ${c} stocks</title></rect>`;
+  });
+  const zx = X(0), mk = marker != null && marker <= hi && marker >= lo
+    ? `<line x1="${X(marker)}" x2="${X(marker)}" y1="${pad.t}" y2="${pad.t + ih}" stroke="var(--warning)" stroke-dasharray="4 3"/><text x="${X(marker) - 4}" y="${pad.t + 10}" text-anchor="end" style="fill:var(--warning)">luck ceiling</text>` : '';
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="histogram">${bars}<line x1="${zx}" x2="${zx}" y1="${pad.t}" y2="${pad.t + ih}" stroke="var(--text-muted)"/>${mk}
+    <text x="${pad.l}" y="${h - 6}">${fmt(lo, 0)}%</text><text x="${w - pad.r}" y="${h - 6}" text-anchor="end">${fmt(hi, 0)}%</text><text x="${pad.l - 4}" y="${pad.t + 8}" text-anchor="end">${mx}</text></svg>`;
+}
+
+function barRows(items) {   // items: [{label, avg, n}]
+  if (!items.length) return '<div class="muted">No trades.</div>';
+  const mx = Math.max(...items.map(i => Math.abs(i.avg || 0)), 0.01);
+  return items.map(i => {
+    const w = Math.abs(i.avg || 0) / mx * 50, left = i.avg >= 0 ? 50 : 50 - w;
+    return `<div class="barrow"><div class="lbl">${esc(i.label)}</div><div class="track"><div class="mid"></div>
+      <div class="fill" style="left:${left}%;width:${w}%;background:${i.avg >= 0 ? 'var(--good)' : 'var(--critical)'};opacity:0.85"></div></div>
+      <div class="num ${cls(i.avg)}">${sgn(i.avg, 3)}% <span class="muted">· ${i.n}</span></div></div>`;
+  }).join('');
+}
+
+// ------------------------------------------------------------------ rendering
+function state() {
+  return {cost: parseFloat(document.getElementById('fCost').value), dir: parseInt(document.getElementById('fDir').value, 10),
+          month: document.getElementById('fMonth').value, q: (document.getElementById('fSearch').value || '').trim().toUpperCase()};
+}
+const isDefault = f => f.dir === 0 && f.month === 'ALL';
+const costKey = c => 'cost_' + Number(c).toFixed(2);
+
+function render() {
+  if (!DATA) return;
+  const f = state(), all = ALL_ROWS, stockRows = all.filter(r => r.kind === 'stock'), sel = filtered(stockRows, f);
+  const a = DATA.analysis_stocks_pooled[costKey(f.cost)];
+
+  const v = verdictOf(a);
+  const vEl = document.getElementById('verdict');
+  vEl.className = 'card verdict ' + v.cls;
+  vEl.innerHTML = `<div class="big">${esc(v.title)}</div><div class="hint" style="margin-bottom:0">Whole-period, long+short, at ${fmt(f.cost, 2)}% cost per side — the significance tests are computed on the full sample only.</div><ul>${v.lines.map(l => `<li>${esc(l)}</li>`).join('')}</ul>`;
+
+  const c = calc(sel, f.cost), nSyms = new Set(sel.map(r => r.sym)).size;
+  const profSyms = Object.values(group(sel, r => r.sym)).filter(rs => calc(rs, f.cost).total > 0).length;
+  const kp = (k, val, s, tone) => `<div class="kpi ${tone || ''}"><div class="k">${k}</div><div class="v num${String(val).length > 11 ? ' long' : ''}">${val}</div><div class="s">${s}</div></div>`;
+  document.getElementById('kpis').innerHTML =
+    kp('Trades', c.n.toLocaleString('en-IN'), `${nSyms} stocks · ${c.n ? fmt(c.n / Math.max(nSyms, 1), 0) : 0} each`, 'violet') +
+    kp('Win rate', c.winRate == null ? '—' : fmt(c.winRate, 1) + '%', `${c.wins.toLocaleString('en-IN')}W / ${(c.n - c.wins).toLocaleString('en-IN')}L`, 'blue') +
+    kp('Profit factor', c.pf == null ? '—' : fmt(c.pf), 'gross wins ÷ gross losses (net of cost)', c.pf > 1 ? 'good' : 'bad') +
+    kp('Avg net % / trade', c.avg == null ? '—' : sgn(c.avg, 3) + '%', a && isDefault(f) ? `95% CI ${sgn(a.ci95_mean[0], 3)} … ${sgn(a.ci95_mean[1], 3)}` : 'CI: whole period only', c.avg > 0 ? 'good' : 'bad') +
+    kp('Profitable stocks', `${profSyms} / ${nSyms}`, a && isDefault(f) ? `luck alone gives ~${fmt(a.null_pct_symbols_profitable, 0)}%` : '', 'teal') +
+    kp('₹ per signal (1 lot)', rupees(c.rupees), 'points × lot, net of cost — underlying proxy', c.rupees > 0 ? 'good' : 'bad');
+
+  document.getElementById('equity').innerHTML = lineChart(c.curve, c.dates || []);
+  document.getElementById('eqHint').textContent = `Cumulative net % per trade (sum over all ${c.n.toLocaleString('en-IN')} trades), in exit order — it is a sum of percentages, not a compounded account`;
+
+  const stats = symbolStats(sel, f.cost, NOTES, a && isDefault(f) ? a.null_best_symbol_total_p95 : null);
+  document.getElementById('hist').innerHTML = histogram(stats.map(s => s.total), a && isDefault(f) ? a.null_best_symbol_total_p95 : null);
+  document.getElementById('histHint').textContent = `Each stock's total net %. ${stats.filter(s => s.total > 0).length} of ${stats.length} are above zero` + (a && isDefault(f) ? `; the dashed line is the best a stock could reach by luck alone (${sgn(a.null_best_symbol_total_p95, 1)}%).` : '.');
+
+  const mo = Object.entries(group(sel, r => r.month)).sort().map(([m, rs]) => ({label: m, avg: calc(rs, f.cost).avg, n: rs.length}));
+  document.getElementById('byMonth').innerHTML = barRows(mo);
+  const side = [['Long', rs => rs.filter(r => r.dir === 1)], ['Short', rs => rs.filter(r => r.dir === -1)],
+                ['End of day', rs => rs.filter(r => r.reason === 'E')], ['EMA5 stop', rs => rs.filter(r => r.reason === 'S')]]
+    .map(([label, fn]) => { const rs = fn(sel); return {label, avg: calc(rs, f.cost).avg, n: rs.length}; }).filter(x => x.n);
+  document.getElementById('bySide').innerHTML = barRows(side);
+  const hr = Object.entries(group(sel, r => r.hour)).sort((a, b) => a[0] - b[0]).map(([h, rs]) => ({label: String(h).padStart(2, '0') + ':xx', avg: calc(rs, f.cost).avg, n: rs.length}));
+  document.getElementById('byHour').innerHTML = barRows(hr);
+
+  renderRefs(f);
+  renderTable(f, a);
+  if (DRILL) renderDrill(f);
+}
+
+function renderRefs(f) {
+  const html = ['NIFTY', 'SENSEX'].map(sym => {
+    const rs = filtered(ALL_ROWS.filter(r => r.sym === sym), f), c = calc(rs, f.cost), g = calc(rs, 0), pts = rs.reduce((s, r) => s + r.pts, 0);
+    return `<div class="ref ${sym === 'NIFTY' ? 'nifty' : 'sensex'}"><h4>${sym === 'NIFTY' ? 'NIFTY 50' : 'SENSEX'}</h4>
+      <div class="row"><span>Trades</span><b class="num">${c.n}</b></div>
+      <div class="row"><span>Win rate</span><b class="num">${c.winRate == null ? '—' : fmt(c.winRate, 1) + '%'}</b></div>
+      <div class="row"><span>Index points (gross)</span><b class="num">${sgn(pts, 0)}</b></div>
+      <div class="row"><span>Avg gross % / trade</span><b class="num">${g.avg == null ? '—' : sgn(g.avg, 3) + '%'}</b></div>
+      <div class="row"><span>Avg net % / trade @ ${fmt(f.cost, 2)}%/side</span><b class="num">${c.avg == null ? '—' : sgn(c.avg, 3) + '%'}</b></div>
+      <div class="row"><span>Total net %</span><b class="num">${sgn(c.total, 2)}%</b></div>
+      <div class="row"><span>Profit factor</span><b class="num">${c.pf == null ? '—' : fmt(c.pf)}</b></div></div>`;
+  }).join('');
+  document.getElementById('refs').innerHTML = html;
+}
+
+function renderTable(f, a) {
+  const th = document.getElementById('thead');
+  th.innerHTML = '<tr>' + COLS.map(([k, label]) => `<th onclick="sortBy('${k}')">${esc(label)}${SORT.key === k ? (SORT.dir < 0 ? ' ▼' : ' ▲') : ''}</th>`).join('') + '</tr>';
+  const rows = symbolStats(filtered(ALL_ROWS, f), f.cost, NOTES, a && isDefault(f) ? a.null_best_symbol_total_p95 : null)
+    .filter(s => !f.q || s.sym.toUpperCase().includes(f.q));
+  const refs = rows.filter(s => s.kind === 'index').sort((x, y) => x.sym < y.sym ? -1 : 1);
+  const stocks = rows.filter(s => s.kind === 'stock').sort((x, y) => {
+    const A = x[SORT.key], B = y[SORT.key];
+    if (typeof A === 'string') return SORT.dir * (A < B ? -1 : A > B ? 1 : 0);
+    return SORT.dir * ((A == null ? -Infinity : A) - (B == null ? -Infinity : B));
+  });
+  const line = s => `<tr class="${s.kind === 'index' ? 'refrow' : ''}" onclick="showSymbol('${esc(s.sym).replace(/'/g, '')}')">
+    <td>${esc(s.sym)}${s.kind === 'index' ? ' <span class="pill">index</span>' : ''}${s.notes.length ? ` <span class="flag" title="${esc(s.notes.join(' | '))}">⚠</span>` : ''}</td>
+    <td class="num">${s.lot.toLocaleString('en-IN')}</td><td class="num">${s.n}</td><td class="num">${s.winRate == null ? '—' : fmt(s.winRate, 1)}</td>
+    <td class="num">${s.pf == null ? '—' : fmt(s.pf)}</td><td class="num ${cls(s.avg)}">${sgn(s.avg, 3)}</td><td class="num ${cls(s.total)}">${sgn(s.total, 1)}</td>
+    <td class="num ${cls(s.rupees)}">${rupees(s.rupees)}</td><td class="num">${fmt(s.dd, 1)}</td><td class="num pos">${sgn(s.best, 2)}</td><td class="num neg">${sgn(s.worst, 2)}</td>
+    <td>${s.sig ? '<span class="star" title="Beats the 95th percentile of the luckiest stock under a no-skill null">★</span>' : ''}</td></tr>`;
+  document.getElementById('tbody').innerHTML = refs.map(line).join('') + stocks.map(line).join('') ||
+    '<tr><td colspan="12" class="muted" style="text-align:center">No symbols match.</td></tr>';
+  document.getElementById('lbHint').textContent = `${stocks.length} stocks + 2 reference indices. Click a header to sort, a row for its trades. Per-symbol samples are small (~50 trades), so rankings are mostly noise` +
+    (a && isDefault(f) ? ` — ${a.symbols_beating_null_max} stocks carry a ★ (beat the luck ceiling).` : '.');
+}
+
+function sortBy(key) { SORT = SORT.key === key ? {key, dir: -SORT.dir} : {key, dir: key === 'sym' ? 1 : -1}; render(); }
+function showSymbol(sym) { DRILL = sym; renderDrill(state()); document.getElementById('drill').scrollIntoView && document.getElementById('drill').scrollIntoView({behavior: 'smooth', block: 'nearest'}); }
+function closeDrill() { DRILL = null; document.getElementById('drill').className = 'card'; document.getElementById('drill').innerHTML = ''; }
+
+function renderDrill(f) {
+  const s = DATA.symbols[DRILL];
+  if (!s) return closeDrill();
+  const rs = filtered(ALL_ROWS.filter(r => r.sym === DRILL), f), c = calc(rs, f.cost);
+  const list = rs.slice().sort((a, b) => a.exit < b.exit ? 1 : -1).slice(0, 250).map(r => {
+    const x = netOf(r, f.cost);
+    return `<tr><td>${esc(r.entry.replace('T', ' '))}</td><td>${esc(r.exit.replace('T', ' '))}</td><td>${r.dir === 1 ? 'LONG' : 'SHORT'}</td><td class="num">${fmt(r.ep)}</td><td class="num">${fmt(r.xp)}</td>
+      <td>${esc(REASON[r.reason] || r.reason)}</td><td class="num">${r.bars}</td><td class="num ${cls(x)}">${sgn(x, 2)}%</td><td class="num ${cls(r.pts * r.lot)}">${rupees(rupOf(r, f.cost))}</td></tr>`;
+  }).join('');
+  const el = document.getElementById('drill');
+  el.className = 'card open';
+  el.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><h3>${esc(DRILL)} — ${esc(s.name)}</h3><button class="csv" onclick="closeDrill()">✕ close</button></div>
+    <div class="hint">${c.n} trades · total net ${sgn(c.total, 2)}% · lot ${s.lot.toLocaleString('en-IN')} · history from ${esc(s.first_bar)}${s.notes.length ? ' · ⚠ ' + esc(s.notes.join(' | ')) : ''}</div>
+    <div class="grid2"><div>${lineChart(c.curve, c.dates || [])}</div><div class="muted" style="font-size:.85rem">Latest ${Math.min(250, rs.length)} trades shown. Net % includes the ${fmt(2 * f.cost, 2)}% round-trip cost selected above.</div></div>
+    <div class="tablewrap" style="margin-top:.7rem;max-height:340px"><table><thead><tr><th>Entry</th><th>Exit</th><th>Side</th><th>In</th><th>Out</th><th>Exit</th><th>Bars</th><th>Net %</th><th>₹ (1 lot)</th></tr></thead><tbody>${list || '<tr><td colspan="9" class="muted">No trades.</td></tr>'}</tbody></table></div>`;
+}
+
+function downloadCsv() {
+  const f = state(), rows = symbolStats(filtered(ALL_ROWS, f), f.cost, NOTES, null);
+  const cols = ['sym', 'kind', 'lot', 'n', 'winRate', 'pf', 'avg', 'total', 'rupees', 'dd', 'best', 'worst'];
+  const cell = v => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const blob = new Blob([[cols.join(',')].concat(rows.map(r => cols.map(c => cell(r[c])).join(','))).join('\n')], {type: 'text/csv'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'fno_universe_leaderboard.csv'; a.click();
+}
+
+// ------------------------------------------------------------------ boot
+let ALL_ROWS = [], NOTES = {};
+function boot(data) {
+  DATA = data; ALL_ROWS = flatten(data);
+  NOTES = {}; for (const [k, s] of Object.entries(data.symbols)) if (s.notes && s.notes.length) NOTES[k] = s.notes;
+  const costSel = document.getElementById('fCost');
+  costSel.innerHTML = data.cost_levels_pct_per_side.map(c => `<option value="${c}"${c === 0.05 ? ' selected' : ''}>${c === 0 ? '0% (gross)' : c.toFixed(2) + '% per side'}</option>`).join('');
+  const months = [...new Set(ALL_ROWS.map(r => r.month))].sort();
+  document.getElementById('fMonth').innerHTML = '<option value="ALL">Whole period</option>' + months.map(m => `<option value="${m}">${m}</option>`).join('');
+  document.getElementById('tagline').textContent = `${data.tested_stocks} NSE F&O stocks + NIFTY/SENSEX · 15-min bars · ${data.report_start} → ${data.data_to} · same rules as the live engine`;
+  document.getElementById('pillData').textContent = `Data through ${data.data_to}`;
+  const notes = Object.entries(NOTES).map(([k, v]) => `<div><b>${esc(k)}</b>: ${esc(v.join(' | '))}</div>`).join('');
+  document.getElementById('notes').innerHTML = (notes || '<div>No corporate-action adjustments were needed.</div>') +
+    `<div style="margin-top:.4rem">Universe: ${data.universe_count} stocks with stock futures listed on NSE (resolved from Dhan's security master); ${data.tested_stocks} tested${Object.keys(data.skipped || {}).length ? '; skipped: ' + esc(Object.entries(data.skipped).map(([k, v]) => k + ' (' + v + ')').join(', ')) : ''}. Lot sizes are current.</div>`;
+  document.getElementById('foot').innerHTML = `Generated ${esc(data.generated_at)}. Percentages are of the underlying's price; a real ITM option's return would be a multiple of these (delta ≈ 0.65 on a premium of only ~1–5% of spot) and its costs are spreads and STT, which the cost selector approximates in underlying terms. Statistics: day-clustered bootstrap for the confidence interval; a no-skill null built by flipping each day's trade directions together; the "luck ceiling" is the 95th percentile of the best stock's total under that null. Not investment advice; nothing here is traded live.`;
+  ['fCost', 'fDir', 'fMonth'].forEach(id => document.getElementById(id).addEventListener('change', render));
+  document.getElementById('fSearch').addEventListener('input', render);
+  document.getElementById('btnCsv').addEventListener('click', downloadCsv);
+  render();
+}
+
+async function init() {
+  try {
+    const r = await fetch('universe_data.json?t=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    boot(await r.json());
+  } catch (e) {
+    document.getElementById('tagline').textContent = 'Could not load universe_data.json — ' + e.message;
+  }
+}
+init();
+</script>
+</body>
+</html>
