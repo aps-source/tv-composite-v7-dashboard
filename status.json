@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-28T13:16:02+05:30",
-  "last_tick": "2026-09-28T13:16:02+05:30",
+  "generated_at": "2026-09-28T13:31:02+05:30",
+  "last_tick": "2026-09-28T13:31:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.57,
+  "token_hours_remaining": 19.32,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.21,761, SENSEX ~Rs.18,150)",
-      "checked_at": "2026-09-28T12:46:18.148000"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.21,707, SENSEX ~Rs.18,175)",
+      "checked_at": "2026-09-28T13:31:14.047978"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-28T13:16:06",
+    "ran_at": "2026-09-28T13:31:14",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-28T13:15:00",
-        "close": 22821.1,
-        "ema5_15m": 22828.1,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.05,
+        "bar_time": "2026-09-28T13:30:00",
+        "close": 22842.55,
+        "ema5_15m": 22838.53,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.66,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -74,10 +74,10 @@
         "short": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-28T13:15:00",
-        "close": 72888.09,
-        "ema5_15m": 72911.05,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.04,
+        "bar_time": "2026-09-28T13:30:00",
+        "close": 72962.58,
+        "ema5_15m": 72944.97,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.08,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -112,7 +112,7 @@
         "short": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
             "candle": false
