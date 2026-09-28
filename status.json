@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-25T13:01:02+05:30",
-  "last_tick": "2026-09-25T13:01:02+05:30",
+  "generated_at": "2026-09-28T08:50:40+05:30",
+  "last_tick": "2026-09-28T08:50:40+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.11,
+  "token_hours_remaining": 24.0,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,29 +18,29 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-09-25",
+  "trading_day": "2026-09-28",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "bad",
-    "prev_close": 12.63,
-    "prev_change_pct": 21.68
+    "state": "ok",
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-09-25T12:31:05.509585"
+      "checked_at": "2026-09-28T08:50:44.315167"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.13,846, SENSEX ~Rs.18,134)",
-      "checked_at": "2026-09-25T13:01:09.117422"
+      "ok": false,
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.18,172, SENSEX ~Rs.19,844) -- add funds",
+      "checked_at": "2026-09-28T08:50:45.229083"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-25T13:01:09",
+    "ran_at": "2026-09-28T08:50:44",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,21 +51,21 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T13:00:00",
-        "close": 23046.75,
-        "ema5_15m": 23056.96,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.66,
+        "bar_time": "2026-09-25T15:15:00",
+        "close": 23140.5,
+        "ema5_15m": 23123.13,
+        "volume_ratio": 0.0,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
             "candle": true
           },
@@ -73,17 +73,18 @@
         },
         "short": {
           "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "India VIX regime flagged bad"
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
@@ -92,21 +93,21 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-25T13:00:00",
-        "close": 73607.67,
-        "ema5_15m": 73639.45,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.76,
+        "bar_time": "2026-09-25T15:15:00",
+        "close": 73895.74,
+        "ema5_15m": 73858.4,
+        "volume_ratio": 0.2,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
             "candle": true
           },
@@ -114,17 +115,18 @@
         },
         "short": {
           "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "India VIX regime flagged bad"
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
