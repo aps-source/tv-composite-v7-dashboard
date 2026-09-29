@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-29T14:46:03+05:30",
-  "last_tick": "2026-09-29T14:46:03+05:30",
+  "generated_at": "2026-09-29T15:01:03+05:30",
+  "last_tick": "2026-09-29T15:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.01,
+  "token_hours_remaining": 17.76,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.24,503, SENSEX ~Rs.27,811) -- add funds",
-      "checked_at": "2026-09-29T14:16:06.812341"
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.21,039, SENSEX ~Rs.25,961) -- add funds",
+      "checked_at": "2026-09-29T15:01:06.573755"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-29T14:46:05",
+    "ran_at": "2026-09-29T15:01:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-29T14:45:00",
-        "close": 22669.35,
-        "ema5_15m": 22669.17,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.36,
+        "bar_time": "2026-09-29T15:00:00",
+        "close": 22673.05,
+        "ema5_15m": 22671.33,
+        "volume_ratio": 0.45,
+        "body_ratio": 0.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx); India VIX regime flagged bad",
           "direction": null
         },
         "long": {
@@ -83,6 +83,7 @@
         },
         "blocked_reasons": [
           "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (15:xx)",
           "India VIX regime flagged bad"
         ]
       },
@@ -92,14 +93,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-29T14:45:00",
-        "close": 72411.36,
-        "ema5_15m": 72405.69,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.23,
+        "bar_time": "2026-09-29T15:00:00",
+        "close": 72436.65,
+        "ema5_15m": 72418.59,
+        "volume_ratio": 0.17,
+        "body_ratio": 0.35,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); India VIX regime flagged bad",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx); India VIX regime flagged bad",
           "direction": null
         },
         "long": {
@@ -124,6 +125,7 @@
         },
         "blocked_reasons": [
           "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (15:xx)",
           "India VIX regime flagged bad"
         ]
       },
