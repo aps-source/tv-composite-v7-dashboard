@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-29T15:31:03+05:30",
-  "last_tick": "2026-09-29T15:31:03+05:30",
+  "generated_at": "2026-09-29T15:46:02+05:30",
+  "last_tick": "2026-09-29T15:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.26,
+  "token_hours_remaining": 17.01,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-09-29T14:31:06.328605"
+      "checked_at": "2026-09-29T15:46:06.830454"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.21,039, SENSEX ~Rs.25,961) -- add funds",
-      "checked_at": "2026-09-29T15:01:06.573755"
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.23,316, SENSEX ~Rs.26,400) -- add funds",
+      "checked_at": "2026-09-29T15:46:07.463056"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-29T15:31:05",
+    "ran_at": "2026-09-29T15:46:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,10 +51,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-29T15:30:00",
+        "bar_time": "2026-09-29T15:45:00",
         "close": 22716.2,
         "ema5_15m": 22697.42,
-        "volume_ratio": 0.01,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
@@ -94,10 +94,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-29T15:30:00",
+        "bar_time": "2026-09-29T15:45:00",
         "close": 72529.07,
         "ema5_15m": 72487.36,
-        "volume_ratio": 0.73,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
