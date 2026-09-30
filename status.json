@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-30T09:31:04+05:30",
-  "last_tick": "2026-09-30T09:31:04+05:30",
+  "generated_at": "2026-09-30T09:46:03+05:30",
+  "last_tick": "2026-09-30T09:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.13,
+  "token_hours_remaining": 22.88,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-09-30T08:39:20.932100"
+      "checked_at": "2026-09-30T09:46:08.955433"
     },
     "funds": {
       "ok": true,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-30T09:31:10",
+    "ran_at": "2026-09-30T09:46:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T09:30:00",
-        "close": 22700.7,
-        "ema5_15m": 22699.73,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.88,
+        "bar_time": "2026-09-30T09:45:00",
+        "close": 22728.25,
+        "ema5_15m": 22712.44,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.94,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,17 +67,17 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "short": {
           "conditions": {
-            "hourly_stack": true,
+            "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T09:30:00",
-        "close": 72654.25,
-        "ema5_15m": 72582.09,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.82,
+        "bar_time": "2026-09-30T09:45:00",
+        "close": 72753.03,
+        "ema5_15m": 72652.55,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.76,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -105,7 +105,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -115,7 +115,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
