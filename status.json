@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-30T15:16:03+05:30",
-  "last_tick": "2026-09-30T15:16:03+05:30",
+  "generated_at": "2026-09-30T15:31:03+05:30",
+  "last_tick": "2026-09-30T15:31:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.38,
+  "token_hours_remaining": 17.13,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.17,650, SENSEX ~Rs.19,916)",
-      "checked_at": "2026-09-30T15:01:09.185468"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.15,809, SENSEX ~Rs.19,457)",
+      "checked_at": "2026-09-30T15:31:15.667280"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-30T15:16:32",
+    "ran_at": "2026-09-30T15:31:15",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,9 +51,9 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T15:15:00",
-        "close": 22616.6,
-        "ema5_15m": 22635.91,
+        "bar_time": "2026-09-30T15:30:00",
+        "close": 22620.45,
+        "ema5_15m": 22631.61,
         "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
@@ -92,10 +92,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T15:15:00",
-        "close": 72440.79,
-        "ema5_15m": 72499.43,
-        "volume_ratio": 0.04,
+        "bar_time": "2026-09-30T15:30:00",
+        "close": 72480.29,
+        "ema5_15m": 72501.83,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
@@ -106,7 +106,7 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
             "candle": false
           },
@@ -116,7 +116,7 @@
           "conditions": {
             "hourly_stack": true,
             "m15_stack": true,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
