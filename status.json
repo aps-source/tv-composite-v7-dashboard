@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-30T14:31:03+05:30",
-  "last_tick": "2026-09-30T14:31:03+05:30",
+  "generated_at": "2026-09-30T14:46:03+05:30",
+  "last_tick": "2026-09-30T14:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.13,
+  "token_hours_remaining": 17.88,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-30T14:31:06",
+    "ran_at": "2026-09-30T14:46:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T14:30:00",
-        "close": 22634.9,
-        "ema5_15m": 22681.0,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.51,
+        "bar_time": "2026-09-30T14:45:00",
+        "close": 22628.75,
+        "ema5_15m": 22658.07,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.93,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -77,7 +77,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T14:30:00",
-        "close": 72481.77,
-        "ema5_15m": 72637.14,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.79,
+        "bar_time": "2026-09-30T14:45:00",
+        "close": 72469.11,
+        "ema5_15m": 72564.25,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.98,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -103,9 +103,9 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -113,9 +113,9 @@
           "conditions": {
             "hourly_stack": true,
             "m15_stack": true,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
