@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-30T12:31:03+05:30",
-  "last_tick": "2026-09-30T12:31:03+05:30",
+  "generated_at": "2026-09-30T12:46:02+05:30",
+  "last_tick": "2026-09-30T12:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.13,
+  "token_hours_remaining": 19.88,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.16,363, SENSEX ~Rs.19,802)",
-      "checked_at": "2026-09-30T12:16:05.828232"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.15,108, SENSEX ~Rs.19,360)",
+      "checked_at": "2026-09-30T12:46:05.928288"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-30T12:31:07",
+    "ran_at": "2026-09-30T12:46:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T12:30:00",
-        "close": 22754.15,
-        "ema5_15m": 22736.7,
+        "bar_time": "2026-09-30T12:45:00",
+        "close": 22777.85,
+        "ema5_15m": 22754.51,
         "volume_ratio": 0.03,
-        "body_ratio": 0.66,
+        "body_ratio": 0.7,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-30T12:30:00",
-        "close": 72863.04,
-        "ema5_15m": 72813.84,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.58,
+        "bar_time": "2026-09-30T12:45:00",
+        "close": 72953.1,
+        "ema5_15m": 72877.14,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.53,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -105,7 +105,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
