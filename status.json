@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-29T15:46:02+05:30",
-  "last_tick": "2026-09-29T15:46:02+05:30",
+  "generated_at": "2026-09-30T08:39:18+05:30",
+  "last_tick": "2026-09-30T08:39:18+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.01,
+  "token_hours_remaining": 24.0,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,29 +18,29 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-09-29",
+  "trading_day": "2026-09-30",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "bad",
-    "prev_close": 13.75,
-    "prev_change_pct": 13.36
+    "state": "ok",
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-09-29T15:46:06.830454"
+      "checked_at": "2026-09-30T08:39:20.932100"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even one lot (needs NIFTY ~Rs.23,316, SENSEX ~Rs.26,400) -- add funds",
-      "checked_at": "2026-09-29T15:46:07.463056"
+      "detail": "balance too low for even one lot (needs NIFTY ~Rs.23,316, SENSEX ~Rs.28,459) -- add funds",
+      "checked_at": "2026-09-30T08:39:21.563326"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-09-29T15:46:06",
+    "ran_at": "2026-09-30T08:39:20",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-29T15:45:00",
+        "bar_time": "2026-09-29T15:15:00",
         "close": 22716.2,
-        "ema5_15m": 22697.42,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "ema5_15m": 22688.03,
+        "volume_ratio": 0.02,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx); India VIX regime flagged bad",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -84,8 +84,7 @@
         "blocked_reasons": [
           "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)",
-          "India VIX regime flagged bad"
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
@@ -94,14 +93,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-09-29T15:45:00",
+        "bar_time": "2026-09-29T15:15:00",
         "close": 72529.07,
-        "ema5_15m": 72487.36,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "ema5_15m": 72466.51,
+        "volume_ratio": 1.09,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx); India VIX regime flagged bad",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -110,7 +109,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -127,8 +126,7 @@
         "blocked_reasons": [
           "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)",
-          "India VIX regime flagged bad"
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
