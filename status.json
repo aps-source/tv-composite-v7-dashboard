@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-01T10:46:02+05:30",
-  "last_tick": "2026-10-01T10:46:02+05:30",
+  "generated_at": "2026-10-01T11:01:03+05:30",
+  "last_tick": "2026-10-01T11:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.46,
+  "token_hours_remaining": 22.21,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.15,748, SENSEX ~Rs.18,493) -- add funds",
-      "checked_at": "2026-10-01T10:16:09.215250"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.15,090, SENSEX ~Rs.18,525) -- add funds",
+      "checked_at": "2026-10-01T11:01:06.091404"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-01T10:46:05",
+    "ran_at": "2026-10-01T11:01:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-01T10:45:00",
-        "close": 22563.55,
-        "ema5_15m": 22567.69,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.05,
+        "bar_time": "2026-10-01T11:00:00",
+        "close": 22558.2,
+        "ema5_15m": 22564.25,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.49,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
@@ -82,8 +82,7 @@
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (10:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
@@ -92,14 +91,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-01T10:45:00",
-        "close": 72452.01,
-        "ema5_15m": 72441.2,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.1,
+        "bar_time": "2026-10-01T11:00:00",
+        "close": 72418.22,
+        "ema5_15m": 72428.34,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.58,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
@@ -115,16 +114,15 @@
         "short": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (10:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
