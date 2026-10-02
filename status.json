@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-03T00:18:30+05:30",
-  "last_tick": "2026-10-03T00:18:30+05:30",
+  "generated_at": "2026-10-03T00:33:29+05:30",
+  "last_tick": "2026-10-03T00:33:29+05:30",
   "engine_status": "token_invalid",
   "last_error": "Dhan access token expired -- paste a fresh token (update_all_dhan_tokens.bat)",
-  "token_hours_remaining": -15.08,
+  "token_hours_remaining": -15.33,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,12 +30,12 @@
     "ip_whitelist": {
       "ok": null,
       "detail": "cannot verify -- Dhan token expired",
-      "checked_at": "2026-10-03T00:18:30.088797"
+      "checked_at": "2026-10-03T00:33:29.427981"
     },
     "funds": {
       "ok": null,
       "detail": "cannot verify -- Dhan token expired",
-      "checked_at": "2026-10-03T00:18:30.088814"
+      "checked_at": "2026-10-03T00:33:29.427995"
     }
   },
   "auto_trading": {
