@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T14:31:03+05:30",
-  "last_tick": "2026-10-05T14:31:03+05:30",
+  "generated_at": "2026-10-05T14:46:02+05:30",
+  "last_tick": "2026-10-05T14:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.33,
+  "token_hours_remaining": 18.08,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-05T13:31:08.267376"
+      "checked_at": "2026-10-05T14:46:05.311974"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.22,809, SENSEX ~Rs.17,151) -- add funds",
-      "checked_at": "2026-10-05T14:01:21.321507"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.22,576, SENSEX ~Rs.16,569) -- add funds",
+      "checked_at": "2026-10-05T14:46:06.174189"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-05T14:31:06",
+    "ran_at": "2026-10-05T14:46:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T14:30:00",
-        "close": 22549.0,
-        "ema5_15m": 22538.2,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.61,
+        "bar_time": "2026-10-05T14:45:00",
+        "close": 22548.65,
+        "ema5_15m": 22542.65,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.54,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T14:30:00",
-        "close": 72351.64,
-        "ema5_15m": 72300.44,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.19,
+        "bar_time": "2026-10-05T14:45:00",
+        "close": 72352.34,
+        "ema5_15m": 72318.21,
+        "volume_ratio": 0.01,
+        "body_ratio": 0.12,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
