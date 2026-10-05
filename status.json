@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T15:01:04+05:30",
-  "last_tick": "2026-10-05T15:01:04+05:30",
+  "generated_at": "2026-10-05T15:16:02+05:30",
+  "last_tick": "2026-10-05T15:16:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.83,
+  "token_hours_remaining": 17.58,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-05T15:01:07",
+    "ran_at": "2026-10-05T15:16:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T15:00:00",
-        "close": 22529.55,
-        "ema5_15m": 22535.75,
-        "volume_ratio": 0.15,
-        "body_ratio": 0.62,
+        "bar_time": "2026-10-05T15:15:00",
+        "close": 22535.45,
+        "ema5_15m": 22536.93,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -77,11 +77,12 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
@@ -91,14 +92,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T15:00:00",
-        "close": 72269.81,
-        "ema5_15m": 72288.16,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.57,
+        "bar_time": "2026-10-05T15:15:00",
+        "close": 72312.23,
+        "ema5_15m": 72305.67,
+        "volume_ratio": 0.03,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -117,11 +118,12 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
