@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T13:01:04+05:30",
-  "last_tick": "2026-10-05T13:01:04+05:30",
+  "generated_at": "2026-10-05T13:16:03+05:30",
+  "last_tick": "2026-10-05T13:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.83,
+  "token_hours_remaining": 19.58,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-05T13:01:07",
+    "ran_at": "2026-10-05T13:16:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T13:00:00",
-        "close": 22445.5,
-        "ema5_15m": 22451.69,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.7,
+        "bar_time": "2026-10-05T13:15:00",
+        "close": 22474.5,
+        "ema5_15m": 22464.85,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.45,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -73,11 +73,11 @@
         },
         "short": {
           "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
+            "hourly_stack": false,
+            "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T13:00:00",
-        "close": 71978.97,
-        "ema5_15m": 71999.49,
-        "volume_ratio": 0.0,
-        "body_ratio": 0.48,
+        "bar_time": "2026-10-05T13:15:00",
+        "close": 72071.14,
+        "ema5_15m": 72038.91,
+        "volume_ratio": 0.01,
+        "body_ratio": 0.63,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -105,14 +105,14 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "short": {
           "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
+            "hourly_stack": false,
+            "m15_stack": false,
             "above_cpr": false,
             "volume": false,
             "candle": false
