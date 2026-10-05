@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T10:16:08+05:30",
-  "last_tick": "2026-10-05T10:16:08+05:30",
+  "generated_at": "2026-10-05T10:31:05+05:30",
+  "last_tick": "2026-10-05T10:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.58,
+  "token_hours_remaining": 22.33,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.24,903, SENSEX ~Rs.53,409) -- add funds",
-      "checked_at": "2026-10-05T10:01:08.342297"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.24,739, SENSEX ~Rs.18,478) -- add funds",
+      "checked_at": "2026-10-05T10:31:10.091540"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-05T10:16:13",
+    "ran_at": "2026-10-05T10:31:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T10:15:00",
-        "close": 22540.1,
-        "ema5_15m": 22531.91,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.36,
+        "bar_time": "2026-10-05T10:30:00",
+        "close": 22517.4,
+        "ema5_15m": 22521.04,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.3,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-05T10:15:00",
-        "close": 72347.3,
-        "ema5_15m": 72318.1,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.13,
+        "bar_time": "2026-10-05T10:30:00",
+        "close": 72263.8,
+        "ema5_15m": 72279.78,
+        "volume_ratio": 3.0,
+        "body_ratio": 0.36,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -106,7 +106,7 @@
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": true,
-            "volume": false,
+            "volume": true,
             "candle": false
           },
           "all_met": false
@@ -116,7 +116,7 @@
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": false,
+            "volume": true,
             "candle": false
           },
           "all_met": false
