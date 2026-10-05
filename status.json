@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-04T18:54:03+05:30",
-  "last_tick": "2026-10-04T18:54:03+05:30",
+  "generated_at": "2026-10-05T08:51:11+05:30",
+  "last_tick": "2026-10-05T08:51:11+05:30",
   "engine_status": "running",
   "last_error": null,
   "token_hours_remaining": 24.0,
@@ -18,7 +18,7 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-10-04",
+  "trading_day": "2026-10-05",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-04T18:54:10.827359"
+      "checked_at": "2026-10-05T08:51:13.844940"
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.26,012, SENSEX ~Rs.21,804)",
-      "checked_at": "2026-10-04T18:54:17.507188"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.26,405, SENSEX ~Rs.21,804)",
+      "checked_at": "2026-10-05T08:51:14.718106"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-04T18:54:10",
+    "ran_at": "2026-10-05T08:51:13",
     "placed": 0,
     "held": [],
     "blocked": null
