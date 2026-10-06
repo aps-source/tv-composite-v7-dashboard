@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T14:46:05+05:30",
-  "last_tick": "2026-10-06T14:46:05+05:30",
+  "generated_at": "2026-10-06T15:01:03+05:30",
+  "last_tick": "2026-10-06T15:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.62,
+  "token_hours_remaining": 17.37,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-06T14:46:11",
+    "ran_at": "2026-10-06T15:01:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-06T14:45:00",
-        "close": 22705.85,
-        "ema5_15m": 22704.57,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.45,
+        "bar_time": "2026-10-06T15:00:00",
+        "close": 22705.2,
+        "ema5_15m": 22704.73,
+        "volume_ratio": 0.2,
+        "body_ratio": 0.05,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -81,7 +81,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     },
@@ -89,14 +91,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-06T14:45:00",
-        "close": 72889.92,
-        "ema5_15m": 72891.81,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.38,
+        "bar_time": "2026-10-06T15:00:00",
+        "close": 72891.68,
+        "ema5_15m": 72893.54,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.04,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -119,7 +121,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     }
