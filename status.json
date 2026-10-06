@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T10:01:03+05:30",
-  "last_tick": "2026-10-06T10:01:03+05:30",
+  "generated_at": "2026-10-06T10:16:02+05:30",
+  "last_tick": "2026-10-06T10:16:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.37,
+  "token_hours_remaining": 22.12,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-10-06T09:31:07.261917"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.21,808, SENSEX ~Rs.30,690 for full ITM sizing)",
-      "checked_at": "2026-10-06T09:31:08.304196"
+      "ok": false,
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,806, SENSEX ~Rs.23,760) -- add funds",
+      "checked_at": "2026-10-06T10:16:05.333306"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-06T10:01:07",
+    "ran_at": "2026-10-06T10:16:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-06T10:00:00",
-        "close": 22659.05,
-        "ema5_15m": 22623.06,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.13,
+        "bar_time": "2026-10-06T10:15:00",
+        "close": 22657.5,
+        "ema5_15m": 22632.96,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.56,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -67,7 +67,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-06T10:00:00",
-        "close": 72714.75,
-        "ema5_15m": 72586.92,
+        "bar_time": "2026-10-06T10:15:00",
+        "close": 72703.47,
+        "ema5_15m": 72619.09,
         "volume_ratio": 0.01,
-        "body_ratio": 0.43,
+        "body_ratio": 0.72,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -107,7 +107,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
