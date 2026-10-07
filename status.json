@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-07T10:46:03+05:30",
-  "last_tick": "2026-10-07T10:46:03+05:30",
+  "generated_at": "2026-10-07T11:01:02+05:30",
+  "last_tick": "2026-10-07T11:01:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.87,
+  "token_hours_remaining": 21.62,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-07T09:46:09.176979"
+      "checked_at": "2026-10-07T11:01:05.214864"
     },
     "funds": {
       "ok": false,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-07T10:46:05",
+    "ran_at": "2026-10-07T11:01:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,55 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-07T10:45:00",
-        "close": 22653.35,
-        "ema5_15m": 22656.41,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.67,
+        "bar_time": "2026-10-07T11:00:00",
+        "close": 22694.35,
+        "ema5_15m": 22680.56,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.89,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
-          "direction": null
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": true,
-            "volume": false,
-            "candle": true
-          },
-          "all_met": false
-        },
-        "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (10:xx)"
-        ]
-      },
-      "error": null
-    },
-    "SENSEX": {
-      "position": null,
-      "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-10-07T10:45:00",
-        "close": 72821.45,
-        "ema5_15m": 72810.56,
-        "volume_ratio": 0.01,
-        "body_ratio": 0.69,
-        "decision": {
-          "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
@@ -123,8 +82,47 @@
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (10:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
+        ]
+      },
+      "error": null
+    },
+    "SENSEX": {
+      "position": null,
+      "day_losses": 0,
+      "snapshot": {
+        "bar_time": "2026-10-07T11:00:00",
+        "close": 72958.12,
+        "ema5_15m": 72896.08,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.82,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
