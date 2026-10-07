@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T15:46:04+05:30",
-  "last_tick": "2026-10-06T15:46:04+05:30",
+  "generated_at": "2026-10-07T08:38:49+05:30",
+  "last_tick": "2026-10-07T08:38:49+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 16.62,
+  "token_hours_remaining": 23.99,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,29 +18,29 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-10-06",
+  "trading_day": "2026-10-07",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": 14.71,
-    "prev_change_pct": 1.87
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-06T15:16:21.189261"
+      "checked_at": "2026-10-07T08:39:01.997693"
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.17,192, SENSEX ~Rs.40,464 for full ITM sizing)",
-      "checked_at": "2026-10-06T15:16:23.589954"
+      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.21,900, SENSEX ~Rs.23,540 for full ITM sizing)",
+      "checked_at": "2026-10-07T08:39:03.214607"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-06T15:46:09",
+    "ran_at": "2026-10-07T08:39:01",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-06T15:45:00",
+        "bar_time": "2026-10-06T15:15:00",
         "close": 22776.1,
-        "ema5_15m": 22746.19,
+        "ema5_15m": 22731.23,
         "volume_ratio": 0.0,
-        "body_ratio": null,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
           "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
@@ -67,7 +67,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -92,11 +92,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-06T15:45:00",
+        "bar_time": "2026-10-06T15:15:00",
         "close": 73067.81,
-        "ema5_15m": 72998.09,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "ema5_15m": 72963.23,
+        "volume_ratio": 0.53,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
           "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
@@ -108,7 +108,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
