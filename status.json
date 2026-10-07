@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-07T14:16:32+05:30",
-  "last_tick": "2026-10-07T14:16:32+05:30",
-  "engine_status": "rate_limited",
-  "last_error": "SENSEX: intraday_minute_data failed: {'error_code': 'DH-904', 'error_type': 'Rate_Limit', 'error_message': 'Too many requests on server from single user breaching rate limits. Try throttling API calls.'}",
-  "token_hours_remaining": 18.37,
+  "generated_at": "2026-10-07T14:31:05+05:30",
+  "last_tick": "2026-10-07T14:31:05+05:30",
+  "engine_status": "running",
+  "last_error": null,
+  "token_hours_remaining": 18.12,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-07T14:17:22",
+    "ran_at": "2026-10-07T14:31:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-07T14:15:00",
-        "close": 22572.3,
-        "ema5_15m": 22579.87,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.8,
+        "bar_time": "2026-10-07T14:30:00",
+        "close": 22638.45,
+        "ema5_15m": 22614.41,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.43,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -67,13 +67,13 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
         "short": {
           "conditions": {
-            "hourly_stack": true,
+            "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -90,8 +90,42 @@
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: {'error_code': 'DH-904', 'error_type': 'Rate_Limit', 'error_message': 'Too many requests on server from single user breaching rate limits. Try throttling API calls.'}"
+      "snapshot": {
+        "bar_time": "2026-10-07T14:30:00",
+        "close": 72754.84,
+        "ema5_15m": 72672.57,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.4,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
+        ]
+      },
+      "error": null
     }
   }
 }
