@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-07T14:01:06+05:30",
-  "last_tick": "2026-10-07T14:01:06+05:30",
-  "engine_status": "running",
-  "last_error": null,
-  "token_hours_remaining": 18.62,
+  "generated_at": "2026-10-07T14:16:32+05:30",
+  "last_tick": "2026-10-07T14:16:32+05:30",
+  "engine_status": "rate_limited",
+  "last_error": "SENSEX: intraday_minute_data failed: {'error_code': 'DH-904', 'error_type': 'Rate_Limit', 'error_message': 'Too many requests on server from single user breaching rate limits. Try throttling API calls.'}",
+  "token_hours_remaining": 18.37,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-07T13:01:16.874015"
+      "checked_at": "2026-10-07T14:17:22.122936"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.19,148, SENSEX ~Rs.21,230) -- add funds",
-      "checked_at": "2026-10-07T13:46:11.564466"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.17,160, SENSEX ~Rs.21,450) -- add funds",
+      "checked_at": "2026-10-07T14:17:35.493195"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-07T14:01:13",
+    "ran_at": "2026-10-07T14:17:22",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-07T14:00:00",
-        "close": 22555.3,
-        "ema5_15m": 22582.32,
-        "volume_ratio": 0.12,
-        "body_ratio": 0.41,
+        "bar_time": "2026-10-07T14:15:00",
+        "close": 22572.3,
+        "ema5_15m": 22579.87,
+        "volume_ratio": 0.11,
+        "body_ratio": 0.8,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -90,42 +90,8 @@
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-10-07T14:00:00",
-        "close": 72493.0,
-        "ema5_15m": 72581.14,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.36,
-        "decision": {
-          "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "direction": null
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": true,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
-        ]
-      },
-      "error": null
+      "snapshot": null,
+      "error": "intraday_minute_data failed: {'error_code': 'DH-904', 'error_type': 'Rate_Limit', 'error_message': 'Too many requests on server from single user breaching rate limits. Try throttling API calls.'}"
     }
   }
 }
