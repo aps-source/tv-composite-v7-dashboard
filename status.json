@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T13:46:02+05:30",
-  "last_tick": "2026-10-08T13:46:02+05:30",
+  "generated_at": "2026-10-08T14:01:03+05:30",
+  "last_tick": "2026-10-08T14:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.63,
+  "token_hours_remaining": 18.38,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-08T13:46:13",
+    "ran_at": "2026-10-08T14:01:11",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -56,16 +56,16 @@
         "quantity": 65,
         "entry_time": "2026-10-08T09:25:23.975475",
         "entry_ltp": 109.95,
-        "bars_held": 18,
+        "bars_held": 19,
         "stop_streak": 0
       },
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T13:45:00",
-        "close": 22240.95,
-        "ema5_15m": 22260.1,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.62,
+        "bar_time": "2026-10-08T14:00:00",
+        "close": 22220.8,
+        "ema5_15m": 22246.87,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.84,
         "decision": {
           "code": "IN_POSITION",
           "detail": "SHORT PE 22450.0 -- stop streak 0/2",
@@ -99,11 +99,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T13:45:00",
-        "close": 71579.57,
-        "ema5_15m": 71644.82,
+        "bar_time": "2026-10-08T14:00:00",
+        "close": 71518.97,
+        "ema5_15m": 71603.67,
         "volume_ratio": 0.04,
-        "body_ratio": 0.65,
+        "body_ratio": 0.95,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
