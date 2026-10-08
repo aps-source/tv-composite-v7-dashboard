@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T15:31:04+05:30",
-  "last_tick": "2026-10-08T15:31:04+05:30",
+  "generated_at": "2026-10-08T15:46:03+05:30",
+  "last_tick": "2026-10-08T15:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 16.88,
+  "token_hours_remaining": 16.63,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.16,513, SENSEX ~Rs.21,540 for full ITM sizing)",
-      "checked_at": "2026-10-08T15:01:09.149419"
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.19,559, SENSEX ~Rs.24,042 for full ITM sizing)",
+      "checked_at": "2026-10-08T15:46:07.217163"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-08T15:31:07",
+    "ran_at": "2026-10-08T15:46:07",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,7 +51,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T15:30:00",
+        "bar_time": "2026-10-08T15:45:00",
         "close": 22231.8,
         "ema5_15m": 22227.27,
         "volume_ratio": 0.0,
@@ -92,7 +92,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T15:30:00",
+        "bar_time": "2026-10-08T15:45:00",
         "close": 71593.24,
         "ema5_15m": 71548.95,
         "volume_ratio": 0.0,
