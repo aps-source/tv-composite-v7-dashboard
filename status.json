@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T15:16:04+05:30",
-  "last_tick": "2026-10-08T15:16:04+05:30",
+  "generated_at": "2026-10-08T15:31:04+05:30",
+  "last_tick": "2026-10-08T15:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.13,
+  "token_hours_remaining": 16.88,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,74 +40,21 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-08T15:16:08",
+    "ran_at": "2026-10-08T15:31:07",
     "placed": 0,
-    "held": [
-      "EXIT NIFTY: broker already flat -- state cleared, P&L not booked"
-    ],
+    "held": [],
     "blocked": null
   },
   "pending": [],
   "symbols": {
     "NIFTY": {
-      "position": {
-        "direction": "SHORT",
-        "option_type": "PE",
-        "strike": 22450.0,
-        "expiry": "2026-10-13",
-        "quantity": 65,
-        "entry_time": "2026-10-08T09:25:23.975475",
-        "entry_ltp": 109.95,
-        "bars_held": 23,
-        "stop_streak": 0
-      },
-      "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-10-08T15:15:00",
-        "close": 22216.0,
-        "ema5_15m": 22219.73,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
-        "decision": {
-          "code": "EXIT_PROPOSED",
-          "detail": "Exit proposed (eod_squareoff) -- awaiting your confirmation",
-          "direction": "SHORT"
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
-        ]
-      },
-      "error": null
-    },
-    "SENSEX": {
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T15:15:00",
-        "close": 71461.62,
-        "ema5_15m": 71482.94,
-        "volume_ratio": 0.22,
+        "bar_time": "2026-10-08T15:30:00",
+        "close": 22231.8,
+        "ema5_15m": 22227.27,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
@@ -127,7 +74,48 @@
         "short": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": true,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
+          "Entry hour blocked (15:xx)"
+        ]
+      },
+      "error": null
+    },
+    "SENSEX": {
+      "position": null,
+      "day_losses": 0,
+      "snapshot": {
+        "bar_time": "2026-10-08T15:30:00",
+        "close": 71593.24,
+        "ema5_15m": 71548.95,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
             "candle": false
