@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T12:46:03+05:30",
-  "last_tick": "2026-10-08T12:46:03+05:30",
+  "generated_at": "2026-10-08T13:01:03+05:30",
+  "last_tick": "2026-10-08T13:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.63,
+  "token_hours_remaining": 19.38,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.19,015, SENSEX ~Rs.22,880) -- add funds",
-      "checked_at": "2026-10-08T12:31:14.678291"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.17,346, SENSEX ~Rs.21,520) -- add funds",
+      "checked_at": "2026-10-08T13:01:22.624633"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-08T12:46:06",
+    "ran_at": "2026-10-08T13:01:22",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -56,16 +56,16 @@
         "quantity": 65,
         "entry_time": "2026-10-08T09:25:23.975475",
         "entry_ltp": 109.95,
-        "bars_held": 14,
+        "bars_held": 15,
         "stop_streak": 0
       },
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T12:45:00",
-        "close": 22292.6,
-        "ema5_15m": 22320.78,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.18,
+        "bar_time": "2026-10-08T13:00:00",
+        "close": 22273.95,
+        "ema5_15m": 22299.47,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.34,
         "decision": {
           "code": "IN_POSITION",
           "detail": "SHORT PE 22450.0 -- stop streak 0/2",
@@ -99,11 +99,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T12:45:00",
-        "close": 71769.63,
-        "ema5_15m": 71849.72,
-        "volume_ratio": 0.01,
-        "body_ratio": 0.2,
+        "bar_time": "2026-10-08T13:00:00",
+        "close": 71676.64,
+        "ema5_15m": 71770.4,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.13,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
