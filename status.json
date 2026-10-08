@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T12:31:03+05:30",
-  "last_tick": "2026-10-08T12:31:03+05:30",
+  "generated_at": "2026-10-08T12:46:03+05:30",
+  "last_tick": "2026-10-08T12:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.88,
+  "token_hours_remaining": 19.63,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-08T11:46:05.422504"
+      "checked_at": "2026-10-08T12:46:06.065685"
     },
     "funds": {
       "ok": false,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-08T12:31:14",
+    "ran_at": "2026-10-08T12:46:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -56,16 +56,16 @@
         "quantity": 65,
         "entry_time": "2026-10-08T09:25:23.975475",
         "entry_ltp": 109.95,
-        "bars_held": 13,
+        "bars_held": 14,
         "stop_streak": 0
       },
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T12:30:00",
-        "close": 22297.7,
-        "ema5_15m": 22336.33,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.97,
+        "bar_time": "2026-10-08T12:45:00",
+        "close": 22292.6,
+        "ema5_15m": 22320.78,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.18,
         "decision": {
           "code": "IN_POSITION",
           "detail": "SHORT PE 22450.0 -- stop streak 0/2",
@@ -87,7 +87,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -99,11 +99,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T12:30:00",
-        "close": 71783.81,
-        "ema5_15m": 71895.52,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.97,
+        "bar_time": "2026-10-08T12:45:00",
+        "close": 71769.63,
+        "ema5_15m": 71849.72,
+        "volume_ratio": 0.01,
+        "body_ratio": 0.2,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -125,7 +125,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
