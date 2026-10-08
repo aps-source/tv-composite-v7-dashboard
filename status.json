@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T14:46:03+05:30",
-  "last_tick": "2026-10-08T14:46:03+05:30",
+  "generated_at": "2026-10-08T15:01:04+05:30",
+  "last_tick": "2026-10-08T15:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.63,
+  "token_hours_remaining": 17.38,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-08T13:46:13.439432"
+      "checked_at": "2026-10-08T15:01:08.208814"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.17,643, SENSEX ~Rs.22,953) -- add funds",
-      "checked_at": "2026-10-08T14:31:08.825822"
+      "ok": true,
+      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.16,513, SENSEX ~Rs.21,540 for full ITM sizing)",
+      "checked_at": "2026-10-08T15:01:09.149419"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-08T14:46:07",
+    "ran_at": "2026-10-08T15:01:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -56,16 +56,16 @@
         "quantity": 65,
         "entry_time": "2026-10-08T09:25:23.975475",
         "entry_ltp": 109.95,
-        "bars_held": 22,
+        "bars_held": 23,
         "stop_streak": 0
       },
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T14:45:00",
-        "close": 22224.55,
-        "ema5_15m": 22231.6,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.18,
+        "bar_time": "2026-10-08T15:00:00",
+        "close": 22209.5,
+        "ema5_15m": 22219.5,
+        "volume_ratio": 0.18,
+        "body_ratio": 0.34,
         "decision": {
           "code": "IN_POSITION",
           "detail": "SHORT PE 22450.0 -- stop streak 0/2",
@@ -91,7 +91,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     },
@@ -99,14 +101,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-08T14:45:00",
-        "close": 71497.11,
-        "ema5_15m": 71532.88,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.05,
+        "bar_time": "2026-10-08T15:00:00",
+        "close": 71442.81,
+        "ema5_15m": 71486.33,
+        "volume_ratio": 0.22,
+        "body_ratio": 0.19,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -129,7 +131,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     }
