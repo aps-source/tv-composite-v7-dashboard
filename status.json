@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-09T12:31:03+05:30",
-  "last_tick": "2026-10-09T12:31:03+05:30",
-  "engine_status": "data_error",
-  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000142E1C42210>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
-  "token_hours_remaining": 20.36,
+  "generated_at": "2026-10-09T12:46:02+05:30",
+  "last_tick": "2026-10-09T12:46:02+05:30",
+  "engine_status": "running",
+  "last_error": null,
+  "token_hours_remaining": 20.11,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -22,25 +22,25 @@
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "unavailable",
-    "prev_close": null,
-    "prev_change_pct": null
+    "state": "ok",
+    "prev_close": 15.24,
+    "prev_change_pct": 9.64
   },
   "checks": {
     "ip_whitelist": {
-      "ok": null,
-      "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-10-09T12:34:05.406387"
+      "ok": true,
+      "detail": "Dhan reports orders allowed from this machine's current IP",
+      "checked_at": "2026-10-09T12:46:05.491408"
     },
     "funds": {
-      "ok": null,
-      "detail": "balance check failed (ValueError)",
-      "checked_at": "2026-10-09T12:34:17.197226"
+      "ok": true,
+      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.14,725, SENSEX ~Rs.17,882 for full ITM sizing)",
+      "checked_at": "2026-10-09T12:46:06.364691"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-09T12:34:05",
+    "ran_at": "2026-10-09T12:46:05",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -50,14 +50,82 @@
     "NIFTY": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000142E1C42990>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "snapshot": {
+        "bar_time": "2026-10-09T12:45:00",
+        "close": 22484.25,
+        "ema5_15m": 22477.37,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.76,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
+        ]
+      },
+      "error": null
     },
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000142E1C42D50>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "snapshot": {
+        "bar_time": "2026-10-09T12:45:00",
+        "close": 72356.48,
+        "ema5_15m": 72341.14,
+        "volume_ratio": 0.01,
+        "body_ratio": 0.82,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
+        ]
+      },
+      "error": null
     }
   }
 }
