@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-09T09:31:02+05:30",
-  "last_tick": "2026-10-09T09:31:02+05:30",
+  "generated_at": "2026-10-09T09:46:04+05:30",
+  "last_tick": "2026-10-09T09:46:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.36,
+  "token_hours_remaining": 23.11,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-09T09:31:05",
+    "ran_at": "2026-10-09T09:46:07",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-09T09:30:00",
-        "close": 22368.95,
-        "ema5_15m": 22306.34,
-        "volume_ratio": 0.16,
-        "body_ratio": 0.33,
+        "bar_time": "2026-10-09T09:45:00",
+        "close": 22437.45,
+        "ema5_15m": 22363.33,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.69,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-09T09:30:00",
-        "close": 72011.12,
-        "ema5_15m": 71797.36,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.19,
+        "bar_time": "2026-10-09T09:45:00",
+        "close": 72227.95,
+        "ema5_15m": 71982.97,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.94,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -107,7 +107,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
