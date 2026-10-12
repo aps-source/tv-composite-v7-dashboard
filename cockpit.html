@@ -971,7 +971,6 @@ async function loadTodayCharts() {
     const m = await res.json();
     const t = Date.now();
     grid.innerHTML =
-      chartTile(`today_trades.png?t=${t}`, "Today's trades", m.trades_caption, true) +
       chartTile(`today_chart_nifty.png?t=${t}`, "NIFTY", m.nifty_caption, !!m.has_nifty_chart) +
       chartTile(`today_chart_sensex.png?t=${t}`, "SENSEX", m.sensex_caption, !!m.has_sensex_chart);
   } catch (e) {
