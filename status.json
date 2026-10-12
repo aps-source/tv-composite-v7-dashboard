@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-09T21:24:01+05:30",
-  "last_tick": "2026-10-09T21:24:01+05:30",
+  "generated_at": "2026-10-12T08:55:08+05:30",
+  "last_tick": "2026-10-12T08:55:08+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.51,
+  "token_hours_remaining": 23.99,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,29 +18,29 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-10-09",
+  "trading_day": "2026-10-12",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": 15.24,
-    "prev_change_pct": 9.64
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-09T21:24:15.904852"
+      "checked_at": "2026-10-12T08:55:22.253706"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.12,344, SENSEX ~Rs.68,860) -- add funds",
-      "checked_at": "2026-10-09T21:24:19.925387"
+      "ok": true,
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.24,092, SENSEX ~Rs.19,657 for full ITM sizing)",
+      "checked_at": "2026-10-12T08:55:25.532017"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-09T21:24:15",
+    "ran_at": "2026-10-12T08:55:22",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-09T20:30:00",
+        "bar_time": "2026-10-09T15:15:00",
         "close": 22520.45,
-        "ema5_15m": 22531.73,
+        "ema5_15m": 22537.37,
         "volume_ratio": 0.0,
-        "body_ratio": null,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile)",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -77,13 +77,14 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
           "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
@@ -92,14 +93,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-09T17:00:00",
+        "bar_time": "2026-10-09T15:15:00",
         "close": 72472.33,
-        "ema5_15m": 72514.68,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "ema5_15m": 72535.85,
+        "volume_ratio": 1.11,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile)",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -118,13 +119,14 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
           "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
