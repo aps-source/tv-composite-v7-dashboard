@@ -33,6 +33,21 @@
   .switch:disabled { opacity: 0.55; cursor: wait; }
   .toggle-state { font-size: 11px; color: var(--ink-muted); min-width: 6rem; font-style: italic; }
 
+  .chart-section { margin-top: 1.2rem; }
+  .chart-section h3 { font-size: 15px; margin: 0 0 10px; }
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px,100%), 1fr)); gap: 14px; }
+  .chart-tile { background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: 10px; overflow: hidden; }
+  .chart-tile .ct-head { padding: 10px 14px 6px; font-size: 13px; font-weight: 700; color: var(--ink); }
+  .chart-tile .ct-cap { padding: 0 14px 10px; font-size: 11.5px; color: var(--ink-muted); }
+  .chart-tile button.ct-img { display: block; width: 100%; border: none; padding: 0; margin: 0; background: var(--page); cursor: zoom-in; }
+  .chart-tile img { display: block; width: 100%; height: auto; }
+  .chart-tile .ct-empty { padding: 30px 14px; text-align: center; color: var(--ink-muted); font-size: 13px; }
+  #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.92); display: none; align-items: center; justify-content: center; z-index: 999; padding: 24px; cursor: zoom-out; }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 96vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+  #lightbox .lb-cap { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: var(--ink); font-size: 13px; }
+  #lightbox .lb-close { position: absolute; top: 16px; right: 22px; color: var(--ink); font-size: 26px; font-weight: 700; cursor: pointer; }
+
   .filters { display: flex; gap: 10px; align-items: center; margin: 18px 0 20px; flex-wrap: wrap; border-top: 1px solid var(--ink); padding-top: 14px; }
   .filters select, .filters button {
     background: var(--page); border: 1px solid var(--ink); color: var(--ink);
@@ -232,8 +247,20 @@
   <div class="bottom-row" id="bottomRow"></div>
 
   <div class="footer-note" id="footerNote"></div>
+
+  <div class="chart-section">
+    <h3>Today's chart &middot; strategy, signals &amp; trades</h3>
+    <div class="chart-grid" id="chart-grid">
+      <div class="chart-tile"><div class="ct-empty">Loading…</div></div>
+    </div>
+  </div>
 </div>
 
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="lb-close" onclick="closeLightbox(event)">&times;</span>
+  <img id="lightbox-img" src="" alt="" />
+  <div class="lb-cap" id="lightbox-cap"></div>
+</div>
 <script>
 let RAW = null;
 
@@ -911,6 +938,48 @@ async function flipTrading() {
 switchBtn.addEventListener("click", flipTrading);
 loadControl();
 setInterval(loadControl, 30000);
+
+/* ---------- today's chart section: trades-table image + per-instrument annotated/strategy
+   chart, same PNGs already sent to Telegram at 15:40 by send_daily_trades_image.py, copied here
+   under fixed names each day. Click any tile to view full screen. */
+function openLightbox(src, cap) {
+  document.getElementById("lightbox-img").src = src;
+  document.getElementById("lightbox-cap").textContent = cap || "";
+  document.getElementById("lightbox").classList.add("open");
+}
+function closeLightbox(e) {
+  if (e) e.stopPropagation();
+  document.getElementById("lightbox").classList.remove("open");
+}
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+
+function chartTile(src, label, caption, exists) {
+  if (!exists) return `<div class="chart-tile"><div class="ct-head">${label}</div><div class="ct-empty">No chart yet today.</div></div>`;
+  const esc2 = (s) => (s || "").replace(/'/g, "\\'");
+  return `<div class="chart-tile">
+    <div class="ct-head">${label}</div>
+    <button class="ct-img" onclick="openLightbox('${src}','${esc2(caption)}')"><img src="${src}" loading="lazy" alt="${label}" /></button>
+    <div class="ct-cap">${caption || ""}</div>
+  </div>`;
+}
+
+async function loadTodayCharts() {
+  const grid = document.getElementById("chart-grid");
+  try {
+    const res = await fetch("today_meta.json?t=" + Date.now(), { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const m = await res.json();
+    const t = Date.now();
+    grid.innerHTML =
+      chartTile(`today_trades.png?t=${t}`, "Today's trades", m.trades_caption, true) +
+      chartTile(`today_chart_nifty.png?t=${t}`, "NIFTY", m.nifty_caption, !!m.has_nifty_chart) +
+      chartTile(`today_chart_sensex.png?t=${t}`, "SENSEX", m.sensex_caption, !!m.has_sensex_chart);
+  } catch (e) {
+    grid.innerHTML = `<div class="chart-tile"><div class="ct-empty">Today's chart hasn't been published yet &mdash; it goes out once the 15:40 daily job runs.</div></div>`;
+  }
+}
+loadTodayCharts();
+setInterval(loadTodayCharts, 5 * 60 * 1000);
 </script>
 </body>
 </html>
