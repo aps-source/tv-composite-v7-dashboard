@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-12T15:46:05+05:30",
-  "last_tick": "2026-10-12T15:46:05+05:30",
+  "generated_at": "2026-10-13T09:02:46+05:30",
+  "last_tick": "2026-10-13T09:02:46+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.14,
+  "token_hours_remaining": 23.99,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,29 +18,29 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-10-12",
+  "trading_day": "2026-10-13",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": 14.36,
-    "prev_change_pct": -5.77
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-12T15:31:16.336630"
+      "checked_at": "2026-10-13T09:03:02.901385"
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.23,148, SENSEX ~Rs.20,638)",
-      "checked_at": "2026-10-12T15:31:18.657188"
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.23,266, SENSEX ~Rs.27,878 for full ITM sizing)",
+      "checked_at": "2026-10-13T09:03:06.004501"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-12T15:46:10",
+    "ran_at": "2026-10-13T09:03:02",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-12T15:45:00",
+        "bar_time": "2026-10-12T15:15:00",
         "close": 22363.35,
-        "ema5_15m": 22348.75,
+        "ema5_15m": 22341.46,
         "volume_ratio": 0.0,
-        "body_ratio": null,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
           "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -93,11 +93,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-12T15:45:00",
+        "bar_time": "2026-10-12T15:15:00",
         "close": 71924.68,
-        "ema5_15m": 71854.55,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "ema5_15m": 71819.49,
+        "volume_ratio": 0.69,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
           "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
@@ -109,7 +109,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
