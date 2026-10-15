@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T09:46:04+05:30",
-  "last_tick": "2026-10-15T09:46:04+05:30",
+  "generated_at": "2026-10-15T10:01:04+05:30",
+  "last_tick": "2026-10-15T10:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.08,
+  "token_hours_remaining": 22.83,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-15T08:54:24.897865"
+      "checked_at": "2026-10-15T10:01:10.137417"
     },
     "funds": {
       "ok": false,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-15T09:46:08",
+    "ran_at": "2026-10-15T10:01:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,52 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-15T09:45:00",
-        "close": 22770.05,
-        "ema5_15m": 22718.13,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.84,
+        "bar_time": "2026-10-15T10:00:00",
+        "close": 22865.35,
+        "ema5_15m": 22784.97,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.88,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
-          "direction": null
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": true
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "blocked_reasons": []
-      },
-      "error": null
-    },
-    "SENSEX": {
-      "position": null,
-      "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-10-15T09:45:00",
-        "close": 73327.7,
-        "ema5_15m": 73145.94,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.61,
-        "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (10:xx)",
           "direction": null
         },
         "long": {
@@ -119,7 +81,49 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
+      },
+      "error": null
+    },
+    "SENSEX": {
+      "position": null,
+      "day_losses": 0,
+      "snapshot": {
+        "bar_time": "2026-10-15T10:00:00",
+        "close": 73645.44,
+        "ema5_15m": 73375.37,
+        "volume_ratio": 0.4,
+        "body_ratio": 0.82,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (10:xx)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": true,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     }
