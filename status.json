@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-16T13:16:04+05:30",
-  "last_tick": "2026-10-16T13:16:04+05:30",
+  "generated_at": "2026-10-16T13:31:04+05:30",
+  "last_tick": "2026-10-16T13:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.6,
+  "token_hours_remaining": 19.35,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.15,312, SENSEX ~Rs.20,357)",
-      "checked_at": "2026-10-16T12:46:24.884818"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.12,874, SENSEX ~Rs.20,688)",
+      "checked_at": "2026-10-16T13:31:09.098711"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-16T13:16:08",
+    "ran_at": "2026-10-16T13:31:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T13:15:00",
-        "close": 23114.8,
-        "ema5_15m": 23113.42,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.45,
+        "bar_time": "2026-10-16T13:30:00",
+        "close": 23123.1,
+        "ema5_15m": 23118.77,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.47,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T13:15:00",
-        "close": 74637.03,
-        "ema5_15m": 74638.15,
-        "volume_ratio": 0.01,
-        "body_ratio": 0.33,
+        "bar_time": "2026-10-16T13:30:00",
+        "close": 74667.8,
+        "ema5_15m": 74655.6,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.15,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -104,7 +104,7 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
             "candle": false
