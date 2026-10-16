@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-16T15:01:04+05:30",
-  "last_tick": "2026-10-16T15:01:04+05:30",
+  "generated_at": "2026-10-16T15:16:03+05:30",
+  "last_tick": "2026-10-16T15:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.85,
+  "token_hours_remaining": 17.6,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-16T15:01:15",
+    "ran_at": "2026-10-16T15:16:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,23 +51,23 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T15:00:00",
-        "close": 23090.15,
-        "ema5_15m": 23093.85,
-        "volume_ratio": 0.19,
-        "body_ratio": 0.73,
+        "bar_time": "2026-10-16T15:15:00",
+        "close": 23119.0,
+        "ema5_15m": 23109.22,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
+            "hourly_stack": true,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -82,6 +82,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
           "Entry hour blocked (15:xx)"
         ]
@@ -92,23 +93,23 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T15:00:00",
-        "close": 74580.34,
-        "ema5_15m": 74583.53,
-        "volume_ratio": 0.41,
-        "body_ratio": 0.67,
+        "bar_time": "2026-10-16T15:15:00",
+        "close": 74674.29,
+        "ema5_15m": 74634.73,
+        "volume_ratio": 0.06,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -123,6 +124,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
           "Entry hour blocked (15:xx)"
         ]
