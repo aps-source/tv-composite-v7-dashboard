@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T13:46:07+05:30",
-  "last_tick": "2026-10-15T13:46:07+05:30",
-  "engine_status": "data_error",
-  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000264F04E2210>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
-  "token_hours_remaining": 19.08,
+  "generated_at": "2026-10-16T08:52:44+05:30",
+  "last_tick": "2026-10-16T08:52:44+05:30",
+  "engine_status": "running",
+  "last_error": null,
+  "token_hours_remaining": 23.99,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,29 +18,29 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-10-15",
+  "trading_day": "2026-10-16",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "unavailable",
+    "state": "ok",
     "prev_close": null,
     "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
-      "ok": null,
-      "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-10-15T13:47:38.601737"
+      "ok": true,
+      "detail": "Dhan reports orders allowed from this machine's current IP",
+      "checked_at": "2026-10-16T08:52:52.769176"
     },
     "funds": {
-      "ok": null,
-      "detail": "balance check failed (ValueError)",
-      "checked_at": "2026-10-15T13:47:38.614398"
+      "ok": true,
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.20,059, SENSEX ~Rs.30,348)",
+      "checked_at": "2026-10-16T08:52:56.968504"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-15T13:47:38",
+    "ran_at": "2026-10-16T08:52:52",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -50,14 +50,84 @@
     "NIFTY": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000264F04E2990>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "snapshot": {
+        "bar_time": "2026-10-15T15:15:00",
+        "close": 22997.35,
+        "ema5_15m": 22982.66,
+        "volume_ratio": 0.0,
+        "body_ratio": 1.0,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": true,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
+          "Entry hour blocked (15:xx)"
+        ]
+      },
+      "error": null
     },
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000264F04E2D50>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "snapshot": {
+        "bar_time": "2026-10-15T15:15:00",
+        "close": 74315.61,
+        "ema5_15m": 74143.41,
+        "volume_ratio": 0.82,
+        "body_ratio": 1.0,
+        "decision": {
+          "code": "BLOCKED",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": true,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": false,
+            "candle": true
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
+          "Entry hour blocked (15:xx)"
+        ]
+      },
+      "error": null
     }
   }
 }
