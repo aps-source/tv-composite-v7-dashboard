@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-16T14:16:04+05:30",
-  "last_tick": "2026-10-16T14:16:04+05:30",
+  "generated_at": "2026-10-16T14:31:05+05:30",
+  "last_tick": "2026-10-16T14:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.6,
+  "token_hours_remaining": 18.35,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-16T14:16:08",
+    "ran_at": "2026-10-16T14:31:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T14:15:00",
-        "close": 23104.85,
-        "ema5_15m": 23114.29,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.79,
+        "bar_time": "2026-10-16T14:30:00",
+        "close": 23087.45,
+        "ema5_15m": 23101.01,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.26,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -63,7 +63,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": true,
+            "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -77,7 +77,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T14:15:00",
-        "close": 74614.71,
-        "ema5_15m": 74638.17,
+        "bar_time": "2026-10-16T14:30:00",
+        "close": 74557.88,
+        "ema5_15m": 74596.94,
         "volume_ratio": 0.01,
-        "body_ratio": 0.61,
+        "body_ratio": 0.51,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -117,7 +117,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
