@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-16T10:01:12+05:30",
-  "last_tick": "2026-10-16T10:01:12+05:30",
+  "generated_at": "2026-10-16T10:16:09+05:30",
+  "last_tick": "2026-10-16T10:16:09+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.84,
+  "token_hours_remaining": 22.6,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.17,135, SENSEX ~Rs.23,627)",
-      "checked_at": "2026-10-16T09:31:29.756859"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.17,964, SENSEX ~Rs.22,070)",
+      "checked_at": "2026-10-16T10:16:20.055106"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-16T10:01:22",
+    "ran_at": "2026-10-16T10:16:19",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T10:00:00",
-        "close": 23035.5,
-        "ema5_15m": 23005.94,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.58,
+        "bar_time": "2026-10-16T10:15:00",
+        "close": 23104.55,
+        "ema5_15m": 23051.88,
+        "volume_ratio": 0.16,
+        "body_ratio": 0.77,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
@@ -92,11 +92,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-16T10:00:00",
-        "close": 74415.43,
-        "ema5_15m": 74295.11,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.85,
+        "bar_time": "2026-10-16T10:15:00",
+        "close": 74637.89,
+        "ema5_15m": 74449.66,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.82,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
