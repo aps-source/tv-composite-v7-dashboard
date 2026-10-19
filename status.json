@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-19T14:16:06+05:30",
-  "last_tick": "2026-10-19T14:16:06+05:30",
+  "generated_at": "2026-10-19T14:31:09+05:30",
+  "last_tick": "2026-10-19T14:31:09+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.88,
+  "token_hours_remaining": 18.63,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.21,092, SENSEX ~Rs.15,032) -- add funds",
-      "checked_at": "2026-10-19T14:01:12.349924"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.21,579, SENSEX ~Rs.15,371) -- add funds",
+      "checked_at": "2026-10-19T14:31:16.847648"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-19T14:16:12",
+    "ran_at": "2026-10-19T14:31:16",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-19T14:15:00",
-        "close": 22873.7,
-        "ema5_15m": 22879.71,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.28,
+        "bar_time": "2026-10-19T14:30:00",
+        "close": 22860.25,
+        "ema5_15m": 22869.3,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.4,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-19T14:15:00",
-        "close": 73792.65,
-        "ema5_15m": 73820.76,
+        "bar_time": "2026-10-19T14:30:00",
+        "close": 73752.37,
+        "ema5_15m": 73787.07,
         "volume_ratio": 0.02,
-        "body_ratio": 0.18,
+        "body_ratio": 0.11,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
