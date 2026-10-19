@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-19T13:46:04+05:30",
-  "last_tick": "2026-10-19T13:46:04+05:30",
+  "generated_at": "2026-10-19T14:01:05+05:30",
+  "last_tick": "2026-10-19T14:01:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.38,
+  "token_hours_remaining": 19.13,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-19T12:46:10.445355"
+      "checked_at": "2026-10-19T14:01:10.416963"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.23,938, SENSEX ~Rs.15,192) -- add funds",
-      "checked_at": "2026-10-19T13:31:11.037435"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.21,092, SENSEX ~Rs.15,032) -- add funds",
+      "checked_at": "2026-10-19T14:01:12.349924"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-19T13:46:08",
+    "ran_at": "2026-10-19T14:01:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-19T13:45:00",
-        "close": 22859.25,
-        "ema5_15m": 22884.69,
-        "volume_ratio": 0.12,
-        "body_ratio": 0.43,
+        "bar_time": "2026-10-19T14:00:00",
+        "close": 22871.75,
+        "ema5_15m": 22882.85,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.16,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-19T13:45:00",
-        "close": 73741.53,
-        "ema5_15m": 73833.93,
+        "bar_time": "2026-10-19T14:00:00",
+        "close": 73797.1,
+        "ema5_15m": 73834.04,
         "volume_ratio": 0.01,
-        "body_ratio": 0.78,
+        "body_ratio": 0.12,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -114,10 +114,10 @@
         "short": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
