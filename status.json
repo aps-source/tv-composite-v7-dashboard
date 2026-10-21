@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T15:31:05+05:30",
-  "last_tick": "2026-10-21T15:31:05+05:30",
+  "generated_at": "2026-10-21T15:46:02+05:30",
+  "last_tick": "2026-10-21T15:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.31,
+  "token_hours_remaining": 17.06,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.20,714, SENSEX ~Rs.68,977)",
-      "checked_at": "2026-10-21T15:01:23.607603"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.32,597, SENSEX ~Rs.31,352)",
+      "checked_at": "2026-10-21T15:46:07.012530"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-21T15:31:10",
+    "ran_at": "2026-10-21T15:46:07",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,7 +51,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-21T15:30:00",
+        "bar_time": "2026-10-21T15:45:00",
         "close": 22811.35,
         "ema5_15m": 22763.65,
         "volume_ratio": 0.0,
@@ -93,7 +93,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-21T15:30:00",
+        "bar_time": "2026-10-21T15:45:00",
         "close": 73709.69,
         "ema5_15m": 73570.7,
         "volume_ratio": 0.0,
