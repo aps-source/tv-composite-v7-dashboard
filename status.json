@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T11:31:06+05:30",
-  "last_tick": "2026-10-21T11:31:06+05:30",
+  "generated_at": "2026-10-21T11:36:38+05:30",
+  "last_tick": "2026-10-21T11:36:38+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.31,
+  "token_hours_remaining": 21.22,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,445, SENSEX ~Rs.23,543) -- add funds",
-      "checked_at": "2026-10-21T11:06:51.394643"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.22,644, SENSEX ~Rs.25,293) -- add funds",
+      "checked_at": "2026-10-21T11:36:53.477541"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-21T11:31:12",
+    "ran_at": "2026-10-21T11:36:53",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -52,10 +52,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-10-21T11:30:00",
-        "close": 22880.85,
-        "ema5_15m": 22918.78,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.66,
+        "close": 22847.3,
+        "ema5_15m": 22907.59,
+        "volume_ratio": 0.4,
+        "body_ratio": 0.89,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -92,10 +92,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-10-21T11:30:00",
-        "close": 73935.11,
-        "ema5_15m": 74067.02,
-        "volume_ratio": 0.34,
-        "body_ratio": 0.78,
+        "close": 73844.45,
+        "ema5_15m": 74036.8,
+        "volume_ratio": 1.12,
+        "body_ratio": 0.87,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
