@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T14:06:38+05:30",
-  "last_tick": "2026-10-21T14:06:38+05:30",
+  "generated_at": "2026-10-21T14:16:05+05:30",
+  "last_tick": "2026-10-21T14:16:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.72,
+  "token_hours_remaining": 18.56,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-21T13:16:08.479676"
+      "checked_at": "2026-10-21T14:16:09.974326"
     },
     "funds": {
       "ok": true,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-21T14:06:42",
+    "ran_at": "2026-10-21T14:16:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-21T14:00:00",
-        "close": 22705.4,
-        "ema5_15m": 22714.54,
-        "volume_ratio": 0.3,
-        "body_ratio": 0.41,
+        "bar_time": "2026-10-21T14:15:00",
+        "close": 22684.8,
+        "ema5_15m": 22698.92,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.44,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-21T14:00:00",
-        "close": 73399.17,
-        "ema5_15m": 73425.31,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.52,
+        "bar_time": "2026-10-21T14:15:00",
+        "close": 73327.79,
+        "ema5_15m": 73373.69,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.57,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -107,7 +107,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
