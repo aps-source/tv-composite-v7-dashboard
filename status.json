@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T14:21:38+05:30",
-  "last_tick": "2026-10-21T14:21:38+05:30",
+  "generated_at": "2026-10-21T14:31:05+05:30",
+  "last_tick": "2026-10-21T14:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.47,
+  "token_hours_remaining": 18.31,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.21,950, SENSEX ~Rs.68,977)",
-      "checked_at": "2026-10-21T14:01:10.821198"
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.21,611, SENSEX ~Rs.25,523)",
+      "checked_at": "2026-10-21T14:31:14.220763"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-21T14:21:42",
+    "ran_at": "2026-10-21T14:31:14",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-21T14:15:00",
-        "close": 22666.25,
-        "ema5_15m": 22692.74,
-        "volume_ratio": 0.58,
-        "body_ratio": 0.65,
+        "bar_time": "2026-10-21T14:30:00",
+        "close": 22668.65,
+        "ema5_15m": 22686.04,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.73,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-21T14:15:00",
-        "close": 73277.94,
-        "ema5_15m": 73357.07,
-        "volume_ratio": 0.26,
-        "body_ratio": 0.54,
+        "bar_time": "2026-10-21T14:30:00",
+        "close": 73273.95,
+        "ema5_15m": 73332.23,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.64,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
