@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T12:16:04+05:30",
-  "last_tick": "2026-10-21T12:16:04+05:30",
+  "generated_at": "2026-10-21T12:21:38+05:30",
+  "last_tick": "2026-10-21T12:21:38+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.56,
+  "token_hours_remaining": 20.47,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-21T12:16:09",
+    "ran_at": "2026-10-21T12:21:50",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -52,10 +52,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-10-21T12:15:00",
-        "close": 22729.55,
-        "ema5_15m": 22795.81,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.72,
+        "close": 22720.4,
+        "ema5_15m": 22792.76,
+        "volume_ratio": 0.4,
+        "body_ratio": 0.62,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -92,10 +92,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-10-21T12:15:00",
-        "close": 73465.42,
-        "ema5_15m": 73681.6,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.97,
+        "close": 73428.09,
+        "ema5_15m": 73669.16,
+        "volume_ratio": 0.24,
+        "body_ratio": 0.76,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
