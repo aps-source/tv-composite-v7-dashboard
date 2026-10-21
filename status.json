@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T11:01:06+05:30",
-  "last_tick": "2026-10-21T11:01:06+05:30",
+  "generated_at": "2026-10-21T11:06:38+05:30",
+  "last_tick": "2026-10-21T11:06:38+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.81,
+  "token_hours_remaining": 21.72,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.22,186, SENSEX ~Rs.25,297) -- add funds",
-      "checked_at": "2026-10-21T10:31:15.948985"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,445, SENSEX ~Rs.23,543) -- add funds",
+      "checked_at": "2026-10-21T11:06:51.394643"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-21T11:01:10",
+    "ran_at": "2026-10-21T11:06:51",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -52,10 +52,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-10-21T11:00:00",
-        "close": 22960.7,
-        "ema5_15m": 22965.94,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.06,
+        "close": 22970.35,
+        "ema5_15m": 22969.15,
+        "volume_ratio": 0.4,
+        "body_ratio": 0.35,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -74,7 +74,7 @@
         "short": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": false,
             "volume": false,
             "candle": false
@@ -92,10 +92,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-10-21T11:00:00",
-        "close": 74216.22,
-        "ema5_15m": 74215.96,
-        "volume_ratio": 0.24,
-        "body_ratio": 0.35,
+        "close": 74245.74,
+        "ema5_15m": 74225.8,
+        "volume_ratio": 0.74,
+        "body_ratio": 0.49,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
