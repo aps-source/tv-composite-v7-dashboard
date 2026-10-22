@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-22T13:16:19+05:30",
-  "last_tick": "2026-10-22T13:16:19+05:30",
+  "generated_at": "2026-10-22T13:31:18+05:30",
+  "last_tick": "2026-10-22T13:31:18+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.5,
+  "token_hours_remaining": 19.25,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-22T13:16:42",
+    "ran_at": "2026-10-22T13:31:30",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-22T13:15:00",
-        "close": 22688.15,
-        "ema5_15m": 22673.87,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.89,
+        "bar_time": "2026-10-22T13:30:00",
+        "close": 22637.25,
+        "ema5_15m": 22647.34,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.52,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -74,7 +74,7 @@
         "short": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
             "candle": false
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-22T13:15:00",
-        "close": 73411.07,
-        "ema5_15m": 73354.03,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.9,
+        "bar_time": "2026-10-22T13:30:00",
+        "close": 73222.69,
+        "ema5_15m": 73259.89,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.55,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -112,7 +112,7 @@
         "short": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
             "candle": false
