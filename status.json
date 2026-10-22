@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-22T14:01:06+05:30",
-  "last_tick": "2026-10-22T14:01:06+05:30",
+  "generated_at": "2026-10-22T14:16:05+05:30",
+  "last_tick": "2026-10-22T14:16:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.76,
+  "token_hours_remaining": 18.51,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-22T14:01:15",
+    "ran_at": "2026-10-22T14:16:11",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-22T14:00:00",
-        "close": 22638.6,
-        "ema5_15m": 22641.68,
+        "bar_time": "2026-10-22T14:15:00",
+        "close": 22627.45,
+        "ema5_15m": 22633.72,
         "volume_ratio": 0.05,
-        "body_ratio": 0.7,
+        "body_ratio": 0.45,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -77,7 +77,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-22T14:00:00",
-        "close": 73228.12,
-        "ema5_15m": 73238.98,
+        "bar_time": "2026-10-22T14:15:00",
+        "close": 73178.33,
+        "ema5_15m": 73206.6,
         "volume_ratio": 0.02,
-        "body_ratio": 0.57,
+        "body_ratio": 0.36,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -115,7 +115,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
