@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T08:54:06+05:30",
-  "last_tick": "2026-10-23T08:54:06+05:30",
+  "generated_at": "2026-10-23T09:31:04+05:30",
+  "last_tick": "2026-10-23T09:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.99,
+  "token_hours_remaining": 23.38,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -23,8 +23,8 @@
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": null,
-    "prev_change_pct": null
+    "prev_close": 15.73,
+    "prev_change_pct": 0.13
   },
   "checks": {
     "ip_whitelist": {
@@ -33,14 +33,14 @@
       "checked_at": "2026-10-23T08:54:17.720002"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.16,256, SENSEX ~Rs.23,910)",
-      "checked_at": "2026-10-23T08:54:19.689542"
+      "ok": false,
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.21,143, SENSEX ~Rs.24,041) -- add funds",
+      "checked_at": "2026-10-23T09:31:09.000782"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-23T08:54:17",
+    "ran_at": "2026-10-23T09:31:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,27 +51,17 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-22T15:15:00",
-        "close": 22687.65,
-        "ema5_15m": 22668.27,
-        "volume_ratio": 0.0,
-        "body_ratio": 1.0,
+        "bar_time": "2026-10-23T09:30:00",
+        "close": 22717.15,
+        "ema5_15m": 22697.49,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.49,
         "decision": {
-          "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
           "direction": null
         },
         "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": true
-          },
-          "all_met": false
-        },
-        "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
@@ -81,10 +71,17 @@
           },
           "all_met": false
         },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
-        ]
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": []
       },
       "error": null
     },
@@ -92,17 +89,27 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-22T15:15:00",
-        "close": 73249.39,
-        "ema5_15m": 73267.56,
-        "volume_ratio": 0.96,
-        "body_ratio": 1.0,
+        "bar_time": "2026-10-23T09:30:00",
+        "close": 73527.18,
+        "ema5_15m": 73417.88,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.46,
         "decision": {
-          "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
           "direction": null
         },
         "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
@@ -112,20 +119,7 @@
           },
           "all_met": false
         },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": true
-          },
-          "all_met": false
-        },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
-        ]
+        "blocked_reasons": []
       },
       "error": null
     }
