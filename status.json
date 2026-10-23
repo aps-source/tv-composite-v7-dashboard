@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T14:01:05+05:30",
-  "last_tick": "2026-10-23T14:01:05+05:30",
+  "generated_at": "2026-10-23T14:16:03+05:30",
+  "last_tick": "2026-10-23T14:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.88,
+  "token_hours_remaining": 18.63,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.21,707, SENSEX ~Rs.27,114) -- add funds",
-      "checked_at": "2026-10-23T13:46:08.324825"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.20,517, SENSEX ~Rs.78,111) -- add funds",
+      "checked_at": "2026-10-23T14:16:09.206386"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-23T14:01:10",
+    "ran_at": "2026-10-23T14:16:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-23T14:00:00",
-        "close": 22541.45,
-        "ema5_15m": 22505.77,
+        "bar_time": "2026-10-23T14:15:00",
+        "close": 22561.6,
+        "ema5_15m": 22527.16,
         "volume_ratio": 0.07,
-        "body_ratio": 0.78,
+        "body_ratio": 0.75,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-23T14:00:00",
-        "close": 72991.56,
-        "ema5_15m": 72878.13,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.85,
+        "bar_time": "2026-10-23T14:15:00",
+        "close": 73036.37,
+        "ema5_15m": 72938.77,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.55,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
