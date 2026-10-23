@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T14:16:03+05:30",
-  "last_tick": "2026-10-23T14:16:03+05:30",
+  "generated_at": "2026-10-23T14:31:12+05:30",
+  "last_tick": "2026-10-23T14:31:12+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.63,
+  "token_hours_remaining": 18.37,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-23T13:31:16.533528"
+      "checked_at": "2026-10-23T14:31:21.775289"
     },
     "funds": {
       "ok": false,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-23T14:16:09",
+    "ran_at": "2026-10-23T14:31:21",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-23T14:15:00",
-        "close": 22561.6,
-        "ema5_15m": 22527.16,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.75,
+        "bar_time": "2026-10-23T14:30:00",
+        "close": 22545.05,
+        "ema5_15m": 22529.84,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.19,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-23T14:15:00",
-        "close": 73036.37,
-        "ema5_15m": 72938.77,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.55,
+        "bar_time": "2026-10-23T14:30:00",
+        "close": 72981.78,
+        "ema5_15m": 72939.61,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.31,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -105,7 +105,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
