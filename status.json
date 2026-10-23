@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T12:01:03+05:30",
-  "last_tick": "2026-10-23T12:01:03+05:30",
+  "generated_at": "2026-10-23T12:16:04+05:30",
+  "last_tick": "2026-10-23T12:16:04+05:30",
   "engine_status": "data_error",
-  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000001D686A22210>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
-  "token_hours_remaining": 20.88,
+  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000208E6152210>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
+  "token_hours_remaining": 20.63,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": null,
       "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-10-23T12:02:38.648544"
+      "checked_at": "2026-10-23T12:18:03.289877"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers NIFTY only via the cheaper OTM fallback (needs NIFTY ~Rs.20,721, SENSEX ~Rs.24,004 for full ITM sizing)",
-      "checked_at": "2026-10-23T11:46:09.570495"
+      "ok": null,
+      "detail": "balance check failed (ValueError)",
+      "checked_at": "2026-10-23T12:18:03.292309"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-23T12:02:38",
+    "ran_at": "2026-10-23T12:18:03",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,13 +51,13 @@
       "position": null,
       "day_losses": 0,
       "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000001D686A22990>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000208E6152990>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
     },
     "SENSEX": {
       "position": null,
       "day_losses": 0,
       "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000001D686A22D50>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000208E6152D50>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
     }
   }
 }
