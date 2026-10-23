@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T12:16:04+05:30",
-  "last_tick": "2026-10-23T12:16:04+05:30",
-  "engine_status": "data_error",
-  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000208E6152210>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
-  "token_hours_remaining": 20.63,
+  "generated_at": "2026-10-23T12:31:05+05:30",
+  "last_tick": "2026-10-23T12:31:05+05:30",
+  "engine_status": "running",
+  "last_error": null,
+  "token_hours_remaining": 20.38,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -22,25 +22,25 @@
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "unavailable",
-    "prev_close": null,
-    "prev_change_pct": null
+    "state": "ok",
+    "prev_close": 15.73,
+    "prev_change_pct": 0.13
   },
   "checks": {
     "ip_whitelist": {
-      "ok": null,
-      "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-10-23T12:18:03.289877"
+      "ok": true,
+      "detail": "Dhan reports orders allowed from this machine's current IP",
+      "checked_at": "2026-10-23T12:31:10.491501"
     },
     "funds": {
-      "ok": null,
-      "detail": "balance check failed (ValueError)",
-      "checked_at": "2026-10-23T12:18:03.292309"
+      "ok": false,
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.18,619, SENSEX ~Rs.25,180) -- add funds",
+      "checked_at": "2026-10-23T12:31:12.325969"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-23T12:18:03",
+    "ran_at": "2026-10-23T12:31:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -50,14 +50,78 @@
     "NIFTY": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000208E6152990>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "snapshot": {
+        "bar_time": "2026-10-23T12:30:00",
+        "close": 22415.4,
+        "ema5_15m": 22433.76,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.27,
+        "decision": {
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": true,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": []
+      },
+      "error": null
     },
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": null,
-      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x00000208E6152D50>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "snapshot": {
+        "bar_time": "2026-10-23T12:30:00",
+        "close": 72572.08,
+        "ema5_15m": 72638.23,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.4,
+        "decision": {
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
+          "direction": null
+        },
+        "long": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": false,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": true,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": []
+      },
+      "error": null
     }
   }
 }
