@@ -264,21 +264,6 @@
     <div id="calendar"></div>
   </div>
 
-  <div class="grid2">
-    <div class="card">
-      <h3>Net P&amp;L by segment</h3>
-      <div class="hint">NIFTY vs SENSEX</div>
-      <div id="bySegment"></div>
-    </div>
-    <div class="card">
-      <h3>Net P&amp;L by exit type</h3>
-      <div class="hint">Sticky EMA5 stop vs EOD square-off</div>
-      <div id="bySetup"></div>
-    </div>
-  </div>
-
-  <div class="bottom-row" id="bottomRow"></div>
-
   <div class="section-title">Signal history</div>
   <div class="filters">
     <select id="hSymbol"><option value="ALL">All symbols</option><option value="NIFTY">NIFTY</option><option value="SENSEX">SENSEX</option></select>
@@ -475,54 +460,6 @@ function renderCalendar(trades, split) {
     <div class="cal-legend"><span><span class="dot" style="background:rgba(62,207,142,0.5)"></span>profit</span><span><span class="dot" style="background:rgba(239,90,90,0.5)"></span>loss</span></div>`;
 }
 
-function renderBarPanel(elId, rows) {
-  const maxAbs = Math.max(1, ...rows.map(r => Math.abs(r.net_pnl)));
-  document.getElementById(elId).innerHTML = rows.map(r => `
-    <div class="bar-row">
-      <div class="label">${r.key}</div>
-      <div class="bar-track"><div class="bar-fill ${r.net_pnl < 0 ? 'neg' : ''}" style="width:${Math.abs(r.net_pnl)/maxAbs*100}%"></div></div>
-      <div class="bar-val num ${r.net_pnl >= 0 ? 'pos' : 'neg'}">${rupees(r.net_pnl, true)}</div>
-    </div>`).join('') || '<div style="color:var(--ink-muted);font-size:12.5px;">No data</div>';
-}
-
-function byKey(trades, key) {
-  const totals = {};
-  trades.forEach(t => { totals[t[key]] = (totals[t[key]] || 0) + t.pnl_rupees; });
-  return Object.entries(totals).map(([key, net_pnl]) => ({key, net_pnl})).sort((a,b) => b.net_pnl - a.net_pnl);
-}
-
-// Backtest and live side by side per segment / exit type; backtest bars are drawn lighter because they are estimates.
-function renderSplitBarPanel(elId, trades, key) {
-  const agg = {};
-  trades.forEach(t => {
-    const k = t[key], a = agg[k] || (agg[k] = {backtest: null, live: null});
-    a[srcOf(t)] = (a[srcOf(t)] || 0) + t.pnl_rupees;
-  });
-  const total = a => (a.backtest || 0) + (a.live || 0);
-  const keys = Object.keys(agg).sort((x, y) => total(agg[y]) - total(agg[x]));
-  const maxAbs = Math.max(1, ...keys.flatMap(k => [Math.abs(agg[k].backtest || 0), Math.abs(agg[k].live || 0)]));
-  const line = (src, v) => `<div class="bar-row sub"><div class="label">${SRC_TAG[src]}</div>
-      <div class="bar-track">${v === null ? '' : `<div class="bar-fill ${v < 0 ? 'neg' : ''}${src === 'backtest' ? ' est' : ''}" style="width:${Math.abs(v) / maxAbs * 100}%"></div>`}</div>
-      <div class="bar-val num ${v === null ? '' : v >= 0 ? 'pos' : 'neg'}">${v === null ? '—' : rupees(v, true)}</div></div>`;
-  const anyLive = keys.some(k => agg[k].live !== null);
-  document.getElementById(elId).innerHTML = keys.length
-    ? keys.map(k => `<div class="bar-group"><div class="bar-group-label">${esc(k)}</div>${line('backtest', agg[k].backtest)}${line('live', agg[k].live)}</div>`).join('')
-      + (anyLive ? '' : '<div style="color:var(--ink-muted);font-size:11.5px;">No live trades yet — the LIVE rows fill in as real trades close.</div>')
-    : '<div style="color:var(--ink-muted);font-size:12.5px;">No data</div>';
-}
-
-function renderBottomRow(s, bySrc) {
-  // bySrc = {backtest: summary|null, live: summary|null} when the Source filter is "Backtest + Live", else null
-  const plural = (n, one, many) => n === 1 ? one : many;
-  const streak = x => x ? `<span class="${x.current_streak_type === 'win' ? 'good' : 'bad'}">${x.current_streak} ${x.current_streak_type === 'win' ? plural(x.current_streak, 'win', 'wins') : plural(x.current_streak, 'loss', 'losses')}</span>` : '—';
-  const avg = x => x ? `<span class="num">${rupees(x.avg_win)} / ${rupees(x.avg_loss)}</span>` : '—';
-  const charges = x => x ? `<span class="num">${rupees(x.total_charges)}</span>` : '—';
-  const card = (fn, label) => bySrc
-    ? `<div class="stat-card"><div class="split-line">${SRC_TAG.backtest}<span>${fn(bySrc.backtest)}</span></div><div class="split-line">${SRC_TAG.live}<span>${fn(bySrc.live)}</span></div><div class="k">${label}</div></div>`
-    : `<div class="stat-card"><div class="v">${fn(s)}</div><div class="k">${label}</div></div>`;
-  document.getElementById('bottomRow').innerHTML = card(streak, 'Current streak') + card(avg, 'Avg win / loss per trade') + card(charges, 'Estimated charges (brokerage only)');
-}
-
 function downloadCsv() {
   const trades = filterTrades();
   const headers = ['source','symbol','direction','setup_tag','entry_time','exit_time','pnl_rupees','pnl_is_estimate','charges_rupees'];
@@ -552,14 +489,6 @@ function renderAll() {
   renderLadder(s);
   const split = document.getElementById('fSource').value === 'ALL';   // both kinds are in play: show them side by side
   renderCalendar(trades, split);
-  if (split) {
-    renderSplitBarPanel('bySegment', trades, 'symbol');
-    renderSplitBarPanel('bySetup', trades, 'setup_tag');
-  } else {
-    renderBarPanel('bySegment', byKey(trades, 'symbol'));
-    renderBarPanel('bySetup', byKey(trades, 'setup_tag'));
-  }
-  renderBottomRow(s, split ? {backtest: summarize(trades.filter(t => srcOf(t) === 'backtest')), live: summarize(trades.filter(t => srcOf(t) === 'live'))} : null);
 
   document.getElementById('footerNote').innerHTML = `
     <b>Rupee figures for backtest trades are estimates</b> (index points × lot size), not real fills — the underlying v1-v7 backtests only ever measured points. Live trades use real recorded fill prices.<br>
