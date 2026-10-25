@@ -44,9 +44,27 @@
     padding: 18px 22px; border-radius: 16px; box-shadow: 0 8px 26px color-mix(in srgb, var(--brand-a) 35%, transparent); }
   .topbar h1 { font-size: 21px; margin: 0; font-weight: 800; letter-spacing: -0.01em; }
   .topbar .sub { color: rgba(255,255,255,0.85); font-size: 12.5px; margin-top: 4px; }
-  .trades-link { display: inline-block; margin-top: 10px; color: #fff; text-decoration: none; font-size: 12.5px; font-weight: 700; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 6px 12px; background: rgba(255,255,255,0.14); }
+  .hdr-links { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .trades-link { display: inline-block; color: #fff; text-decoration: none; font-size: 12.5px; font-weight: 700; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; padding: 6px 12px; background: rgba(255,255,255,0.14); }
   .trades-link:hover { background: rgba(255,255,255,0.26); border-color: #fff; }
   .badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  #hdrClock { font-variant-numeric: tabular-nums; }
+
+  .strategy-details { background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: 14px; padding: 12px 18px; margin: 14px 0 0; box-shadow: var(--shadow); }
+  .strategy-details summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--ink-2); list-style: none; }
+  .strategy-details summary::-webkit-details-marker { display: none; }
+  .strategy-details summary::before { content: "▸ "; color: var(--accent); }
+  .strategy-details[open] summary::before { content: "▾ "; }
+  .sd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px 20px; margin-top: 10px; font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+  .sd-grid b { color: var(--ink); }
+
+  .oc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-bottom: 18px; }
+  .oc-tile { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); }
+  .oc-tile::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--accent); }
+  .oc-tile.resistance::before { background: var(--critical); } .oc-tile.support::before { background: var(--good); } .oc-tile.maxpain::before { background: var(--warn); } .oc-tile.pcr::before { background: var(--brand-c); }
+  .oc-tile .k { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); font-weight: 700; }
+  .oc-tile .v { font-size: 20px; font-weight: 800; margin-top: 4px; }
+  .oc-tile .d { font-size: 11.5px; color: var(--ink-muted); margin-top: 3px; }
   .badge { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32); border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600; color: #fff; }
   .toggle-wrap { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32); padding: 5px 10px 5px 12px; border-radius: 999px; }
   .toggle-label { font-size: 12px; font-weight: 700; color: #fff; }
@@ -172,6 +190,25 @@
   .mini-table td { padding: 5px 4px; border-bottom: 1px solid var(--hairline); }
   .muted { color: var(--ink-muted); font-size: 13px; }
 
+  /* ---- exit condition checklist ---- */
+  .exit-row { display: flex; gap: 10px; align-items: baseline; padding: 7px 0; border-top: 1px solid var(--hairline); font-size: 13px; }
+  .exit-row:first-child { border-top: none; }
+  .exit-ic { width: 16px; font-weight: 800; flex-shrink: 0; text-align: center; }
+  .exit-ic.pass { color: var(--good); } .exit-ic.warn { color: var(--warn); } .exit-ic.na { color: var(--ink-muted); }
+  .exit-detail { color: var(--ink-muted); font-size: 11.5px; }
+
+  /* ---- strategy chart embed ---- */
+  .chart-embed { position: relative; border-radius: 10px; overflow: hidden; background: var(--surface-2); cursor: zoom-in; }
+  .chart-embed img { width: 100%; display: block; }
+  .chart-embed .fs-hint { position: absolute; right: 8px; bottom: 8px; background: rgba(0,0,0,0.6); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+  .chart-fs-overlay { position: fixed; inset: 0; background: rgba(5,8,16,0.92); z-index: 999; display: flex; align-items: center; justify-content: center; cursor: zoom-out; padding: 24px; }
+  .chart-fs-overlay img { max-width: 100%; max-height: 100%; border-radius: 8px; }
+  .chart-fs-overlay.hidden { display: none; }
+
+  .tl-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .tl-table th { text-align: left; color: var(--ink-muted); font-weight: 700; padding: 6px 7px; border-bottom: 2px solid var(--hairline); font-size: 10px; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
+  .tl-table td { padding: 6px 7px; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+
   /* ---- index quotes strip ---- */
   .q-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; font-size: 12px; color: var(--ink-muted); }
   .q-head .left { display: flex; align-items: center; gap: 8px; }
@@ -216,10 +253,14 @@
     <div>
       <h1>TV Composite v7 — Dashboard</h1>
       <div class="sub">NIFTY + SENSEX cockpit — backtest history (Jan-Sep 2026) + live confirmed trades combined.</div>
-      <a class="trades-link" href="trades.html">Day-wise trades &amp; G/L &rarr;</a>
-      <a class="trades-link" href="universe.html" style="margin-left:8px">F&amp;O universe backtest &rarr;</a>
+      <div class="hdr-links">
+        <a class="trades-link" href="trades.html">Backtest: Day-wise trades &amp; G/L &rarr;</a>
+        <a class="trades-link" href="universe.html">Backtest: F&amp;O universe &rarr;</a>
+        <a class="trades-link" href="signal_history.html">Strategy signal history &rarr;</a>
+      </div>
     </div>
     <div class="badges">
+      <span class="badge" id="hdrClock">—</span>
       <div class="toggle-wrap">
         <span class="toggle-label">Trading</span>
         <button class="switch" id="trading-switch" title="Turn new entries on/off for the live engine (both instruments)"></button>
@@ -230,8 +271,35 @@
     </div>
   </div>
 
-  <div class="section-title">Live status</div>
+  <details class="strategy-details">
+    <summary>Strategy details — entry, exit, gates (click to expand)</summary>
+    <div class="sd-grid">
+      <div>
+        <b>Entry — all 5 true on one closed 15m bar:</b>
+        hourly EMA5&gt;26&gt;50 stack · 15m EMA5&gt;26&gt;50 stack · price vs. daily CPR TC ·
+        volume &gt;1.2× its 20-bar avg · strong candle (body &gt;50% of range, closes in outer 40%).
+      </div>
+      <div>
+        <b>Exit:</b> 2 consecutive 15m closes on the wrong side of EMA5 (15m), or forced EOD square-off at 15:15 IST.
+        No fixed target, no hard stop price.
+      </div>
+      <div>
+        <b>Entry gates (any one blocks a new entry):</b>
+        EOD window ≥15:15 · 2-loss breaker/symbol · Rs.3,000 combined daily loss cap · wide-CPR day ·
+        blocked hours (10:xx, 15:xx) · India VIX regime bad/unavailable · PAUSE.flag · remote trading toggle OFF.
+      </div>
+      <div>
+        <b>Sizing:</b> 1 lot/signal (NIFTY 65, SENSEX 20) · ITM delta 0.60–0.70, falls back to OTM delta 0.30–0.45 only if the ITM pick doesn't fit the balance · expiry ≥3 days out.
+      </div>
+    </div>
+  </details>
+
+  <div class="section-title">Indices</div>
   <div id="quotesStrip"></div>
+
+  <div class="section-title">Market levels — NIFTY option-chain reference</div>
+  <div id="optionChainRef"><div class="muted">Loading option-chain reference…</div></div>
+
   <div id="liveSection"><div class="muted">Loading live status…</div></div>
 
   <div class="section-title">Performance — backtest history + live trades</div>
@@ -263,21 +331,6 @@
     <div class="hint" id="calHint">—</div>
     <div id="calendar"></div>
   </div>
-
-  <div class="section-title">Signal history</div>
-  <div class="filters">
-    <select id="hSymbol"><option value="ALL">All symbols</option><option value="NIFTY">NIFTY</option><option value="SENSEX">SENSEX</option></select>
-    <select id="hOutcome">
-      <option value="ALL">Every evaluation</option>
-      <option value="FIRED">Signals fired (long or short)</option>
-      <option value="BLOCKED">Blocked</option>
-      <option value="OPEN">In position / proposed</option>
-    </select>
-    <div class="spacer"></div>
-    <span class="meta" id="hMeta"></span>
-    <button id="btnHistCsv">⬇ CSV</button>
-  </div>
-  <div class="card"><div id="sigHistory"><div class="muted">Loading signal history…</div></div></div>
 
   <div class="footer-note" id="footerNote"></div>
 </div>
@@ -671,53 +724,138 @@ function renderGatesStrip(S) {
   </div></div>`;
 }
 
-function renderLivePanel(sym, S, D) {
+function liveHead(sym, S) {
   const sd = S.symbols[sym] || {};
   const open = marketWindowOpen(S.tick_window);
   const ageMin = (Date.now() - Date.parse(S.last_tick)) / 60000;
   let dot = 'off', dotLabel = 'idle';
   if (open) { if (ageMin <= 20 && !sd.error) { dot = 'on'; dotLabel = 'live'; } else { dot = 'bad'; dotLabel = 'stale'; } }
+  return `<div class="livehead"><span class="name">${esc(DISPLAY[sym] || sym)}</span>
+    <span><span class="dot-live ${dot}"></span> ${dotLabel}</span>
+    <span>Last tick: ${fmtIst(S.last_tick)}</span>
+    <span>Status: <b style="color:var(--ink)">${esc(STATUS_LABEL[S.engine_status] || S.engine_status)}</b></span></div>`;
+}
 
+// ---- Section F: exit condition checklist (+ position/today summary) ----
+function renderExitChecklist(sym, S) {
+  const sd = S.symbols[sym] || {};
   const p = sd.position;
-  const posHtml = p
-    ? `<div class="pos-side ${esc(p.direction)}">${esc(p.direction)} ${esc(p.option_type)} ${esc(p.strike)}</div>
-       <div class="pos-meta">Entered ${p.entry_time ? esc(String(p.entry_time).slice(11, 16)) : '—'} @ Rs.${Number(p.entry_ltp || 0).toFixed(2)} · qty ${esc(p.quantity)} · bars held ${p.bars_held || 0} · stop streak ${p.stop_streak || 0}/2 · expiry ${esc(p.expiry)}</div>`
-    : '<span class="muted">No open position</span>';
-
   const today = istToday();
-  const live = ((D && D.trades) || []).filter(t => t.source === 'live' && t.symbol === sym && String(t.exit_time).slice(0, 10) === today);
-  const pnl = live.reduce((a, t) => a + t.pnl_rupees, 0);
   const losses = S.trading_day === today ? (sd.day_losses || 0) : 0;
-  const rows = live.slice().reverse().map(t => `<tr>
-      <td class="num">${esc(String(t.exit_time).slice(11, 16))}</td><td>${esc(t.direction)}${t.option_type ? ' ' + esc(t.option_type) : ''}</td>
-      <td class="num">${t.strike != null ? esc(t.strike) : '—'}</td><td>${esc(t.setup_tag)}</td>
-      <td class="num ${t.pnl_rupees >= 0 ? 'pos' : 'neg'}">${rupees(t.pnl_rupees, true)}</td></tr>`).join('')
-    || '<tr><td colspan="5" class="muted">No trades yet today</td></tr>';
 
-  return `<div>
-    <div class="livehead"><span class="name">${esc(DISPLAY[sym] || sym)}</span>
-      <span><span class="dot-live ${dot}"></span> ${dotLabel}</span>
-      <span>Last tick: ${fmtIst(S.last_tick)}</span>
-      <span>Status: <b style="color:var(--ink)">${esc(STATUS_LABEL[S.engine_status] || S.engine_status)}</b></span></div>
-    <div class="live-card"><h4>Position</h4>${posHtml}</div>
-    <div class="live-card"><h4>Today</h4><div class="mini-stats">
-      <div><div class="v num">${live.length}</div><div class="k">Trades today</div></div>
-      <div><div class="v num ${pnl >= 0 ? 'pos' : 'neg'}">${rupees(pnl, true)}</div><div class="k">Realized P&amp;L</div></div>
-      <div><div class="v num ${losses >= 2 ? 'neg' : ''}">${losses}/2</div><div class="k">Loss breaker</div></div>
-    </div></div>
-    <div class="live-card"><h4>Trade log (today)</h4>
-      <table class="mini-table"><thead><tr><th>Time</th><th>Side</th><th>Strike</th><th>Exit</th><th>P&amp;L</th></tr></thead><tbody>${rows}</tbody></table></div>
+  if (!p) {
+    return `<div class="decide">${liveHead(sym, S)}
+      <div class="live-card"><h4>Exit checklist</h4>
+        <div class="exit-row"><span class="exit-ic na">–</span><span>No open position — exit checklist not applicable</span></div>
+      </div>
+      <div class="live-card"><h4>Today</h4><div class="mini-stats">
+        <div><div class="v num ${losses >= 2 ? 'neg' : ''}">${losses}/2</div><div class="k">Loss breaker</div></div>
+      </div></div>
+    </div>`;
+  }
+  const streak = p.stop_streak || 0;
+  const streakRow = (n, label) => `<div class="exit-row"><span class="exit-ic ${streak >= n ? 'warn' : 'na'}">${streak >= n ? '!' : '–'}</span><span>${label}</span></div>`;
+  return `<div class="decide">${liveHead(sym, S)}
+    <div class="live-card"><h4>Position</h4>
+      <div class="pos-side ${esc(p.direction)}">${esc(p.direction)} ${esc(p.option_type)} ${esc(p.strike)}</div>
+      <div class="pos-meta">Entered ${p.entry_time ? esc(String(p.entry_time).slice(11, 16)) : '—'} @ Rs.${Number(p.entry_ltp || 0).toFixed(2)} · qty ${esc(p.quantity)} · bars held ${p.bars_held || 0} · expiry ${esc(p.expiry)}</div>
+    </div>
+    <div class="live-card"><h4>Exit checklist</h4>
+      ${streakRow(1, 'Sticky EMA5 — 1st 15m close on the wrong side')}
+      ${streakRow(2, 'Sticky EMA5 — 2nd consecutive close → EXIT')}
+      <div class="exit-row"><span class="exit-ic na">–</span><span>EOD square-off at 15:15 IST (forced regardless of EMA5)</span></div>
+      <div class="exit-detail">Stop streak ${streak}/2. No fixed target, no hard stop price — EMA-stop or clock only.</div>
+    </div>
   </div>`;
+}
+
+// ---- Section G: running chart, click to view full screen ----
+function openChartFs(src) {
+  let ov = document.getElementById('chartFsOverlay');
+  if (!ov) {
+    ov = document.createElement('div');
+    ov.id = 'chartFsOverlay';
+    ov.className = 'chart-fs-overlay hidden';
+    ov.innerHTML = '<img id="chartFsImg">';
+    ov.addEventListener('click', () => ov.classList.add('hidden'));
+    document.body.appendChild(ov);
+  }
+  document.getElementById('chartFsImg').src = src;
+  ov.classList.remove('hidden');
+}
+
+function renderChartCard(sym) {
+  const src = `daily_chart_${sym.toLowerCase()}.png`;
+  return `<div class="decide">
+    <div class="livehead"><span class="name">${esc(DISPLAY[sym] || sym)}</span></div>
+    <div class="chart-embed" onclick="openChartFs('${src}')">
+      <img src="${src}" alt="${esc(sym)} strategy chart" loading="lazy" onerror="this.closest('.chart-embed').innerHTML='<div class=&quot;muted&quot; style=&quot;padding:24px;&quot;>Chart not published yet for today</div>'">
+      <span class="fs-hint">⤢ view full screen</span>
+    </div>
+  </div>`;
+}
+
+// ---- Section H: trade log (today), full column set ----
+function renderTradeLogTable(S, D) {
+  const today = istToday();
+  const live = ((D && D.trades) || []).filter(t => t.source === 'live' && String(t.exit_time).slice(0, 10) === today);
+  const pnl = live.reduce((a, t) => a + t.pnl_rupees, 0);
+  const fmtT = iso => iso ? esc(String(iso).slice(11, 16)) : '—';
+  const fmtD = iso => iso ? esc(String(iso).slice(0, 10)) : '—';
+  const px = v => v != null ? Number(v).toFixed(2) : '—';
+  const sorted = live.slice().sort((a, b) => String(b.exit_time).localeCompare(String(a.exit_time)));
+  const rows = sorted.map(t => {
+    const diff = (t.entry_price != null && t.exit_price != null)
+      ? (t.direction === 'LONG' ? t.exit_price - t.entry_price : t.entry_price - t.exit_price) : null;
+    return `<tr>
+      <td><b>${esc(t.symbol)}</b></td><td>${fmtD(t.exit_time)}</td><td>${t.expiry ? esc(String(t.expiry).slice(0, 10)) : '—'}</td>
+      <td>${esc(t.direction)}${t.option_type ? ' ' + esc(t.option_type) : ''}</td><td class="num">${t.strike != null ? esc(t.strike) : '—'}</td>
+      <td class="num">${fmtT(t.entry_time)}</td><td class="num">${px(t.entry_price)}</td>
+      <td class="num">${fmtT(t.exit_time)}</td><td class="num">${px(t.exit_price)}</td>
+      <td>${esc(t.setup_tag)}</td>
+      <td class="num ${diff == null ? '' : diff >= 0 ? 'pos' : 'neg'}">${diff == null ? '—' : (diff >= 0 ? '+' : '') + diff.toFixed(2)}</td>
+      <td class="num ${t.pnl_rupees >= 0 ? 'pos' : 'neg'}">${rupees(t.pnl_rupees, true)}</td></tr>`;
+  }).join('') || '<tr><td colspan="12" class="muted">No trades yet today</td></tr>';
+
+  return `<div class="card">
+    <div class="livehead"><span class="name">Both instruments</span>
+      <span class="${pnl >= 0 ? 'pos' : 'neg'} num">${rupees(pnl, true)} today, ${live.length} trade${live.length === 1 ? '' : 's'}</span></div>
+    <div style="overflow-x:auto;"><table class="tl-table"><thead><tr>
+      <th>Symbol</th><th>Date</th><th>Expiry</th><th>Side</th><th>Strike</th><th>Entry time</th><th>Buy px</th>
+      <th>Exit time</th><th>Sell px</th><th>Reason</th><th>Diff pts</th><th>Gain/Loss Rs</th>
+    </tr></thead><tbody>${rows}</tbody></table></div>
+  </div>`;
+}
+
+// ---- Section C: NIFTY option-chain reference ----
+let OCREF = null;
+function renderOptionChainRef() {
+  const el = document.getElementById('optionChainRef');
+  const r = OCREF;
+  if (!r) { el.innerHTML = '<div class="muted">Option-chain reference unavailable — not published yet.</div>'; return; }
+  const pct = v => v == null ? '' : `${v >= 0 ? '+' : ''}${v.toFixed(2)}% from spot`;
+  el.innerHTML = `
+    <div class="oc-grid">
+      <div class="oc-tile"><div class="k">NIFTY spot</div><div class="v num">${Number(r.spot).toLocaleString('en-IN')}</div><div class="d">Expiry ${esc(r.expiry)} · as of ${esc(fmtIst(r.as_of + '+05:30'))}</div></div>
+      <div class="oc-tile resistance"><div class="k">Resistance · max Call OI</div><div class="v num">${r.resistance.strike.toLocaleString('en-IN')}</div><div class="d">${pct(r.resistance.pct_from_spot)} · ${(r.resistance.oi / 1e6).toFixed(1)}M OI</div></div>
+      <div class="oc-tile support"><div class="k">Support · max Put OI</div><div class="v num">${r.support.strike.toLocaleString('en-IN')}</div><div class="d">${pct(r.support.pct_from_spot)} · ${(r.support.oi / 1e6).toFixed(1)}M OI</div></div>
+      <div class="oc-tile maxpain"><div class="k">Max pain</div><div class="v num">${r.max_pain.strike != null ? r.max_pain.strike.toLocaleString('en-IN') : '—'}</div><div class="d">${pct(r.max_pain.pct_from_spot)}</div></div>
+      <div class="oc-tile pcr"><div class="k">PCR</div><div class="v num">${r.pcr != null ? r.pcr.toFixed(3) : '—'}</div><div class="d">${esc(r.suggestion)}</div></div>
+    </div>
+    <div class="muted" style="font-size:11.5px;">Informational only — PCR/max-pain/OI walls are NOT part of the v7 entry/exit logic above, which never looks at open interest.</div>`;
 }
 
 function renderLive() {
   const el = document.getElementById('liveSection'), S = STATUS, D = RAW;
   if (!S) { el.innerHTML = renderChecklist(null, D) + '<div class="muted">Live status unavailable — the scanner has not published a status.json yet.</div>'; return; }
   const syms = Object.keys(S.symbols || {});
-  el.innerHTML = renderChecklist(S, D)
-    + `<div class="decide-grid">${syms.map(s => renderDecision(s, S)).join('')}</div>`
+  el.innerHTML =
+      `<div class="section-title">Start-of-day checklist</div>` + renderChecklist(S, D)
+    + `<div class="section-title">Entry condition checklist</div><div class="decide-grid">${syms.map(s => renderDecision(s, S)).join('')}</div>`
     + renderGatesStrip(S)
-    + `<div class="live-grid">${syms.map(s => renderLivePanel(s, S, D)).join('')}</div>`;
+    + `<div class="section-title">Exit condition checklist</div><div class="decide-grid">${syms.map(s => renderExitChecklist(s, S)).join('')}</div>`
+    + `<div class="section-title">Running chart — strategy, signals &amp; levels</div><div class="live-grid">${syms.map(s => renderChartCard(s)).join('')}</div>`
+    + `<div class="section-title">Trade log (today)</div>${renderTradeLogTable(S, D)}`;
 }
 
 // ===================== INDEX QUOTES (quotes.json, pushed by quote_tick.py every minute) =====================
@@ -792,90 +930,38 @@ function renderQuotes() {
     <span>as of ${esc(fmtClock(Q.as_of))} IST · updates about every minute</span></div><div class="q-grid">${tiles}</div>`;
 }
 
-// ===================== SIGNAL HISTORY (signal_history.json, written by live_tick.py every tick) =====================
-// Every evaluation (fired, blocked, or neither), not just trades -- live_tick._log_signal() appends one row per
-// symbol per tick to signal_log.jsonl; this file is the trimmed, published tail (see SIGNAL_HISTORY_MAX_ROWS).
-let SIGHIST = null;
-
-function histOutcome(row) {
-  const code = (row.decision || {}).code;
-  if (code === 'IN_POSITION' || code === 'ENTRY_PROPOSED' || code === 'EXIT_PROPOSED') return 'OPEN';
-  if (code === 'SIGNAL_LONG' || code === 'SIGNAL_SHORT') return 'FIRED';
-  if (code === 'BLOCKED') return 'BLOCKED';
-  return 'NONE';
-}
-
-function renderSignalHistory() {
-  const el = document.getElementById('sigHistory'), meta = document.getElementById('hMeta');
-  if (!SIGHIST || !SIGHIST.length) {
-    el.innerHTML = '<div class="muted">No signal history yet — this fills in as the scanner ticks (every 15 min, 09:31–15:46 IST).</div>';
-    meta.textContent = '';
-    return;
-  }
-  const symF = document.getElementById('hSymbol').value, outF = document.getElementById('hOutcome').value;
-  const rows = SIGHIST.filter(r => (symF === 'ALL' || r.symbol === symF) && (outF === 'ALL' || histOutcome(r) === outF)).slice().reverse();
-  meta.textContent = `${rows.length} of ${SIGHIST.length} evaluations shown`;
-  if (!rows.length) { el.innerHTML = '<div class="muted">No evaluations match this filter.</div>'; return; }
-  const codeCls = {FIRED: 'fired', BLOCKED: 'blocked', OPEN: 'open', NONE: 'none'};
-  const trs = rows.map(r => {
-    const d = r.decision || {}, o = histOutcome(r);
-    const L = r.long ? Object.values(r.long.conditions).filter(Boolean).length : null;
-    const S = r.short ? Object.values(r.short.conditions).filter(Boolean).length : null;
-    const detail = d.detail || (r.blocked_reasons || []).join('; ');
-    return `<tr>
-      <td class="num">${esc(fmtIst(String(r.ts) + '+05:30'))}</td>
-      <td><b>${esc(r.symbol)}</b></td>
-      <td class="num">${r.close != null ? Number(r.close).toLocaleString('en-IN', {maximumFractionDigits: 2}) : '—'}</td>
-      <td>${d.direction ? `<span class="hist-side ${esc(d.direction)}">${esc(d.direction)}</span>` : '<span class="muted">—</span>'}</td>
-      <td class="num">${L != null ? L + '/5' : '—'}</td><td class="num">${S != null ? S + '/5' : '—'}</td>
-      <td><span class="hist-code ${codeCls[o]}">${esc(d.code || '—')}</span></td>
-      <td class="hist-reasons">${esc(detail)}</td>
-    </tr>`;
-  }).join('');
-  el.innerHTML = `<div style="overflow-x:auto;"><table class="hist-table"><thead><tr>
-    <th>Tick (IST)</th><th>Symbol</th><th>Close</th><th>Direction</th><th>Long</th><th>Short</th><th>Outcome</th><th>Detail</th>
-  </tr></thead><tbody>${trs}</tbody></table></div>`;
-}
-
-function downloadHistCsv() {
-  if (!SIGHIST || !SIGHIST.length) return;
-  const headers = ['ts', 'symbol', 'close', 'bar_time', 'decision_code', 'decision_direction', 'decision_detail', 'blocked_reasons'];
-  const esc_csv = (v) => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
-  const lines = [headers.join(',')].concat(SIGHIST.map(r => [
-    r.ts, r.symbol, r.close, r.bar_time, (r.decision || {}).code, (r.decision || {}).direction,
-    (r.decision || {}).detail, (r.blocked_reasons || []).join('; '),
-  ].map(esc_csv).join(',')));
-  const blob = new Blob([lines.join('\n')], {type: 'text/csv'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'tv_composite_v7_signal_history.csv';
-  a.click();
-}
-
-async function refreshSignalHistory() { const d = await fetchJson('signal_history.json'); if (d) { SIGHIST = d; renderSignalHistory(); } }
+// Signal history moved to its own page (signal_history.html) -- same data (signal_history.json),
+// linked from the header instead of rendered inline here.
 
 async function refreshQuotes() { QUOTES = await fetchQuotes(); renderQuotes(); }
 
 async function refreshStatus() { STATUS = await fetchJson('status.json'); renderLive(); renderQuotes(); }
 async function refreshData() { const d = await fetchJson('dashboard_data.json'); if (d) { RAW = d; renderAll(); renderLive(); } }
+async function refreshOptionChainRef() { const d = await fetchJson('option_chain.json'); if (d) { OCREF = d; renderOptionChainRef(); } }
+
+function tickClock() {
+  const d = istNow();
+  const dd = String(d.getDate()).padStart(2, '0'), mon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
+  const hh = String(d.getHours()).padStart(2, '0'), mm = String(d.getMinutes()).padStart(2, '0'), ss = String(d.getSeconds()).padStart(2, '0');
+  document.getElementById('hdrClock').textContent = `${dd} ${mon} ${d.getFullYear()} · ${hh}:${mm}:${ss} IST`;
+}
 
 async function init() {
   document.getElementById('fSegment').addEventListener('change', renderAll);
   document.getElementById('fSource').addEventListener('change', renderAll);
   document.getElementById('btnCsv').addEventListener('click', downloadCsv);
-  document.getElementById('hSymbol').addEventListener('change', renderSignalHistory);
-  document.getElementById('hOutcome').addEventListener('change', renderSignalHistory);
-  document.getElementById('btnHistCsv').addEventListener('click', downloadHistCsv);
+  tickClock();
+  setInterval(tickClock, 1000);
   RAW = await fetchJson('dashboard_data.json');
   refreshQuotes();                        // don't block the rest of the page on the quote feed
-  refreshSignalHistory();                 // same -- not needed for the above-the-fold checklist/KPIs
+  refreshOptionChainRef();                // same -- not needed for the above-the-fold checklist/KPIs
   await refreshStatus();
   if (RAW) renderAll();
   else document.getElementById('kpiRow').innerHTML = '<div class="kpi"><div class="k">Performance data</div><div class="v">unavailable</div></div>';
   setInterval(refreshQuotes, QUOTE_POLL_MS);
   setInterval(refreshStatus, 30000);     // GitHub Pages caches ~10 min; the 15-min tick cadence makes that fine
   setInterval(refreshData, 120000);
-  setInterval(refreshSignalHistory, 120000);
+  setInterval(refreshOptionChainRef, 120000);
 
   // Browsers throttle or fully pause setInterval timers on a backgrounded tab (and stop them across a laptop
   // sleep/lock), so a tab left open can silently freeze on a stale status/quotes render -- the checklist then shows
