@@ -261,11 +261,6 @@
     </div>
     <div class="badges">
       <span class="badge" id="hdrClock">—</span>
-      <div class="toggle-wrap">
-        <span class="toggle-label">Trading</span>
-        <button class="switch" id="trading-switch" title="Turn new entries on/off for the live engine (both instruments)"></button>
-        <span class="toggle-state" id="trading-switch-state">loading…</span>
-      </div>
     </div>
   </div>
 
@@ -730,88 +725,6 @@ async function init() {
 }
 
 init();
-
-/* ---------- trading on/off toggle: writes control.json in this repo via the GitHub API.
-   The live engine pulls this repo once per tick and blocks every new entry, both NIFTY and
-   SENSEX, whenever trading_enabled is false -- same effect as the engine's local PAUSE.flag,
-   just reachable from the dashboard instead of the trading PC. A GitHub token is required to
-   WRITE; asked for once, kept only in this browser's localStorage, never sent anywhere but
-   github.com. */
-const GH_REPO = "aps-source/tv-composite-v7-dashboard";
-const GH_API = `https://api.github.com/repos/${GH_REPO}/contents/control.json`;
-const switchBtn = document.getElementById("trading-switch");
-const switchState = document.getElementById("trading-switch-state");
-let controlSha = null;
-
-function renderSwitch(enabled, note) {
-  switchBtn.classList.toggle("on", !!enabled);
-  switchState.textContent = note || (enabled ? "ON — entries allowed" : "OFF — entries blocked");
-}
-
-async function loadControl() {
-  try {
-    const res = await fetch("control.json?t=" + Date.now(), { cache: "no-store" });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const c = await res.json();
-    renderSwitch(c.trading_enabled !== false);
-  } catch (e) {
-    renderSwitch(true, "status unknown");
-  }
-}
-
-async function flipTrading() {
-  const turningOn = !switchBtn.classList.contains("on");
-  if (!confirm(turningOn
-    ? "Turn trading back ON for NIFTY + SENSEX?"
-    : "Turn trading OFF for NIFTY + SENSEX?\n\nThe live engine will stop taking new entries (open positions are not touched) until switched back on here.")) return;
-
-  let pat = localStorage.getItem("tvc_gh_pat");
-  if (!pat) {
-    pat = prompt("GitHub token with write access to this repo (saved only in this browser):");
-    if (!pat) return;
-    localStorage.setItem("tvc_gh_pat", pat.trim());
-    pat = pat.trim();
-  }
-
-  switchBtn.disabled = true;
-  switchState.textContent = "saving…";
-  try {
-    if (!controlSha) {
-      const cur = await fetch(GH_API, { headers: { Authorization: "Bearer " + pat } });
-      if (!cur.ok) throw new Error("could not read current file (HTTP " + cur.status + ")");
-      controlSha = (await cur.json()).sha;
-    }
-    const body = {
-      trading_enabled: turningOn,
-      updated_at: new Date().toISOString(),
-      updated_by: "dashboard",
-    };
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(body, null, 2) + "\n")));
-    const res = await fetch(GH_API, {
-      method: "PUT",
-      headers: { Authorization: "Bearer " + pat, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message: `Trading ${turningOn ? "ON" : "OFF"} via dashboard toggle`,
-        content, sha: controlSha, branch: "main",
-      }),
-    });
-    if (!res.ok) {
-      if (res.status === 401 || res.status === 403) localStorage.removeItem("tvc_gh_pat");
-      throw new Error("GitHub rejected the write (HTTP " + res.status + ")");
-    }
-    controlSha = (await res.json()).content.sha;
-    renderSwitch(turningOn, (turningOn ? "ON" : "OFF") + " — reaches the engine on its next tick");
-  } catch (e) {
-    alert("Could not update trading status: " + e.message);
-    renderSwitch(!turningOn);
-  } finally {
-    switchBtn.disabled = false;
-  }
-}
-
-switchBtn.addEventListener("click", flipTrading);
-loadControl();
-setInterval(loadControl, 30000);
 </script>
 </body>
 </html>
