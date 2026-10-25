@@ -266,8 +266,6 @@
         <button class="switch" id="trading-switch" title="Turn new entries on/off for the live engine (both instruments)"></button>
         <span class="toggle-state" id="trading-switch-state">loading…</span>
       </div>
-      <span class="badge" id="badgeTotal">—</span>
-      <span class="badge" id="badgeTrades">—</span>
     </div>
   </div>
 
@@ -301,38 +299,6 @@
   <div id="optionChainRef"><div class="muted">Loading option-chain reference…</div></div>
 
   <div id="liveSection"><div class="muted">Loading live status…</div></div>
-
-  <div class="section-title">Performance — backtest history + live trades</div>
-  <div class="filters">
-    <select id="fSegment"><option value="ALL">All segments</option><option value="NIFTY">NIFTY</option><option value="SENSEX">SENSEX</option></select>
-    <select id="fSource"><option value="ALL">Backtest + Live</option><option value="backtest">Backtest only</option><option value="live">Live only</option></select>
-    <div class="spacer"></div>
-    <span class="meta" id="genMeta"></span>
-    <button id="btnCsv">⬇ CSV</button>
-  </div>
-
-  <div class="kpi-row" id="kpiRow"></div>
-
-  <div class="grid2">
-    <div class="card">
-      <h3>Equity curve</h3>
-      <div class="hint">Cumulative P&amp;L across all trades in the filtered set (estimated rupees for backtest trades, actual for live)</div>
-      <div id="equityChart"></div>
-    </div>
-    <div class="card">
-      <h3>Monthly target</h3>
-      <div class="hint" id="ladderHint">—</div>
-      <div id="ladder"></div>
-    </div>
-  </div>
-
-  <div class="card" style="margin-bottom:16px;">
-    <h3>Daily P&amp;L calendar</h3>
-    <div class="hint" id="calHint">—</div>
-    <div id="calendar"></div>
-  </div>
-
-  <div class="footer-note" id="footerNote"></div>
 </div>
 
 <script>
@@ -342,211 +308,6 @@ function rupees(n, showSign) {
   const v = Number(n) || 0;
   const sign = v > 0 && showSign ? '+' : (v < 0 ? '-' : '');
   return sign + 'Rs.' + Math.abs(v).toLocaleString('en-IN', {maximumFractionDigits: 0});
-}
-
-function filterTrades() {
-  const seg = document.getElementById('fSegment').value;
-  const src = document.getElementById('fSource').value;
-  return RAW.trades.filter(t =>
-    (seg === 'ALL' || t.symbol === seg) && (src === 'ALL' || t.source === src)
-  );
-}
-
-function summarize(trades) {
-  if (!trades.length) return null;
-  const pnls = trades.map(t => t.pnl_rupees);
-  const wins = pnls.filter(p => p > 0);
-  const losses = pnls.filter(p => p <= 0);
-  const grossWin = wins.reduce((a,b)=>a+b,0);
-  const grossLoss = Math.abs(losses.reduce((a,b)=>a+b,0));
-  const totalCharges = trades.reduce((a,t)=>a+(t.charges_rupees||0),0);
-
-  let streak = 0;
-  const lastIsWin = pnls[pnls.length-1] > 0;
-  for (let i = pnls.length - 1; i >= 0; i--) {
-    if ((pnls[i] > 0) === lastIsWin) streak++; else break;
-  }
-
-  let equity = 0, peak = 0, maxDd = 0;
-  const curve = trades.map(t => {
-    equity += t.pnl_rupees; peak = Math.max(peak, equity); maxDd = Math.max(maxDd, peak - equity);
-    return { date: t.exit_time.slice(0,10), equity, drawdown: peak - equity };
-  });
-
-  return {
-    count: trades.length, wins: wins.length, losses: losses.length,
-    win_rate: (wins.length / trades.length * 100),
-    net_pnl: pnls.reduce((a,b)=>a+b,0),
-    total_charges: totalCharges,
-    profit_factor: grossLoss > 0 ? grossWin / grossLoss : null,
-    avg_win: wins.length ? grossWin / wins.length : 0,
-    avg_loss: losses.length ? losses.reduce((a,b)=>a+b,0) / losses.length : 0,
-    best: Math.max(...pnls), worst: Math.min(...pnls),
-    current_streak: streak, current_streak_type: lastIsWin ? 'win' : 'loss',
-    max_drawdown: maxDd, equity_curve: curve,
-  };
-}
-
-function renderKPIs(s) {
-  const expectancy = s.count ? s.net_pnl / s.count : 0;
-  const cards = [
-    { k: 'Net P&L', v: rupees(s.net_pnl, true), cls: s.net_pnl >= 0 ? 'good' : 'bad', extra: `Gross ${rupees(s.net_pnl + s.total_charges)}` },
-    { k: 'Total Charges (est.)', v: rupees(s.total_charges), cls: '', extra: `${(s.total_charges / (s.net_pnl + s.total_charges) * 100 || 0).toFixed(2)}% of gross` },
-    { k: 'Win Rate', v: s.win_rate.toFixed(1) + '%', cls: '', extra: `${s.wins}W / ${s.losses}L` },
-    { k: 'Profit Factor', v: s.profit_factor != null ? s.profit_factor.toFixed(2) : '—', cls: '', extra: `Expectancy ${rupees(expectancy, true)}` },
-    { k: 'Avg Win / Loss', v: `${rupees(s.avg_win)} / ${rupees(s.avg_loss)}`, cls: '', extra: `Max DD ${rupees(s.max_drawdown)}` },
-  ];
-  document.getElementById('kpiRow').innerHTML = cards.map(c => `
-    <div class="kpi"><div class="k">${c.k}</div><div class="v num ${c.cls}">${c.v}</div><div class="extra">${c.extra}</div></div>
-  `).join('');
-}
-
-function renderEquityCurve(curve) {
-  const el = document.getElementById('equityChart');
-  if (!curve.length) { el.innerHTML = '<div style="color:var(--ink-muted);font-size:13px;">No trades in this filter</div>'; return; }
-  const W = 720, H = 220, pad = 30;
-  const values = curve.map(c => c.equity);
-  const min = Math.min(0, ...values), max = Math.max(0, ...values);
-  const range = (max - min) || 1;
-  const x = i => pad + (i / (curve.length - 1 || 1)) * (W - pad * 2);
-  const y = v => H - pad - ((v - min) / range) * (H - pad * 2);
-  const zeroY = y(0);
-
-  const linePts = curve.map((c,i) => `${x(i)},${y(c.equity)}`).join(' ');
-  const areaPts = `${pad},${zeroY} ` + linePts + ` ${x(curve.length-1)},${zeroY}`;
-
-  el.innerHTML = `
-    <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;">
-      <defs>
-        <linearGradient id="eqGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="var(--good)" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="var(--good)" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <line x1="${pad}" y1="${zeroY}" x2="${W-pad}" y2="${zeroY}" stroke="var(--hairline-strong)" stroke-dasharray="3,3"/>
-      <polygon points="${areaPts}" fill="url(#eqGrad)"/>
-      <polyline points="${linePts}" fill="none" stroke="var(--good)" stroke-width="2"/>
-      <text x="${pad}" y="14" fill="var(--ink-muted)" font-size="10">${curve[0].date}</text>
-      <text x="${W-pad}" y="14" fill="var(--ink-muted)" font-size="10" text-anchor="end">${curve[curve.length-1].date}</text>
-      <text x="${pad}" y="${H-8}" fill="var(--ink-muted)" font-size="10">Rs.${Math.round(min).toLocaleString('en-IN')}</text>
-      <text x="${pad}" y="${pad-14}" fill="var(--ink-muted)" font-size="10">Rs.${Math.round(max).toLocaleString('en-IN')}</text>
-    </svg>`;
-}
-
-function renderLadder(s) {
-  const hint = document.getElementById('ladderHint');
-  const target = RAW.monthly_target_rupees;
-  if (!target) {
-    hint.textContent = 'No monthly target set (build_dashboard_data.py: MONTHLY_TARGET_RUPEES).';
-    document.getElementById('ladder').innerHTML = '<div style="color:var(--ink-muted);font-size:12.5px;">Set a target to see progress here.</div>';
-    return;
-  }
-  const now = new Date();
-  const monthKey = now.toISOString().slice(0,7);
-  const monthPnl = RAW.trades.filter(t => t.exit_time.slice(0,7) === monthKey).reduce((a,t)=>a+t.pnl_rupees,0);
-  const pct = Math.max(0, Math.min(100, monthPnl / target * 100));
-  hint.textContent = `${monthKey} progress toward target`;
-  document.getElementById('ladder').innerHTML = `
-    <div class="num" style="font-size:20px;font-weight:700;">${rupees(monthPnl,true)}</div>
-    <div class="ladder-track"><div class="ladder-fill" style="width:${pct}%"></div></div>
-    <div class="ladder-labels"><span>Rs.0</span><span>Target Rs.${target.toLocaleString('en-IN')}</span></div>`;
-}
-
-const SRC_TAG = {
-  backtest: '<span class="src bt" title="Backtest: rupees are estimates (index points x lot size)">BT</span>',
-  live: '<span class="src live" title="Live: real recorded fills">LIVE</span>',
-};
-const srcOf = t => t.source === 'live' ? 'live' : 'backtest';
-let CAL_MONTH = null, CAL_MONTHS = [];
-
-function calNav(delta) {
-  const i = CAL_MONTHS.indexOf(CAL_MONTH) + delta;
-  if (i >= 0 && i < CAL_MONTHS.length) { CAL_MONTH = CAL_MONTHS[i]; renderAll(); }
-}
-
-// `split` = the Source filter is "Backtest + Live": each day says which kind of trades it holds (LIVE cells get a blue outline)
-function renderCalendar(trades, split) {
-  const now = new Date();
-  CAL_MONTHS = [...new Set(trades.map(t => t.exit_time.slice(0,7)))].sort();
-  if (!CAL_MONTHS.includes(CAL_MONTH)) CAL_MONTH = CAL_MONTHS.length ? CAL_MONTHS[CAL_MONTHS.length - 1] : null;
-  const monthKey = CAL_MONTH || now.toISOString().slice(0,7);
-  const idx = CAL_MONTHS.indexOf(monthKey);
-  document.getElementById('calHint').textContent = `Showing ${monthKey}` + (CAL_MONTHS.length > 1 ? ` (month ${idx + 1} of ${CAL_MONTHS.length} with trades)` : ' (the only month with trades)')
-    + (split ? ' · BT = backtest (estimated rupees) · LIVE = real fills, blue outline' : '');
-
-  const daily = {};
-  trades.filter(t => t.exit_time.slice(0,7) === monthKey).forEach(t => {
-    const d = t.exit_time.slice(0,10);
-    if (!daily[d]) daily[d] = {backtest: null, live: null};
-    daily[d][srcOf(t)] = (daily[d][srcOf(t)] || 0) + t.pnl_rupees;
-  });
-  const dayTotal = v => (v.backtest || 0) + (v.live || 0);
-
-  const [y, m] = monthKey.split('-').map(Number);
-  const firstDow = new Date(y, m-1, 1).getDay();
-  const daysInMonth = new Date(y, m, 0).getDate();
-  const maxAbs = Math.max(1, ...Object.values(daily).map(v => Math.abs(dayTotal(v))));
-
-  let cells = ['S','M','T','W','T','F','S'].map(d => `<div class="cal-dow">${d}</div>`).join('');
-  for (let i = 0; i < firstDow; i++) cells += '<div class="cal-cell empty"></div>';
-  for (let d = 1; d <= daysInMonth; d++) {
-    const key = `${monthKey}-${String(d).padStart(2,'0')}`;
-    const v = daily[key];
-    let style = '', extra = '', cls = 'cal-cell', title = '';
-    if (v !== undefined) {
-      const pnl = dayTotal(v);
-      const intensity = Math.min(1, Math.abs(pnl) / maxAbs);
-      const color = pnl >= 0 ? '62,207,142' : '239,90,90';
-      style = `background: rgba(${color}, ${0.12 + intensity * 0.35});`;
-      extra = `<span class="num" style="font-size:9px;">${rupees(pnl)}</span>`;
-      if (split) {
-        extra += (v.live !== null ? SRC_TAG.live : '') + (v.backtest !== null ? SRC_TAG.backtest : '');
-        if (v.live !== null) cls += ' has-live';
-        title = ` title="${esc('Backtest ' + (v.backtest === null ? '-' : rupees(v.backtest, true)) + ' | Live ' + (v.live === null ? '-' : rupees(v.live, true)))}"`;
-      }
-    }
-    cells += `<div class="${cls}" style="${style}"${title}>${d}${extra}</div>`;
-  }
-  const nav = CAL_MONTHS.length > 1
-    ? `<div class="cal-nav"><button onclick="calNav(-1)" ${idx <= 0 ? 'disabled' : ''} aria-label="Previous month">◀</button><span>${esc(monthKey)}</span><button onclick="calNav(1)" ${idx >= CAL_MONTHS.length - 1 ? 'disabled' : ''} aria-label="Next month">▶</button></div>` : '';
-  document.getElementById('calendar').innerHTML = `${nav}<div class="cal-grid">${cells}</div>
-    <div class="cal-legend"><span><span class="dot" style="background:rgba(62,207,142,0.5)"></span>profit</span><span><span class="dot" style="background:rgba(239,90,90,0.5)"></span>loss</span></div>`;
-}
-
-function downloadCsv() {
-  const trades = filterTrades();
-  const headers = ['source','symbol','direction','setup_tag','entry_time','exit_time','pnl_rupees','pnl_is_estimate','charges_rupees'];
-  const lines = [headers.join(',')].concat(trades.map(t => headers.map(h => t[h]).join(',')));
-  const blob = new Blob([lines.join('\n')], {type: 'text/csv'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'tv_composite_v7_trades.csv';
-  a.click();
-}
-
-function renderAll() {
-  const trades = filterTrades();
-  const s = summarize(trades);
-
-  document.getElementById('badgeTotal').textContent = s ? `Total ${rupees(s.net_pnl, true)}` : 'No trades';
-  document.getElementById('badgeTrades').textContent = s ? `${s.count} trades` : '';
-  document.getElementById('genMeta').textContent = RAW.generated_at ? `Data as of ${new Date(RAW.generated_at).toLocaleString('en-IN')} — ${RAW.counts.backtest} backtest + ${RAW.counts.live} live` : '';
-
-  if (!s) {
-    document.getElementById('kpiRow').innerHTML = '<div class="kpi"><div class="k">No trades</div><div class="v">—</div></div>';
-    return;
-  }
-
-  renderKPIs(s);
-  renderEquityCurve(s.equity_curve);
-  renderLadder(s);
-  const split = document.getElementById('fSource').value === 'ALL';   // both kinds are in play: show them side by side
-  renderCalendar(trades, split);
-
-  document.getElementById('footerNote').innerHTML = `
-    <b>Rupee figures for backtest trades are estimates</b> (index points × lot size), not real fills — the underlying v1-v7 backtests only ever measured points. Live trades use real recorded fill prices.<br>
-    <b>Charges are estimated brokerage only</b> (Rs.20/executed leg × 2 legs/trade) — does NOT include STT, GST, exchange/SEBI charges, or stamp duty. Real net P&amp;L will be lower than shown once full charges are modeled.<br>
-    Data from <code>dashboard_data.json</code>, built by <code>build_dashboard_data.py</code>. Not live-computed — refresh by re-running that script.`;
 }
 
 // ===================== LIVE STATUS (status.json, written by live_tick.py every 15 min) =====================
@@ -936,7 +697,7 @@ function renderQuotes() {
 async function refreshQuotes() { QUOTES = await fetchQuotes(); renderQuotes(); }
 
 async function refreshStatus() { STATUS = await fetchJson('status.json'); renderLive(); renderQuotes(); }
-async function refreshData() { const d = await fetchJson('dashboard_data.json'); if (d) { RAW = d; renderAll(); renderLive(); } }
+async function refreshData() { const d = await fetchJson('dashboard_data.json'); if (d) { RAW = d; renderLive(); } }
 async function refreshOptionChainRef() { const d = await fetchJson('option_chain.json'); if (d) { OCREF = d; renderOptionChainRef(); } }
 
 function tickClock() {
@@ -947,17 +708,12 @@ function tickClock() {
 }
 
 async function init() {
-  document.getElementById('fSegment').addEventListener('change', renderAll);
-  document.getElementById('fSource').addEventListener('change', renderAll);
-  document.getElementById('btnCsv').addEventListener('click', downloadCsv);
   tickClock();
   setInterval(tickClock, 1000);
   RAW = await fetchJson('dashboard_data.json');
   refreshQuotes();                        // don't block the rest of the page on the quote feed
-  refreshOptionChainRef();                // same -- not needed for the above-the-fold checklist/KPIs
+  refreshOptionChainRef();                // same -- not needed for the above-the-fold checklist
   await refreshStatus();
-  if (RAW) renderAll();
-  else document.getElementById('kpiRow').innerHTML = '<div class="kpi"><div class="k">Performance data</div><div class="v">unavailable</div></div>';
   setInterval(refreshQuotes, QUOTE_POLL_MS);
   setInterval(refreshStatus, 30000);     // GitHub Pages caches ~10 min; the 15-min tick cadence makes that fine
   setInterval(refreshData, 120000);
