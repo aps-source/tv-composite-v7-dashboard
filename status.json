@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-26T14:16:04+05:30",
-  "last_tick": "2026-10-26T14:16:04+05:30",
+  "generated_at": "2026-10-26T14:31:05+05:30",
+  "last_tick": "2026-10-26T14:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.48,
+  "token_hours_remaining": 18.23,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-26T13:16:07.645625"
+      "checked_at": "2026-10-26T14:31:09.957804"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.29,733, SENSEX ~Rs.23,715) -- add funds",
-      "checked_at": "2026-10-26T14:01:09.230404"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.29,755, SENSEX ~Rs.24,938) -- add funds",
+      "checked_at": "2026-10-26T14:31:12.229577"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-26T14:16:07",
+    "ran_at": "2026-10-26T14:31:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-26T14:15:00",
-        "close": 22690.35,
-        "ema5_15m": 22668.85,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.76,
+        "bar_time": "2026-10-26T14:30:00",
+        "close": 22695.9,
+        "ema5_15m": 22676.31,
+        "volume_ratio": 0.11,
+        "body_ratio": 0.97,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,7 +67,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -77,7 +77,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-26T14:15:00",
-        "close": 73422.77,
-        "ema5_15m": 73354.04,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.95,
+        "bar_time": "2026-10-26T14:30:00",
+        "close": 73421.39,
+        "ema5_15m": 73370.43,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.75,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -105,7 +105,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -115,7 +115,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
