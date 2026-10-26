@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-26T10:16:03+05:30",
-  "last_tick": "2026-10-26T10:16:03+05:30",
+  "generated_at": "2026-10-26T10:31:04+05:30",
+  "last_tick": "2026-10-26T10:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.48,
+  "token_hours_remaining": 22.23,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-26T10:16:07",
+    "ran_at": "2026-10-26T10:31:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-26T10:15:00",
-        "close": 22663.05,
-        "ema5_15m": 22616.46,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.95,
+        "bar_time": "2026-10-26T10:30:00",
+        "close": 22638.55,
+        "ema5_15m": 22620.53,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.48,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -77,7 +77,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-26T10:15:00",
-        "close": 73361.19,
-        "ema5_15m": 73212.36,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.99,
+        "bar_time": "2026-10-26T10:30:00",
+        "close": 73277.37,
+        "ema5_15m": 73218.91,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.48,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -117,7 +117,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
