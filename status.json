@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-27T09:46:03+05:30",
-  "last_tick": "2026-10-27T09:46:03+05:30",
+  "generated_at": "2026-10-27T10:01:04+05:30",
+  "last_tick": "2026-10-27T10:01:04+05:30",
   "engine_status": "token_invalid",
   "last_error": "India VIX fetch failed: intraday_minute_data failed: {'error_code': 'DH-906', 'error_type': 'Order_Error', 'error_message': 'Invalid Token'}",
-  "token_hours_remaining": 9.07,
+  "token_hours_remaining": 8.82,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": null,
       "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-10-27T09:46:07.130477"
+      "checked_at": "2026-10-27T10:01:08.167427"
     },
     "funds": {
       "ok": null,
       "detail": "balance check failed (ValueError)",
-      "checked_at": "2026-10-27T09:46:08.016662"
+      "checked_at": "2026-10-27T10:01:09.063935"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-27T09:46:07",
+    "ran_at": "2026-10-27T10:01:08",
     "placed": 0,
     "held": [],
     "blocked": null
