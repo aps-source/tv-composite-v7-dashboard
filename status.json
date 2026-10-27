@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-27T15:16:08+05:30",
-  "last_tick": "2026-10-27T15:16:08+05:30",
+  "generated_at": "2026-10-27T15:31:07+05:30",
+  "last_tick": "2026-10-27T15:31:07+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.76,
+  "token_hours_remaining": 17.51,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.22,501, SENSEX ~Rs.53,485)",
-      "checked_at": "2026-10-27T15:01:15.195524"
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.23,127, SENSEX ~Rs.28,023 for full ITM sizing)",
+      "checked_at": "2026-10-27T15:31:15.478303"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-27T15:16:14",
+    "ran_at": "2026-10-27T15:31:15",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,9 +51,9 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-27T15:15:00",
-        "close": 22760.75,
-        "ema5_15m": 22744.19,
+        "bar_time": "2026-10-27T15:30:00",
+        "close": 22749.75,
+        "ema5_15m": 22743.6,
         "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
@@ -93,10 +93,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-27T15:15:00",
-        "close": 73556.27,
-        "ema5_15m": 73510.81,
-        "volume_ratio": 0.04,
+        "bar_time": "2026-10-27T15:30:00",
+        "close": 73598.67,
+        "ema5_15m": 73549.52,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
