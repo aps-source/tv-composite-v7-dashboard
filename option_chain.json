@@ -3,19 +3,19 @@
   "expiry": "2026-11-03",
   "resistance": {
     "strike": 24000.0,
-    "oi": 8399170.0,
+    "oi": 8327670.0,
     "pct_from_spot": 5.73
   },
   "support": {
     "strike": 20050.0,
-    "oi": 8749975.0,
+    "oi": 8628685.0,
     "pct_from_spot": -11.67
   },
   "max_pain": {
     "strike": 22700.0,
     "pct_from_spot": 0.01
   },
-  "pcr": 1.055,
+  "pcr": 1.053,
   "suggestion": "Balanced (PCR 0.9-1.1)",
-  "as_of": "2026-10-28T15:31:36"
+  "as_of": "2026-10-28T15:46:06"
 }
