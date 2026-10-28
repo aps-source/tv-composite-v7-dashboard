@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-28T14:16:04+05:30",
-  "last_tick": "2026-10-28T14:16:04+05:30",
+  "generated_at": "2026-10-28T14:31:05+05:30",
+  "last_tick": "2026-10-28T14:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.71,
+  "token_hours_remaining": 18.46,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-28T14:16:08",
+    "ran_at": "2026-10-28T14:31:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T14:15:00",
-        "close": 22702.0,
-        "ema5_15m": 22707.82,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.74,
+        "bar_time": "2026-10-28T14:30:00",
+        "close": 22700.0,
+        "ema5_15m": 22703.09,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.69,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,7 +67,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -77,7 +77,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T14:15:00",
-        "close": 73292.35,
-        "ema5_15m": 73303.72,
-        "volume_ratio": 0.12,
-        "body_ratio": 0.17,
+        "bar_time": "2026-10-28T14:30:00",
+        "close": 73277.93,
+        "ema5_15m": 73291.42,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.16,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
