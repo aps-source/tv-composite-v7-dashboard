@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-28T14:46:03+05:30",
-  "last_tick": "2026-10-28T14:46:03+05:30",
+  "generated_at": "2026-10-28T15:01:04+05:30",
+  "last_tick": "2026-10-28T15:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.21,
+  "token_hours_remaining": 17.96,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-28T14:46:07",
+    "ran_at": "2026-10-28T15:01:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T14:45:00",
-        "close": 22704.3,
-        "ema5_15m": 22702.81,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.84,
+        "bar_time": "2026-10-28T15:00:00",
+        "close": 22705.9,
+        "ema5_15m": 22703.92,
+        "volume_ratio": 0.19,
+        "body_ratio": 0.16,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -67,7 +67,7 @@
             "m15_stack": true,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -81,7 +81,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     },
@@ -89,14 +91,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T14:45:00",
-        "close": 73282.14,
-        "ema5_15m": 73285.16,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.72,
+        "bar_time": "2026-10-28T15:00:00",
+        "close": 73290.57,
+        "ema5_15m": 73287.93,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.04,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -105,7 +107,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -119,7 +121,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     }
