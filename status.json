@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-28T11:46:03+05:30",
-  "last_tick": "2026-10-28T11:46:03+05:30",
+  "generated_at": "2026-10-28T12:01:04+05:30",
+  "last_tick": "2026-10-28T12:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.21,
+  "token_hours_remaining": 20.96,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-10-28T11:16:08.188744"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.25,561, SENSEX ~Rs.29,358) -- add funds",
-      "checked_at": "2026-10-28T11:31:09.888524"
+      "ok": true,
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.25,468, SENSEX ~Rs.29,689 for full ITM sizing)",
+      "checked_at": "2026-10-28T12:01:12.433838"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-28T11:46:07",
+    "ran_at": "2026-10-28T12:01:12",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T11:45:00",
-        "close": 22608.8,
-        "ema5_15m": 22599.96,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.54,
+        "bar_time": "2026-10-28T12:00:00",
+        "close": 22630.75,
+        "ema5_15m": 22615.89,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.72,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T11:45:00",
-        "close": 72988.73,
-        "ema5_15m": 72959.3,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.4,
+        "bar_time": "2026-10-28T12:00:00",
+        "close": 73064.64,
+        "ema5_15m": 73013.6,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.31,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
