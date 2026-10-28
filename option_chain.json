@@ -1,21 +1,21 @@
 {
-  "spot": 22727.25,
+  "spot": 22728.25,
   "expiry": "2026-11-03",
   "resistance": {
-    "strike": 23000.0,
-    "oi": 8499530.0,
-    "pct_from_spot": 1.2
+    "strike": 24000.0,
+    "oi": 8461830.0,
+    "pct_from_spot": 5.6
   },
   "support": {
-    "strike": 22500.0,
-    "oi": 8699860.0,
-    "pct_from_spot": -1.0
+    "strike": 20050.0,
+    "oi": 8689655.0,
+    "pct_from_spot": -11.78
   },
   "max_pain": {
     "strike": 22700.0,
     "pct_from_spot": -0.12
   },
-  "pcr": 1.179,
+  "pcr": 1.142,
   "suggestion": "PUT writers dominate (PCR>1.1) -- often read as support-heavy / less downside conviction",
-  "as_of": "2026-10-28T13:16:17"
+  "as_of": "2026-10-28T13:31:15"
 }
