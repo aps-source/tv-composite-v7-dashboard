@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-28T15:16:04+05:30",
-  "last_tick": "2026-10-28T15:16:04+05:30",
+  "generated_at": "2026-10-28T15:31:04+05:30",
+  "last_tick": "2026-10-28T15:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.71,
+  "token_hours_remaining": 17.46,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-10-28T14:46:07.697725"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.23,030, SENSEX ~Rs.26,840) -- add funds",
-      "checked_at": "2026-10-28T14:46:08.843187"
+      "ok": true,
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.22,984, SENSEX ~Rs.26,927)",
+      "checked_at": "2026-10-28T15:31:23.143451"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-28T15:16:07",
+    "ran_at": "2026-10-28T15:31:23",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,9 +51,9 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T15:15:00",
-        "close": 22706.8,
-        "ema5_15m": 22705.17,
+        "bar_time": "2026-10-28T15:30:00",
+        "close": 22698.85,
+        "ema5_15m": 22701.3,
         "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
@@ -64,7 +64,7 @@
         "long": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": false,
             "volume": false,
             "candle": false
@@ -92,10 +92,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-28T15:15:00",
-        "close": 73266.44,
-        "ema5_15m": 73273.62,
-        "volume_ratio": 0.36,
+        "bar_time": "2026-10-28T15:30:00",
+        "close": 73246.03,
+        "ema5_15m": 73259.89,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
@@ -114,7 +114,7 @@
         },
         "short": {
           "conditions": {
-            "hourly_stack": false,
+            "hourly_stack": true,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
