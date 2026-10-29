@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T13:01:06+05:30",
-  "last_tick": "2026-10-29T13:01:06+05:30",
+  "generated_at": "2026-10-29T13:16:05+05:30",
+  "last_tick": "2026-10-29T13:16:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.02,
+  "token_hours_remaining": 19.77,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-29T13:01:11",
+    "ran_at": "2026-10-29T13:16:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T13:00:00",
-        "close": 22830.95,
-        "ema5_15m": 22837.28,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.15,
+        "bar_time": "2026-10-29T13:15:00",
+        "close": 22849.05,
+        "ema5_15m": 22843.28,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.8,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -64,10 +64,10 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T13:00:00",
-        "close": 73753.37,
-        "ema5_15m": 73777.71,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.42,
+        "bar_time": "2026-10-29T13:15:00",
+        "close": 73831.67,
+        "ema5_15m": 73807.86,
+        "volume_ratio": 0.11,
+        "body_ratio": 0.88,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -102,10 +102,10 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
