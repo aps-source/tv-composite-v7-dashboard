@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T10:01:07+05:30",
-  "last_tick": "2026-10-29T10:01:07+05:30",
+  "generated_at": "2026-10-29T10:16:07+05:30",
+  "last_tick": "2026-10-29T10:16:07+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.02,
+  "token_hours_remaining": 22.77,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-29T09:04:48.430717"
+      "checked_at": "2026-10-29T10:16:13.514008"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,839, SENSEX ~Rs.26,172) -- add funds",
-      "checked_at": "2026-10-29T09:46:10.835761"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.18,948, SENSEX ~Rs.23,760) -- add funds",
+      "checked_at": "2026-10-29T10:16:16.077081"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-29T10:01:14",
+    "ran_at": "2026-10-29T10:16:13",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T10:00:00",
-        "close": 22762.3,
-        "ema5_15m": 22740.92,
+        "bar_time": "2026-10-29T10:15:00",
+        "close": 22795.65,
+        "ema5_15m": 22764.72,
         "volume_ratio": 0.08,
-        "body_ratio": 0.77,
+        "body_ratio": 0.56,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T10:00:00",
-        "close": 73494.13,
-        "ema5_15m": 73422.5,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.83,
+        "bar_time": "2026-10-29T10:15:00",
+        "close": 73607.41,
+        "ema5_15m": 73501.75,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.73,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
