@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T11:01:10+05:30",
-  "last_tick": "2026-10-29T11:01:10+05:30",
+  "generated_at": "2026-10-29T11:16:11+05:30",
+  "last_tick": "2026-10-29T11:16:11+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.02,
+  "token_hours_remaining": 21.77,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-10-29T10:16:13.514008"
+      "checked_at": "2026-10-29T11:16:30.523637"
     },
     "funds": {
       "ok": true,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-29T11:01:22",
+    "ran_at": "2026-10-29T11:16:30",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T11:00:00",
-        "close": 22835.25,
-        "ema5_15m": 22819.43,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.35,
+        "bar_time": "2026-10-29T11:15:00",
+        "close": 22848.1,
+        "ema5_15m": 22829.34,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.73,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -67,7 +67,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T11:00:00",
-        "close": 73753.15,
-        "ema5_15m": 73692.21,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.82,
+        "bar_time": "2026-10-29T11:15:00",
+        "close": 73779.78,
+        "ema5_15m": 73719.28,
+        "volume_ratio": 0.07,
+        "body_ratio": 1.0,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
