@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T14:01:07+05:30",
-  "last_tick": "2026-10-29T14:01:07+05:30",
+  "generated_at": "2026-10-29T14:16:04+05:30",
+  "last_tick": "2026-10-29T14:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.02,
+  "token_hours_remaining": 18.77,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-10-29T13:31:14.602031"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.18,343, SENSEX ~Rs.24,420) -- add funds",
-      "checked_at": "2026-10-29T13:31:16.961508"
+      "ok": true,
+      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.15,512, SENSEX ~Rs.21,890)",
+      "checked_at": "2026-10-29T14:16:09.074897"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-29T14:01:12",
+    "ran_at": "2026-10-29T14:16:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T14:00:00",
-        "close": 22892.75,
-        "ema5_15m": 22872.7,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.3,
+        "bar_time": "2026-10-29T14:15:00",
+        "close": 22891.25,
+        "ema5_15m": 22878.24,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.06,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,11 +89,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-29T14:00:00",
-        "close": 73957.04,
-        "ema5_15m": 73896.69,
+        "bar_time": "2026-10-29T14:15:00",
+        "close": 73942.13,
+        "ema5_15m": 73907.6,
         "volume_ratio": 0.05,
-        "body_ratio": 0.13,
+        "body_ratio": 0.41,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
