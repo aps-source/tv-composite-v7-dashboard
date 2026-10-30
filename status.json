@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-10-30T14:01:03+05:30",
-  "last_tick": "2026-10-30T14:01:03+05:30",
+  "generated_at": "2026-10-30T14:16:03+05:30",
+  "last_tick": "2026-10-30T14:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.04,
+  "token_hours_remaining": 18.79,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-10-30T14:01:07",
+    "ran_at": "2026-10-30T14:16:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-30T14:00:00",
-        "close": 23004.85,
-        "ema5_15m": 23033.94,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.48,
+        "bar_time": "2026-10-30T14:15:00",
+        "close": 23032.15,
+        "ema5_15m": 23037.86,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.43,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -63,7 +63,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": false,
+            "hourly_stack": true,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-10-30T14:00:00",
-        "close": 74375.82,
-        "ema5_15m": 74475.47,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.69,
+        "bar_time": "2026-10-30T14:15:00",
+        "close": 74454.86,
+        "ema5_15m": 74482.2,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.39,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -103,7 +103,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": false,
+            "hourly_stack": true,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -117,7 +117,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
