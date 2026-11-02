@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-02T15:31:04+05:30",
-  "last_tick": "2026-11-02T15:31:04+05:30",
+  "generated_at": "2026-11-02T15:46:02+05:30",
+  "last_tick": "2026-11-02T15:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.35,
+  "token_hours_remaining": 17.1,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,17 +30,17 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-02T14:31:13.947033"
+      "checked_at": "2026-11-02T15:46:06.604120"
     },
     "funds": {
       "ok": true,
-      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.25,082, SENSEX ~Rs.66,625 for full ITM sizing)",
-      "checked_at": "2026-11-02T15:16:07.183401"
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.133,290, SENSEX ~Rs.78,795 for full ITM sizing)",
+      "checked_at": "2026-11-02T15:46:07.249808"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-02T15:31:08",
+    "ran_at": "2026-11-02T15:46:06",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,7 +51,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-02T15:30:00",
+        "bar_time": "2026-11-02T15:45:00",
         "close": 23440.8,
         "ema5_15m": 23381.31,
         "volume_ratio": 0.0,
@@ -92,7 +92,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-02T15:30:00",
+        "bar_time": "2026-11-02T15:45:00",
         "close": 75692.78,
         "ema5_15m": 75522.95,
         "volume_ratio": 0.0,
