@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-02T10:01:04+05:30",
-  "last_tick": "2026-11-02T10:01:04+05:30",
+  "generated_at": "2026-11-02T10:16:04+05:30",
+  "last_tick": "2026-11-02T10:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.85,
+  "token_hours_remaining": 22.6,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,14 +33,14 @@
       "checked_at": "2026-11-02T10:01:08.789519"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.100,568, SENSEX ~Rs.63,306) -- add funds",
-      "checked_at": "2026-11-02T09:31:54.040545"
+      "ok": true,
+      "detail": "balance covers NIFTY, SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.106,928, SENSEX ~Rs.70,017 for full ITM sizing)",
+      "checked_at": "2026-11-02T10:16:08.454588"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-02T10:01:08",
+    "ran_at": "2026-11-02T10:16:08",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-02T10:00:00",
-        "close": 23303.4,
-        "ema5_15m": 23248.88,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.79,
+        "bar_time": "2026-11-02T10:15:00",
+        "close": 23315.3,
+        "ema5_15m": 23274.87,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.73,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-02T10:00:00",
-        "close": 75381.8,
-        "ema5_15m": 75198.11,
+        "bar_time": "2026-11-02T10:15:00",
+        "close": 75415.01,
+        "ema5_15m": 75283.12,
         "volume_ratio": 0.04,
-        "body_ratio": 0.47,
+        "body_ratio": 0.6,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -117,7 +117,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
