@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-03T10:01:05+05:30",
-  "last_tick": "2026-11-03T10:01:05+05:30",
+  "generated_at": "2026-11-03T10:16:04+05:30",
+  "last_tick": "2026-11-03T10:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.85,
+  "token_hours_remaining": 22.6,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.23,516, SENSEX ~Rs.29,237) -- add funds",
-      "checked_at": "2026-11-03T09:31:15.704485"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.25,214, SENSEX ~Rs.30,118) -- add funds",
+      "checked_at": "2026-11-03T10:16:22.051171"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-03T10:01:09",
+    "ran_at": "2026-11-03T10:16:22",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-03T10:00:00",
-        "close": 23634.05,
-        "ema5_15m": 23572.53,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.14,
+        "bar_time": "2026-11-03T10:15:00",
+        "close": 23637.75,
+        "ema5_15m": 23593.88,
+        "volume_ratio": 0.15,
+        "body_ratio": 0.51,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
@@ -92,11 +92,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-03T10:00:00",
-        "close": 76410.35,
-        "ema5_15m": 76201.93,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.59,
+        "bar_time": "2026-11-03T10:15:00",
+        "close": 76437.27,
+        "ema5_15m": 76280.46,
+        "volume_ratio": 0.11,
+        "body_ratio": 0.55,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
