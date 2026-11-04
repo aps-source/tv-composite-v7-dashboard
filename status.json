@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-04T09:14:49+05:30",
-  "last_tick": "2026-11-04T09:14:49+05:30",
+  "generated_at": "2026-11-04T09:31:09+05:30",
+  "last_tick": "2026-11-04T09:31:09+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.99,
+  "token_hours_remaining": 23.72,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -23,8 +23,8 @@
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": null,
-    "prev_change_pct": null
+    "prev_close": 15.66,
+    "prev_change_pct": 1.49
   },
   "checks": {
     "ip_whitelist": {
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-04T09:14:54",
+    "ran_at": "2026-11-04T09:31:16",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,14 +51,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-03T15:15:00",
-        "close": 23810.85,
-        "ema5_15m": 23743.76,
-        "volume_ratio": 7.06,
-        "body_ratio": 1.0,
+        "bar_time": "2026-11-04T09:30:00",
+        "close": 23919.95,
+        "ema5_15m": 23846.39,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.58,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
@@ -66,25 +66,23 @@
             "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
-            "volume": true,
-            "candle": true
+            "volume": false,
+            "candle": false
           },
-          "all_met": true
+          "all_met": false
         },
         "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": true,
-            "candle": false
+            "volume": false,
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
@@ -93,14 +91,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-03T15:15:00",
-        "close": 76917.85,
-        "ema5_15m": 76742.7,
-        "volume_ratio": 1.25,
-        "body_ratio": 1.0,
+        "bar_time": "2026-11-04T09:30:00",
+        "close": 77310.01,
+        "ema5_15m": 77069.95,
+        "volume_ratio": 0.21,
+        "body_ratio": 0.6,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
@@ -108,24 +106,23 @@
             "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
-            "volume": true,
-            "candle": true
+            "volume": false,
+            "candle": false
           },
-          "all_met": true
+          "all_met": false
         },
         "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": true,
-            "candle": false
+            "volume": false,
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
