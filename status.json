@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-04T13:31:06+05:30",
-  "last_tick": "2026-11-04T13:31:06+05:30",
+  "generated_at": "2026-11-04T13:46:05+05:30",
+  "last_tick": "2026-11-04T13:46:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.72,
+  "token_hours_remaining": 19.47,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.23,777, SENSEX ~Rs.28,709) -- add funds",
-      "checked_at": "2026-11-04T13:16:10.071114"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,485, SENSEX ~Rs.27,800) -- add funds",
+      "checked_at": "2026-11-04T13:46:10.104769"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-04T13:31:11",
+    "ran_at": "2026-11-04T13:46:10",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-04T13:30:00",
-        "close": 23869.0,
-        "ema5_15m": 23849.51,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.3,
+        "bar_time": "2026-11-04T13:45:00",
+        "close": 23897.25,
+        "ema5_15m": 23872.29,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.35,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,11 +91,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-04T13:30:00",
-        "close": 77089.2,
-        "ema5_15m": 77031.03,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.25,
+        "bar_time": "2026-11-04T13:45:00",
+        "close": 77194.65,
+        "ema5_15m": 77109.63,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.17,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
