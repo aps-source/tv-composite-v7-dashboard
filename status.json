@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-04T15:16:04+05:30",
-  "last_tick": "2026-11-04T15:16:04+05:30",
-  "engine_status": "running",
-  "last_error": null,
-  "token_hours_remaining": 17.97,
+  "generated_at": "2026-11-04T15:31:05+05:30",
+  "last_tick": "2026-11-04T15:31:05+05:30",
+  "engine_status": "data_error",
+  "last_error": "India VIX fetch failed: intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023989F2E5D0>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))",
+  "token_hours_remaining": 17.72,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -22,9 +22,9 @@
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
-    "state": "ok",
-    "prev_close": 15.66,
-    "prev_change_pct": 1.49
+    "state": "unavailable",
+    "prev_close": null,
+    "prev_change_pct": null
   },
   "checks": {
     "ip_whitelist": {
@@ -33,14 +33,14 @@
       "checked_at": "2026-11-04T14:46:12.765461"
     },
     "funds": {
-      "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.22,179, SENSEX ~Rs.27,812) -- add funds",
-      "checked_at": "2026-11-04T14:46:15.161418"
+      "ok": null,
+      "detail": "balance check failed (ValueError)",
+      "checked_at": "2026-11-04T15:32:59.863877"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-04T15:16:07",
+    "ran_at": "2026-11-04T15:32:59",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -50,86 +50,14 @@
     "NIFTY": {
       "position": null,
       "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-11-04T15:15:00",
-        "close": 23911.7,
-        "ema5_15m": 23908.16,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
-        "decision": {
-          "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
-          "direction": null
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)"
-        ]
-      },
-      "error": null
+      "snapshot": null,
+      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023989F2ED50>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
     },
     "SENSEX": {
       "position": null,
       "day_losses": 0,
-      "snapshot": {
-        "bar_time": "2026-11-04T15:15:00",
-        "close": 77219.65,
-        "ema5_15m": 77210.19,
-        "volume_ratio": 0.05,
-        "body_ratio": null,
-        "decision": {
-          "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
-          "direction": null
-        },
-        "long": {
-          "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": false,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)"
-        ]
-      },
-      "error": null
+      "snapshot": null,
+      "error": "intraday_minute_data failed: HTTPSConnectionPool(host='api.dhan.co', port=443): Max retries exceeded with url: /v2/charts/intraday (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023989F2F110>: Failed to resolve 'api.dhan.co' ([Errno 11001] getaddrinfo failed)\"))"
     }
   }
 }
