@@ -1,21 +1,21 @@
 {
-  "spot": 23822.7,
+  "spot": 23790.95,
   "expiry": "2026-11-09",
   "resistance": {
     "strike": 24000.0,
-    "oi": 11279515.0,
-    "pct_from_spot": 0.74
+    "oi": 11771630.0,
+    "pct_from_spot": 0.88
   },
   "support": {
     "strike": 23600.0,
-    "oi": 7451015.0,
-    "pct_from_spot": -0.93
+    "oi": 7383545.0,
+    "pct_from_spot": -0.8
   },
   "max_pain": {
     "strike": 23750.0,
-    "pct_from_spot": -0.31
+    "pct_from_spot": -0.17
   },
-  "pcr": 0.939,
+  "pcr": 0.908,
   "suggestion": "Balanced (PCR 0.9-1.1)",
-  "as_of": "2026-11-04T11:31:16"
+  "as_of": "2026-11-04T11:46:11"
 }
