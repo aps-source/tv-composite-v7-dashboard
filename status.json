@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-04T10:01:15+05:30",
-  "last_tick": "2026-11-04T10:01:15+05:30",
+  "generated_at": "2026-11-04T10:16:05+05:30",
+  "last_tick": "2026-11-04T10:16:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.22,
+  "token_hours_remaining": 22.97,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-04T09:14:54.749560"
+      "checked_at": "2026-11-04T10:16:09.557880"
     },
     "funds": {
       "ok": true,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-04T10:01:24",
+    "ran_at": "2026-11-04T10:16:09",
     "placed": 0,
     "held": [],
     "blocked": null
@@ -51,11 +51,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-04T10:00:00",
-        "close": 23907.2,
-        "ema5_15m": 23880.46,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.13,
+        "bar_time": "2026-11-04T10:15:00",
+        "close": 23908.8,
+        "ema5_15m": 23892.23,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.47,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
@@ -92,11 +92,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-04T10:00:00",
-        "close": 77265.65,
-        "ema5_15m": 77171.21,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.11,
+        "bar_time": "2026-11-04T10:15:00",
+        "close": 77268.71,
+        "ema5_15m": 77208.85,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.48,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
