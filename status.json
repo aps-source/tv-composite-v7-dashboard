@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T11:31:04+05:30",
-  "last_tick": "2026-11-05T11:31:04+05:30",
+  "generated_at": "2026-11-05T11:46:04+05:30",
+  "last_tick": "2026-11-05T11:46:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.55,
+  "token_hours_remaining": 21.3,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T11:31:19",
+    "ran_at": "2026-11-05T11:46:09",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: insufficient balance for Rs.16,202 + 10% buffer (OTM fallback also failed: SENSEX: even the OTM fallback (delta 0.37, Rs.7,129/lot) exceeds the Rs.482 budget)"
+      "ENTRY SENSEX: insufficient balance for Rs.16,202 + 10% buffer (OTM fallback also failed: SENSEX: even the OTM fallback (delta 0.37, Rs.7,187/lot) exceeds the Rs.482 budget)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T11:30:00",
-        "close": 24403.9,
-        "ema5_15m": 24377.56,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.82,
+        "bar_time": "2026-11-05T11:45:00",
+        "close": 24406.65,
+        "ema5_15m": 24385.62,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.84,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T11:30:00",
-        "close": 78834.15,
-        "ema5_15m": 78754.08,
-        "volume_ratio": 13.42,
-        "body_ratio": 0.76,
+        "bar_time": "2026-11-05T11:45:00",
+        "close": 78844.73,
+        "ema5_15m": 78779.89,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.99,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -118,17 +118,17 @@
             "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
-            "volume": true,
+            "volume": false,
             "candle": true
           },
-          "all_met": true
+          "all_met": false
         },
         "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": true,
+            "volume": false,
             "candle": false
           },
           "all_met": false
