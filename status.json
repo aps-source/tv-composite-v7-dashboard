@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T13:01:05+05:30",
-  "last_tick": "2026-11-05T13:01:05+05:30",
+  "generated_at": "2026-11-05T13:16:04+05:30",
+  "last_tick": "2026-11-05T13:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.05,
+  "token_hours_remaining": 19.8,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-05T12:16:15.625220"
+      "checked_at": "2026-11-05T13:16:19.153362"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T13:01:11",
+    "ran_at": "2026-11-05T13:16:09",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (91 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (106 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T13:00:00",
-        "close": 24460.25,
-        "ema5_15m": 24437.9,
+        "bar_time": "2026-11-05T13:15:00",
+        "close": 24470.95,
+        "ema5_15m": 24451.55,
         "volume_ratio": 0.05,
-        "body_ratio": 0.3,
+        "body_ratio": 0.41,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T13:00:00",
-        "close": 79043.24,
-        "ema5_15m": 78963.78,
-        "volume_ratio": 0.01,
-        "body_ratio": 0.75,
+        "bar_time": "2026-11-05T13:15:00",
+        "close": 79086.58,
+        "ema5_15m": 79014.36,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.05,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -119,7 +119,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
