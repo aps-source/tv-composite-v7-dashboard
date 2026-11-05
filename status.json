@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T15:31:07+05:30",
-  "last_tick": "2026-11-05T15:31:07+05:30",
+  "generated_at": "2026-11-05T15:46:03+05:30",
+  "last_tick": "2026-11-05T15:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.55,
+  "token_hours_remaining": 17.3,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T15:31:14",
+    "ran_at": "2026-11-05T15:46:22",
     "placed": 0,
     "held": [
       "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
@@ -63,7 +63,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T15:30:00",
+        "bar_time": "2026-11-05T15:45:00",
         "close": 24536.6,
         "ema5_15m": 24538.51,
         "volume_ratio": 0.0,
@@ -105,7 +105,7 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T15:30:00",
+        "bar_time": "2026-11-05T15:45:00",
         "close": 79310.01,
         "ema5_15m": 79328.44,
         "volume_ratio": 0.0,
