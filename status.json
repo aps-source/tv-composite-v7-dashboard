@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T14:46:05+05:30",
-  "last_tick": "2026-11-05T14:46:05+05:30",
+  "generated_at": "2026-11-05T15:01:06+05:30",
+  "last_tick": "2026-11-05T15:01:06+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.3,
+  "token_hours_remaining": 18.05,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T14:46:22",
+    "ran_at": "2026-11-05T15:01:16",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (196 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (211 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,20 +63,20 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T14:45:00",
-        "close": 24549.6,
-        "ema5_15m": 24538.36,
-        "volume_ratio": 0.12,
-        "body_ratio": 0.55,
+        "bar_time": "2026-11-05T15:00:00",
+        "close": 24532.15,
+        "ema5_15m": 24537.46,
+        "volume_ratio": 0.2,
+        "body_ratio": 0.86,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
             "candle": false
@@ -94,7 +94,8 @@
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (15:xx)"
         ]
       },
       "error": null
@@ -103,11 +104,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T14:45:00",
-        "close": 79384.26,
-        "ema5_15m": 79335.38,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.42,
+        "bar_time": "2026-11-05T15:00:00",
+        "close": 79316.16,
+        "ema5_15m": 79332.48,
+        "volume_ratio": 0.1,
+        "body_ratio": 1.0,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -116,7 +117,7 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
             "candle": false
@@ -129,11 +130,13 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     }
