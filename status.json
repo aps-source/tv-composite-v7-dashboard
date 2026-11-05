@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T12:01:05+05:30",
-  "last_tick": "2026-11-05T12:01:05+05:30",
+  "generated_at": "2026-11-05T12:16:04+05:30",
+  "last_tick": "2026-11-05T12:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.05,
+  "token_hours_remaining": 20.8,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,20 +30,20 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-05T11:16:09.750404"
+      "checked_at": "2026-11-05T12:16:15.625220"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.18,404, SENSEX ~Rs.26,785) -- add funds",
-      "checked_at": "2026-11-05T11:31:26.999846"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.17,739, SENSEX ~Rs.26,762) -- add funds",
+      "checked_at": "2026-11-05T12:16:17.602551"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T12:01:10",
+    "ran_at": "2026-11-05T12:16:09",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: insufficient balance for Rs.16,202 + 10% buffer (OTM fallback also failed: SENSEX: even the OTM fallback (delta 0.36, Rs.7,068/lot) exceeds the Rs.482 budget)"
+      "ENTRY SENSEX: stale signal (46 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T12:00:00",
-        "close": 24402.05,
-        "ema5_15m": 24389.97,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.27,
+        "bar_time": "2026-11-05T12:15:00",
+        "close": 24413.85,
+        "ema5_15m": 24400.13,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.37,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T12:00:00",
-        "close": 78830.37,
-        "ema5_15m": 78795.35,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.46,
+        "bar_time": "2026-11-05T12:15:00",
+        "close": 78868.69,
+        "ema5_15m": 78828.56,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.04,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
