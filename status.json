@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T11:16:04+05:30",
-  "last_tick": "2026-11-05T11:16:04+05:30",
+  "generated_at": "2026-11-05T11:31:04+05:30",
+  "last_tick": "2026-11-05T11:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.8,
+  "token_hours_remaining": 21.55,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,28 +34,40 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.18,300, SENSEX ~Rs.26,730) -- add funds",
-      "checked_at": "2026-11-05T11:01:15.755909"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.18,404, SENSEX ~Rs.26,785) -- add funds",
+      "checked_at": "2026-11-05T11:31:26.999846"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T11:16:09",
+    "ran_at": "2026-11-05T11:31:19",
     "placed": 0,
-    "held": [],
+    "held": [
+      "ENTRY SENSEX: insufficient balance for Rs.16,202 + 10% buffer (OTM fallback also failed: SENSEX: even the OTM fallback (delta 0.37, Rs.7,129/lot) exceeds the Rs.482 budget)"
+    ],
     "blocked": null
   },
-  "pending": [],
+  "pending": [
+    {
+      "kind": "ENTRY",
+      "symbol": "SENSEX",
+      "urgent": false,
+      "needs_review": false,
+      "direction": "LONG",
+      "exit_reason": null,
+      "signal_time": "2026-11-05T11:30:00"
+    }
+  ],
   "symbols": {
     "NIFTY": {
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T11:15:00",
-        "close": 24374.95,
-        "ema5_15m": 24359.69,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.76,
+        "bar_time": "2026-11-05T11:30:00",
+        "close": 24403.9,
+        "ema5_15m": 24377.56,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.82,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -91,32 +103,32 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T11:15:00",
-        "close": 78746.84,
-        "ema5_15m": 78700.93,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.45,
+        "bar_time": "2026-11-05T11:30:00",
+        "close": 78834.15,
+        "ema5_15m": 78754.08,
+        "volume_ratio": 13.42,
+        "body_ratio": 0.76,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
-          "direction": null
+          "code": "ENTRY_PROPOSED",
+          "detail": "LONG entry proposed -- awaiting your confirmation",
+          "direction": "LONG"
         },
         "long": {
           "conditions": {
             "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
-            "volume": false,
-            "candle": false
+            "volume": true,
+            "candle": true
           },
-          "all_met": false
+          "all_met": true
         },
         "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": false,
+            "volume": true,
             "candle": false
           },
           "all_met": false
