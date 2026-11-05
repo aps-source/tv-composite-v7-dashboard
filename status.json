@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T14:01:09+05:30",
-  "last_tick": "2026-11-05T14:01:09+05:30",
+  "generated_at": "2026-11-05T14:16:06+05:30",
+  "last_tick": "2026-11-05T14:16:06+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.05,
+  "token_hours_remaining": 18.8,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-05T13:16:19.153362"
+      "checked_at": "2026-11-05T14:16:20.955090"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-05T14:01:18",
+    "ran_at": "2026-11-05T14:16:15",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (151 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (166 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T14:00:00",
-        "close": 24537.25,
-        "ema5_15m": 24517.78,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.75,
+        "bar_time": "2026-11-05T14:15:00",
+        "close": 24551.9,
+        "ema5_15m": 24532.1,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.12,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-05T14:00:00",
-        "close": 79330.86,
-        "ema5_15m": 79252.38,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.79,
+        "bar_time": "2026-11-05T14:15:00",
+        "close": 79377.06,
+        "ema5_15m": 79304.78,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.02,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -129,7 +129,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
