@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T09:46:06+05:30",
-  "last_tick": "2026-11-06T09:46:06+05:30",
+  "generated_at": "2026-11-06T10:01:05+05:30",
+  "last_tick": "2026-11-06T10:01:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.09,
+  "token_hours_remaining": 22.84,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,20 +30,20 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-06T08:52:37.742116"
+      "checked_at": "2026-11-06T10:01:20.047063"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers one lot of every index (needs NIFTY ~Rs.23,981, SENSEX ~Rs.35,848)",
-      "checked_at": "2026-11-06T09:31:12.917393"
+      "ok": false,
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.23,738, SENSEX ~Rs.35,640) -- add funds",
+      "checked_at": "2026-11-06T10:01:21.134641"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-06T09:46:11",
+    "ran_at": "2026-11-06T10:01:11",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (1336 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (1351 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T09:45:00",
-        "close": 24592.5,
-        "ema5_15m": 24559.25,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.57,
+        "bar_time": "2026-11-06T10:00:00",
+        "close": 24631.6,
+        "ema5_15m": 24590.81,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.16,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (10:xx)",
           "direction": null
         },
         "long": {
@@ -79,7 +79,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -93,7 +93,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     },
@@ -101,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T09:45:00",
-        "close": 79698.8,
-        "ema5_15m": 79536.62,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.67,
+        "bar_time": "2026-11-06T10:00:00",
+        "close": 79819.3,
+        "ema5_15m": 79653.53,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.29,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,7 +119,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -131,7 +133,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     }
