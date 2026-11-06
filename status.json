@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T09:31:04+05:30",
-  "last_tick": "2026-11-06T09:31:04+05:30",
+  "generated_at": "2026-11-06T09:46:06+05:30",
+  "last_tick": "2026-11-06T09:46:06+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.34,
+  "token_hours_remaining": 23.09,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-06T09:31:08",
+    "ran_at": "2026-11-06T09:46:11",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (1321 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (1336 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T09:30:00",
-        "close": 24522.55,
-        "ema5_15m": 24525.69,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.6,
+        "bar_time": "2026-11-06T09:45:00",
+        "close": 24592.5,
+        "ema5_15m": 24559.25,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.57,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -76,7 +76,7 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
             "candle": true
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T09:30:00",
-        "close": 79459.7,
-        "ema5_15m": 79396.63,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.61,
+        "bar_time": "2026-11-06T09:45:00",
+        "close": 79698.8,
+        "ema5_15m": 79536.62,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.67,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
