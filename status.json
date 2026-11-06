@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T14:16:04+05:30",
-  "last_tick": "2026-11-06T14:16:04+05:30",
+  "generated_at": "2026-11-06T14:31:07+05:30",
+  "last_tick": "2026-11-06T14:31:07+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.59,
+  "token_hours_remaining": 18.34,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-06T14:16:20",
+    "ran_at": "2026-11-06T14:31:14",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (1606 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (1621 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T14:15:00",
-        "close": 24800.0,
-        "ema5_15m": 24782.75,
-        "volume_ratio": 0.07,
-        "body_ratio": 0.75,
+        "bar_time": "2026-11-06T14:30:00",
+        "close": 24840.35,
+        "ema5_15m": 24808.49,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.41,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T14:15:00",
-        "close": 80383.22,
-        "ema5_15m": 80325.06,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.43,
+        "bar_time": "2026-11-06T14:30:00",
+        "close": 80494.68,
+        "ema5_15m": 80399.58,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.37,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
