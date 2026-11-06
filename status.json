@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T13:16:05+05:30",
-  "last_tick": "2026-11-06T13:16:05+05:30",
+  "generated_at": "2026-11-06T13:31:06+05:30",
+  "last_tick": "2026-11-06T13:31:06+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.59,
+  "token_hours_remaining": 19.34,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -33,17 +33,17 @@
       "checked_at": "2026-11-06T13:16:18.296623"
     },
     "funds": {
-      "ok": true,
-      "detail": "balance covers NIFTY at the normal ITM pick; SENSEX only via the cheaper OTM fallback (needs NIFTY ~Rs.20,177, SENSEX ~Rs.30,691 for full ITM sizing)",
-      "checked_at": "2026-11-06T13:01:18.951081"
+      "ok": false,
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.20,188, SENSEX ~Rs.30,470) -- add funds",
+      "checked_at": "2026-11-06T13:31:21.968736"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-06T13:16:10",
+    "ran_at": "2026-11-06T13:31:17",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (1546 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (1561 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T13:15:00",
-        "close": 24739.25,
-        "ema5_15m": 24703.2,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.74,
+        "bar_time": "2026-11-06T13:30:00",
+        "close": 24737.05,
+        "ema5_15m": 24711.68,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.75,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T13:15:00",
-        "close": 80170.49,
-        "ema5_15m": 80061.16,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.82,
+        "bar_time": "2026-11-06T13:30:00",
+        "close": 80172.42,
+        "ema5_15m": 80090.69,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.99,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
