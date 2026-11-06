@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T14:46:05+05:30",
-  "last_tick": "2026-11-06T14:46:05+05:30",
+  "generated_at": "2026-11-06T15:01:04+05:30",
+  "last_tick": "2026-11-06T15:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.09,
+  "token_hours_remaining": 17.84,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.19,402, SENSEX ~Rs.30,627) -- add funds",
-      "checked_at": "2026-11-06T14:16:23.698472"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.18,640, SENSEX ~Rs.27,464) -- add funds",
+      "checked_at": "2026-11-06T15:01:17.717969"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-06T14:46:09",
+    "ran_at": "2026-11-06T15:01:10",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (1636 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (1651 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T14:45:00",
-        "close": 24855.2,
-        "ema5_15m": 24827.54,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.17,
+        "bar_time": "2026-11-06T15:00:00",
+        "close": 24885.25,
+        "ema5_15m": 24850.8,
+        "volume_ratio": 0.22,
+        "body_ratio": 0.74,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -79,7 +79,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -93,7 +93,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     },
@@ -101,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-06T14:45:00",
-        "close": 80562.3,
-        "ema5_15m": 80467.35,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.15,
+        "bar_time": "2026-11-06T15:00:00",
+        "close": 80651.44,
+        "ema5_15m": 80541.57,
+        "volume_ratio": 0.11,
+        "body_ratio": 0.81,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,7 +119,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -131,7 +133,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (15:xx)"
+        ]
       },
       "error": null
     }
