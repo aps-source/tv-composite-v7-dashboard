@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-09T11:01:04+05:30",
-  "last_tick": "2026-11-09T11:01:04+05:30",
+  "generated_at": "2026-11-09T11:16:03+05:30",
+  "last_tick": "2026-11-09T11:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.73,
+  "token_hours_remaining": 21.48,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-09T11:01:08",
+    "ran_at": "2026-11-09T11:16:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (5731 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (5746 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-09T11:00:00",
-        "close": 24891.7,
-        "ema5_15m": 24896.62,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.45,
+        "bar_time": "2026-11-09T11:15:00",
+        "close": 24916.5,
+        "ema5_15m": 24906.99,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.31,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -76,7 +76,7 @@
         "long": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": false,
             "volume": false,
             "candle": false
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-09T11:00:00",
-        "close": 80667.78,
-        "ema5_15m": 80694.77,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.25,
+        "bar_time": "2026-11-09T11:15:00",
+        "close": 80753.57,
+        "ema5_15m": 80727.54,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.33,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -114,7 +114,7 @@
         "long": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": false,
             "volume": false,
             "candle": false
