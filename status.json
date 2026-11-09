@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-09T15:01:05+05:30",
-  "last_tick": "2026-11-09T15:01:05+05:30",
+  "generated_at": "2026-11-09T15:16:04+05:30",
+  "last_tick": "2026-11-09T15:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.73,
+  "token_hours_remaining": 17.48,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-09T14:16:11.406349"
+      "checked_at": "2026-11-09T15:16:17.306143"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-09T15:01:10",
+    "ran_at": "2026-11-09T15:16:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (5971 min old, limit 35)"
+      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-09T15:00:00",
-        "close": 24995.7,
-        "ema5_15m": 24983.53,
-        "volume_ratio": 0.15,
-        "body_ratio": 0.74,
+        "bar_time": "2026-11-09T15:15:00",
+        "close": 25003.65,
+        "ema5_15m": 24992.01,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -79,7 +79,7 @@
             "m15_stack": true,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -94,6 +94,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
@@ -103,11 +104,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-09T15:00:00",
-        "close": 81050.71,
-        "ema5_15m": 81009.02,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.66,
+        "bar_time": "2026-11-09T15:15:00",
+        "close": 81064.68,
+        "ema5_15m": 81029.81,
+        "volume_ratio": 0.09,
+        "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,9 +118,9 @@
           "conditions": {
             "hourly_stack": true,
             "m15_stack": true,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -127,13 +128,14 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
             "candle": false
           },
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
