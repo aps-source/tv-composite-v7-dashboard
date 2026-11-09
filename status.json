@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-09T09:46:03+05:30",
-  "last_tick": "2026-11-09T09:46:03+05:30",
+  "generated_at": "2026-11-09T10:01:04+05:30",
+  "last_tick": "2026-11-09T10:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.98,
+  "token_hours_remaining": 22.73,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-09T09:46:07",
+    "ran_at": "2026-11-09T10:01:09",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (5656 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (5671 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-09T09:45:00",
-        "close": 24947.75,
-        "ema5_15m": 24962.92,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.82,
+        "bar_time": "2026-11-09T10:00:00",
+        "close": 24940.65,
+        "ema5_15m": 24952.13,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.54,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (10:xx)",
           "direction": null
         },
         "long": {
@@ -93,7 +93,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     },
@@ -101,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-09T09:45:00",
-        "close": 80898.8,
-        "ema5_15m": 80931.73,
-        "volume_ratio": 0.12,
-        "body_ratio": 0.86,
+        "bar_time": "2026-11-09T10:00:00",
+        "close": 80846.73,
+        "ema5_15m": 80888.25,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.29,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,7 +119,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -131,7 +133,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     }
