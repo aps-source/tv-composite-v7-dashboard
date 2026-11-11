@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-11-11T15:31:43.168009",
+  "updated_at": "2026-11-11T15:40:23.743607",
   "date": "2026-11-11",
-  "nifty_caption": "TVC NIFTY \u2014 strategy chart (Hourly+15m EMA stack, CPR, signals), live \u2014 11 Nov 2026",
-  "sensex_caption": "TVC SENSEX \u2014 strategy chart (Hourly+15m EMA stack, CPR, signals), live \u2014 11 Nov 2026",
+  "trades_caption": "TVC daily trades \u2014 11 Nov 2026: 0 trades, +\u20b90",
+  "nifty_caption": "TVC NIFTY \u2014 strategy chart (Hourly+15m EMA stack, CPR, signals), 11 Nov 2026",
+  "sensex_caption": "TVC SENSEX \u2014 strategy chart (Hourly+15m EMA stack, CPR, signals), 11 Nov 2026",
   "has_nifty_chart": true,
   "has_sensex_chart": true
 }
