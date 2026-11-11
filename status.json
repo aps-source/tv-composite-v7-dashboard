@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T14:31:05+05:30",
-  "last_tick": "2026-11-11T14:31:05+05:30",
+  "generated_at": "2026-11-11T14:33:46+05:30",
+  "last_tick": "2026-11-11T14:33:46+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.49,
+  "token_hours_remaining": 18.44,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.27,352, SENSEX ~Rs.37,528) -- add funds",
-      "checked_at": "2026-11-11T14:01:23.115967"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.26,276, SENSEX ~Rs.32,780) -- add funds",
+      "checked_at": "2026-11-11T14:33:53.029968"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T14:31:09",
+    "ran_at": "2026-11-11T14:33:50",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8821 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8824 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -64,10 +64,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T14:30:00",
-        "close": 25234.0,
-        "ema5_15m": 25233.8,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.93,
+        "close": 25238.25,
+        "ema5_15m": 25235.22,
+        "volume_ratio": 0.27,
+        "body_ratio": 0.77,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -102,10 +102,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T14:30:00",
-        "close": 81844.46,
-        "ema5_15m": 81842.91,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.93,
+        "close": 81866.14,
+        "ema5_15m": 81850.13,
+        "volume_ratio": 0.2,
+        "body_ratio": 0.74,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
