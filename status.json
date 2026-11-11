@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T13:04:51+05:30",
-  "last_tick": "2026-11-11T13:04:51+05:30",
+  "generated_at": "2026-11-11T13:16:07+05:30",
+  "last_tick": "2026-11-11T13:16:07+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.93,
+  "token_hours_remaining": 19.74,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-11T12:16:18.258839"
+      "checked_at": "2026-11-11T13:16:18.302009"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T13:05:02",
+    "ran_at": "2026-11-11T13:16:13",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8735 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8746 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T13:00:00",
-        "close": 25312.35,
-        "ema5_15m": 25314.67,
-        "volume_ratio": 0.19,
-        "body_ratio": 0.73,
+        "bar_time": "2026-11-11T13:15:00",
+        "close": 25284.6,
+        "ema5_15m": 25296.76,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.56,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T13:00:00",
-        "close": 82105.28,
-        "ema5_15m": 82120.5,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.86,
+        "bar_time": "2026-11-11T13:15:00",
+        "close": 82018.88,
+        "ema5_15m": 82062.36,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.75,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
