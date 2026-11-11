@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T09:18:46+05:30",
-  "last_tick": "2026-11-11T09:18:46+05:30",
+  "generated_at": "2026-11-11T09:31:04+05:30",
+  "last_tick": "2026-11-11T09:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.69,
+  "token_hours_remaining": 23.49,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T09:18:50",
+    "ran_at": "2026-11-11T09:31:08",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8509 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8521 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T09:15:00",
-        "close": 25346.2,
-        "ema5_15m": 25119.18,
-        "volume_ratio": 1.86,
-        "body_ratio": 0.1,
+        "bar_time": "2026-11-11T09:30:00",
+        "close": 25328.6,
+        "ema5_15m": 25187.69,
+        "volume_ratio": 0.15,
+        "body_ratio": 0.6,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -78,7 +78,7 @@
             "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
-            "volume": true,
+            "volume": false,
             "candle": false
           },
           "all_met": false
@@ -88,8 +88,8 @@
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": true,
-            "candle": false
+            "volume": false,
+            "candle": true
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T09:15:00",
-        "close": 82255.63,
-        "ema5_15m": 81447.74,
-        "volume_ratio": 2.29,
-        "body_ratio": 0.02,
+        "bar_time": "2026-11-11T09:30:00",
+        "close": 82195.72,
+        "ema5_15m": 81694.09,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.6,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -116,7 +116,7 @@
             "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
-            "volume": true,
+            "volume": false,
             "candle": false
           },
           "all_met": false
@@ -126,8 +126,8 @@
             "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": false,
-            "volume": true,
-            "candle": false
+            "volume": false,
+            "candle": true
           },
           "all_met": false
         },
