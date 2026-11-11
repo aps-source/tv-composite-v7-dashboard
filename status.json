@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T13:31:08+05:30",
-  "last_tick": "2026-11-11T13:31:08+05:30",
+  "generated_at": "2026-11-11T13:33:49+05:30",
+  "last_tick": "2026-11-11T13:33:49+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.49,
+  "token_hours_remaining": 19.44,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T13:31:16",
+    "ran_at": "2026-11-11T13:33:55",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8761 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8764 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -64,10 +64,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T13:30:00",
-        "close": 25253.8,
-        "ema5_15m": 25279.57,
-        "volume_ratio": 0.08,
-        "body_ratio": 0.9,
+        "close": 25224.25,
+        "ema5_15m": 25269.72,
+        "volume_ratio": 0.29,
+        "body_ratio": 0.92,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -75,7 +75,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": true,
+            "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -102,10 +102,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T13:30:00",
-        "close": 81918.17,
-        "ema5_15m": 82003.81,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.8,
+        "close": 81806.57,
+        "ema5_15m": 81966.61,
+        "volume_ratio": 0.16,
+        "body_ratio": 0.93,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -113,7 +113,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": true,
+            "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
