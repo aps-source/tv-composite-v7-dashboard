@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T11:31:05+05:30",
-  "last_tick": "2026-11-11T11:31:05+05:30",
+  "generated_at": "2026-11-11T11:33:47+05:30",
+  "last_tick": "2026-11-11T11:33:47+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.49,
+  "token_hours_remaining": 21.44,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T11:31:12",
+    "ran_at": "2026-11-11T11:33:51",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8641 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8644 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -64,10 +64,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T11:30:00",
-        "close": 25361.2,
-        "ema5_15m": 25359.9,
-        "volume_ratio": 0.06,
-        "body_ratio": 1.0,
+        "close": 25386.75,
+        "ema5_15m": 25368.42,
+        "volume_ratio": 0.24,
+        "body_ratio": 0.54,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -79,7 +79,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -102,10 +102,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T11:30:00",
-        "close": 82315.28,
-        "ema5_15m": 82300.97,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.08,
+        "close": 82388.16,
+        "ema5_15m": 82325.27,
+        "volume_ratio": 0.25,
+        "body_ratio": 0.68,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,7 +117,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
