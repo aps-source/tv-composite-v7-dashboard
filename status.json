@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T14:18:47+05:30",
-  "last_tick": "2026-11-11T14:18:47+05:30",
+  "generated_at": "2026-11-11T14:31:05+05:30",
+  "last_tick": "2026-11-11T14:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.69,
+  "token_hours_remaining": 18.49,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T14:18:54",
+    "ran_at": "2026-11-11T14:31:09",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8809 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8821 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T14:15:00",
-        "close": 25216.55,
-        "ema5_15m": 25234.07,
-        "volume_ratio": 0.19,
-        "body_ratio": 0.48,
+        "bar_time": "2026-11-11T14:30:00",
+        "close": 25234.0,
+        "ema5_15m": 25233.8,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.93,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -76,10 +76,10 @@
         "long": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T14:15:00",
-        "close": 81794.79,
-        "ema5_15m": 81846.76,
-        "volume_ratio": 0.12,
-        "body_ratio": 0.36,
+        "bar_time": "2026-11-11T14:30:00",
+        "close": 81844.46,
+        "ema5_15m": 81842.91,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.93,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -114,10 +114,10 @@
         "long": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
