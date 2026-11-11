@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T11:18:47+05:30",
-  "last_tick": "2026-11-11T11:18:47+05:30",
+  "generated_at": "2026-11-11T11:31:05+05:30",
+  "last_tick": "2026-11-11T11:31:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.69,
+  "token_hours_remaining": 21.49,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T11:18:51",
+    "ran_at": "2026-11-11T11:31:12",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8629 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8641 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T11:15:00",
-        "close": 25377.9,
-        "ema5_15m": 25363.09,
-        "volume_ratio": 0.26,
-        "body_ratio": 0.02,
+        "bar_time": "2026-11-11T11:30:00",
+        "close": 25361.2,
+        "ema5_15m": 25359.9,
+        "volume_ratio": 0.06,
+        "body_ratio": 1.0,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-11T11:15:00",
-        "close": 82370.94,
-        "ema5_15m": 82311.75,
-        "volume_ratio": 0.14,
-        "body_ratio": 0.26,
+        "bar_time": "2026-11-11T11:30:00",
+        "close": 82315.28,
+        "ema5_15m": 82300.97,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.08,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
