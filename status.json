@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T14:16:03+05:30",
-  "last_tick": "2026-11-11T14:16:03+05:30",
+  "generated_at": "2026-11-11T14:18:47+05:30",
+  "last_tick": "2026-11-11T14:18:47+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.74,
+  "token_hours_remaining": 18.69,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-11T13:16:18.302009"
+      "checked_at": "2026-11-11T14:18:57.615566"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-11T14:16:07",
+    "ran_at": "2026-11-11T14:18:54",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (8806 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (8809 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -64,10 +64,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T14:15:00",
-        "close": 25225.2,
-        "ema5_15m": 25236.95,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.41,
+        "close": 25216.55,
+        "ema5_15m": 25234.07,
+        "volume_ratio": 0.19,
+        "body_ratio": 0.48,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -102,10 +102,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-11T14:15:00",
-        "close": 81822.93,
-        "ema5_15m": 81856.14,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.09,
+        "close": 81794.79,
+        "ema5_15m": 81846.76,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.36,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
