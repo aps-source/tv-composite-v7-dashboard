@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-12T11:46:06+05:30",
-  "last_tick": "2026-11-12T11:46:06+05:30",
+  "generated_at": "2026-11-12T12:01:05+05:30",
+  "last_tick": "2026-11-12T12:01:05+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.3,
+  "token_hours_remaining": 21.05,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-12T11:46:12",
+    "ran_at": "2026-11-12T12:01:10",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (10096 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (10111 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-12T11:45:00",
-        "close": 25278.2,
-        "ema5_15m": 25290.34,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.19,
+        "bar_time": "2026-11-12T12:00:00",
+        "close": 25271.7,
+        "ema5_15m": 25281.87,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.25,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -75,7 +75,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": true,
+            "hourly_stack": false,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-12T11:45:00",
-        "close": 81994.97,
-        "ema5_15m": 82029.35,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.91,
+        "bar_time": "2026-11-12T12:00:00",
+        "close": 81973.59,
+        "ema5_15m": 81999.88,
+        "volume_ratio": 0.13,
+        "body_ratio": 1.0,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
