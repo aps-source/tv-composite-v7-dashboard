@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-12T11:01:05+05:30",
-  "last_tick": "2026-11-12T11:01:05+05:30",
+  "generated_at": "2026-11-12T11:16:04+05:30",
+  "last_tick": "2026-11-12T11:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.05,
+  "token_hours_remaining": 21.8,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-12T11:01:09",
+    "ran_at": "2026-11-12T11:16:08",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (10051 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (10066 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-12T11:00:00",
-        "close": 25330.6,
-        "ema5_15m": 25332.15,
+        "bar_time": "2026-11-12T11:15:00",
+        "close": 25292.8,
+        "ema5_15m": 25311.43,
         "volume_ratio": 0.05,
-        "body_ratio": 0.17,
+        "body_ratio": 0.36,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-12T11:00:00",
-        "close": 82177.74,
-        "ema5_15m": 82169.51,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.36,
+        "bar_time": "2026-11-12T11:15:00",
+        "close": 82062.59,
+        "ema5_15m": 82107.22,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.11,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -114,7 +114,7 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
             "candle": false
