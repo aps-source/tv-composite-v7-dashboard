@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-13T09:19:22+05:30",
-  "last_tick": "2026-11-13T09:19:22+05:30",
+  "generated_at": "2026-11-13T09:31:04+05:30",
+  "last_tick": "2026-11-13T09:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.99,
+  "token_hours_remaining": 23.8,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-13T09:19:32",
+    "ran_at": "2026-11-13T09:31:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (11390 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (11401 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-13T09:15:00",
-        "close": 25133.05,
-        "ema5_15m": 25226.72,
-        "volume_ratio": 1.06,
-        "body_ratio": 0.75,
+        "bar_time": "2026-11-13T09:30:00",
+        "close": 25128.5,
+        "ema5_15m": 25194.26,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.42,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-13T09:15:00",
-        "close": 81495.07,
-        "ema5_15m": 81778.99,
-        "volume_ratio": 0.62,
-        "body_ratio": 0.8,
+        "bar_time": "2026-11-13T09:30:00",
+        "close": 81464.24,
+        "ema5_15m": 81669.49,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.56,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
