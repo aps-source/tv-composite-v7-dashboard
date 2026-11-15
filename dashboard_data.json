@@ -1,27 +1,33 @@
 {
-  "generated_at": "2026-09-19T15:38:48.151633",
+  "generated_at": "2026-11-15T16:19:38.207212",
   "monthly_target_rupees": null,
-  "last_order": null,
+  "last_order": {
+    "time": "2026-10-08T09:25:23.975497",
+    "ok": true,
+    "kind": "ENTRY",
+    "symbol": "NIFTY",
+    "detail": "accepted"
+  },
   "counts": {
-    "backtest": 76,
+    "backtest": 95,
     "live": 0,
-    "total": 76
+    "total": 95
   },
   "summary": {
-    "count": 76,
-    "wins": 44,
-    "losses": 32,
+    "count": 95,
+    "wins": 55,
+    "losses": 40,
     "win_rate": 57.9,
-    "net_pnl": 84156.55,
-    "gross_pnl": 87196.55,
-    "total_charges": 3040.0,
-    "profit_factor": 2.27,
-    "avg_win": 3413.96,
-    "avg_loss": -2064.3,
-    "best": 13503.75,
+    "net_pnl": 112565.6,
+    "gross_pnl": 116365.6,
+    "total_charges": 3800.0,
+    "profit_factor": 2.15,
+    "avg_win": 3826.61,
+    "avg_loss": -2447.45,
+    "best": 17663.75,
     "worst": -8697.0,
-    "current_streak": 1,
-    "current_streak_type": "win",
+    "current_streak": 3,
+    "current_streak_type": "loss",
     "max_drawdown": 29381.65,
     "equity_curve": [
       {
@@ -403,27 +409,122 @@
         "date": "2026-09-15",
         "equity": 84156.55,
         "drawdown": 18537.9
+      },
+      {
+        "date": "2026-09-24",
+        "equity": 89005.55,
+        "drawdown": 13688.9
+      },
+      {
+        "date": "2026-09-24",
+        "equity": 85933.75,
+        "drawdown": 16760.7
+      },
+      {
+        "date": "2026-09-28",
+        "equity": 94276.5,
+        "drawdown": 8417.95
+      },
+      {
+        "date": "2026-09-28",
+        "equity": 95208.9,
+        "drawdown": 7485.55
+      },
+      {
+        "date": "2026-09-30",
+        "equity": 96658.4,
+        "drawdown": 6036.05
+      },
+      {
+        "date": "2026-10-08",
+        "equity": 114322.15,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-10-08",
+        "equity": 110912.35,
+        "drawdown": 3409.8
+      },
+      {
+        "date": "2026-10-15",
+        "equity": 128213.55,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-10-23",
+        "equity": 121989.15,
+        "drawdown": 6224.4
+      },
+      {
+        "date": "2026-10-29",
+        "equity": 120571.95,
+        "drawdown": 7641.6
+      },
+      {
+        "date": "2026-10-29",
+        "equity": 120890.45,
+        "drawdown": 7323.1
+      },
+      {
+        "date": "2026-11-02",
+        "equity": 123747.2,
+        "drawdown": 4466.35
+      },
+      {
+        "date": "2026-11-02",
+        "equity": 122599.6,
+        "drawdown": 5613.95
+      },
+      {
+        "date": "2026-11-03",
+        "equity": 123621.6,
+        "drawdown": 4591.95
+      },
+      {
+        "date": "2026-11-05",
+        "equity": 128088.8,
+        "drawdown": 124.75
+      },
+      {
+        "date": "2026-11-06",
+        "equity": 129135.3,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2026-11-11",
+        "equity": 122154.3,
+        "drawdown": 6981.0
+      },
+      {
+        "date": "2026-11-11",
+        "equity": 114275.1,
+        "drawdown": 14860.2
+      },
+      {
+        "date": "2026-11-12",
+        "equity": 112565.6,
+        "drawdown": 16569.7
       }
     ]
   },
   "by_segment": [
     {
       "key": "SENSEX",
-      "net_pnl": 57847.8
+      "net_pnl": 58420.6
     },
     {
       "key": "NIFTY",
-      "net_pnl": 26308.75
+      "net_pnl": 54145.0
     }
   ],
   "by_setup_tag": [
     {
       "key": "eod_squareoff",
-      "net_pnl": 79941.9
+      "net_pnl": 103481.8
     },
     {
       "key": "sticky_ema5",
-      "net_pnl": 4214.65
+      "net_pnl": 9083.8
     }
   ],
   "daily_pnl": [
@@ -618,6 +719,58 @@
     {
       "date": "2026-09-15",
       "pnl": 3659.5
+    },
+    {
+      "date": "2026-09-24",
+      "pnl": 1777.2
+    },
+    {
+      "date": "2026-09-28",
+      "pnl": 9275.15
+    },
+    {
+      "date": "2026-09-30",
+      "pnl": 1449.5
+    },
+    {
+      "date": "2026-10-08",
+      "pnl": 14253.95
+    },
+    {
+      "date": "2026-10-15",
+      "pnl": 17301.2
+    },
+    {
+      "date": "2026-10-23",
+      "pnl": -6224.4
+    },
+    {
+      "date": "2026-10-29",
+      "pnl": -1098.7
+    },
+    {
+      "date": "2026-11-02",
+      "pnl": 1709.15
+    },
+    {
+      "date": "2026-11-03",
+      "pnl": 1022.0
+    },
+    {
+      "date": "2026-11-05",
+      "pnl": 4467.2
+    },
+    {
+      "date": "2026-11-06",
+      "pnl": 1046.5
+    },
+    {
+      "date": "2026-11-11",
+      "pnl": -14860.2
+    },
+    {
+      "date": "2026-11-12",
+      "pnl": -1709.5
     }
   ],
   "trades": [
@@ -1759,6 +1912,291 @@
       "entry_price": 23174.9,
       "exit_price": 23118.6,
       "points": 56.3,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-24T12:30:00",
+      "exit_time": "2026-09-24T14:45:00",
+      "pnl_rupees": 4849.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 23172.65,
+      "exit_price": 23098.05,
+      "points": 74.6,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-09-24T13:45:00",
+      "exit_time": "2026-09-24T14:45:00",
+      "pnl_rupees": -3071.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 73597.78,
+      "exit_price": 73751.37,
+      "points": -153.59,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-28T09:15:00",
+      "exit_time": "2026-09-28T15:15:00",
+      "pnl_rupees": 8342.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 22908.6,
+      "exit_price": 22780.25,
+      "points": 128.35,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-28T14:15:00",
+      "exit_time": "2026-09-28T15:15:00",
+      "pnl_rupees": 932.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 72818.34,
+      "exit_price": 72771.72,
+      "points": 46.62,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-09-30T14:15:00",
+      "exit_time": "2026-09-30T15:15:00",
+      "pnl_rupees": 1449.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 22642.75,
+      "exit_price": 22620.45,
+      "points": 22.3,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-10-08T09:15:00",
+      "exit_time": "2026-10-08T15:15:00",
+      "pnl_rupees": 17663.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 22503.55,
+      "exit_price": 22231.8,
+      "points": 271.75,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-10-08T14:45:00",
+      "exit_time": "2026-10-08T15:15:00",
+      "pnl_rupees": -3409.8,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 71422.75,
+      "exit_price": 71593.24,
+      "points": -170.49,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-10-15T09:15:00",
+      "exit_time": "2026-10-15T14:15:00",
+      "pnl_rupees": 17301.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 73259.72,
+      "exit_price": 74124.78,
+      "points": 865.06,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "SHORT",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-10-23T14:30:00",
+      "exit_time": "2026-10-23T15:15:00",
+      "pnl_rupees": -6224.4,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 72812.61,
+      "exit_price": 73123.83,
+      "points": -311.22,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-10-29T11:30:00",
+      "exit_time": "2026-10-29T12:45:00",
+      "pnl_rupees": -1417.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 73832.98,
+      "exit_price": 73762.12,
+      "points": -70.86,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-10-29T14:15:00",
+      "exit_time": "2026-10-29T15:15:00",
+      "pnl_rupees": 318.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 22931.85,
+      "exit_price": 22936.75,
+      "points": 4.9,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-02T09:15:00",
+      "exit_time": "2026-11-02T11:45:00",
+      "pnl_rupees": 2856.75,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 23266.1,
+      "exit_price": 23310.05,
+      "points": 43.95,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-02T09:30:00",
+      "exit_time": "2026-11-02T11:45:00",
+      "pnl_rupees": -1147.6,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 75399.73,
+      "exit_price": 75342.35,
+      "points": -57.38,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-03T12:45:00",
+      "exit_time": "2026-11-03T14:00:00",
+      "pnl_rupees": 1022.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 76602.29,
+      "exit_price": 76653.39,
+      "points": 51.1,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "eod_squareoff",
+      "entry_time": "2026-11-05T13:00:00",
+      "exit_time": "2026-11-05T15:15:00",
+      "pnl_rupees": 4467.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 79086.65,
+      "exit_price": 79310.01,
+      "points": 223.36,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-06T09:30:00",
+      "exit_time": "2026-11-06T10:45:00",
+      "pnl_rupees": 1046.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 24573.35,
+      "exit_price": 24589.45,
+      "points": 16.1,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-11T09:30:00",
+      "exit_time": "2026-11-11T12:15:00",
+      "pnl_rupees": -6981.0,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 25412.95,
+      "exit_price": 25305.55,
+      "points": -107.4,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "SENSEX",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-11T09:30:00",
+      "exit_time": "2026-11-11T12:15:00",
+      "pnl_rupees": -7879.2,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 82491.45,
+      "exit_price": 82097.49,
+      "points": -393.96,
+      "price_kind": "index"
+    },
+    {
+      "source": "backtest",
+      "symbol": "NIFTY",
+      "direction": "LONG",
+      "setup_tag": "sticky_ema5",
+      "entry_time": "2026-11-12T09:15:00",
+      "exit_time": "2026-11-12T11:00:00",
+      "pnl_rupees": -1709.5,
+      "pnl_is_estimate": true,
+      "charges_rupees": 40.0,
+      "entry_price": 25322.7,
+      "exit_price": 25296.4,
+      "points": -26.3,
       "price_kind": "index"
     }
   ],
