@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T09:46:03+05:30",
-  "last_tick": "2026-11-16T09:46:03+05:30",
+  "generated_at": "2026-11-16T10:01:04+05:30",
+  "last_tick": "2026-11-16T10:01:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.98,
+  "token_hours_remaining": 22.73,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-16T09:46:06",
+    "ran_at": "2026-11-16T10:01:08",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (15736 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (15751 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,23 +63,23 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-16T09:45:00",
-        "close": 25314.2,
-        "ema5_15m": 25242.36,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.86,
+        "bar_time": "2026-11-16T10:00:00",
+        "close": 25316.4,
+        "ema5_15m": 25268.49,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.3,
         "decision": {
-          "code": "NO_SIGNAL",
-          "detail": "Waiting -- entry conditions not all met",
+          "code": "BLOCKED",
+          "detail": "Entry hour blocked (10:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -93,7 +93,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     },
@@ -101,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-16T09:45:00",
-        "close": 82225.38,
-        "ema5_15m": 81972.63,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.73,
+        "bar_time": "2026-11-16T10:00:00",
+        "close": 82242.81,
+        "ema5_15m": 82068.02,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.12,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,7 +119,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -131,7 +133,9 @@
           },
           "all_met": false
         },
-        "blocked_reasons": []
+        "blocked_reasons": [
+          "Entry hour blocked (10:xx)"
+        ]
       },
       "error": null
     }
