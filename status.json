@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T14:31:05+05:30",
-  "last_tick": "2026-11-16T14:31:05+05:30",
+  "generated_at": "2026-11-16T14:46:03+05:30",
+  "last_tick": "2026-11-16T14:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.23,
+  "token_hours_remaining": 17.98,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-16T14:31:10",
+    "ran_at": "2026-11-16T14:46:11",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (16021 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (16036 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-16T14:30:00",
-        "close": 25227.2,
-        "ema5_15m": 25222.74,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.6,
+        "bar_time": "2026-11-16T14:45:00",
+        "close": 25209.3,
+        "ema5_15m": 25214.06,
+        "volume_ratio": 0.15,
+        "body_ratio": 0.14,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -75,11 +75,11 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
+            "hourly_stack": false,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-16T14:30:00",
-        "close": 81935.81,
-        "ema5_15m": 81925.58,
+        "bar_time": "2026-11-16T14:45:00",
+        "close": 81877.06,
+        "ema5_15m": 81898.33,
         "volume_ratio": 0.03,
-        "body_ratio": 0.76,
+        "body_ratio": 0.35,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -113,11 +113,11 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
+            "hourly_stack": false,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
