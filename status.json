@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-17T13:31:11+05:30",
-  "last_tick": "2026-11-17T13:31:11+05:30",
+  "generated_at": "2026-11-17T13:46:09+05:30",
+  "last_tick": "2026-11-17T13:46:09+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 19.73,
+  "token_hours_remaining": 19.48,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-17T13:32:58",
+    "ran_at": "2026-11-17T13:46:20",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (17403 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (17416 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T13:30:00",
-        "close": 25382.95,
-        "ema5_15m": 25407.69,
-        "volume_ratio": 0.21,
-        "body_ratio": 0.34,
+        "bar_time": "2026-11-17T13:45:00",
+        "close": 25417.65,
+        "ema5_15m": 25419.54,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.44,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -75,7 +75,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": false,
+            "hourly_stack": true,
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T13:30:00",
-        "close": 82544.49,
-        "ema5_15m": 82611.46,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.04,
+        "bar_time": "2026-11-17T13:45:00",
+        "close": 82661.82,
+        "ema5_15m": 82657.44,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.6,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -114,7 +114,7 @@
         "long": {
           "conditions": {
             "hourly_stack": true,
-            "m15_stack": false,
+            "m15_stack": true,
             "above_cpr": true,
             "volume": false,
             "candle": false
@@ -127,7 +127,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
