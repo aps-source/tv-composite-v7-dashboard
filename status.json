@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-17T14:16:10+05:30",
-  "last_tick": "2026-11-17T14:16:10+05:30",
+  "generated_at": "2026-11-17T14:31:10+05:30",
+  "last_tick": "2026-11-17T14:31:10+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.98,
+  "token_hours_remaining": 18.73,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-17T14:16:20",
+    "ran_at": "2026-11-17T14:31:21",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (17446 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (17461 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T14:15:00",
-        "close": 25453.85,
-        "ema5_15m": 25443.97,
-        "volume_ratio": 0.1,
-        "body_ratio": 0.0,
+        "bar_time": "2026-11-17T14:30:00",
+        "close": 25453.25,
+        "ema5_15m": 25449.25,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.76,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T14:15:00",
-        "close": 82767.03,
-        "ema5_15m": 82740.58,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.37,
+        "bar_time": "2026-11-17T14:30:00",
+        "close": 82767.45,
+        "ema5_15m": 82755.99,
+        "volume_ratio": 0.12,
+        "body_ratio": 0.86,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -127,7 +127,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
