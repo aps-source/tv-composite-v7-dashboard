@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-17T15:01:09+05:30",
-  "last_tick": "2026-11-17T15:01:09+05:30",
+  "generated_at": "2026-11-17T15:16:08+05:30",
+  "last_tick": "2026-11-17T15:16:08+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.23,
+  "token_hours_remaining": 17.98,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-17T15:01:19",
+    "ran_at": "2026-11-17T15:16:17",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (17491 min old, limit 35)"
+      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T15:00:00",
-        "close": 25410.25,
-        "ema5_15m": 25426.49,
-        "volume_ratio": 0.21,
-        "body_ratio": 0.19,
+        "bar_time": "2026-11-17T15:15:00",
+        "close": 25413.0,
+        "ema5_15m": 25423.67,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -94,6 +94,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
@@ -103,11 +104,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T15:00:00",
-        "close": 82604.53,
-        "ema5_15m": 82667.75,
-        "volume_ratio": 0.09,
-        "body_ratio": 0.16,
+        "bar_time": "2026-11-17T15:15:00",
+        "close": 82630.61,
+        "ema5_15m": 82661.2,
+        "volume_ratio": 0.03,
+        "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -134,6 +135,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
