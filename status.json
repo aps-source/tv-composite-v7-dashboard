@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T08:51:05+05:30",
-  "last_tick": "2026-11-18T08:51:05+05:30",
+  "generated_at": "2026-11-18T09:31:03+05:30",
+  "last_tick": "2026-11-18T09:31:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.96,
+  "token_hours_remaining": 23.29,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -23,8 +23,8 @@
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": null,
-    "prev_change_pct": null
+    "prev_close": 15.5,
+    "prev_change_pct": -1.27
   },
   "checks": {
     "ip_whitelist": {
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.21,368, SENSEX ~Rs.26,968) -- add funds",
-      "checked_at": "2026-11-18T08:51:37.755059"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.25,636, SENSEX ~Rs.29,418) -- add funds",
+      "checked_at": "2026-11-18T09:31:14.562587"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-18T08:51:11",
+    "ran_at": "2026-11-18T09:31:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
+      "ENTRY SENSEX: stale signal (18601 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,27 +63,17 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T15:15:00",
-        "close": 25387.4,
-        "ema5_15m": 25415.14,
-        "volume_ratio": 0.01,
-        "body_ratio": 1.0,
+        "bar_time": "2026-11-18T09:30:00",
+        "close": 25312.55,
+        "ema5_15m": 25354.01,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.66,
         "decision": {
-          "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
           "direction": null
         },
         "long": {
-          "conditions": {
-            "hourly_stack": false,
-            "m15_stack": false,
-            "above_cpr": true,
-            "volume": false,
-            "candle": false
-          },
-          "all_met": false
-        },
-        "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
@@ -93,10 +83,17 @@
           },
           "all_met": false
         },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
-        ]
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
+        "blocked_reasons": []
       },
       "error": null
     },
@@ -104,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-17T15:15:00",
-        "close": 82532.19,
-        "ema5_15m": 82628.39,
-        "volume_ratio": 0.43,
-        "body_ratio": 1.0,
+        "bar_time": "2026-11-18T09:30:00",
+        "close": 82304.46,
+        "ema5_15m": 82438.49,
+        "volume_ratio": 0.05,
+        "body_ratio": 0.63,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -118,9 +115,9 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": true,
+            "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -128,16 +125,13 @@
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
-            "above_cpr": false,
+            "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
-        ]
+        "blocked_reasons": []
       },
       "error": null
     }
