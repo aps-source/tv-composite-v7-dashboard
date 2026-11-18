@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T15:01:02+05:30",
-  "last_tick": "2026-11-18T15:01:02+05:30",
+  "generated_at": "2026-11-18T15:16:02+05:30",
+  "last_tick": "2026-11-18T15:16:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.79,
+  "token_hours_remaining": 17.54,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,159, SENSEX ~Rs.27,940) -- add funds",
-      "checked_at": "2026-11-18T14:31:12.442287"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.20,603, SENSEX ~Rs.25,300) -- add funds",
+      "checked_at": "2026-11-18T15:16:15.763842"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-18T15:01:05",
+    "ran_at": "2026-11-18T15:16:05",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (18931 min old, limit 35)"
+      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-18T15:00:00",
-        "close": 25216.2,
-        "ema5_15m": 25223.05,
-        "volume_ratio": 0.17,
-        "body_ratio": 0.01,
+        "bar_time": "2026-11-18T15:15:00",
+        "close": 25220.45,
+        "ema5_15m": 25223.23,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -94,6 +94,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
@@ -103,11 +104,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-18T15:00:00",
-        "close": 82028.53,
-        "ema5_15m": 82050.88,
-        "volume_ratio": 0.03,
-        "body_ratio": 0.72,
+        "bar_time": "2026-11-18T15:15:00",
+        "close": 82030.21,
+        "ema5_15m": 82043.18,
+        "volume_ratio": 0.04,
+        "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -129,11 +130,12 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Entry hour blocked (15:xx)"
         ]
       },
