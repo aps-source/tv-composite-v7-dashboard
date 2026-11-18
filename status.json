@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T10:31:04+05:30",
-  "last_tick": "2026-11-18T10:31:04+05:30",
+  "generated_at": "2026-11-18T10:46:03+05:30",
+  "last_tick": "2026-11-18T10:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.29,
+  "token_hours_remaining": 22.04,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.23,520, SENSEX ~Rs.29,697) -- add funds",
-      "checked_at": "2026-11-18T10:01:16.024113"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.24,457, SENSEX ~Rs.28,130) -- add funds",
+      "checked_at": "2026-11-18T10:46:12.958206"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-18T10:31:09",
+    "ran_at": "2026-11-18T10:46:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (18661 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (18676 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-18T10:30:00",
-        "close": 25255.9,
-        "ema5_15m": 25277.83,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.37,
+        "bar_time": "2026-11-18T10:45:00",
+        "close": 25230.35,
+        "ema5_15m": 25254.56,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.47,
         "decision": {
           "code": "BLOCKED",
           "detail": "Entry hour blocked (10:xx)",
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-18T10:30:00",
-        "close": 82148.87,
-        "ema5_15m": 82214.77,
-        "volume_ratio": 0.02,
-        "body_ratio": 0.61,
+        "bar_time": "2026-11-18T10:45:00",
+        "close": 82061.27,
+        "ema5_15m": 82137.63,
+        "volume_ratio": 0.1,
+        "body_ratio": 0.71,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
