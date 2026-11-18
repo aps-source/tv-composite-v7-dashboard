@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T12:01:03+05:30",
-  "last_tick": "2026-11-18T12:01:03+05:30",
+  "generated_at": "2026-11-18T12:16:02+05:30",
+  "last_tick": "2026-11-18T12:16:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.79,
+  "token_hours_remaining": 20.54,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-18T12:01:05",
+    "ran_at": "2026-11-18T12:16:05",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (18751 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (18766 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-18T12:00:00",
-        "close": 25252.3,
-        "ema5_15m": 25254.22,
-        "volume_ratio": 0.06,
-        "body_ratio": 0.05,
+        "bar_time": "2026-11-18T12:15:00",
+        "close": 25256.9,
+        "ema5_15m": 25253.48,
+        "volume_ratio": 0.04,
+        "body_ratio": 0.88,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -79,14 +79,14 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "short": {
           "conditions": {
             "hourly_stack": false,
-            "m15_stack": true,
+            "m15_stack": false,
             "above_cpr": true,
             "volume": false,
             "candle": false
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-18T12:00:00",
-        "close": 82129.17,
-        "ema5_15m": 82137.9,
+        "bar_time": "2026-11-18T12:15:00",
+        "close": 82130.34,
+        "ema5_15m": 82129.12,
         "volume_ratio": 0.02,
-        "body_ratio": 0.27,
+        "body_ratio": 0.85,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -117,7 +117,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
