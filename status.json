@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-19T12:01:03+05:30",
-  "last_tick": "2026-11-19T12:01:03+05:30",
+  "generated_at": "2026-11-19T12:16:03+05:30",
+  "last_tick": "2026-11-19T12:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.11,
+  "token_hours_remaining": 20.86,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.15,869, SENSEX ~Rs.23,320) -- add funds",
-      "checked_at": "2026-11-19T11:31:21.568721"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.17,189, SENSEX ~Rs.92,124) -- add funds",
+      "checked_at": "2026-11-19T12:16:10.100074"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-19T12:01:06",
+    "ran_at": "2026-11-19T12:16:05",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (20191 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (20206 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-19T12:00:00",
-        "close": 25369.7,
-        "ema5_15m": 25340.77,
+        "bar_time": "2026-11-19T12:15:00",
+        "close": 25361.0,
+        "ema5_15m": 25344.49,
         "volume_ratio": 0.04,
-        "body_ratio": 0.17,
+        "body_ratio": 0.24,
         "decision": {
           "code": "NO_SIGNAL",
           "detail": "Waiting -- entry conditions not all met",
@@ -101,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-19T12:00:00",
-        "close": 82485.27,
-        "ema5_15m": 82392.69,
+        "bar_time": "2026-11-19T12:15:00",
+        "close": 82467.73,
+        "ema5_15m": 82414.36,
         "volume_ratio": 0.02,
-        "body_ratio": 0.39,
+        "body_ratio": 0.08,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
