@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-20T12:46:03+05:30",
-  "last_tick": "2026-11-20T12:46:03+05:30",
+  "generated_at": "2026-11-20T13:01:03+05:30",
+  "last_tick": "2026-11-20T13:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.29,
+  "token_hours_remaining": 20.04,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-20T11:46:13.778710"
+      "checked_at": "2026-11-20T13:01:10.785442"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-20T12:46:07",
+    "ran_at": "2026-11-20T13:01:06",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (21676 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (21691 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-20T12:45:00",
-        "close": 25714.35,
-        "ema5_15m": 25674.5,
+        "bar_time": "2026-11-20T13:00:00",
+        "close": 25721.4,
+        "ema5_15m": 25688.21,
         "volume_ratio": 0.05,
-        "body_ratio": 0.57,
+        "body_ratio": 0.79,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-20T12:45:00",
-        "close": 83708.24,
-        "ema5_15m": 83579.61,
+        "bar_time": "2026-11-20T13:00:00",
+        "close": 83729.74,
+        "ema5_15m": 83621.53,
         "volume_ratio": 0.04,
-        "body_ratio": 0.78,
+        "body_ratio": 0.95,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
