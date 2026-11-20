@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-20T11:31:04+05:30",
-  "last_tick": "2026-11-20T11:31:04+05:30",
+  "generated_at": "2026-11-20T11:46:03+05:30",
+  "last_tick": "2026-11-20T11:46:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.54,
+  "token_hours_remaining": 21.29,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -28,9 +28,9 @@
   },
   "checks": {
     "ip_whitelist": {
-      "ok": null,
-      "detail": "getIP unavailable (auth/response error)",
-      "checked_at": "2026-11-20T11:31:13.967258"
+      "ok": true,
+      "detail": "Dhan reports orders allowed from this machine's current IP",
+      "checked_at": "2026-11-20T11:46:13.778710"
     },
     "funds": {
       "ok": false,
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-20T11:31:08",
+    "ran_at": "2026-11-20T11:46:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (21601 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (21616 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-20T11:30:00",
-        "close": 25544.5,
-        "ema5_15m": 25536.74,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.01,
+        "bar_time": "2026-11-20T11:45:00",
+        "close": 25572.25,
+        "ema5_15m": 25554.09,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.06,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-20T11:30:00",
-        "close": 83136.16,
-        "ema5_15m": 83113.03,
-        "volume_ratio": 0.01,
-        "body_ratio": 0.78,
+        "bar_time": "2026-11-20T11:45:00",
+        "close": 83237.66,
+        "ema5_15m": 83174.73,
+        "volume_ratio": 0.02,
+        "body_ratio": 0.48,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -119,7 +119,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
