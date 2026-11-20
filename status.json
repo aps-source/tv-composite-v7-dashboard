@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-20T09:04:29+05:30",
-  "last_tick": "2026-11-20T09:04:29+05:30",
+  "generated_at": "2026-11-20T09:31:03+05:30",
+  "last_tick": "2026-11-20T09:31:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.98,
+  "token_hours_remaining": 23.54,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -23,8 +23,8 @@
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": null,
-    "prev_change_pct": null
+    "prev_close": 15.9,
+    "prev_change_pct": 2.38
   },
   "checks": {
     "ip_whitelist": {
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-20T09:04:33",
+    "ran_at": "2026-11-20T09:31:08",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
+      "ENTRY SENSEX: stale signal (21481 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,27 +63,17 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-19T15:15:00",
-        "close": 25514.3,
-        "ema5_15m": 25479.69,
-        "volume_ratio": 0.0,
-        "body_ratio": 1.0,
+        "bar_time": "2026-11-20T09:30:00",
+        "close": 25431.7,
+        "ema5_15m": 25453.63,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.11,
         "decision": {
           "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Entry hour blocked (15:xx)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
           "direction": null
         },
         "long": {
-          "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": true
-          },
-          "all_met": false
-        },
-        "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
@@ -93,9 +83,18 @@
           },
           "all_met": false
         },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
         "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
@@ -104,27 +103,17 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-19T15:15:00",
-        "close": 83021.75,
-        "ema5_15m": 82892.46,
-        "volume_ratio": 0.87,
-        "body_ratio": 0.73,
+        "bar_time": "2026-11-20T09:30:00",
+        "close": 82747.37,
+        "ema5_15m": 82816.86,
+        "volume_ratio": 0.07,
+        "body_ratio": 0.34,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
           "direction": "LONG"
         },
         "long": {
-          "conditions": {
-            "hourly_stack": true,
-            "m15_stack": true,
-            "above_cpr": true,
-            "volume": false,
-            "candle": true
-          },
-          "all_met": false
-        },
-        "short": {
           "conditions": {
             "hourly_stack": false,
             "m15_stack": false,
@@ -134,9 +123,18 @@
           },
           "all_met": false
         },
+        "short": {
+          "conditions": {
+            "hourly_stack": false,
+            "m15_stack": false,
+            "above_cpr": true,
+            "volume": false,
+            "candle": false
+          },
+          "all_met": false
+        },
         "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Entry hour blocked (15:xx)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)"
         ]
       },
       "error": null
