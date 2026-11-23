@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-23T15:01:03+05:30",
-  "last_tick": "2026-11-23T15:01:03+05:30",
+  "generated_at": "2026-11-23T15:16:03+05:30",
+  "last_tick": "2026-11-23T15:16:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 18.03,
+  "token_hours_remaining": 17.78,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.32,239, SENSEX ~Rs.102,471) -- add funds",
-      "checked_at": "2026-11-23T14:31:18.223242"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.35,485, SENSEX ~Rs.23,407) -- add funds",
+      "checked_at": "2026-11-23T15:16:10.428519"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-23T15:01:06",
+    "ran_at": "2026-11-23T15:16:06",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (26131 min old, limit 35)"
+      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-23T15:00:00",
-        "close": 25370.4,
-        "ema5_15m": 25400.77,
-        "volume_ratio": 0.11,
-        "body_ratio": 0.04,
+        "bar_time": "2026-11-23T15:15:00",
+        "close": 25366.4,
+        "ema5_15m": 25388.67,
+        "volume_ratio": 0.0,
+        "body_ratio": null,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
+          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
           "direction": null
         },
         "long": {
@@ -94,6 +94,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
           "Entry hour blocked (15:xx)"
         ]
@@ -104,11 +105,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-23T15:00:00",
-        "close": 82486.95,
-        "ema5_15m": 82586.7,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.32,
+        "bar_time": "2026-11-23T15:15:00",
+        "close": 82443.96,
+        "ema5_15m": 82528.79,
+        "volume_ratio": 0.14,
+        "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -135,6 +136,7 @@
           "all_met": false
         },
         "blocked_reasons": [
+          "EOD window -- no new entries from 15:15",
           "Wide-CPR day (prior-day CPR width in the top quartile)",
           "Entry hour blocked (15:xx)"
         ]
