@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-23T15:16:03+05:30",
-  "last_tick": "2026-11-23T15:16:03+05:30",
+  "generated_at": "2026-11-23T15:31:04+05:30",
+  "last_tick": "2026-11-23T15:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.78,
+  "token_hours_remaining": 17.53,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-23T15:16:06",
+    "ran_at": "2026-11-23T15:31:08",
     "placed": 0,
     "held": [
       "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-23T15:15:00",
-        "close": 25366.4,
-        "ema5_15m": 25388.67,
+        "bar_time": "2026-11-23T15:30:00",
+        "close": 25349.65,
+        "ema5_15m": 25375.66,
         "volume_ratio": 0.0,
-        "body_ratio": null,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
           "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
@@ -89,7 +89,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -105,10 +105,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-23T15:15:00",
-        "close": 82443.96,
-        "ema5_15m": 82528.79,
-        "volume_ratio": 0.14,
+        "bar_time": "2026-11-23T15:30:00",
+        "close": 82435.99,
+        "ema5_15m": 82496.08,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
