@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-23T12:01:02+05:30",
-  "last_tick": "2026-11-23T12:01:02+05:30",
+  "generated_at": "2026-11-23T12:16:04+05:30",
+  "last_tick": "2026-11-23T12:16:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 21.03,
+  "token_hours_remaining": 20.78,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,16 +34,16 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.36,401, SENSEX ~Rs.146,105) -- add funds",
-      "checked_at": "2026-11-23T11:31:17.627220"
+      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.35,561, SENSEX ~Rs.122,191) -- add funds",
+      "checked_at": "2026-11-23T12:16:13.831221"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-23T12:01:05",
+    "ran_at": "2026-11-23T12:16:09",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (25951 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (25966 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-23T12:00:00",
-        "close": 25511.1,
-        "ema5_15m": 25547.5,
-        "volume_ratio": 0.04,
-        "body_ratio": 0.4,
+        "bar_time": "2026-11-23T12:15:00",
+        "close": 25528.0,
+        "ema5_15m": 25545.37,
+        "volume_ratio": 0.03,
+        "body_ratio": 0.85,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-23T12:00:00",
-        "close": 82947.63,
-        "ema5_15m": 83086.66,
+        "bar_time": "2026-11-23T12:15:00",
+        "close": 83002.37,
+        "ema5_15m": 83074.85,
         "volume_ratio": 0.03,
-        "body_ratio": 0.69,
+        "body_ratio": 0.76,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
