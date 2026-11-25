@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T12:34:27+05:30",
-  "last_tick": "2026-11-25T12:34:27+05:30",
+  "generated_at": "2026-11-25T12:46:02+05:30",
+  "last_tick": "2026-11-25T12:46:02+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.49,
+  "token_hours_remaining": 20.3,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T12:34:28",
+    "ran_at": "2026-11-25T12:46:05",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (28864 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (28876 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,11 +63,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T12:30:00",
-        "close": 25807.3,
-        "ema5_15m": 25863.93,
-        "volume_ratio": 0.35,
-        "body_ratio": 1.0,
+        "bar_time": "2026-11-25T12:45:00",
+        "close": 25781.5,
+        "ema5_15m": 25828.65,
+        "volume_ratio": 0.08,
+        "body_ratio": 0.62,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -79,7 +79,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -103,11 +103,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T12:30:00",
-        "close": 84023.14,
-        "ema5_15m": 84205.3,
-        "volume_ratio": 0.35,
-        "body_ratio": 0.98,
+        "bar_time": "2026-11-25T12:45:00",
+        "close": 83920.19,
+        "ema5_15m": 84080.79,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.7,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -119,7 +119,7 @@
             "m15_stack": false,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -129,7 +129,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
