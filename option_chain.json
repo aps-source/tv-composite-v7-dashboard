@@ -1,21 +1,21 @@
 {
-  "spot": 25705.5,
+  "spot": 25709.85,
   "expiry": "2026-12-01",
   "resistance": {
     "strike": 26000.0,
-    "oi": 9761570.0,
-    "pct_from_spot": 1.15
+    "oi": 9734530.0,
+    "pct_from_spot": 1.13
   },
   "support": {
     "strike": 25000.0,
-    "oi": 6460675.0,
-    "pct_from_spot": -2.74
+    "oi": 6502340.0,
+    "pct_from_spot": -2.76
   },
   "max_pain": {
-    "strike": 25750.0,
-    "pct_from_spot": 0.17
+    "strike": 25700.0,
+    "pct_from_spot": -0.04
   },
-  "pcr": 0.917,
-  "suggestion": "Balanced (PCR 0.9-1.1)",
-  "as_of": "2026-11-25T13:01:11"
+  "pcr": 0.899,
+  "suggestion": "CALL writers dominate (PCR<0.9) -- often read as resistance-heavy / less upside conviction",
+  "as_of": "2026-11-25T13:04:41"
 }
