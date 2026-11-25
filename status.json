@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T09:49:27+05:30",
-  "last_tick": "2026-11-25T09:49:27+05:30",
+  "generated_at": "2026-11-25T10:01:03+05:30",
+  "last_tick": "2026-11-25T10:01:03+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 23.24,
+  "token_hours_remaining": 23.05,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T09:49:28",
+    "ran_at": "2026-11-25T10:01:07",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (28699 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (28711 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,19 +63,19 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T09:45:00",
-        "close": 25723.75,
-        "ema5_15m": 25635.36,
-        "volume_ratio": 0.4,
-        "body_ratio": 0.37,
+        "bar_time": "2026-11-25T10:00:00",
+        "close": 25756.05,
+        "ema5_15m": 25686.56,
+        "volume_ratio": 0.09,
+        "body_ratio": 0.7,
         "decision": {
           "code": "BLOCKED",
-          "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
           "direction": null
         },
         "long": {
           "conditions": {
-            "hourly_stack": false,
+            "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
@@ -89,12 +89,13 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (10:xx)"
         ]
       },
       "error": null
@@ -103,11 +104,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T09:45:00",
-        "close": 83707.51,
-        "ema5_15m": 83402.99,
-        "volume_ratio": 0.41,
-        "body_ratio": 0.42,
+        "bar_time": "2026-11-25T10:00:00",
+        "close": 83837.68,
+        "ema5_15m": 83588.9,
+        "volume_ratio": 0.14,
+        "body_ratio": 0.58,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -115,7 +116,7 @@
         },
         "long": {
           "conditions": {
-            "hourly_stack": false,
+            "hourly_stack": true,
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
@@ -129,12 +130,13 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
         "blocked_reasons": [
-          "Wide-CPR day (prior-day CPR width in the top quartile)"
+          "Wide-CPR day (prior-day CPR width in the top quartile)",
+          "Entry hour blocked (10:xx)"
         ]
       },
       "error": null
