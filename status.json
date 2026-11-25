@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T10:16:02+05:30",
-  "last_tick": "2026-11-25T10:16:02+05:30",
+  "generated_at": "2026-11-25T10:19:32+05:30",
+  "last_tick": "2026-11-25T10:19:32+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 22.8,
+  "token_hours_remaining": 22.74,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T10:16:05",
+    "ran_at": "2026-11-25T10:19:34",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (28726 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (28730 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -64,10 +64,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-25T10:15:00",
-        "close": 25763.25,
-        "ema5_15m": 25715.11,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.77,
+        "close": 25806.55,
+        "ema5_15m": 25729.54,
+        "volume_ratio": 0.35,
+        "body_ratio": 0.75,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (10:xx)",
@@ -79,7 +79,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -89,7 +89,7 @@
             "m15_stack": false,
             "above_cpr": false,
             "volume": false,
-            "candle": true
+            "candle": false
           },
           "all_met": false
         },
@@ -105,10 +105,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-25T10:15:00",
-        "close": 83853.79,
-        "ema5_15m": 83681.76,
-        "volume_ratio": 0.05,
-        "body_ratio": 0.25,
+        "close": 83996.38,
+        "ema5_15m": 83729.29,
+        "volume_ratio": 0.38,
+        "body_ratio": 0.92,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -120,7 +120,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
