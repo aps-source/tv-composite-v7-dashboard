@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T15:19:27+05:30",
-  "last_tick": "2026-11-25T15:19:27+05:30",
+  "generated_at": "2026-11-25T15:31:04+05:30",
+  "last_tick": "2026-11-25T15:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.74,
+  "token_hours_remaining": 17.55,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -30,7 +30,7 @@
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-25T14:31:15.879725"
+      "checked_at": "2026-11-25T15:31:16.255714"
     },
     "funds": {
       "ok": false,
@@ -40,7 +40,7 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T15:19:43",
+    "ran_at": "2026-11-25T15:31:08",
     "placed": 0,
     "held": [
       "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
@@ -63,9 +63,9 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T15:15:00",
-        "close": 25791.25,
-        "ema5_15m": 25770.53,
+        "bar_time": "2026-11-25T15:30:00",
+        "close": 25819.25,
+        "ema5_15m": 25792.99,
         "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
@@ -105,10 +105,10 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T15:15:00",
-        "close": 83982.08,
-        "ema5_15m": 83895.74,
-        "volume_ratio": 0.26,
+        "bar_time": "2026-11-25T15:30:00",
+        "close": 83938.28,
+        "ema5_15m": 83900.19,
+        "volume_ratio": 0.0,
         "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
