@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T15:16:02+05:30",
-  "last_tick": "2026-11-25T15:16:02+05:30",
+  "generated_at": "2026-11-25T15:19:27+05:30",
+  "last_tick": "2026-11-25T15:19:27+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.8,
+  "token_hours_remaining": 17.74,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -34,13 +34,13 @@
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on SENSEX, NIFTY (needs NIFTY ~Rs.26,287, SENSEX ~Rs.141,681) -- add funds",
-      "checked_at": "2026-11-25T14:46:16.930972"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.24,743, SENSEX ~Rs.32,784) -- add funds",
+      "checked_at": "2026-11-25T15:19:45.465784"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T15:16:05",
+    "ran_at": "2026-11-25T15:19:43",
     "placed": 0,
     "held": [
       "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
@@ -108,7 +108,7 @@
         "bar_time": "2026-11-25T15:15:00",
         "close": 83982.08,
         "ema5_15m": 83895.74,
-        "volume_ratio": 0.06,
+        "volume_ratio": 0.26,
         "body_ratio": null,
         "decision": {
           "code": "ENTRY_PROPOSED",
