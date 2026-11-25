@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T12:31:04+05:30",
-  "last_tick": "2026-11-25T12:31:04+05:30",
+  "generated_at": "2026-11-25T12:34:27+05:30",
+  "last_tick": "2026-11-25T12:34:27+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 20.55,
+  "token_hours_remaining": 20.49,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -40,10 +40,10 @@
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T12:31:08",
+    "ran_at": "2026-11-25T12:34:28",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: stale signal (28861 min old, limit 35)"
+      "ENTRY SENSEX: stale signal (28864 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -64,10 +64,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-25T12:30:00",
-        "close": 25836.8,
-        "ema5_15m": 25873.77,
-        "volume_ratio": 0.13,
-        "body_ratio": 0.93,
+        "close": 25807.3,
+        "ema5_15m": 25863.93,
+        "volume_ratio": 0.35,
+        "body_ratio": 1.0,
         "decision": {
           "code": "BLOCKED",
           "detail": "Wide-CPR day (prior-day CPR width in the top quartile)",
@@ -104,10 +104,10 @@
       "day_losses": 0,
       "snapshot": {
         "bar_time": "2026-11-25T12:30:00",
-        "close": 84121.47,
-        "ema5_15m": 84238.07,
-        "volume_ratio": 0.15,
-        "body_ratio": 0.93,
+        "close": 84023.14,
+        "ema5_15m": 84205.3,
+        "volume_ratio": 0.35,
+        "body_ratio": 0.98,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
