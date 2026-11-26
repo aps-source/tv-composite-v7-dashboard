@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T15:46:01+05:30",
-  "last_tick": "2026-11-25T15:46:01+05:30",
+  "generated_at": "2026-11-26T09:31:04+05:30",
+  "last_tick": "2026-11-26T09:31:04+05:30",
   "engine_status": "running",
   "last_error": null,
-  "token_hours_remaining": 17.3,
+  "token_hours_remaining": 23.49,
   "paused": false,
   "tick_window": {
     "start": "09:31",
@@ -18,32 +18,32 @@
     ],
     "interval_min": 15
   },
-  "trading_day": "2026-11-25",
+  "trading_day": "2026-11-26",
   "daily_loss_cap_rupees": 3000.0,
   "combined_daily_pnl_rupees": 0.0,
   "vix": {
     "state": "ok",
-    "prev_close": 17.6,
-    "prev_change_pct": 1.73
+    "prev_close": 17.64,
+    "prev_change_pct": 0.23
   },
   "checks": {
     "ip_whitelist": {
       "ok": true,
       "detail": "Dhan reports orders allowed from this machine's current IP",
-      "checked_at": "2026-11-25T15:31:16.255714"
+      "checked_at": "2026-11-26T09:31:16.047094"
     },
     "funds": {
       "ok": false,
-      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.24,743, SENSEX ~Rs.32,784) -- add funds",
-      "checked_at": "2026-11-25T15:19:45.465784"
+      "detail": "balance too low for even the OTM fallback on NIFTY, SENSEX (needs NIFTY ~Rs.26,712, SENSEX ~Rs.92,365) -- add funds",
+      "checked_at": "2026-11-26T09:31:18.072986"
     }
   },
   "auto_trading": {
     "enabled": true,
-    "ran_at": "2026-11-25T15:46:03",
+    "ran_at": "2026-11-26T09:31:10",
     "placed": 0,
     "held": [
-      "ENTRY SENSEX: outside the auto-entry window 09:15-15:14"
+      "ENTRY SENSEX: stale signal (30121 min old, limit 35)"
     ],
     "blocked": null
   },
@@ -63,14 +63,14 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T15:45:00",
-        "close": 25819.25,
-        "ema5_15m": 25792.99,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "bar_time": "2026-11-26T09:30:00",
+        "close": 25834.15,
+        "ema5_15m": 25806.36,
+        "volume_ratio": 0.11,
+        "body_ratio": 0.7,
         "decision": {
-          "code": "BLOCKED",
-          "detail": "EOD window -- no new entries from 15:15; Wide-CPR day (prior-day CPR width in the top quartile); Entry hour blocked (15:xx)",
+          "code": "NO_SIGNAL",
+          "detail": "Waiting -- entry conditions not all met",
           "direction": null
         },
         "long": {
@@ -79,7 +79,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -93,11 +93,7 @@
           },
           "all_met": false
         },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)"
-        ]
+        "blocked_reasons": []
       },
       "error": null
     },
@@ -105,11 +101,11 @@
       "position": null,
       "day_losses": 0,
       "snapshot": {
-        "bar_time": "2026-11-25T15:45:00",
-        "close": 83938.28,
-        "ema5_15m": 83900.19,
-        "volume_ratio": 0.0,
-        "body_ratio": null,
+        "bar_time": "2026-11-26T09:30:00",
+        "close": 84103.32,
+        "ema5_15m": 83992.54,
+        "volume_ratio": 0.06,
+        "body_ratio": 0.72,
         "decision": {
           "code": "ENTRY_PROPOSED",
           "detail": "LONG entry proposed -- awaiting your confirmation",
@@ -121,7 +117,7 @@
             "m15_stack": true,
             "above_cpr": true,
             "volume": false,
-            "candle": false
+            "candle": true
           },
           "all_met": false
         },
@@ -135,11 +131,7 @@
           },
           "all_met": false
         },
-        "blocked_reasons": [
-          "EOD window -- no new entries from 15:15",
-          "Wide-CPR day (prior-day CPR width in the top quartile)",
-          "Entry hour blocked (15:xx)"
-        ]
+        "blocked_reasons": []
       },
       "error": null
     }
